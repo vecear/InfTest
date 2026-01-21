@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Exam {
+  id        String     @id @default(cuid())
+  title     String
+  year      Int
+  category  String     // "WRITTEN", "PRACTICAL", "OTHER"
+  questions Question[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Question {
+  id                String           @id @default(cuid())
+  examId            String
+  exam              Exam             @relation(fields: [examId], references: [id])
+  content           String           // The question text
+  imageUrl          String?          // Optional image
+  type              String           // "CHOICE" or "FILL"
+  options           QuestionOption[]
+  correctAnswer     String?          // For Choice: index or ID, for Fill: the answer string
+  answerExplanation String?
+  comments          Comment[]
+  order             Int              @default(0)
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
+}
+
+model QuestionOption {
+  id         String   @id @default(cuid())
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id])
+  text       String
+  order      Int      @default(0)
+}
+
+model Comment {
+  id         String   @id @default(cuid())
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id])
+  content    String   // Rich text content
+  author     String   @default("Guest")
+  createdAt  DateTime @default(now())
+}
