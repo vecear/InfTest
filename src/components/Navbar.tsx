@@ -5,14 +5,15 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Microscope, BookOpen, PenTool, Database, LogIn, LogOut, User } from "lucide-react";
 import { auth } from "@/firebase";
-import { onAuthStateChanged, signOut, User as FirebaseUser } from "firebase/auth";
+import { signOut } from "firebase/auth";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Navbar() {
     const pathname = usePathname();
     const router = useRouter();
     const [isMobile, setIsMobile] = useState(false);
     const [isBottomNavVisible, setIsBottomNavVisible] = useState(true);
-    const [user, setUser] = useState<FirebaseUser | null>(null);
+    const { user } = useAuth();
     const [isProfileOpen, setIsProfileOpen] = useState(false);
 
     // Detect if we are on a question detail page
@@ -23,14 +24,8 @@ export default function Navbar() {
         checkMobile();
         window.addEventListener('resize', checkMobile);
 
-        // Auth listener
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser);
-        });
-
         return () => {
             window.removeEventListener('resize', checkMobile);
-            unsubscribe();
         };
     }, []);
 

@@ -5,7 +5,7 @@ interface Exam {
     id: string;
     title: string;
     year: number;
-    _count: {
+    _count?: {
         questions: number;
     };
 }
@@ -65,7 +65,7 @@ export default function ExamList({ exams, title, description, iconColor, categor
                                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                                             <Calendar size={14} /> {exam.year} 年度
                                         </span>
-                                        <span>共 {exam._count.questions} 題</span>
+                                        <span>共 {exam._count?.questions ?? 0} 題</span>
                                     </div>
                                 </div>
                             </div>

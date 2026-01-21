@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { updateQuestionExplanation } from '@/lib/firestore';
 
 export async function PATCH(
     request: NextRequest,
@@ -20,20 +18,14 @@ export async function PATCH(
         }
 
         // Update the question's answer explanation
-        const updatedQuestion = await prisma.question.update({
-            where: { id },
-            data: { answerExplanation },
-            select: { id: true, answerExplanation: true }
-        });
+        const result = await updateQuestionExplanation(id, answerExplanation);
 
-        return NextResponse.json(updatedQuestion);
+        return NextResponse.json(result);
     } catch (error) {
         console.error('Error updating explanation:', error);
         return NextResponse.json(
             { error: 'Failed to update explanation', details: error instanceof Error ? error.message : 'Unknown error' },
             { status: 500 }
         );
-    } finally {
-        await prisma.$disconnect();
     }
 }

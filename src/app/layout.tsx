@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { AuthProvider } from "@/context/AuthContext";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -18,10 +19,12 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body className={outfit.className} suppressHydrationWarning>
-        <Navbar />
-        <main style={{ paddingTop: '5rem', paddingBottom: '2rem' }}>
-          {children}
-        </main>
+        <AuthProvider>
+          <Navbar />
+          <main style={{ paddingTop: '5rem', paddingBottom: '2rem' }}>
+            {children}
+          </main>
+        </AuthProvider>
       </body>
     </html>
   );

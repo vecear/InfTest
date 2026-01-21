@@ -1,12 +1,8 @@
-import { prisma } from "@/lib/prisma";
+import { getExams } from "@/lib/firestore";
 import ExamList from "@/components/ExamList";
 
 export default async function WrittenExamsPage() {
-    const exams = await prisma.exam.findMany({
-        where: { category: "WRITTEN" },
-        orderBy: { year: "desc" },
-        include: { _count: { select: { questions: true } } },
-    });
+    const exams = await getExams("WRITTEN");
 
     return (
         <ExamList

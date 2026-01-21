@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { getComments, addComment } from "@/lib/firestore";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
@@ -9,29 +9,20 @@ export async function GET(request: Request) {
         return NextResponse.json({ error: "Missing questionId" }, { status: 400 });
     }
 
-    const comments = await prisma.comment.findMany({
-        where: { questionId },
-        orderBy: { createdAt: "desc" },
-    });
+    const comments = await getComments(questionId);
 
     return NextResponse.json(comments);
 }
 
 export async function POST(request: Request) {
     try {
-        const { questionId, content } = await request.json();
+        const { questionId, content, author } = await request.json();
 
         if (!questionId || !content) {
             return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
         }
 
-        const comment = await prisma.comment.create({
-            data: {
-                questionId,
-                content,
-                author: "Guest", // Defaulting to Guest for now
-            },
-        });
+        const comment = await addComment(questionId, content, author || "Guest");
 
         return NextResponse.json(comment);
     } catch (error) {
