@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CheckCircle2, XCircle, MessageSquare, Copy } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -11,6 +11,8 @@ interface Option {
     text: string;
     order: number;
 }
+
+type ExamMode = 'exam' | 'review' | 'reading' | null;
 
 interface QuestionProps {
     question: {
@@ -23,12 +25,24 @@ interface QuestionProps {
         answerExplanation: string | null;
         options: Option[];
     };
+    mode?: ExamMode;
+    examSubmitted?: boolean;
+    forceShowAnswer?: boolean;
+    isWrong?: boolean;
+    onAnswerChange?: (questionId: string, answer: string | null, isCorrect: boolean) => void;
 }
 
-export default function QuestionCard({ question }: QuestionProps) {
+export default function QuestionCard({
+    question,
+    mode = null,
+    examSubmitted = false,
+    forceShowAnswer = false,
+    isWrong = false,
+    onAnswerChange
+}: QuestionProps) {
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     const [fillAnswer, setFillAnswer] = useState("");
-    const [showAnswer, setShowAnswer] = useState(false);
+    const [showAnswer, setShowAnswer] = useState(forceShowAnswer);
     const [showComments, setShowComments] = useState(false);
     const [copySuccess, setCopySuccess] = useState(false);
     const [isEditingExplanation, setIsEditingExplanation] = useState(false);
@@ -46,8 +60,50 @@ export default function QuestionCard({ question }: QuestionProps) {
         ? getSelectedOptionText() === question.correctAnswer
         : fillAnswer.trim().toLowerCase() === (question.correctAnswer || "").trim().toLowerCase();
 
+    // Determine if answer should be shown based on mode
+    const shouldShowAnswer = forceShowAnswer || showAnswer || (mode === 'exam' && examSubmitted);
+
+    // In exam mode before submit, hide reveal button and comments
+    const canReveal = mode !== 'exam' || examSubmitted;
+    const canShowComments = mode !== 'exam' || examSubmitted;
+
     const handleReveal = () => {
+        if (!canReveal) return;
         setShowAnswer(true);
+    };
+
+    // Handle option selection with callback
+    const handleSelectOption = (optionId: string) => {
+        setSelectedOption(optionId);
+        const option = question.options.find(o => o.id === optionId);
+        const optionText = option?.text || null;
+        const correct = optionText === question.correctAnswer;
+
+        if (onAnswerChange) {
+            onAnswerChange(question.id, optionText, correct);
+        }
+
+        // In review mode, auto-show answer after selection
+        if (mode === 'review') {
+            setShowAnswer(true);
+        }
+    };
+
+    // Handle fill answer change with callback
+    const handleFillAnswerChange = (value: string) => {
+        setFillAnswer(value);
+        const correct = value.trim().toLowerCase() === (question.correctAnswer || "").trim().toLowerCase();
+
+        if (onAnswerChange) {
+            onAnswerChange(question.id, value, correct);
+        }
+    };
+
+    // Handle fill answer submit (for review mode)
+    const handleFillAnswerSubmit = () => {
+        if (mode === 'review' && fillAnswer.trim()) {
+            setShowAnswer(true);
+        }
     };
 
     const handleEditExplanation = () => {
@@ -131,8 +187,24 @@ export default function QuestionCard({ question }: QuestionProps) {
         }
     };
 
+    const [isMobile, setIsMobile] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
+    // Check for mobile viewport
+    useEffect(() => {
+        setMounted(true);
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
-        <div className="premium-card" style={{ padding: '2rem', marginBottom: '2rem' }}>
+        <div className="premium-card" style={{
+            padding: (mounted && isMobile) ? '1.25rem' : '2rem',
+            marginBottom: (mounted && isMobile) ? '1.5rem' : '2rem',
+            borderLeft: isWrong ? '4px solid #ef4444' : undefined
+        }}>
             <div style={{ marginBottom: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 600, lineHeight: 1.6 }}>{question.content}</h3>
 
@@ -206,7 +278,7 @@ export default function QuestionCard({ question }: QuestionProps) {
                         let bgColor = 'rgba(255, 255, 255, 0.5)';
                         let borderColor = 'var(--glass-border)';
 
-                        if (showAnswer) {
+                        if (shouldShowAnswer) {
                             if (isOptionCorrect) {
                                 bgColor = 'rgba(16, 185, 129, 0.1)';
                                 borderColor = '#10b981';
@@ -222,15 +294,15 @@ export default function QuestionCard({ question }: QuestionProps) {
                         return (
                             <button
                                 key={option.id}
-                                disabled={showAnswer}
-                                onClick={() => setSelectedOption(option.id)}
+                                disabled={shouldShowAnswer}
+                                onClick={() => handleSelectOption(option.id)}
                                 style={{
                                     textAlign: 'left',
                                     padding: '1rem 1.25rem',
                                     borderRadius: '0.75rem',
                                     border: `2px solid ${borderColor}`,
                                     background: bgColor,
-                                    cursor: showAnswer ? 'default' : 'pointer',
+                                    cursor: shouldShowAnswer ? 'default' : 'pointer',
                                     transition: 'all 0.2s ease',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -240,8 +312,8 @@ export default function QuestionCard({ question }: QuestionProps) {
                                 }}
                             >
                                 <span>{option.text}</span>
-                                {showAnswer && isOptionCorrect && <CheckCircle2 size={20} color="#10b981" />}
-                                {showAnswer && isOptionSelected && !isCorrect && <XCircle size={20} color="#ef4444" />}
+                                {shouldShowAnswer && isOptionCorrect && <CheckCircle2 size={20} color="#10b981" />}
+                                {shouldShowAnswer && isOptionSelected && !isCorrect && <XCircle size={20} color="#ef4444" />}
                             </button>
                         );
                     })}
@@ -251,14 +323,16 @@ export default function QuestionCard({ question }: QuestionProps) {
                     <input
                         type="text"
                         value={fillAnswer}
-                        onChange={(e) => setFillAnswer(e.target.value)}
-                        disabled={showAnswer}
+                        onChange={(e) => handleFillAnswerChange(e.target.value)}
+                        onBlur={handleFillAnswerSubmit}
+                        onKeyDown={(e) => e.key === 'Enter' && handleFillAnswerSubmit()}
+                        disabled={shouldShowAnswer}
                         placeholder="請輸入您的答案..."
                         style={{
                             width: '100%',
                             padding: '1rem 1.25rem',
                             borderRadius: '0.75rem',
-                            border: `2px solid ${showAnswer ? (isCorrect ? '#10b981' : '#ef4444') : 'var(--glass-border)'}`,
+                            border: `2px solid ${shouldShowAnswer ? (isCorrect ? '#10b981' : '#ef4444') : 'var(--glass-border)'}`,
                             background: 'rgba(255, 255, 255, 0.5)',
                             fontSize: '1rem',
                             color: 'var(--text-main)',
@@ -266,7 +340,7 @@ export default function QuestionCard({ question }: QuestionProps) {
                             transition: 'all 0.2s ease'
                         }}
                     />
-                    {showAnswer && !isCorrect && (
+                    {shouldShowAnswer && !isCorrect && (
                         <p style={{ marginTop: '0.5rem', color: '#ef4444', fontSize: '0.875rem', fontWeight: 600 }}>
                             正確答案：{question.correctAnswer}
                         </p>
@@ -274,55 +348,70 @@ export default function QuestionCard({ question }: QuestionProps) {
                 </div>
             )}
 
-            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <button
-                    onClick={handleReveal}
-                    disabled={(question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || showAnswer}
-                    style={{
-                        padding: '0.6rem 1.5rem',
-                        borderRadius: '0.75rem',
-                        background: ((question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || showAnswer) ? '#94a3b8' : 'var(--accent-color)',
-                        color: 'white',
-                        border: 'none',
-                        fontWeight: 600,
-                        cursor: ((question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || showAnswer) ? 'default' : 'pointer'
-                    }}
-                >
-                    查看解答
-                </button>
+            {/* Only show buttons if not in reading mode */}
+            {mode !== 'reading' && (
+                <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    {canReveal ? (
+                        <button
+                            onClick={handleReveal}
+                            disabled={(question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer}
+                            style={{
+                                padding: '0.6rem 1.5rem',
+                                borderRadius: '0.75rem',
+                                background: ((question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer) ? '#94a3b8' : 'var(--accent-color)',
+                                color: 'white',
+                                border: 'none',
+                                fontWeight: 600,
+                                cursor: ((question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer) ? 'default' : 'pointer'
+                            }}
+                        >
+                            查看解答
+                        </button>
+                    ) : (
+                        <div style={{ color: '#94a3b8', fontSize: '0.875rem' }}>
+                            {selectedOption || fillAnswer.trim() ? '已作答' : '請作答'}
+                        </div>
+                    )}
 
-                <button
-                    onClick={() => {
-                        if (showAnswer) setShowComments(!showComments);
-                    }}
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        color: showAnswer ? 'var(--text-muted)' : '#94a3b8',
-                        background: 'none',
-                        border: 'none',
-                        cursor: showAnswer ? 'pointer' : 'default',
-                        fontWeight: 500,
-                        opacity: showAnswer ? 1 : 0.6
-                    }}
-                >
-                    <MessageSquare size={18} />
-                    {showComments ? '隱藏討論' : '查看討論'}
-                </button>
-            </div>
+                    {canShowComments ? (
+                        <button
+                            onClick={() => {
+                                if (shouldShowAnswer) setShowComments(!showComments);
+                            }}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                color: shouldShowAnswer ? 'var(--text-muted)' : '#94a3b8',
+                                background: 'none',
+                                border: 'none',
+                                cursor: shouldShowAnswer ? 'pointer' : 'default',
+                                fontWeight: 500,
+                                opacity: shouldShowAnswer ? 1 : 0.6
+                            }}
+                        >
+                            <MessageSquare size={18} />
+                            {showComments ? '隱藏討論' : '查看討論'}
+                        </button>
+                    ) : (
+                        <div style={{ color: '#94a3b8', fontSize: '0.875rem', opacity: 0.5 }}>
+                            交卷後可查看討論
+                        </div>
+                    )}
+                </div>
+            )}
 
-            {showAnswer && (
+            {shouldShowAnswer && (
                 <div style={{
                     marginTop: '1.5rem',
                     padding: '1.5rem',
                     background: '#f8fafc',
                     borderRadius: '1rem',
-                    borderLeft: `4px solid ${isCorrect ? '#10b981' : '#ef4444'}`
+                    borderLeft: `4px solid ${forceShowAnswer ? '#a855f7' : (isCorrect ? '#10b981' : '#ef4444')}`
                 }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-                        <h4 style={{ fontWeight: 700, margin: 0, color: isCorrect ? '#10b981' : '#ef4444' }}>
-                            {isCorrect ? '正確！' : '錯誤'} <span style={{ fontWeight: 400, color: 'var(--text-muted)' }}>（正確答案：{question.correctAnswer}）</span>
+                        <h4 style={{ fontWeight: 700, margin: 0, color: forceShowAnswer ? '#a855f7' : (isCorrect ? '#10b981' : '#ef4444') }}>
+                            {forceShowAnswer ? '詳解' : (isCorrect ? '正確！' : '錯誤')} <span style={{ fontWeight: 400, color: 'var(--text-muted)' }}>（正確答案：{question.correctAnswer}）</span>
                         </h4>
                         {!isEditingExplanation && (
                             <button
@@ -408,7 +497,7 @@ export default function QuestionCard({ question }: QuestionProps) {
                 </div>
             )}
 
-            {showComments && (
+            {showComments && canShowComments && (
                 <div style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid var(--glass-border)' }}>
                     <CommentSection questionId={question.id} />
                 </div>

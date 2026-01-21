@@ -102,3 +102,232 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.exam-card-year {
+  min-width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .exam-list-container {
+    padding: 1rem;
+  }
+
+  .exam-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .exam-list-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+  }
+
+  .exam-title {
+    font-size: 1.5rem;
+  }
+
+  .exam-card-year {
+    min-width: 2.75rem;
+    height: 2.75rem;
+    font-size: 0.875rem;
+  }
+
+  .premium-card {
+    border-radius: 1rem;
+  }
+
+  .back-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .exam-list-container {
+    padding: 0.75rem;
+  }
+
+  .exam-title {
+    font-size: 1.25rem;
+  }
+
+  .exam-count {
+    font-size: 0.875rem;
+  }
+
+  .exam-list-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .exam-card-year {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Question Card Mobile Styles */
+.question-card-mobile {
+  padding: 1.25rem !important;
+}
+
+@media (max-width: 768px) {
+
+  /* Markdown content in explanations */
+  .markdown-content {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .markdown-content pre {
+    overflow-x: auto;
+    font-size: 0.8rem;
+  }
+
+  .markdown-content table {
+    font-size: 0.8rem;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .markdown-content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Better touch targets */
+  button {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .markdown-content {
+    font-size: 0.85rem;
+  }
+
+  .markdown-content h1 {
+    font-size: 1.25rem;
+  }
+
+  .markdown-content h2 {
+    font-size: 1.125rem;
+  }
+
+  .markdown-content h3 {
+    font-size: 1rem;
+  }
+
+  .markdown-content ul,
+  .markdown-content ol {
+    padding-left: 1.25rem;
+  }
+}
+
+/* Bottom Navigation for Mobile */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.65rem;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 12px;
+  border-radius: 12px;
+  min-width: 64px;
+}
+
+.bottom-nav-item.active {
+  color: var(--accent-color);
+}
+
+.bottom-nav-item.active .bottom-nav-icon {
+  transform: translateY(-2px);
+  color: var(--accent-color);
+}
+
+.bottom-nav-icon {
+  transition: transform 0.2s ease;
+}
+
+@media (min-width: 769px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 70px;
+    /* Space for bottom nav */
+  }
+
+  .navbar-top {
+    justify-content: center !important;
+    padding: 0.75rem 1rem !important;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-red {
+
+  0%,
+  100% {
+    color: #ef4444;
+    transform: scale(1);
+  }
+
+  50% {
+    color: #ff0000;
+    transform: scale(1.05);
+  }
+}
