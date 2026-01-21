@@ -24,11 +24,12 @@ model Question {
   id                String           @id @default(cuid())
   examId            String
   exam              Exam             @relation(fields: [examId], references: [id])
-  content           String           // The question text
-  imageUrl          String?          // Optional image
+  content           String           // The question text (can be brief for image-based questions)
+  imageUrl          String?          // Optional image URL
+  ocrText           String?          // OCR'd text from the image (for click-to-expand)
   type              String           // "CHOICE" or "FILL"
   options           QuestionOption[]
-  correctAnswer     String?          // For Choice: index or ID, for Fill: the answer string
+  correctAnswer     String?          // For Choice: option ID (A/B/C/D/E), for Fill: the answer string
   answerExplanation String?
   comments          Comment[]
   order             Int              @default(0)

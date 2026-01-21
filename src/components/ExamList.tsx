@@ -20,22 +20,17 @@ interface ExamListProps {
 
 export default function ExamList({ exams, title, description, iconColor, categoryPath }: ExamListProps) {
     return (
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2.5rem' }}>
-                <div style={{
-                    width: '3.5rem',
-                    height: '3.5rem',
-                    borderRadius: '1rem',
-                    background: `${iconColor}15`,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
+        <div className="exam-list-container">
+            <div className="exam-list-header">
+                <div
+                    className="exam-list-icon"
+                    style={{ background: `${iconColor}15` } as React.CSSProperties}
+                >
                     <BookOpen size={24} color={iconColor} />
                 </div>
                 <div>
-                    <h1 style={{ fontSize: '2rem', fontWeight: 800 }}>{title}</h1>
-                    <p style={{ color: 'var(--text-muted)' }}>{description}</p>
+                    <h1 className="exam-title">{title}</h1>
+                    <p className="exam-count" style={{ marginTop: 0 }}>{description}</p>
                 </div>
             </div>
 
@@ -53,16 +48,13 @@ export default function ExamList({ exams, title, description, iconColor, categor
                             justifyContent: 'space-between'
                         }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                                <div style={{
-                                    fontSize: '1.25rem',
-                                    fontWeight: 700,
-                                    color: iconColor,
-                                    background: `${iconColor}08`,
-                                    padding: '0.5rem 1rem',
-                                    borderRadius: '0.75rem',
-                                    minWidth: '60px',
-                                    textAlign: 'center'
-                                }}>
+                                <div
+                                    className="exam-card-year"
+                                    style={{
+                                        color: iconColor,
+                                        background: `${iconColor}08`
+                                    } as React.CSSProperties}
+                                >
                                     {exam.year}
                                 </div>
                                 <div>
@@ -83,7 +75,7 @@ export default function ExamList({ exams, title, description, iconColor, categor
                 ))}
 
                 {exams.length === 0 && (
-                    <div style={{ textAlign: 'center', padding: '4rem', color: 'var(--text-muted)' }}>
+                    <div className="exam-count" style={{ textAlign: 'center', padding: '4rem' }}>
                         目前尚無考題資料。
                     </div>
                 )}

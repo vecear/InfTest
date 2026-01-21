@@ -11,13 +11,24 @@
   "dependencies": {
     "@prisma/client": "^6.2.1",
     "@prisma/config": "^7.2.0",
+    "@tiptap/extension-color": "^3.16.0",
+    "@tiptap/extension-text-align": "^3.16.0",
+    "@tiptap/extension-text-style": "^3.16.0",
+    "@tiptap/extension-underline": "^3.16.0",
+    "@tiptap/react": "^3.16.0",
+    "@tiptap/starter-kit": "^3.16.0",
+    "emoji-picker-react": "^4.16.1",
     "lucide-react": "^0.562.0",
     "next": "16.1.4",
+    "pdf-parse": "1.1.1",
     "prisma": "^6.2.1",
     "quill": "^2.0.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-quill": "^2.0.0"
+    "react-markdown": "^10.1.0",
+    "react-quill": "^2.0.0",
+    "remark-gfm": "^4.0.1",
+    "tesseract.js": "^7.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

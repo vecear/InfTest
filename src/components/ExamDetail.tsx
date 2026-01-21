@@ -12,6 +12,7 @@ interface Question {
     id: string;
     content: string;
     imageUrl?: string | null;
+    ocrText?: string | null;
     type: string;
     correctAnswer: string | null;
     answerExplanation: string | null;
@@ -33,22 +34,14 @@ export default function ExamDetail({ exam, backPath }: ExamDetailProps) {
     return (
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
             <div style={{ marginBottom: '2.5rem' }}>
-                <Link href={backPath} style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    color: 'var(--text-muted)',
-                    textDecoration: 'none',
-                    marginBottom: '1rem',
-                    fontSize: '0.875rem'
-                }}>
+                <Link href={backPath} className="back-link">
                     <ArrowLeft size={16} /> 返回列表
                 </Link>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <h1 style={{ fontSize: '2rem', fontWeight: 800 }}>{exam.title}</h1>
+                <div className="exam-header">
+                    <h1 className="exam-title">{exam.title}</h1>
                 </div>
-                <p style={{ color: 'var(--text-muted)', marginTop: '0.5rem' }}>
-                    共 {exam.questions.length} 題
+                <p className="exam-count">
+                    共 {exam.questions.length} 題 <span style={{ fontSize: '0.875rem', color: 'var(--accent-color)', marginLeft: '1rem', fontWeight: 500 }}>（需先查看解答才可參與討論）</span>
                 </p>
             </div>
 

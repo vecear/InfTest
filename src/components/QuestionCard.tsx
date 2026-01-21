@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, XCircle, MessageSquare } from "lucide-react";
+import { CheckCircle2, XCircle, MessageSquare, Copy } from "lucide-react";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import CommentSection from "@/components/CommentSection";
 
 interface Option {
@@ -15,6 +17,7 @@ interface QuestionProps {
         id: string;
         content: string;
         imageUrl?: string | null;
+        ocrText?: string | null;
         type: string;
         correctAnswer: string | null;
         answerExplanation: string | null;
@@ -27,29 +30,178 @@ export default function QuestionCard({ question }: QuestionProps) {
     const [fillAnswer, setFillAnswer] = useState("");
     const [showAnswer, setShowAnswer] = useState(false);
     const [showComments, setShowComments] = useState(false);
+    const [copySuccess, setCopySuccess] = useState(false);
+    const [isEditingExplanation, setIsEditingExplanation] = useState(false);
+    const [editedExplanation, setEditedExplanation] = useState(question.answerExplanation || "");
+    const [isSaving, setIsSaving] = useState(false);
+
+    // For image-based questions, match by option text (A/B/C/D/E)
+    const getSelectedOptionText = () => {
+        if (!selectedOption) return null;
+        const option = question.options.find(o => o.id === selectedOption);
+        return option?.text || null;
+    };
 
     const isCorrect = question.type === "CHOICE"
-        ? selectedOption === question.correctAnswer
+        ? getSelectedOptionText() === question.correctAnswer
         : fillAnswer.trim().toLowerCase() === (question.correctAnswer || "").trim().toLowerCase();
 
     const handleReveal = () => {
         setShowAnswer(true);
     };
 
+    const handleEditExplanation = () => {
+        setIsEditingExplanation(true);
+        setEditedExplanation(question.answerExplanation || "");
+    };
+
+    const handleCancelEdit = () => {
+        setIsEditingExplanation(false);
+        setEditedExplanation(question.answerExplanation || "");
+    };
+
+    const handleSaveExplanation = async () => {
+        setIsSaving(true);
+        try {
+            const response = await fetch(`/api/questions/${question.id}/explanation`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ answerExplanation: editedExplanation })
+            });
+
+            if (response.ok) {
+                const updated = await response.json();
+                question.answerExplanation = updated.answerExplanation;
+                setIsEditingExplanation(false);
+            } else {
+                alert('儲存失敗，請稍後再試');
+            }
+        } catch (error) {
+            console.error('Error saving explanation:', error);
+            alert('儲存失敗，請稍後再試');
+        } finally {
+            setIsSaving(false);
+        }
+    };
+
+    const handleImageClick = async () => {
+        if (!question.imageUrl) return;
+
+        try {
+            // Create an image element
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+
+            // Wait for image to load
+            await new Promise((resolve, reject) => {
+                img.onload = resolve;
+                img.onerror = reject;
+                img.src = question.imageUrl!;
+            });
+
+            // Create canvas and draw image
+            const canvas = document.createElement('canvas');
+            canvas.width = img.naturalWidth;
+            canvas.height = img.naturalHeight;
+            const ctx = canvas.getContext('2d');
+            if (!ctx) throw new Error('Failed to get canvas context');
+
+            ctx.drawImage(img, 0, 0);
+
+            // Convert to blob
+            const blob = await new Promise<Blob>((resolve, reject) => {
+                canvas.toBlob((b) => {
+                    if (b) resolve(b);
+                    else reject(new Error('Failed to convert canvas to blob'));
+                }, 'image/png');
+            });
+
+            // Copy to clipboard
+            await navigator.clipboard.write([
+                new ClipboardItem({
+                    'image/png': blob
+                })
+            ]);
+
+            setCopySuccess(true);
+            setTimeout(() => setCopySuccess(false), 2000);
+        } catch (err) {
+            console.error('Failed to copy image:', err);
+            alert('複製圖片失敗，請稍後再試');
+        }
+    };
+
     return (
         <div className="premium-card" style={{ padding: '2rem', marginBottom: '2rem' }}>
             <div style={{ marginBottom: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 600, lineHeight: 1.6 }}>- {question.content}</h3>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 600, lineHeight: 1.6 }}>{question.content}</h3>
+
                 {question.imageUrl && (
-                    <img src={question.imageUrl} alt="Question" style={{ maxWidth: '100%', borderRadius: '0.75rem', marginTop: '1rem' }} />
+                    <div style={{ position: 'relative', marginTop: '1rem' }}>
+                        <div
+                            onClick={handleImageClick}
+                            style={{
+                                cursor: 'pointer',
+                                position: 'relative'
+                            }}
+                        >
+                            <img
+                                src={question.imageUrl}
+                                alt="Question"
+                                style={{
+                                    maxWidth: '100%',
+                                    borderRadius: '0.75rem',
+                                    transition: 'opacity 0.2s ease'
+                                }}
+                            />
+                            <div style={{
+                                position: 'absolute',
+                                bottom: '0.5rem',
+                                right: '0.5rem',
+                                background: 'rgba(0, 0, 0, 0.6)',
+                                color: 'white',
+                                padding: '0.25rem 0.5rem',
+                                borderRadius: '0.5rem',
+                                fontSize: '0.75rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.25rem'
+                            }}>
+                                <Copy size={14} />
+                                點擊複製圖片
+                            </div>
+                        </div>
+
+                        {/* Copy success toast */}
+                        {copySuccess && (
+                            <div style={{
+                                position: 'absolute',
+                                top: '0.5rem',
+                                right: '0.5rem',
+                                background: '#10b981',
+                                color: 'white',
+                                padding: '0.5rem 1rem',
+                                borderRadius: '0.5rem',
+                                fontSize: '0.875rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                animation: 'fadeIn 0.3s ease',
+                                zIndex: 10
+                            }}>
+                                <Copy size={14} />
+                                圖片已複製
+                            </div>
+                        )}
+                    </div>
                 )}
             </div>
 
             {question.type === "CHOICE" ? (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                    {question.options.map((option, index) => {
+                    {question.options.map((option) => {
                         const isOptionSelected = selectedOption === option.id;
-                        const isOptionCorrect = question.correctAnswer === option.id;
+                        const isOptionCorrect = question.correctAnswer === option.text;
 
                         let bgColor = 'rgba(255, 255, 255, 0.5)';
                         let borderColor = 'var(--glass-border)';
@@ -87,7 +239,7 @@ export default function QuestionCard({ question }: QuestionProps) {
                                     color: 'var(--text-main)'
                                 }}
                             >
-                                <span>{String.fromCharCode(65 + index)}. {option.text}</span>
+                                <span>{option.text}</span>
                                 {showAnswer && isOptionCorrect && <CheckCircle2 size={20} color="#10b981" />}
                                 {showAnswer && isOptionSelected && !isCorrect && <XCircle size={20} color="#ef4444" />}
                             </button>
@@ -140,16 +292,19 @@ export default function QuestionCard({ question }: QuestionProps) {
                 </button>
 
                 <button
-                    onClick={() => setShowComments(!showComments)}
+                    onClick={() => {
+                        if (showAnswer) setShowComments(!showComments);
+                    }}
                     style={{
                         display: 'flex',
                         alignItems: 'center',
                         gap: '0.5rem',
-                        color: 'var(--text-muted)',
+                        color: showAnswer ? 'var(--text-muted)' : '#94a3b8',
                         background: 'none',
                         border: 'none',
-                        cursor: 'pointer',
-                        fontWeight: 500
+                        cursor: showAnswer ? 'pointer' : 'default',
+                        fontWeight: 500,
+                        opacity: showAnswer ? 1 : 0.6
                     }}
                 >
                     <MessageSquare size={18} />
@@ -165,12 +320,91 @@ export default function QuestionCard({ question }: QuestionProps) {
                     borderRadius: '1rem',
                     borderLeft: `4px solid ${isCorrect ? '#10b981' : '#ef4444'}`
                 }}>
-                    <h4 style={{ fontWeight: 700, marginBottom: '0.5rem', color: isCorrect ? '#10b981' : '#ef4444' }}>
-                        {isCorrect ? '正確！' : '錯誤'}
-                    </h4>
-                    <p style={{ color: 'var(--text-muted)', lineHeight: 1.6 }}>
-                        {question.answerExplanation || "目前尚無詳細解析。"}
-                    </p>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                        <h4 style={{ fontWeight: 700, margin: 0, color: isCorrect ? '#10b981' : '#ef4444' }}>
+                            {isCorrect ? '正確！' : '錯誤'} <span style={{ fontWeight: 400, color: 'var(--text-muted)' }}>（正確答案：{question.correctAnswer}）</span>
+                        </h4>
+                        {!isEditingExplanation && (
+                            <button
+                                onClick={handleEditExplanation}
+                                style={{
+                                    padding: '0.4rem 0.8rem',
+                                    borderRadius: '0.5rem',
+                                    background: 'var(--accent-color)',
+                                    color: 'white',
+                                    border: 'none',
+                                    fontSize: '0.875rem',
+                                    cursor: 'pointer',
+                                    fontWeight: 500
+                                }}
+                            >
+                                編輯
+                            </button>
+                        )}
+                    </div>
+
+                    {isEditingExplanation ? (
+                        <div>
+                            <textarea
+                                value={editedExplanation}
+                                onChange={(e) => setEditedExplanation(e.target.value)}
+                                style={{
+                                    width: '100%',
+                                    minHeight: '300px',
+                                    padding: '1rem',
+                                    borderRadius: '0.75rem',
+                                    border: '2px solid var(--glass-border)',
+                                    background: 'rgba(255, 255, 255, 0.5)',
+                                    fontSize: '0.95rem',
+                                    lineHeight: 1.6,
+                                    fontFamily: 'inherit',
+                                    resize: 'vertical',
+                                    outline: 'none'
+                                }}
+                                placeholder="輸入詳解（支援 Markdown 格式）..."
+                            />
+                            <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem' }}>
+                                <button
+                                    onClick={handleSaveExplanation}
+                                    disabled={isSaving}
+                                    style={{
+                                        padding: '0.5rem 1.25rem',
+                                        borderRadius: '0.5rem',
+                                        background: isSaving ? '#94a3b8' : '#10b981',
+                                        color: 'white',
+                                        border: 'none',
+                                        fontSize: '0.875rem',
+                                        cursor: isSaving ? 'default' : 'pointer',
+                                        fontWeight: 600
+                                    }}
+                                >
+                                    {isSaving ? '儲存中...' : '儲存'}
+                                </button>
+                                <button
+                                    onClick={handleCancelEdit}
+                                    disabled={isSaving}
+                                    style={{
+                                        padding: '0.5rem 1.25rem',
+                                        borderRadius: '0.5rem',
+                                        background: 'transparent',
+                                        color: 'var(--text-muted)',
+                                        border: '2px solid var(--glass-border)',
+                                        fontSize: '0.875rem',
+                                        cursor: isSaving ? 'default' : 'pointer',
+                                        fontWeight: 600
+                                    }}
+                                >
+                                    取消
+                                </button>
+                            </div>
+                        </div>
+                    ) : (
+                        <article style={{ color: 'var(--text-muted)', lineHeight: 1.6, fontSize: '0.95rem' }} className="markdown-content">
+                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                {question.answerExplanation || "目前尚無詳細解析。"}
+                            </ReactMarkdown>
+                        </article>
+                    )}
                 </div>
             )}
 
