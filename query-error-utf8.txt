@@ -1,0 +1,33 @@
+﻿Testing Firestore query...
+node : Query failed:
+位於 線路:1 字元:1
++ node test-firestore.js > query-error.t
+xt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo          : NotSpecif 
+   ied: (Query failed::String) [], Rem  
+  oteException
+    + FullyQualifiedErrorId : NativeCom 
+   mandError
+ 
+9 FAILED_PRECONDITION: The query require
+s an index. That index is currently buil
+ding and cannot be used yet. See its sta
+tus here: https://console.firebase.googl
+e.com/v1/r/project/inftest-c77b1/firesto
+re/indexes?create_composite=ClZwcm9qZWN0
+cy9pbmZ0ZXN0LWM3N2IxL2RhdGFiYXNlcy8oZGVm
+YXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9leGFtcy9p
+bmRleGVzL0NJQ0FnT2pYaDRFSxABGgwKCGNhdGVn
+b3J5EAEaCAoEeWVhchACGgwKCF9fbmFtZV9fEAI
+Details: The query requires an index. Th
+at index is currently building and canno
+t be used yet. See its status here: http
+s://console.firebase.google.com/v1/r/pro
+ject/inftest-c77b1/firestore/indexes?cre
+ate_composite=ClZwcm9qZWN0cy9pbmZ0ZXN0LW
+M3N2IxL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbG
+VjdGlvbkdyb3Vwcy9leGFtcy9pbmRleGVzL0NJQ0
+FnT2pYaDRFSxABGgwKCGNhdGVnb3J5EAEaCAoEeW
+VhchACGgwKCF9fbmFtZV9fEAI
