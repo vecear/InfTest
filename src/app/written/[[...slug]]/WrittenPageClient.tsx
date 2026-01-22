@@ -9,26 +9,37 @@ import ExamDetail from "@/components/ExamDetail";
 export default function WrittenUnifiedPage() {
     const params = useParams();
     const router = useRouter();
-
-    // params.slug is an array for catch-all routes
     const slug = params.slug as string[] | undefined;
-    const examId = slug?.[0];
+
+    // For static export on Firebase, useParams might not always catch the slug correctly 
+    // when served via rewrites. We fallback to parsing the pathname.
+    const [examId, setExamId] = useState<string | undefined>(slug?.[0]);
+
+    useEffect(() => {
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        // Path is like /written/exam-id/
+        if (pathParts[0] === 'written' && pathParts[1]) {
+            setExamId(pathParts[1]);
+        } else {
+            setExamId(slug?.[0]);
+        }
+    }, [slug]);
 
     const [exams, setExams] = useState<Exam[]>([]);
     const [exam, setExam] = useState<(Exam & { questions: Question[] }) | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setLoading(true);
         if (!examId) {
             // Load List
-            setLoading(true);
             getExams("WRITTEN").then((data) => {
                 setExams(data);
+                setExam(null); // Clear previous exam
                 setLoading(false);
             });
         } else {
             // Load Detail
-            setLoading(true);
             Promise.all([
                 getExamById(examId),
                 getQuestionsByExamId(examId)

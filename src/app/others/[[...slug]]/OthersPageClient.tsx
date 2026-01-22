@@ -9,23 +9,32 @@ import ExamDetail from "@/components/ExamDetail";
 export default function OthersUnifiedPage() {
     const params = useParams();
     const router = useRouter();
-
     const slug = params.slug as string[] | undefined;
-    const examId = slug?.[0];
+
+    const [examId, setExamId] = useState<string | undefined>(slug?.[0]);
+
+    useEffect(() => {
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        if (pathParts[0] === 'others' && pathParts[1]) {
+            setExamId(pathParts[1]);
+        } else {
+            setExamId(slug?.[0]);
+        }
+    }, [slug]);
 
     const [exams, setExams] = useState<Exam[]>([]);
     const [exam, setExam] = useState<(Exam & { questions: Question[] }) | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setLoading(true);
         if (!examId) {
-            setLoading(true);
             getExams("OTHER").then((data) => {
                 setExams(data);
+                setExam(null);
                 setLoading(false);
             });
         } else {
-            setLoading(true);
             Promise.all([
                 getExamById(examId),
                 getQuestionsByExamId(examId)
