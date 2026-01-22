@@ -2,6 +2,7 @@
 
 import { ArrowLeft, Clock, Play, FileCheck, BookOpen, Eye } from "lucide-react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useRef, useState, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
 import QuestionCard from "./QuestionCard";
@@ -52,13 +53,26 @@ export default function ExamDetail({ exam, backPath }: ExamDetailProps) {
     const [isMobile, setIsMobile] = useState(false);
     const [mounted, setMounted] = useState(false);
 
+    const searchParams = useSearchParams();
+    const initialMode = searchParams.get('mode') as ExamMode;
+
     // Exam mode states
-    const [selectedMode, setSelectedMode] = useState<ExamMode>(null);
-    const [examStarted, setExamStarted] = useState(false);
+    const [selectedMode, setSelectedMode] = useState<ExamMode>(initialMode || null);
+    const [examStarted, setExamStarted] = useState(!!initialMode); // Auto-start if mode provided
     const [examSubmitted, setExamSubmitted] = useState(false);
     const [timerMinutes, setTimerMinutes] = useState(120);
     const [timeRemaining, setTimeRemaining] = useState(0);
     const [answers, setAnswers] = useState<Record<string, AnswerRecord>>({});
+
+    useEffect(() => {
+        if (initialMode) {
+            setSelectedMode(initialMode);
+            setExamStarted(true);
+            if (initialMode === 'exam') {
+                setTimeRemaining(timerMinutes * 60);
+            }
+        }
+    }, [initialMode, timerMinutes]);
 
     // Calculate score
     const correctCount = Object.values(answers).filter(a => a.isCorrect).length;

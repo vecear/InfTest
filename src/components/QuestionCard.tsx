@@ -42,7 +42,7 @@ export default function QuestionCard({
     isWrong = false,
     onAnswerChange
 }: QuestionProps) {
-    const [selectedOption, setSelectedOption] = useState<string | null>(null);
+    const [selectedLabel, setSelectedLabel] = useState<string | null>(null);
     const [fillAnswer, setFillAnswer] = useState("");
     const [showAnswer, setShowAnswer] = useState(forceShowAnswer);
     const [showComments, setShowComments] = useState(false);
@@ -51,15 +51,9 @@ export default function QuestionCard({
     const [editedExplanation, setEditedExplanation] = useState(question.answerExplanation || "");
     const [isSaving, setIsSaving] = useState(false);
 
-    // For image-based questions, match by option text (A/B/C/D/E)
-    const getSelectedOptionText = () => {
-        if (!selectedOption) return null;
-        const option = question.options.find(o => o.id === selectedOption);
-        return option?.text || null;
-    };
 
     const isCorrect = question.type === "CHOICE"
-        ? getSelectedOptionText() === question.correctAnswer
+        ? selectedLabel === question.correctAnswer
         : fillAnswer.trim().toLowerCase() === (question.correctAnswer || "").trim().toLowerCase();
 
     // Determine if answer should be shown based on mode
@@ -75,14 +69,14 @@ export default function QuestionCard({
     };
 
     // Handle option selection with callback
-    const handleSelectOption = (optionId: string) => {
-        setSelectedOption(optionId);
-        const option = question.options.find(o => o.id === optionId);
-        const optionText = option?.text || null;
-        const correct = optionText === question.correctAnswer;
+    const handleSelectOption = (index: number) => {
+        const label = String.fromCharCode(65 + index); // A, B, C...
+        setSelectedLabel(label);
+
+        const correct = label === question.correctAnswer;
 
         if (onAnswerChange) {
-            onAnswerChange(question.id, optionText, correct);
+            onAnswerChange(question.id, label, correct);
         }
 
         // In review mode, auto-show answer after selection
@@ -317,56 +311,76 @@ export default function QuestionCard({
             </div>
 
             {question.type === "CHOICE" ? (
-                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '0.5rem' }}>
-                    {question.options.map((option) => {
-                        const isOptionSelected = selectedOption === option.id;
-                        const isOptionCorrect = question.correctAnswer === option.text;
+                <div>
+                    {/* Options Text Display */}
+                    <div style={{ marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                        {question.options.sort((a, b) => a.order - b.order).map((option, index) => {
+                            const label = String.fromCharCode(65 + index); // A, B, C...
+                            return (
+                                <div key={`text-${index}`} style={{ display: 'flex', gap: '0.5rem', fontSize: '1rem', lineHeight: '1.5', color: 'var(--text-main)' }}>
+                                    <span style={{ fontWeight: 600, minWidth: '24px' }}>({label})</span>
+                                    <span>{option.text}</span>
+                                </div>
+                            );
+                        })}
+                    </div>
 
-                        let bgColor = 'rgba(255, 255, 255, 0.5)';
-                        let borderColor = 'var(--glass-border)';
+                    {/* Answer Buttons (Answer Sheet Style) */}
+                    <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '0.8rem' }}>
+                        {question.options.sort((a, b) => a.order - b.order).map((option, index) => {
+                            const label = String.fromCharCode(65 + index); // A, B, C...
+                            const isOptionSelected = selectedLabel === label;
 
-                        if (shouldShowAnswer) {
-                            if (isOptionCorrect) {
-                                bgColor = 'rgba(16, 185, 129, 0.15)';
-                                borderColor = '#10b981';
-                            } else if (isOptionSelected && !isCorrect) {
-                                bgColor = 'rgba(239, 68, 68, 0.15)';
-                                borderColor = '#ef4444';
+                            // Check correctness using Label or Text
+                            const isOptionCorrect = question.correctAnswer === label || question.correctAnswer === option.text;
+
+                            let bgColor = 'white';
+                            let borderColor = 'var(--glass-border)';
+                            let textColor = 'var(--text-main)';
+
+                            if (shouldShowAnswer) {
+                                if (isOptionCorrect) {
+                                    bgColor = '#10b981';
+                                    borderColor = '#10b981';
+                                    textColor = 'white';
+                                } else if (isOptionSelected) {
+                                    bgColor = '#ef4444';
+                                    borderColor = '#ef4444';
+                                    textColor = 'white';
+                                }
+                            } else if (isOptionSelected) {
+                                bgColor = 'var(--accent-color)';
+                                borderColor = 'var(--accent-color)';
+                                textColor = 'white';
                             }
-                        } else if (isOptionSelected) {
-                            borderColor = 'var(--accent-color)';
-                            bgColor = 'rgba(59, 130, 246, 0.1)';
-                        }
 
-                        return (
-                            <button
-                                key={option.id}
-                                disabled={shouldShowAnswer}
-                                onClick={() => handleSelectOption(option.id)}
-                                style={{
-                                    textAlign: 'center',
-                                    padding: '0.75rem 1.5rem',
-                                    borderRadius: '0.5rem',
-                                    border: `2px solid ${borderColor}`,
-                                    background: bgColor,
-                                    cursor: shouldShowAnswer ? 'default' : 'pointer',
-                                    transition: 'all 0.2s ease',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    gap: '0.35rem',
-                                    fontSize: '1rem',
-                                    fontWeight: 600,
-                                    color: 'var(--text-main)',
-                                    minWidth: '50px'
-                                }}
-                            >
-                                <span>{option.text}</span>
-                                {shouldShowAnswer && isOptionCorrect && <CheckCircle2 size={16} color="#10b981" />}
-                                {shouldShowAnswer && isOptionSelected && !isCorrect && <XCircle size={16} color="#ef4444" />}
-                            </button>
-                        );
-                    })}
+                            return (
+                                <button
+                                    key={`btn-${index}`}
+                                    disabled={shouldShowAnswer}
+                                    onClick={() => handleSelectOption(index)}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        width: '48px',
+                                        height: '48px',
+                                        borderRadius: '50%',
+                                        border: `2px solid ${borderColor}`,
+                                        background: bgColor,
+                                        cursor: shouldShowAnswer ? 'default' : 'pointer',
+                                        transition: 'all 0.2s ease',
+                                        fontSize: '1.1rem',
+                                        fontWeight: 600,
+                                        color: textColor,
+                                        boxShadow: isOptionSelected ? '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' : 'none'
+                                    }}
+                                >
+                                    {label}
+                                </button>
+                            );
+                        })}
+                    </div>
                 </div>
             ) : (
                 <div style={{ marginBottom: '1.5rem' }}>
@@ -405,22 +419,22 @@ export default function QuestionCard({
                         {canReveal ? (
                             <button
                                 onClick={handleReveal}
-                                disabled={(question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer}
+                                disabled={(question.type === "CHOICE" ? selectedLabel === null : !fillAnswer.trim()) || shouldShowAnswer}
                                 style={{
                                     padding: '0.6rem 1.5rem',
                                     borderRadius: '0.75rem',
-                                    background: ((question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer) ? '#94a3b8' : 'var(--accent-color)',
+                                    background: ((question.type === "CHOICE" ? selectedLabel === null : !fillAnswer.trim()) || shouldShowAnswer) ? '#94a3b8' : 'var(--accent-color)',
                                     color: 'white',
                                     border: 'none',
                                     fontWeight: 600,
-                                    cursor: ((question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer) ? 'default' : 'pointer'
+                                    cursor: ((question.type === "CHOICE" ? selectedLabel === null : !fillAnswer.trim()) || shouldShowAnswer) ? 'default' : 'pointer'
                                 }}
                             >
                                 查看解答
                             </button>
                         ) : (
                             <div style={{ color: '#94a3b8', fontSize: '0.875rem' }}>
-                                {selectedOption || fillAnswer.trim() ? '已作答' : '請作答'}
+                                {selectedLabel || fillAnswer.trim() ? '已作答' : '請作答'}
                             </div>
                         )}
 

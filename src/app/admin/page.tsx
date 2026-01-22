@@ -89,7 +89,7 @@ export default function AdminPage() {
             setShowNewExamModal(false);
             setNewExam({ title: "", year: new Date().getFullYear(), category: "WRITTEN", template: "DEFAULT" });
             // Navigate to edit the new exam
-            router.push(`/admin/exam/${examId}`);
+            router.push(`/admin/exam/edit/?id=${examId}`);
         } catch (error) {
             console.error("Error creating exam:", error);
             setMessage({ type: 'error', text: '建立試卷失敗' });
@@ -222,7 +222,7 @@ export default function AdminPage() {
                                                 <td style={{ padding: '0.75rem 1rem', textAlign: 'center' }}>
                                                     <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
                                                         <Link
-                                                            href={`/admin/exam/${exam.id}`}
+                                                            href={`/admin/exam/edit/?id=${exam.id}`}
                                                             style={{
                                                                 display: 'flex',
                                                                 alignItems: 'center',
@@ -273,143 +273,145 @@ export default function AdminPage() {
             })}
 
             {/* New Exam Modal */}
-            {showNewExamModal && (
-                <div style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    background: 'rgba(0,0,0,0.5)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    zIndex: 1000,
-                    padding: '1rem'
-                }}>
-                    <div className="premium-card" style={{ padding: '1.5rem', width: '100%', maxWidth: '400px' }}>
-                        <h2 style={{ margin: '0 0 1.5rem 0', fontSize: '1.25rem' }}>新增試卷</h2>
+            {
+                showNewExamModal && (
+                    <div style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: 'rgba(0,0,0,0.5)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 1000,
+                        padding: '1rem'
+                    }}>
+                        <div className="premium-card" style={{ padding: '1.5rem', width: '100%', maxWidth: '400px' }}>
+                            <h2 style={{ margin: '0 0 1.5rem 0', fontSize: '1.25rem' }}>新增試卷</h2>
 
-                        <div style={{ marginBottom: '1rem' }}>
-                            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
-                                試卷名稱
-                            </label>
-                            <input
-                                type="text"
-                                value={newExam.title}
-                                onChange={(e) => setNewExam({ ...newExam, title: e.target.value })}
-                                placeholder="例：113年第一次醫師國考"
-                                style={{
-                                    width: '100%',
-                                    padding: '0.75rem',
-                                    borderRadius: '0.5rem',
-                                    border: '1px solid #e2e8f0',
-                                    fontSize: '0.95rem',
-                                    boxSizing: 'border-box'
-                                }}
-                            />
-                        </div>
+                            <div style={{ marginBottom: '1rem' }}>
+                                <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
+                                    試卷名稱
+                                </label>
+                                <input
+                                    type="text"
+                                    value={newExam.title}
+                                    onChange={(e) => setNewExam({ ...newExam, title: e.target.value })}
+                                    placeholder="例：113年第一次醫師國考"
+                                    style={{
+                                        width: '100%',
+                                        padding: '0.75rem',
+                                        borderRadius: '0.5rem',
+                                        border: '1px solid #e2e8f0',
+                                        fontSize: '0.95rem',
+                                        boxSizing: 'border-box'
+                                    }}
+                                />
+                            </div>
 
-                        <div style={{ marginBottom: '1rem' }}>
-                            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
-                                年份
-                            </label>
-                            <input
-                                type="number"
-                                value={newExam.year}
-                                onChange={(e) => setNewExam({ ...newExam, year: parseInt(e.target.value) || new Date().getFullYear() })}
-                                style={{
-                                    width: '100%',
-                                    padding: '0.75rem',
-                                    borderRadius: '0.5rem',
-                                    border: '1px solid #e2e8f0',
-                                    fontSize: '0.95rem',
-                                    boxSizing: 'border-box'
-                                }}
-                            />
-                        </div>
+                            <div style={{ marginBottom: '1rem' }}>
+                                <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
+                                    年份
+                                </label>
+                                <input
+                                    type="number"
+                                    value={newExam.year}
+                                    onChange={(e) => setNewExam({ ...newExam, year: parseInt(e.target.value) || new Date().getFullYear() })}
+                                    style={{
+                                        width: '100%',
+                                        padding: '0.75rem',
+                                        borderRadius: '0.5rem',
+                                        border: '1px solid #e2e8f0',
+                                        fontSize: '0.95rem',
+                                        boxSizing: 'border-box'
+                                    }}
+                                />
+                            </div>
 
-                        <div style={{ marginBottom: '1.5rem' }}>
-                            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
-                                分類
-                            </label>
-                            <select
-                                value={newExam.category}
-                                onChange={(e) => setNewExam({ ...newExam, category: e.target.value })}
-                                style={{
-                                    width: '100%',
-                                    padding: '0.75rem',
-                                    borderRadius: '0.5rem',
-                                    border: '1px solid #e2e8f0',
-                                    fontSize: '0.95rem',
-                                    boxSizing: 'border-box',
-                                    background: 'white'
-                                }}
-                            >
-                                {CATEGORIES.map(cat => (
-                                    <option key={cat.value} value={cat.value}>{cat.label}</option>
-                                ))}
-                            </select>
-                        </div>
+                            <div style={{ marginBottom: '1.5rem' }}>
+                                <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
+                                    分類
+                                </label>
+                                <select
+                                    value={newExam.category}
+                                    onChange={(e) => setNewExam({ ...newExam, category: e.target.value })}
+                                    style={{
+                                        width: '100%',
+                                        padding: '0.75rem',
+                                        borderRadius: '0.5rem',
+                                        border: '1px solid #e2e8f0',
+                                        fontSize: '0.95rem',
+                                        boxSizing: 'border-box',
+                                        background: 'white'
+                                    }}
+                                >
+                                    {CATEGORIES.map(cat => (
+                                        <option key={cat.value} value={cat.value}>{cat.label}</option>
+                                    ))}
+                                </select>
+                            </div>
 
-                        <div style={{ marginBottom: '1.5rem' }}>
-                            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
-                                模板
-                            </label>
-                            <select
-                                value={newExam.template}
-                                onChange={(e) => setNewExam({ ...newExam, template: e.target.value })}
-                                style={{
-                                    width: '100%',
-                                    padding: '0.75rem',
-                                    borderRadius: '0.5rem',
-                                    border: '1px solid #e2e8f0',
-                                    fontSize: '0.95rem',
-                                    boxSizing: 'border-box',
-                                    background: 'white'
-                                }}
-                            >
-                                {TEMPLATES.map(tmpl => (
-                                    <option key={tmpl.value} value={tmpl.value}>{tmpl.label}</option>
-                                ))}
-                            </select>
-                        </div>
+                            <div style={{ marginBottom: '1.5rem' }}>
+                                <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
+                                    模板
+                                </label>
+                                <select
+                                    value={newExam.template}
+                                    onChange={(e) => setNewExam({ ...newExam, template: e.target.value })}
+                                    style={{
+                                        width: '100%',
+                                        padding: '0.75rem',
+                                        borderRadius: '0.5rem',
+                                        border: '1px solid #e2e8f0',
+                                        fontSize: '0.95rem',
+                                        boxSizing: 'border-box',
+                                        background: 'white'
+                                    }}
+                                >
+                                    {TEMPLATES.map(tmpl => (
+                                        <option key={tmpl.value} value={tmpl.value}>{tmpl.label}</option>
+                                    ))}
+                                </select>
+                            </div>
 
-                        <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'flex-end' }}>
-                            <button
-                                onClick={() => setShowNewExamModal(false)}
-                                style={{
-                                    padding: '0.75rem 1.25rem',
-                                    background: '#f1f5f9',
-                                    color: '#64748b',
-                                    border: 'none',
-                                    borderRadius: '0.5rem',
-                                    cursor: 'pointer',
-                                    fontWeight: 500
-                                }}
-                            >
-                                取消
-                            </button>
-                            <button
-                                onClick={handleCreateExam}
-                                disabled={creating}
-                                style={{
-                                    padding: '0.75rem 1.25rem',
-                                    background: 'var(--accent-color)',
-                                    color: 'white',
-                                    border: 'none',
-                                    borderRadius: '0.5rem',
-                                    cursor: creating ? 'not-allowed' : 'pointer',
-                                    fontWeight: 500,
-                                    opacity: creating ? 0.7 : 1
-                                }}
-                            >
-                                {creating ? '建立中...' : '建立'}
-                            </button>
+                            <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'flex-end' }}>
+                                <button
+                                    onClick={() => setShowNewExamModal(false)}
+                                    style={{
+                                        padding: '0.75rem 1.25rem',
+                                        background: '#f1f5f9',
+                                        color: '#64748b',
+                                        border: 'none',
+                                        borderRadius: '0.5rem',
+                                        cursor: 'pointer',
+                                        fontWeight: 500
+                                    }}
+                                >
+                                    取消
+                                </button>
+                                <button
+                                    onClick={handleCreateExam}
+                                    disabled={creating}
+                                    style={{
+                                        padding: '0.75rem 1.25rem',
+                                        background: 'var(--accent-color)',
+                                        color: 'white',
+                                        border: 'none',
+                                        borderRadius: '0.5rem',
+                                        cursor: creating ? 'not-allowed' : 'pointer',
+                                        fontWeight: 500,
+                                        opacity: creating ? 0.7 : 1
+                                    }}
+                                >
+                                    {creating ? '建立中...' : '建立'}
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            )}
-        </div>
+                )
+            }
+        </div >
     );
 }

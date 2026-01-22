@@ -24,7 +24,8 @@ import {
     ChevronUp,
     ChevronDown,
     AlertCircle,
-    Check
+    Check,
+    Play
 } from "lucide-react";
 
 const CATEGORIES = [
@@ -402,23 +403,44 @@ export default function ExamEditPageClient({ id }: { id: string }) {
                                 <span>{questions.length} 題</span>
                             </div>
                         </div>
-                        <button
-                            onClick={() => setEditingExam(true)}
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.5rem',
-                                padding: '0.5rem 1rem',
-                                background: '#f0f9ff',
-                                color: '#0284c7',
-                                border: 'none',
-                                borderRadius: '0.5rem',
-                                cursor: 'pointer',
-                                fontWeight: 500
-                            }}
-                        >
-                            <Edit size={16} /> 編輯資訊
-                        </button>
+                        <div style={{ display: 'flex', gap: '0.75rem' }}>
+                            <Link
+                                href={`/${exam.category === 'WRITTEN' ? 'written' : exam.category === 'PRACTICAL' ? 'practical' : 'others'}?id=${exam.id}&mode=review`}
+                                target="_blank"
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.5rem',
+                                    padding: '0.5rem 1rem',
+                                    background: '#ecfdf5',
+                                    color: '#059669',
+                                    borderRadius: '0.5rem',
+                                    textDecoration: 'none',
+                                    fontWeight: 500,
+                                    fontSize: '0.9rem'
+                                }}
+                            >
+                                <Play size={16} /> 預覽試題
+                            </Link>
+                            <button
+                                onClick={() => setEditingExam(true)}
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.5rem',
+                                    padding: '0.5rem 1rem',
+                                    background: '#f0f9ff',
+                                    color: '#0284c7',
+                                    border: 'none',
+                                    borderRadius: '0.5rem',
+                                    cursor: 'pointer',
+                                    fontWeight: 500,
+                                    fontSize: '0.9rem'
+                                }}
+                            >
+                                <Edit size={16} /> 編輯資訊
+                            </button>
+                        </div>
                     </div>
                 )}
             </div>
@@ -801,30 +823,32 @@ function QuestionForm({
                         正確答案
                     </label>
                     {form.type === "CHOICE" ? (
-                        <select
-                            value={form.correctAnswer}
-                            onChange={(e) => setForm({ ...form, correctAnswer: e.target.value })}
-                            style={{
-                                padding: '0.5rem 0.75rem',
-                                borderRadius: '0.375rem',
-                                border: '1px solid #e2e8f0',
-                                fontSize: '0.9rem',
-                                background: 'white'
-                            }}
-                        >
-                            <option value="">選擇答案</option>
+                        <div style={{ display: 'flex', gap: '0.5rem' }}>
                             {form.options.map((_, index) => (
-                                <option key={index} value={String.fromCharCode(65 + index)}>
+                                <button
+                                    key={index}
+                                    onClick={() => setForm({ ...form, correctAnswer: String.fromCharCode(65 + index) })}
+                                    style={{
+                                        width: '36px',
+                                        height: '36px',
+                                        borderRadius: '0.5rem',
+                                        border: '1px solid #e2e8f0',
+                                        background: form.correctAnswer === String.fromCharCode(65 + index) ? 'var(--accent-color)' : 'white',
+                                        color: form.correctAnswer === String.fromCharCode(65 + index) ? 'white' : 'var(--text-main)',
+                                        fontWeight: 600,
+                                        cursor: 'pointer'
+                                    }}
+                                >
                                     {String.fromCharCode(65 + index)}
-                                </option>
+                                </button>
                             ))}
-                        </select>
+                        </div>
                     ) : (
                         <input
                             type="text"
                             value={form.correctAnswer}
                             onChange={(e) => setForm({ ...form, correctAnswer: e.target.value })}
-                            placeholder="輸入正確答案"
+                            placeholder="輸入正確答案文字"
                             style={{
                                 width: '100%',
                                 padding: '0.75rem',
@@ -837,16 +861,16 @@ function QuestionForm({
                     )}
                 </div>
 
-                {/* Answer Explanation */}
+                {/* Explanation */}
                 <div>
                     <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
-                        答案解析 (選填)
+                        答案解析
                     </label>
                     <textarea
                         value={form.answerExplanation}
                         onChange={(e) => setForm({ ...form, answerExplanation: e.target.value })}
-                        rows={3}
-                        placeholder="輸入解析說明..."
+                        rows={4}
+                        placeholder="輸入詳細解析內容..."
                         style={{
                             width: '100%',
                             padding: '0.75rem',
@@ -859,45 +883,38 @@ function QuestionForm({
                         }}
                     />
                 </div>
-            </div>
 
-            <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1.5rem' }}>
-                <button
-                    onClick={onSave}
-                    disabled={saving}
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        padding: '0.75rem 1.25rem',
-                        background: 'var(--accent-color)',
-                        color: 'white',
-                        border: 'none',
-                        borderRadius: '0.5rem',
-                        cursor: saving ? 'not-allowed' : 'pointer',
-                        fontWeight: 500,
-                        opacity: saving ? 0.7 : 1
-                    }}
-                >
-                    <Save size={16} /> {saving ? '儲存中...' : '儲存'}
-                </button>
-                <button
-                    onClick={onCancel}
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        padding: '0.75rem 1.25rem',
-                        background: '#f1f5f9',
-                        color: '#64748b',
-                        border: 'none',
-                        borderRadius: '0.5rem',
-                        cursor: 'pointer',
-                        fontWeight: 500
-                    }}
-                >
-                    <X size={16} /> 取消
-                </button>
+                <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'flex-end', marginTop: '1rem' }}>
+                    <button
+                        onClick={onCancel}
+                        style={{
+                            padding: '0.6rem 1.25rem',
+                            background: '#f1f5f9',
+                            color: '#64748b',
+                            border: 'none',
+                            borderRadius: '0.5rem',
+                            cursor: 'pointer',
+                            fontWeight: 500
+                        }}
+                    >
+                        取消
+                    </button>
+                    <button
+                        onClick={onSave}
+                        disabled={saving}
+                        style={{
+                            padding: '0.6rem 1.25rem',
+                            background: 'var(--accent-color)',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '0.5rem',
+                            cursor: saving ? 'not-allowed' : 'pointer',
+                            fontWeight: 600
+                        }}
+                    >
+                        {saving ? '儲存中...' : '儲存題目'}
+                    </button>
+                </div>
             </div>
         </div>
     );
