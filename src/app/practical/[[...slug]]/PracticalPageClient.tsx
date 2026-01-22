@@ -27,6 +27,7 @@ export default function PracticalUnifiedPage() {
     const [exams, setExams] = useState<Exam[]>([]);
     const [exam, setExam] = useState<(Exam & { questions: Question[] }) | null>(null);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         if (!isMounted) return;
@@ -36,6 +37,10 @@ export default function PracticalUnifiedPage() {
             getExams("PRACTICAL").then((data) => {
                 setExams(data);
                 setExam(null);
+                setLoading(false);
+            }).catch(err => {
+                console.error("Failed to fetch exams:", err);
+                setError("無法載入測驗列表，請稍後再試");
                 setLoading(false);
             });
         } else {
@@ -49,6 +54,10 @@ export default function PracticalUnifiedPage() {
                 }
                 setExam({ ...examData, questions });
                 setLoading(false);
+            }).catch(err => {
+                console.error("Failed to fetch detail:", err);
+                setError("無法載入測驗內容，請稍後再試");
+                setLoading(false);
             });
         }
     }, [examId, router]);
@@ -57,6 +66,17 @@ export default function PracticalUnifiedPage() {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
                 <p>載入中...</p>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh', flexDirection: 'column', gap: '1rem' }}>
+                <p style={{ color: '#ef4444' }}>{error}</p>
+                <button onClick={() => window.location.reload()} style={{ padding: '0.5rem 1rem', border: '1px solid #ccc', borderRadius: '4px' }}>
+                    重新整理
+                </button>
             </div>
         );
     }
