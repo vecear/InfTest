@@ -123,9 +123,9 @@ export default function QuestionCard({
             const updated = await updateQuestionExplanation(question.id, editedExplanation);
             question.answerExplanation = updated.answerExplanation;
             setIsEditingExplanation(false);
-        } catch (error) {
+        } catch (error: any) {
             console.error('Error saving explanation:', error);
-            alert('儲存失敗，請稍後再試');
+            alert(`儲存失敗: ${error.message || "未知錯誤"}`);
         } finally {
             setIsSaving(false);
         }

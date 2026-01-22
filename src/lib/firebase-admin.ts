@@ -11,8 +11,10 @@ if (!admin.apps.length) {
             console.log("Firebase Admin initialized with service account file");
         } catch (fileError) {
             // Fallback to default credentials (works in Firebase/GCP environments)
-            admin.initializeApp();
-            console.log("Firebase Admin initialized with default credentials");
+            admin.initializeApp({
+                projectId: "inftest-c77b1"
+            });
+            console.log("Firebase Admin initialized with projectId: inftest-c77b1");
         }
     } catch (error) {
         console.error("Firebase admin initialization error", error);

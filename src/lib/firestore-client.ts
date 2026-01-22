@@ -1,4 +1,4 @@
-import { db } from "@/firebase";
+import { db, auth } from "@/firebase";
 import {
     collection,
     doc,
@@ -12,6 +12,8 @@ import {
     getCountFromServer,
     Timestamp
 } from "firebase/firestore";
+
+
 
 export interface Exam {
     id: string;
@@ -47,6 +49,26 @@ export interface Comment {
     content: string;
     author: string;
     createdAt: string;
+}
+
+export interface UserScore {
+    id?: string;
+    userId: string;
+    examId: string;
+    examTitle: string;
+    category: string;
+    score: number;
+    totalQuestions: number;
+    correctCount: number;
+    createdAt: string | Timestamp;
+}
+
+export interface UserProfile {
+    uid: string;
+    displayName: string;
+    email: string;
+    photoURL?: string;
+    updatedAt: string | Timestamp;
 }
 
 export async function getExams(category?: string): Promise<Exam[]> {
@@ -140,4 +162,60 @@ export async function updateQuestionExplanation(id: string, explanation: string)
         updatedAt: Timestamp.now()
     });
     return { id, answerExplanation: explanation };
+}
+
+export async function saveUserScore(scoreData: Omit<UserScore, "id" | "createdAt">): Promise<void> {
+    const scoresRef = collection(db, "userScores");
+    await addDoc(scoresRef, {
+        ...scoreData,
+        createdAt: Timestamp.now()
+    });
+}
+
+export async function updateUserProfile(profile: UserProfile): Promise<void> {
+    const docRef = doc(db, "users", profile.uid);
+    const { setDoc } = await import("firebase/firestore");
+    await setDoc(docRef, {
+        ...profile,
+        updatedAt: Timestamp.now()
+    }, { merge: true });
+}
+
+export async function getUserScoreHistory(userId: string): Promise<UserScore[]> {
+    const scoresRef = collection(db, "userScores");
+    // Sort in memory instead of Firestore to avoid composite index requirement
+    const q = query(scoresRef, where("userId", "==", userId));
+    const snapshot = await getDocs(q);
+
+    const scores = snapshot.docs.map((doc) => {
+        const data = doc.data();
+        return {
+            id: doc.id,
+            ...data,
+            createdAt: data.createdAt instanceof Timestamp
+                ? data.createdAt.toDate().toISOString()
+                : data.createdAt
+        } as UserScore;
+    });
+
+    // Sort descending by date
+    return scores.sort((a, b) => {
+        const dateA = typeof a.createdAt === 'string' ? new Date(a.createdAt).getTime() : 0;
+        const dateB = typeof b.createdAt === 'string' ? new Date(b.createdAt).getTime() : 0;
+        return dateB - dateA;
+    });
+}
+
+export async function getUserProfile(uid: string): Promise<UserProfile | null> {
+    const docRef = doc(db, "users", uid);
+    const docSnap = await getDoc(docRef);
+
+    if (!docSnap.exists()) return null;
+    const data = docSnap.data();
+    return {
+        ...data,
+        updatedAt: data.updatedAt instanceof Timestamp
+            ? data.updatedAt.toDate().toISOString()
+            : data.updatedAt
+    } as UserProfile;
 }

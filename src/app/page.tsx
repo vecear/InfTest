@@ -1,7 +1,16 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { BookOpen, PenTool, Database, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const categories = [
     {
       title: "歷屆筆試",
@@ -29,6 +38,17 @@ export default function Home() {
     },
   ];
 
+  if (!isMounted) {
+    return (
+      <div className="home-container">
+        <header className="home-header">
+          <h1 className="home-title">感染科互動測驗網</h1>
+        </header>
+        <div className="home-grid" />
+      </div>
+    );
+  }
+
   return (
     <div className="home-container">
       <header className="home-header">
@@ -40,11 +60,11 @@ export default function Home() {
         </p>
       </header>
 
-      <div className="home-grid" suppressHydrationWarning>
+      <div className="home-grid">
         {categories.map((cat) => (
-          <div key={cat.title} suppressHydrationWarning>
+          <div key={cat.title}>
             {cat.active ? (
-              <Link href={cat.href} className="premium-card cat-card" style={{ opacity: cat.active ? 1 : 0.7 }} suppressHydrationWarning>
+              <Link href={cat.href} className="premium-card cat-card" style={{ opacity: cat.active ? 1 : 0.7 }}>
                 <div className="cat-card-icon-wrapper" style={{ background: `${cat.color}15` }}>
                   <cat.icon size={32} color={cat.color} />
                 </div>
