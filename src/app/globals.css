@@ -11,6 +11,10 @@
   --shadow-premium: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -467,5 +471,134 @@ body {
   .exam-detail-container.timer-active {
     padding-top: 70px;
     /* Space for fixed timer */
+  }
+}
+
+
+/* Utility Classes */
+.mobile-only {
+  display: none;
+}
+
+.main-content {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: flex !important;
+    /* Most mobile nav items are flex */
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* Navbar specific refinements */
+  .navbar-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-top {
+      justify-content: space-between;
+      /* Changed from center to space-between for mobile layout */
+      padding: 0.75rem 1rem;
+      gap: 0;
+    }
+  }
+}
+
+.refresh-button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  margin-left: 8px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.refresh-button:hover {
+  color: var(--accent-color);
+  transform: rotate(180deg);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.cat-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-premium);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cat-card-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cat-card-description {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.cat-card-link-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .cat-card {
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 1rem;
+  }
+
+  .cat-card-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .cat-card-title {
+    font-size: 1.25rem;
   }
 }

@@ -38,7 +38,7 @@ export default function ExamList({ exams, title, description, iconColor, categor
                 {exams.map((exam) => (
                     <Link
                         key={exam.id}
-                        href={`${categoryPath}/${exam.id}`}
+                        href={`${categoryPath}?id=${exam.id}`}
                         style={{ textDecoration: 'none', color: 'inherit' }}
                     >
                         <div className="premium-card">

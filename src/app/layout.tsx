@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={outfit.className} suppressHydrationWarning>
         <AuthProvider>
           <Navbar />
-          <main style={{ paddingTop: '5rem', paddingBottom: '2rem' }}>
+          <main className="main-content" suppressHydrationWarning>
             {children}
           </main>
         </AuthProvider>

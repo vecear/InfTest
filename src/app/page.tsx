@@ -40,51 +40,44 @@ export default function Home() {
         </p>
       </header>
 
-      <div className="home-grid">
+      <div className="home-grid" suppressHydrationWarning>
         {categories.map((cat) => (
-          <div key={cat.title} className="premium-card" style={{
-            padding: '2.5rem',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1.5rem',
-            opacity: cat.active ? 1 : 0.7,
-            transition: 'all 0.3s ease'
-          }}>
-            <div style={{
-              width: '4rem',
-              height: '4rem',
-              borderRadius: '1rem',
-              background: `${cat.color}15`,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-              <cat.icon size={32} color={cat.color} />
-            </div>
+          <div key={cat.title} suppressHydrationWarning>
+            {cat.active ? (
+              <Link href={cat.href} className="premium-card cat-card" style={{ opacity: cat.active ? 1 : 0.7 }} suppressHydrationWarning>
+                <div className="cat-card-icon-wrapper" style={{ background: `${cat.color}15` }}>
+                  <cat.icon size={32} color={cat.color} />
+                </div>
 
-            <div>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>{cat.title}</h2>
-              <p style={{ color: 'var(--text-muted)', lineHeight: 1.6 }}>{cat.description}</p>
-            </div>
+                <div>
+                  <h2 className="cat-card-title">{cat.title}</h2>
+                  <p className="cat-card-description">{cat.description}</p>
+                </div>
 
-            <div style={{ marginTop: 'auto' }}>
-              {cat.active ? (
-                <Link href={cat.href} style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
-                  color: cat.color,
-                  fontWeight: 600,
-                  textDecoration: 'none'
-                }}>
-                  立即開始 <ChevronRight size={18} />
-                </Link>
-              ) : (
-                <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem', fontWeight: 500 }}>
-                  敬請期待
-                </span>
-              )}
-            </div>
+                <div style={{ marginTop: 'auto' }}>
+                  <div className="cat-card-link-text" style={{ color: cat.color }}>
+                    立即開始 <ChevronRight size={18} />
+                  </div>
+                </div>
+              </Link>
+            ) : (
+              <div className="premium-card cat-card" style={{ opacity: 0.7 }}>
+                <div className="cat-card-icon-wrapper" style={{ background: `${cat.color}15` }}>
+                  <cat.icon size={32} color={cat.color} />
+                </div>
+
+                <div>
+                  <h2 className="cat-card-title">{cat.title}</h2>
+                  <p className="cat-card-description">{cat.description}</p>
+                </div>
+
+                <div style={{ marginTop: 'auto' }}>
+                  <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem', fontWeight: 500 }}>
+                    敬請期待
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Microscope, BookOpen, PenTool, Database, LogIn, LogOut, User } from "lucide-react";
+import { Microscope, BookOpen, PenTool, Database, LogIn, LogOut, User, RefreshCw } from "lucide-react";
 import { auth } from "@/firebase";
 import { signOut } from "firebase/auth";
 import { useAuth } from "@/context/AuthContext";
@@ -58,35 +58,38 @@ export default function Navbar() {
     return (
         <>
             {/* Top Navbar */}
-            <nav style={{
-                position: 'fixed',
-                top: 0,
-                width: '100%',
-                zIndex: 1000,
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                borderBottom: '1px solid var(--glass-border)',
-                padding: '0.75rem 2rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: isMobile ? 'space-between' : 'flex-start', // Adjusted for mobile to have space-between
-                gap: isMobile ? '0' : '3rem',
-                boxSizing: 'border-box'
-            }} className="navbar-top">
-                {/* Logo Area - Centered on Mobile using spacer trick if needed, or just left/center */}
-                {/* To center logo on mobile with an item on the right, we need a 3-column grid or flex tweaks. */}
-                {/* Simpler: Logo in center, User icon on right absolute? */}
+            <nav className="navbar-top" suppressHydrationWarning>
+                {/* Desktop Logo */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }} className="desktop-only">
+                    <Microscope size={28} color="var(--accent-color)" />
+                    <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--primary-color)' }}>
+                        InfTest
+                    </span>
+                    <button
+                        onClick={() => window.location.reload()}
+                        className="refresh-button desktop-only"
+                        aria-label="重新整理"
+                    >
+                        <RefreshCw size={20} />
+                    </button>
+                </div>
 
-                {isMobile ? (
-                    <>
-                        <div style={{ width: '24px' }} /> {/* Spacer left */}
+                {/* Mobile Logo & Refresh */}
+                <div className="mobile-only" style={{ display: 'none', width: '100%' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                        <div style={{ width: '24px' }} /> {/* Spacer */}
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                             <Microscope size={24} color="var(--accent-color)" />
                             <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--primary-color)' }}>
                                 InfTest
                             </span>
+                            <button
+                                onClick={() => window.location.reload()}
+                                style={{ background: 'none', border: 'none', padding: '4px', color: 'var(--text-muted)' }}
+                            >
+                                <RefreshCw size={18} />
+                            </button>
                         </div>
-                        {/* Mobile User Icon */}
                         <div style={{ width: '24px', display: 'flex', justifyContent: 'flex-end' }}>
                             {user ? (
                                 <button onClick={() => handleLogout()} style={{ background: 'none', border: 'none', padding: 0 }}>
@@ -97,21 +100,15 @@ export default function Navbar() {
                                     )}
                                 </button>
                             ) : (
-                                <Link href="/login">
+                                <Link href="/login" suppressHydrationWarning>
                                     <LogIn size={20} color="var(--accent-color)" />
                                 </Link>
                             )}
                         </div>
-                    </>
-                ) : (
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                        <Microscope size={28} color="var(--accent-color)" />
-                        <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--primary-color)' }}>
-                            InfTest
-                        </span>
                     </div>
-                )}
+                </div>
 
+                {/* Desktop Links */}
                 <div style={{ display: 'flex', gap: '1rem', flex: 1 }} className="desktop-only">
                     {links.map((link) => {
                         const Icon = link.icon;
@@ -121,6 +118,7 @@ export default function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 className={`nav-link ${isActive ? 'active' : ''}`}
+                                suppressHydrationWarning
                             >
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                                     <Icon size={18} />
@@ -131,113 +129,112 @@ export default function Navbar() {
                     })}
                 </div>
 
-                {/* Desktop User Menu (Right side) */}
-                {!isMobile && (
-                    <div className="desktop-only" style={{ marginLeft: 'auto' }}>
-                        {user ? (
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                                    {user.displayName || user.email}
-                                </span>
-                                <button
-                                    onClick={handleLogout}
-                                    style={{
-                                        padding: '0.5rem 1rem',
-                                        borderRadius: '0.5rem',
-                                        border: '1px solid var(--glass-border)',
-                                        background: 'rgba(255,255,255,0.5)',
-                                        cursor: 'pointer',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '0.5rem',
-                                        fontSize: '0.9rem',
-                                        color: 'var(--text-main)'
-                                    }}
-                                >
-                                    <LogOut size={16} />
-                                    登出
-                                </button>
-                            </div>
-                        ) : (
-                            <Link
-                                href="/login"
+                {/* Desktop User Menu */}
+                <div className="desktop-only" style={{ marginLeft: 'auto' }}>
+                    {user ? (
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                            <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                                {user.displayName || user.email}
+                            </span>
+                            <button
+                                onClick={handleLogout}
+                                className="logout-btn-desktop"
                                 style={{
-                                    padding: '0.5rem 1.25rem',
+                                    padding: '0.5rem 1rem',
                                     borderRadius: '0.5rem',
-                                    background: 'var(--accent-color)',
-                                    color: 'white',
-                                    textDecoration: 'none',
-                                    fontWeight: 600,
-                                    fontSize: '0.9rem',
+                                    border: '1px solid var(--glass-border)',
+                                    background: 'rgba(255,255,255,0.5)',
+                                    cursor: 'pointer',
                                     display: 'flex',
                                     alignItems: 'center',
-                                    gap: '0.5rem'
+                                    gap: '0.5rem',
+                                    fontSize: '0.9rem',
+                                    color: 'var(--text-main)'
                                 }}
                             >
-                                <LogIn size={16} />
-                                登入
-                            </Link>
-                        )}
-                    </div>
-                )}
+                                <LogOut size={16} />
+                                登出
+                            </button>
+                        </div>
+                    ) : (
+                        <Link
+                            href="/login"
+                            style={{
+                                padding: '0.5rem 1.25rem',
+                                borderRadius: '0.5rem',
+                                background: 'var(--accent-color)',
+                                color: 'white',
+                                textDecoration: 'none',
+                                fontWeight: 600,
+                                fontSize: '0.9rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem'
+                            }}
+                            suppressHydrationWarning
+                        >
+                            <LogIn size={16} />
+                            登入
+                        </Link>
+                    )}
+                </div>
             </nav>
 
             {/* Bottom Nav for Mobile */}
-            {isMobile && (
-                <>
-                    {/* Toggle Button for detail mode */}
-                    {isDetailPage && (
-                        <button
-                            onClick={() => setIsBottomNavVisible(!isBottomNavVisible)}
-                            style={{
-                                position: 'fixed',
-                                bottom: isBottomNavVisible ? '80px' : '20px',
-                                right: '20px',
-                                width: '44px',
-                                height: '44px',
-                                borderRadius: '50%',
-                                background: 'var(--accent-color)',
-                                color: 'white',
-                                border: 'none',
-                                boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)',
-                                zIndex: 1001,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                transform: isBottomNavVisible ? 'rotate(180deg)' : 'rotate(0deg)'
-                            }}
+            <div className={`bottom-nav mobile-only`} style={{
+                transform: (isDetailPage && !isBottomNavVisible) ? 'translateY(100%)' : 'translateY(0)',
+                opacity: (isDetailPage && !isBottomNavVisible) ? 0 : 1,
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                pointerEvents: (isDetailPage && !isBottomNavVisible) ? 'none' : 'auto'
+            }} suppressHydrationWarning>
+                {links.map((link) => {
+                    const Icon = link.icon;
+                    const isActive = pathname === link.href;
+                    return (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className={`bottom-nav-item ${isActive ? 'active' : ''}`}
+                            onClick={() => isDetailPage && setIsBottomNavVisible(false)}
+                            suppressHydrationWarning
                         >
-                            <div style={{ transition: 'transform 0.3s ease', transform: isBottomNavVisible ? 'rotate(180deg)' : 'rotate(0deg)' }}>
-                                <Microscope size={20} />
-                            </div>
-                        </button>
-                    )}
+                            <Icon size={22} className="bottom-nav-icon" />
+                            <span>{link.label}</span>
+                        </Link>
+                    );
+                })}
+            </div>
 
-                    <div className="bottom-nav" style={{
-                        transform: (isDetailPage && !isBottomNavVisible) ? 'translateY(100%)' : 'translateY(0)',
-                        opacity: (isDetailPage && !isBottomNavVisible) ? 0 : 1,
-                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                        pointerEvents: (isDetailPage && !isBottomNavVisible) ? 'none' : 'auto'
-                    }}>
-                        {links.map((link) => {
-                            const Icon = link.icon;
-                            const isActive = pathname === link.href;
-                            return (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    className={`bottom-nav-item ${isActive ? 'active' : ''}`}
-                                    onClick={() => isDetailPage && setIsBottomNavVisible(false)}
-                                >
-                                    <Icon size={22} className="bottom-nav-icon" />
-                                    <span>{link.label}</span>
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </>
-            )}
+            {/* Toggle Button for detail mode on mobile */}
+            <div className="mobile-only">
+                {isDetailPage && (
+                    <button
+                        onClick={() => setIsBottomNavVisible(!isBottomNavVisible)}
+                        style={{
+                            position: 'fixed',
+                            bottom: isBottomNavVisible ? '80px' : '20px',
+                            right: '20px',
+                            width: '44px',
+                            height: '44px',
+                            borderRadius: '50%',
+                            background: 'var(--accent-color)',
+                            color: 'white',
+                            border: 'none',
+                            boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)',
+                            zIndex: 1001,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                            transform: isBottomNavVisible ? 'rotate(180deg)' : 'rotate(0deg)'
+                        }}
+                    >
+                        <div style={{ transition: 'transform 0.3s ease', transform: isBottomNavVisible ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+                            <Microscope size={20} />
+                        </div>
+                    </button>
+                )}
+            </div>
         </>
     );
 }

@@ -1,40 +1,36 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useState, useEffect, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { getExams, getExamById, getQuestionsByExamId, Exam, Question } from "@/lib/firestore-client";
 import ExamList from "@/components/ExamList";
 import ExamDetail from "@/components/ExamDetail";
 
-export default function OthersUnifiedPage() {
-    const params = useParams();
+function OthersPageContent() {
     const router = useRouter();
-    const slug = params.slug as string[] | undefined;
+    const searchParams = useSearchParams();
+    const examId = searchParams.get("id") || undefined;
 
-    const [examId, setExamId] = useState<string | undefined>(undefined);
     const [isMounted, setIsMounted] = useState(false);
-
-    useEffect(() => {
-        setIsMounted(true);
-        const pathParts = window.location.pathname.split('/').filter(Boolean);
-        if (pathParts[0] === 'others' && pathParts[1]) {
-            setExamId(pathParts[1]);
-        } else if (slug?.[0]) {
-            setExamId(slug[0]);
-        }
-    }, [slug]);
-
     const [exams, setExams] = useState<Exam[]>([]);
     const [exam, setExam] = useState<(Exam & { questions: Question[] }) | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
+        setIsMounted(true);
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        if (pathParts[0] === 'others' && pathParts[1] && !examId) {
+            router.replace(`/others?id=${pathParts[1]}`);
+        }
+    }, [examId, router]);
+
+    useEffect(() => {
         if (!isMounted) return;
 
         setLoading(true);
         if (!examId) {
-            getExams("OTHER").then((data) => {
+            getExams("OTHERS").then((data) => {
                 setExams(data);
                 setExam(null);
                 setLoading(false);
@@ -55,16 +51,14 @@ export default function OthersUnifiedPage() {
                 setExam({ ...examData, questions });
                 setLoading(false);
             }).catch(err => {
-                console.error("Failed to fetch detail:", err);
+                console.error("Failed to fetch exam detail:", err);
                 setError("無法載入測驗內容，請稍後再試");
                 setLoading(false);
             });
         }
     }, [examId, router, isMounted]);
 
-    if (!isMounted) {
-        return null;
-    }
+    if (!isMounted) return null;
 
     if (loading) {
         return (
@@ -89,9 +83,9 @@ export default function OthersUnifiedPage() {
         return (
             <ExamList
                 exams={exams}
-                title="其他題目"
-                description="各類專題練習與模擬試題，持續更新中。"
-                iconColor="#f59e0b"
+                title="其他相關考題"
+                description="選擇年份開始進行測驗"
+                iconColor="#8b5cf6"
                 categoryPath="/others"
             />
         );
@@ -110,5 +104,17 @@ export default function OthersUnifiedPage() {
             exam={exam as any}
             backPath="/others"
         />
+    );
+}
+
+export default function OthersPageClient() {
+    return (
+        <Suspense fallback={
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
+                <p>載入中...</p>
+            </div>
+        }>
+            <OthersPageContent />
+        </Suspense>
     );
 }
