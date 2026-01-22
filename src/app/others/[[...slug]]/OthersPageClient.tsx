@@ -62,7 +62,11 @@ export default function OthersUnifiedPage() {
         }
     }, [examId, router]);
 
-    if (!isMounted || loading) {
+    if (!isMounted) {
+        return null;
+    }
+
+    if (loading) {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
                 <p>載入中...</p>

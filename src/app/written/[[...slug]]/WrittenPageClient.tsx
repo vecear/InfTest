@@ -67,7 +67,12 @@ export default function WrittenUnifiedPage() {
     }, [examId, router]);
 
     // If not mounted yet, render list to match server build output
-    if (!isMounted || loading) {
+    // If not mounted yet, return null to match server build output (avoid hydration mismatch)
+    if (!isMounted) {
+        return null;
+    }
+
+    if (loading) {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
                 <p>載入中...</p>

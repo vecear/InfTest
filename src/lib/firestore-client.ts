@@ -65,13 +65,19 @@ export async function getExams(category?: string): Promise<Exam[]> {
         ...doc.data()
     } as Exam));
 
-    // Fetch question counts for each exam
-    for (const exam of exams) {
-        const questionsRef = collection(db, "questions");
-        const countQuery = query(questionsRef, where("examId", "==", exam.id));
-        const countSnapshot = await getCountFromServer(countQuery);
-        exam._count = { questions: countSnapshot.data().count };
-    }
+    // Fetch question counts for each exam in parallel
+    await Promise.all(exams.map(async (exam) => {
+        try {
+            const questionsRef = collection(db, "questions");
+            const countQuery = query(questionsRef, where("examId", "==", exam.id));
+            const countSnapshot = await getCountFromServer(countQuery);
+            exam._count = { questions: countSnapshot.data().count };
+        } catch (err) {
+            console.warn(`Failed to count questions for exam ${exam.id}:`, err);
+            // Default to 0 or keeping undefined if appropriate, preventing the whole page from crashing
+            exam._count = { questions: 0 };
+        }
+    }));
 
     return exams;
 }
