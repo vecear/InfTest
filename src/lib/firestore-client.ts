@@ -37,8 +37,8 @@ export interface Question {
 }
 
 export interface QuestionOption {
-    id: string;
-    questionId: string;
+    id?: string;
+    questionId?: string;
     text: string;
     order: number;
 }
