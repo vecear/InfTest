@@ -60,7 +60,7 @@ export default function OthersUnifiedPage() {
                 setLoading(false);
             });
         }
-    }, [examId, router]);
+    }, [examId, router, isMounted]);
 
     if (!isMounted) {
         return null;

@@ -64,7 +64,7 @@ export default function WrittenUnifiedPage() {
                 setLoading(false);
             });
         }
-    }, [examId, router]);
+    }, [examId, router, isMounted]);
 
     // If not mounted yet, render list to match server build output
     // If not mounted yet, return null to match server build output (avoid hydration mismatch)
