@@ -28,6 +28,11 @@ const CATEGORIES = [
     { value: "OTHER", label: "其他題目", icon: Database },
 ];
 
+const TEMPLATES = [
+    { value: "DEFAULT", label: "預設樣式" },
+    { value: "WRITTEN_WITH_IMAGES", label: "歷屆筆試含圖" },
+];
+
 export default function AdminPage() {
     const { user, loading: authLoading, isAdmin } = useAuth();
     const router = useRouter();
@@ -35,7 +40,7 @@ export default function AdminPage() {
     const [exams, setExams] = useState<Exam[]>([]);
     const [loading, setLoading] = useState(true);
     const [showNewExamModal, setShowNewExamModal] = useState(false);
-    const [newExam, setNewExam] = useState({ title: "", year: new Date().getFullYear(), category: "WRITTEN" });
+    const [newExam, setNewExam] = useState({ title: "", year: new Date().getFullYear(), category: "WRITTEN", template: "DEFAULT" });
     const [creating, setCreating] = useState(false);
     const [deleting, setDeleting] = useState<string | null>(null);
     const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
@@ -82,7 +87,7 @@ export default function AdminPage() {
             });
             setMessage({ type: 'success', text: '試卷建立成功' });
             setShowNewExamModal(false);
-            setNewExam({ title: "", year: new Date().getFullYear(), category: "WRITTEN" });
+            setNewExam({ title: "", year: new Date().getFullYear(), category: "WRITTEN", template: "DEFAULT" });
             // Navigate to edit the new exam
             router.push(`/admin/exam/${examId}`);
         } catch (error) {
@@ -343,6 +348,29 @@ export default function AdminPage() {
                             >
                                 {CATEGORIES.map(cat => (
                                     <option key={cat.value} value={cat.value}>{cat.label}</option>
+                                ))}
+                            </select>
+                        </div>
+
+                        <div style={{ marginBottom: '1.5rem' }}>
+                            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
+                                模板
+                            </label>
+                            <select
+                                value={newExam.template}
+                                onChange={(e) => setNewExam({ ...newExam, template: e.target.value })}
+                                style={{
+                                    width: '100%',
+                                    padding: '0.75rem',
+                                    borderRadius: '0.5rem',
+                                    border: '1px solid #e2e8f0',
+                                    fontSize: '0.95rem',
+                                    boxSizing: 'border-box',
+                                    background: 'white'
+                                }}
+                            >
+                                {TEMPLATES.map(tmpl => (
+                                    <option key={tmpl.value} value={tmpl.value}>{tmpl.label}</option>
                                 ))}
                             </select>
                         </div>

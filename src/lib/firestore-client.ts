@@ -20,6 +20,7 @@ export interface Exam {
     title: string;
     year: number;
     category: string;
+    template?: string;
     _count?: { questions: number };
 }
 

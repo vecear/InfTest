@@ -135,6 +135,13 @@ export default function QuestionCard({
     const handleImageClick = async () => {
         if (!question.imageUrl) return;
 
+        // Check if clipboard API is available (requires HTTPS or localhost)
+        if (!navigator.clipboard?.write) {
+            // Fallback: open image in new tab
+            window.open(question.imageUrl, '_blank');
+            return;
+        }
+
         try {
             // Create an image element
             const img = new Image();
@@ -175,7 +182,8 @@ export default function QuestionCard({
             setTimeout(() => setCopySuccess(false), 2000);
         } catch (err) {
             console.error('Failed to copy image:', err);
-            alert('複製圖片失敗，請稍後再試');
+            // Fallback: open image in new tab
+            window.open(question.imageUrl, '_blank');
         }
     };
 
@@ -207,18 +215,8 @@ export default function QuestionCard({
 
     // Calculate and set initial scale when modal image loads
     const handleModalImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
-        const img = e.currentTarget;
-        const { naturalWidth, naturalHeight } = img;
-        const viewportWidth = window.innerWidth;
-        const viewportHeight = window.innerHeight;
-
-        // Calculate scale to FILL the viewport (cover behavior)
-        // Use Math.max so image covers entire viewport
-        const scaleX = viewportWidth / naturalWidth;
-        const scaleY = viewportHeight / naturalHeight;
-        const fillScale = Math.max(scaleX, scaleY);
-
-        setImageScale(fillScale);
+        // Set a fixed 1.2x zoom on modal open
+        setImageScale(1.2);
     };
 
     // Handle wheel zoom
@@ -314,26 +312,6 @@ export default function QuestionCard({
                                 transition: 'opacity 0.2s ease'
                             }}
                         />
-                        <button
-                            onClick={handleImageClick}
-                            style={{
-                                marginTop: '0.5rem',
-                                padding: '0.4rem 0.75rem',
-                                background: copySuccess ? '#10b981' : '#f1f5f9',
-                                color: copySuccess ? 'white' : '#64748b',
-                                border: 'none',
-                                borderRadius: '0.375rem',
-                                fontSize: '0.8rem',
-                                cursor: 'pointer',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.35rem',
-                                transition: 'all 0.2s ease'
-                            }}
-                        >
-                            <Copy size={14} />
-                            {copySuccess ? '已複製' : '複製圖片'}
-                        </button>
                     </div>
                 )}
             </div>
@@ -423,27 +401,56 @@ export default function QuestionCard({
             {/* Only show buttons if not in reading mode */}
             {mode !== 'reading' && (
                 <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    {canReveal ? (
-                        <button
-                            onClick={handleReveal}
-                            disabled={(question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer}
-                            style={{
-                                padding: '0.6rem 1.5rem',
-                                borderRadius: '0.75rem',
-                                background: ((question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer) ? '#94a3b8' : 'var(--accent-color)',
-                                color: 'white',
-                                border: 'none',
-                                fontWeight: 600,
-                                cursor: ((question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer) ? 'default' : 'pointer'
-                            }}
-                        >
-                            查看解答
-                        </button>
-                    ) : (
-                        <div style={{ color: '#94a3b8', fontSize: '0.875rem' }}>
-                            {selectedOption || fillAnswer.trim() ? '已作答' : '請作答'}
-                        </div>
-                    )}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                        {canReveal ? (
+                            <button
+                                onClick={handleReveal}
+                                disabled={(question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer}
+                                style={{
+                                    padding: '0.6rem 1.5rem',
+                                    borderRadius: '0.75rem',
+                                    background: ((question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer) ? '#94a3b8' : 'var(--accent-color)',
+                                    color: 'white',
+                                    border: 'none',
+                                    fontWeight: 600,
+                                    cursor: ((question.type === "CHOICE" ? selectedOption === null : !fillAnswer.trim()) || shouldShowAnswer) ? 'default' : 'pointer'
+                                }}
+                            >
+                                查看解答
+                            </button>
+                        ) : (
+                            <div style={{ color: '#94a3b8', fontSize: '0.875rem' }}>
+                                {selectedOption || fillAnswer.trim() ? '已作答' : '請作答'}
+                            </div>
+                        )}
+
+                        {question.imageUrl && (
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                <button
+                                    onClick={handleImageClick}
+                                    style={{
+                                        padding: '0.4rem 0.75rem',
+                                        background: copySuccess ? '#10b981' : '#f1f5f9',
+                                        color: copySuccess ? 'white' : '#64748b',
+                                        border: 'none',
+                                        borderRadius: '0.375rem',
+                                        fontSize: '0.8rem',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '0.35rem',
+                                        transition: 'all 0.2s ease'
+                                    }}
+                                >
+                                    <Copy size={14} />
+                                    {copySuccess ? '已複製' : '複製圖片'}
+                                </button>
+                                <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
+                                    點擊圖片可放大
+                                </span>
+                            </div>
+                        )}
+                    </div>
 
                     {canShowComments ? (
                         <button
