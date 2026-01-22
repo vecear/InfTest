@@ -58,10 +58,9 @@ export default function ProfilePage() {
     const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
     const [isLinking, setIsLinking] = useState(false);
     const [newEmail, setNewEmail] = useState("");
-    const [showEmailForm, setShowEmailForm] = useState(false);
+    const [activePopover, setActivePopover] = useState<'email' | 'password' | null>(null);
     const [currentPassword, setCurrentPassword] = useState("");
     const [newPassword, setNewPassword] = useState("");
-    const [showPasswordForm, setShowPasswordForm] = useState(false);
     const [authProviders, setAuthProviders] = useState<string[]>([]);
 
     useEffect(() => {
@@ -181,9 +180,8 @@ export default function ProfilePage() {
                 photoURL: user.photoURL || undefined,
                 updatedAt: new Date().toISOString()
             });
-            setMessage({ type: 'success', text: "Email 已更新" });
-            setShowEmailForm(false);
-            setNewEmail("");
+            setActivePopover(null);
+            setMessage({ type: 'success', text: "Email 更新成功，請檢查收件匣驗證新信箱" });
         } catch (error: any) {
             if (error.code === 'auth/requires-recent-login') {
                 setMessage({ type: 'error', text: "為了安全，請重新登入後再試。" });
@@ -192,6 +190,7 @@ export default function ProfilePage() {
             }
         } finally {
             setIsLinking(false);
+            setNewEmail("");
             setTimeout(() => setMessage(null), 3000);
         }
     };
@@ -227,7 +226,7 @@ export default function ProfilePage() {
                 await linkWithCredential(user, credential);
                 setMessage({ type: 'success', text: "密碼已設定，現在可以使用 Email登入" });
             }
-            setShowPasswordForm(false);
+            setActivePopover(null);
             setCurrentPassword("");
             setNewPassword("");
             updateProviderStatus(auth.currentUser!);
@@ -249,7 +248,7 @@ export default function ProfilePage() {
 
     if (authLoading || (loading && !scores.length)) {
         return (
-            <div className="profile-container loading-wrapper">
+            <div className="profile-container loading-wrapper" suppressHydrationWarning>
                 <div style={{ textAlign: 'center' }}>
                     <div className="spinner" />
                     <p style={{ color: 'var(--text-muted)' }}>載入中...</p>
@@ -264,7 +263,7 @@ export default function ProfilePage() {
     const hasPassword = authProviders.includes('password');
 
     return (
-        <div className="profile-container">
+        <div className="profile-container" suppressHydrationWarning>
             <Link href="/" className="back-link">
                 <ArrowLeft size={16} /> 返回首頁
             </Link>
@@ -285,193 +284,186 @@ export default function ProfilePage() {
                 </div>
             )}
 
-            <header className="premium-card profile-header">
-                {user.photoURL ? (
-                    <img src={user.photoURL} alt="Avatar" className="profile-avatar-large" />
-                ) : (
-                    <div className="profile-avatar-large" style={{ background: 'var(--accent-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '2.5rem', fontWeight: 800 }}>
-                        {displayName.charAt(0).toUpperCase()}
-                    </div>
-                )}
-
-                <div className="profile-info">
-                    <div className="profile-name-row">
-                        {isEditing ? (
-                            <>
-                                <input
-                                    type="text"
-                                    value={displayName}
-                                    onChange={(e) => setDisplayName(e.target.value)}
-                                    className="profile-name-input"
-                                    autoFocus
-                                    onKeyDown={(e) => e.key === 'Enter' && handleSaveProfile()}
-                                />
-                                <button onClick={handleSaveProfile} disabled={saving} className="refresh-button" style={{ color: '#10b981' }} title="儲存">
-                                    <Save size={20} />
-                                </button>
-                                <button onClick={() => { setIsEditing(false); fetchUserData(); }} className="refresh-button" style={{ color: '#ef4444' }} title="取消">
-                                    <X size={20} />
-                                </button>
-                            </>
-                        ) : (
-                            <>
-                                <h1 className="profile-name-input" style={{ border: 'none', background: 'transparent', cursor: 'pointer' }} onClick={() => setIsEditing(true)}>
-                                    {displayName}
-                                </h1>
-                                <button onClick={() => setIsEditing(true)} className="refresh-button" title="編輯名稱">
-                                    <Edit3 size={18} />
-                                </button>
-                                <button
-                                    onClick={async () => {
-                                        if (window.confirm("確定要登出嗎？")) {
-                                            try {
-                                                await auth.signOut();
-                                                router.push("/login");
-                                            } catch (error) {
-                                                console.error("Error signing out:", error);
-                                            }
-                                        }
-                                    }}
-                                    className="refresh-button"
-                                    title="登出"
-                                    style={{ color: 'var(--text-muted)' }}
-                                >
-                                    <LogOut size={18} />
-                                </button>
-                            </>
-                        )}
-                    </div>
-                    <p className="profile-email">{user.email}</p>
-                </div>
-            </header>
-
-            {/* Account Settings Section */}
-            <div className="premium-card" style={{ marginBottom: '2rem', padding: '1.5rem' }}>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <Key size={20} /> 帳號設定
-                </h2>
-
-                <div style={{ display: 'grid', gap: '1rem' }}>
-
-                    {/* Google Linking */}
-                    <div className="settings-row">
-                        <div className="settings-info">
-                            <div className="settings-icon-circle">
-                                <Globe size={20} color={hasGoogle ? '#10b981' : '#64748b'} />
-                            </div>
-                            <div>
-                                <div className="settings-text-primary">Google 連結</div>
-                                <div className="settings-text-secondary">
-                                    {hasGoogle ? '已連結 Google 帳號' : '連結 Google 帳號以使用快速登入'}
-                                </div>
-                            </div>
+            <div className="premium-card profile-main-card" style={{ marginBottom: '1.5rem', padding: '1.5rem', overflow: 'visible', position: 'relative', zIndex: 20 }} suppressHydrationWarning>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+                    {/* Avatar */}
+                    {user.photoURL ? (
+                        <img src={user.photoURL} alt="Avatar" className="profile-avatar-large" style={{ width: '70px', height: '70px', minWidth: '70px' }} />
+                    ) : (
+                        <div className="profile-avatar-large" style={{ width: '70px', height: '70px', minWidth: '70px', background: 'var(--accent-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '1.75rem', fontWeight: 800 }}>
+                            {displayName.charAt(0).toUpperCase()}
                         </div>
-                        {hasGoogle ? (
-                            <span style={{ color: '#10b981', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.9rem', fontWeight: 600 }}>
-                                <Check size={16} /> 已連結
-                            </span>
-                        ) : (
-                            <button
-                                onClick={handleLinkGoogle}
-                                disabled={isLinking}
-                                style={{ padding: '0.5rem 1rem', background: 'white', border: '1px solid var(--glass-border)', borderRadius: '0.5rem', cursor: 'pointer', fontWeight: 600 }}
-                            >
-                                連結帳號
-                            </button>
-                        )}
-                    </div>
+                    )}
 
-                    {/* Email Management */}
-                    <div className="settings-row" style={{ flexDirection: 'column', alignItems: 'stretch' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: showEmailForm ? '1rem' : 0 }}>
-                            <div className="settings-info">
-                                <div className="settings-icon-circle">
-                                    <Mail size={20} color="#64748b" />
-                                </div>
-                                <div>
-                                    <div className="settings-text-primary">Email 設定</div>
-                                    <div className="settings-text-secondary">{user.email}</div>
-                                </div>
-                            </div>
-                            <button
-                                onClick={() => setShowEmailForm(!showEmailForm)}
-                                className="settings-action-btn"
-                            >
-                                {showEmailForm ? '取消' : '變更'}
-                            </button>
-                        </div>
-
-                        {showEmailForm && (
-                            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                                <input
-                                    type="email"
-                                    placeholder="輸入新 Email"
-                                    value={newEmail}
-                                    onChange={(e) => setNewEmail(e.target.value)}
-                                    style={{ flex: 1, padding: '0.5rem', borderRadius: '0.5rem', border: '1px solid #ccc' }}
-                                />
-                                <button
-                                    onClick={handleUpdateEmail}
-                                    disabled={isLinking || !newEmail}
-                                    style={{ padding: '0.5rem 1rem', background: 'var(--accent-color)', color: 'white', border: 'none', borderRadius: '0.5rem', cursor: 'pointer' }}
-                                >
-                                    更新 Email
-                                </button>
-                            </div>
-                        )}
-                    </div>
-
-                    {/* Password Management */}
-                    <div className="settings-row" style={{ flexDirection: 'column', alignItems: 'stretch' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: showPasswordForm ? '1rem' : 0 }}>
-                            <div className="settings-info">
-                                <div className="settings-icon-circle">
-                                    <Key size={20} color={hasPassword ? '#10b981' : '#64748b'} />
-                                </div>
-                                <div>
-                                    <div className="settings-text-primary">密碼設定</div>
-                                    <div className="settings-text-secondary">
-                                        {hasPassword ? '已設定密碼' : '尚未設定密碼 (僅使用 Google 登入)'}
-                                    </div>
-                                </div>
-                            </div>
-                            <button
-                                onClick={() => setShowPasswordForm(!showPasswordForm)}
-                                className="settings-action-btn"
-                            >
-                                {showPasswordForm ? '取消' : (hasPassword ? '變更密碼' : '設定密碼')}
-                            </button>
-                        </div>
-
-                        {showPasswordForm && (
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                {hasPassword && (
+                    {/* Info & Actions */}
+                    <div className="profile-info" style={{ gap: '0.25rem', flex: 1, minWidth: '280px' }}>
+                        <div className="profile-name-row" style={{ marginBottom: '0.25rem', display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+                            {isEditing ? (
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                     <input
-                                        type="password"
-                                        placeholder="目前密碼"
-                                        value={currentPassword}
-                                        onChange={(e) => setCurrentPassword(e.target.value)}
-                                        style={{ padding: '0.5rem', borderRadius: '0.5rem', border: '1px solid #ccc' }}
+                                        type="text"
+                                        value={displayName}
+                                        onChange={(e) => setDisplayName(e.target.value)}
+                                        className="profile-name-input"
+                                        autoFocus
+                                        style={{ fontSize: '1.25rem', padding: '0.25rem 0.5rem' }}
+                                        onKeyDown={(e) => e.key === 'Enter' && handleSaveProfile()}
                                     />
-                                )}
-                                <input
-                                    type="password"
-                                    placeholder={hasPassword ? "新密碼" : "設定新密碼"}
-                                    value={newPassword}
-                                    onChange={(e) => setNewPassword(e.target.value)}
-                                    style={{ padding: '0.5rem', borderRadius: '0.5rem', border: '1px solid #ccc' }}
-                                />
-                                <button
-                                    onClick={handlePasswordAction}
-                                    disabled={isLinking || !newPassword}
-                                    style={{ padding: '0.5rem', background: 'var(--accent-color)', color: 'white', border: 'none', borderRadius: '0.5rem', cursor: 'pointer', fontWeight: 600 }}
-                                >
-                                    {hasPassword ? "確認變更" : "確認設定"}
-                                </button>
-                            </div>
-                        )}
-                    </div>
+                                    <button onClick={handleSaveProfile} disabled={saving} className="refresh-button" style={{ color: '#10b981' }} title="儲存">
+                                        <Save size={18} />
+                                    </button>
+                                    <button onClick={() => { setIsEditing(false); fetchUserData(); }} className="refresh-button" style={{ color: '#ef4444' }} title="取消">
+                                        <X size={18} />
+                                    </button>
+                                </div>
+                            ) : (
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                    <h1 className="profile-name-input" style={{ border: 'none', background: 'transparent', cursor: 'pointer', fontSize: '1.35rem', margin: 0 }} onClick={() => setIsEditing(true)}>
+                                        {displayName}
+                                    </h1>
+                                    <button onClick={() => setIsEditing(true)} className="refresh-button" title="編輯名稱">
+                                        <Edit3 size={16} />
+                                    </button>
+                                    <button
+                                        onClick={async () => {
+                                            if (window.confirm("確定要登出嗎？")) {
+                                                try {
+                                                    await auth.signOut();
+                                                    router.push("/login");
+                                                } catch (error) {
+                                                    console.error("Error signing out:", error);
+                                                }
+                                            }
+                                        }}
+                                        className="refresh-button"
+                                        title="登出"
+                                        style={{ color: 'var(--text-muted)' }}
+                                    >
+                                        <LogOut size={16} />
+                                    </button>
+                                </div>
+                            )}
 
+                            {/* Separator */}
+                            <div style={{ width: '1px', height: '20px', background: '#e2e8f0', margin: '0 0.25rem' }}></div>
+
+                            {/* Action Buttons Row */}
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                {/* Google Button */}
+                                {hasGoogle ? (
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '4px 10px', background: '#f0fdf4', borderRadius: '20px', fontSize: '0.75rem', color: '#15803d', border: '1px solid #bbf7d0' }} title="Google 帳號已連結">
+                                        <Globe size={12} /> <span style={{ fontWeight: 600 }}>Google 已連結</span>
+                                    </div>
+                                ) : (
+                                    <button
+                                        onClick={handleLinkGoogle}
+                                        disabled={isLinking}
+                                        style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '4px 10px', background: 'white', borderRadius: '20px', fontSize: '0.75rem', color: '#64748b', border: '1px solid #e2e8f0', cursor: 'pointer', transition: 'all 0.2s' }}
+                                    >
+                                        <Globe size={12} /> 連結 Google
+                                    </button>
+                                )}
+
+                                {/* Email Button */}
+                                <div style={{ position: 'relative' }}>
+                                    <button
+                                        onClick={() => setActivePopover(activePopover === 'email' ? null : 'email')}
+                                        style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '4px 10px', background: 'white', borderRadius: '20px', fontSize: '0.75rem', color: '#64748b', border: '1px solid #e2e8f0', cursor: 'pointer', transition: 'all 0.2s' }}
+                                    >
+                                        <Mail size={12} /> {activePopover === 'email' ? '取消' : '變更 Email'}
+                                    </button>
+
+                                    {activePopover === 'email' && (
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '100%',
+                                            right: 0,
+                                            transform: 'translateY(8px)',
+                                            background: 'white',
+                                            padding: '1rem',
+                                            borderRadius: '0.6rem',
+                                            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                                            border: '1px solid #e2e8f0',
+                                            zIndex: 100,
+                                            width: '280px'
+                                        }}>
+                                            <p style={{ fontSize: '0.75rem', color: '#64748b', marginBottom: '0.5rem' }}>目前: {user.email}</p>
+                                            <div style={{ display: 'flex', gap: '0.5rem' }}>
+                                                <input
+                                                    type="email"
+                                                    placeholder="新 Email"
+                                                    value={newEmail}
+                                                    onChange={(e) => setNewEmail(e.target.value)}
+                                                    style={{ flex: 1, padding: '0.4rem', borderRadius: '0.375rem', border: '1px solid #cbd5e1', fontSize: '0.85rem' }}
+                                                />
+                                                <button
+                                                    onClick={handleUpdateEmail}
+                                                    disabled={isLinking || !newEmail}
+                                                    style={{ padding: '0.4rem 0.75rem', background: 'var(--accent-color)', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: 'pointer', fontSize: '0.8rem', whiteSpace: 'nowrap' }}
+                                                >
+                                                    更新
+                                                </button>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Password Button */}
+                                <div style={{ position: 'relative' }}>
+                                    <button
+                                        onClick={() => setActivePopover(activePopover === 'password' ? null : 'password')}
+                                        style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '4px 10px', background: 'white', borderRadius: '20px', fontSize: '0.75rem', color: '#64748b', border: '1px solid #e2e8f0', cursor: 'pointer', transition: 'all 0.2s' }}
+                                    >
+                                        <Key size={12} /> {activePopover === 'password' ? '取消' : (hasPassword ? '變更密碼' : '設定密碼')}
+                                    </button>
+
+                                    {activePopover === 'password' && (
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '100%',
+                                            right: 0,
+                                            transform: 'translateY(8px)',
+                                            background: 'white',
+                                            padding: '1rem',
+                                            borderRadius: '0.6rem',
+                                            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                                            border: '1px solid #e2e8f0',
+                                            zIndex: 100,
+                                            width: '280px'
+                                        }}>
+                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                                {hasPassword && (
+                                                    <input
+                                                        type="password"
+                                                        placeholder="目前密碼"
+                                                        value={currentPassword}
+                                                        onChange={(e) => setCurrentPassword(e.target.value)}
+                                                        style={{ padding: '0.4rem', borderRadius: '0.375rem', border: '1px solid #cbd5e1', fontSize: '0.85rem' }}
+                                                    />
+                                                )}
+                                                <input
+                                                    type="password"
+                                                    placeholder={hasPassword ? "新密碼" : "設定新密碼"}
+                                                    value={newPassword}
+                                                    onChange={(e) => setNewPassword(e.target.value)}
+                                                    style={{ padding: '0.4rem', borderRadius: '0.375rem', border: '1px solid #cbd5e1', fontSize: '0.85rem' }}
+                                                />
+                                                <button
+                                                    onClick={handlePasswordAction}
+                                                    disabled={isLinking || !newPassword}
+                                                    style={{ padding: '0.4rem', background: 'var(--accent-color)', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: 'pointer', fontWeight: 600, fontSize: '0.8rem' }}
+                                                >
+                                                    {hasPassword ? "確認變更" : "確認設定"}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="profile-email" style={{ margin: 0, fontSize: '0.85rem', color: '#94a3b8' }}>{user.email}</p>
+                    </div>
                 </div>
             </div>
 

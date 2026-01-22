@@ -40,7 +40,7 @@ export default function Home() {
 
   if (!isMounted) {
     return (
-      <div className="home-container">
+      <div className="home-container" suppressHydrationWarning>
         <header className="home-header">
           <h1 className="home-title">感染科互動測驗網</h1>
         </header>
@@ -50,7 +50,7 @@ export default function Home() {
   }
 
   return (
-    <div className="home-container">
+    <div className="home-container" suppressHydrationWarning>
       <header className="home-header">
         <h1 className="home-title">
           感染科互動測驗網
