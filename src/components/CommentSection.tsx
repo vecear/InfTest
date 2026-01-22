@@ -1,15 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import RichTextEditor from "./RichTextEditor";
 import { User, Send } from "lucide-react";
-
-interface Comment {
-    id: string;
-    content: string;
-    author: string;
-    createdAt: string;
-}
+import { getComments, addComment, Comment } from "@/lib/firestore-client";
 
 export default function CommentSection({ questionId }: { questionId: string }) {
     const [comments, setComments] = useState<Comment[]>([]);
@@ -17,40 +11,27 @@ export default function CommentSection({ questionId }: { questionId: string }) {
     const [isLoading, setIsLoading] = useState(false);
     const [mounted, setMounted] = useState(false);
 
-    useEffect(() => {
-        setMounted(true);
-        fetchComments();
-    }, [questionId]);
-
-    const fetchComments = async () => {
+    const fetchComments = useCallback(async () => {
         try {
-            const res = await fetch(`/api/comments?questionId=${questionId}`);
-            if (res.ok) {
-                const data = await res.json();
-                setComments(data);
-            }
+            const data = await getComments(questionId);
+            setComments(data);
         } catch (error) {
             console.error("Failed to fetch comments:", error);
         }
-    };
+    }, [questionId]);
+
+    useEffect(() => {
+        setMounted(true);
+        fetchComments();
+    }, [fetchComments]);
 
     const handleSubmit = async () => {
         if (!newComment.trim()) return;
         setIsLoading(true);
         try {
-            const res = await fetch("/api/comments", {
-                method: "POST",
-                body: JSON.stringify({ questionId, content: newComment }),
-                headers: { "Content-Type": "application/json" },
-            });
-            if (res.ok) {
-                setNewComment("");
-                fetchComments();
-            } else {
-                const errorData = await res.json();
-                console.error("Failed to post comment:", errorData);
-                alert("無法發表留言，請稍後再試。");
-            }
+            await addComment(questionId, newComment);
+            setNewComment("");
+            fetchComments();
         } catch (error) {
             console.error("Error submitting comment:", error);
             alert("發表留言時發生錯誤。");

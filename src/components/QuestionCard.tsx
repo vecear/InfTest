@@ -5,6 +5,7 @@ import { CheckCircle2, XCircle, MessageSquare, Copy } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import CommentSection from "@/components/CommentSection";
+import { updateQuestionExplanation } from "@/lib/firestore-client";
 
 interface Option {
     id: string;
@@ -119,19 +120,9 @@ export default function QuestionCard({
     const handleSaveExplanation = async () => {
         setIsSaving(true);
         try {
-            const response = await fetch(`/api/questions/${question.id}/explanation`, {
-                method: 'PATCH',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ answerExplanation: editedExplanation })
-            });
-
-            if (response.ok) {
-                const updated = await response.json();
-                question.answerExplanation = updated.answerExplanation;
-                setIsEditingExplanation(false);
-            } else {
-                alert('儲存失敗，請稍後再試');
-            }
+            const updated = await updateQuestionExplanation(question.id, editedExplanation);
+            question.answerExplanation = updated.answerExplanation;
+            setIsEditingExplanation(false);
         } catch (error) {
             console.error('Error saving explanation:', error);
             alert('儲存失敗，請稍後再試');

@@ -8,6 +8,18 @@
         ],
         "rewrites": [
             {
+                "source": "/written/**",
+                "destination": "/written/index.html"
+            },
+            {
+                "source": "/practical/**",
+                "destination": "/practical/index.html"
+            },
+            {
+                "source": "/others/**",
+                "destination": "/others/index.html"
+            },
+            {
                 "source": "**",
                 "destination": "/index.html"
             }
