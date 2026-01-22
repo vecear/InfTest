@@ -13,6 +13,15 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase (SSR safe)
+// Initialize Firebase (SSR safe)
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+
+// Use initializeFirestore to allow settings like long polling
+import { initializeFirestore } from "firebase/firestore";
+export const db = initializeFirestore(app, {
+    experimentalForceLongPolling: true, // Fix for some networks blocking WebSockets
+    ignoreUndefinedProperties: true,
+});
+
+console.log("Firebase initialized manually with Long Polling.");

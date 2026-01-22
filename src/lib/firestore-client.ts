@@ -59,7 +59,9 @@ export async function getExams(category?: string): Promise<Exam[]> {
         q = query(examsRef, orderBy("year", "desc"));
     }
 
+    console.log(`[getExams] Starting fetch for category: ${category || 'ALL'}`);
     const snapshot = await getDocs(q);
+    console.log(`[getExams] Got snapshot, docs count: ${snapshot.size}`);
     const exams: Exam[] = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data()
