@@ -11,14 +11,16 @@ export default function PracticalUnifiedPage() {
     const router = useRouter();
     const slug = params.slug as string[] | undefined;
 
-    const [examId, setExamId] = useState<string | undefined>(slug?.[0]);
+    const [examId, setExamId] = useState<string | undefined>(undefined);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         const pathParts = window.location.pathname.split('/').filter(Boolean);
         if (pathParts[0] === 'practical' && pathParts[1]) {
             setExamId(pathParts[1]);
-        } else {
-            setExamId(slug?.[0]);
+        } else if (slug?.[0]) {
+            setExamId(slug[0]);
         }
     }, [slug]);
 
@@ -27,6 +29,8 @@ export default function PracticalUnifiedPage() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        if (!isMounted) return;
+
         setLoading(true);
         if (!examId) {
             getExams("PRACTICAL").then((data) => {
@@ -49,7 +53,7 @@ export default function PracticalUnifiedPage() {
         }
     }, [examId, router]);
 
-    if (loading) {
+    if (!isMounted || loading) {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
                 <p>載入中...</p>

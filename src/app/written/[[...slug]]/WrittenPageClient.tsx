@@ -11,17 +11,18 @@ export default function WrittenUnifiedPage() {
     const router = useRouter();
     const slug = params.slug as string[] | undefined;
 
-    // For static export on Firebase, useParams might not always catch the slug correctly 
-    // when served via rewrites. We fallback to parsing the pathname.
-    const [examId, setExamId] = useState<string | undefined>(slug?.[0]);
+    // To prevent hydration mismatch, we start with undefined and set it in useEffect
+    const [examId, setExamId] = useState<string | undefined>(undefined);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         const pathParts = window.location.pathname.split('/').filter(Boolean);
-        // Path is like /written/exam-id/
+        // Correctly detect examId from path or params
         if (pathParts[0] === 'written' && pathParts[1]) {
             setExamId(pathParts[1]);
-        } else {
-            setExamId(slug?.[0]);
+        } else if (slug?.[0]) {
+            setExamId(slug[0]);
         }
     }, [slug]);
 
@@ -30,6 +31,8 @@ export default function WrittenUnifiedPage() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        if (!isMounted) return;
+
         setLoading(true);
         if (!examId) {
             // Load List
@@ -54,7 +57,8 @@ export default function WrittenUnifiedPage() {
         }
     }, [examId, router]);
 
-    if (loading) {
+    // If not mounted yet, render list to match server build output
+    if (!isMounted || loading) {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
                 <p>載入中...</p>
