@@ -73,6 +73,14 @@ export default function PracticalUnifiedPage() {
         );
     }
 
+    if (!exam) {
+        return (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
+                <p>資料抓取中...</p>
+            </div>
+        );
+    }
+
     return (
         <ExamDetail
             exam={exam as any}

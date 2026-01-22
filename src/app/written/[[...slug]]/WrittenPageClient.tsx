@@ -78,6 +78,15 @@ export default function WrittenUnifiedPage() {
         );
     }
 
+    // Final defensive check to prevent crashing if exam is null but we are in detail view
+    if (!exam) {
+        return (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
+                <p>資料抓取中...</p>
+            </div>
+        );
+    }
+
     return (
         <ExamDetail
             exam={exam as any}
