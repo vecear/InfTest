@@ -327,7 +327,7 @@ export default function ExamDetail({ exam, backPath }: ExamDetailProps) {
                 </div>
             )}
 
-            <div style={{ maxWidth: '800px', margin: '0 auto', padding: (mounted && isMobile) ? '1rem' : '2rem' }}>
+            <div className={`exam-detail-container ${(selectedMode === 'exam' && examStarted && !examSubmitted) ? 'timer-active' : ''}`}>
                 <div ref={headerRef} style={{ marginBottom: '2.5rem' }}>
                     <Link href={backPath} className="back-link">
                         <ArrowLeft size={16} /> 返回列表

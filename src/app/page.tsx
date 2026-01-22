@@ -30,21 +30,17 @@ export default function Home() {
   ];
 
   return (
-    <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '2rem' }}>
-      <header style={{ textAlign: 'center', marginBottom: '4rem' }}>
-        <h1 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1rem', color: 'var(--primary-color)' }}>
+    <div className="home-container">
+      <header className="home-header">
+        <h1 className="home-title">
           感染科互動測驗網
         </h1>
-        <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto' }}>
+        <p className="home-description">
           提升專業知識，挑戰歷屆考題。即時答題回饋與專業社群討論，幫助您更有效率地學習。
         </p>
       </header>
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        gap: '2rem'
-      }}>
+      <div className="home-grid">
         {categories.map((cat) => (
           <div key={cat.title} className="premium-card" style={{
             padding: '2.5rem',
@@ -52,6 +48,7 @@ export default function Home() {
             flexDirection: 'column',
             gap: '1.5rem',
             opacity: cat.active ? 1 : 0.7,
+            transition: 'all 0.3s ease'
           }}>
             <div style={{
               width: '4rem',

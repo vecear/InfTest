@@ -191,9 +191,7 @@ export default function QuestionCard({
     }, []);
 
     return (
-        <div className="premium-card" style={{
-            padding: (mounted && isMobile) ? '1.25rem' : '2rem',
-            marginBottom: (mounted && isMobile) ? '1.5rem' : '2rem',
+        <div className="premium-card question-card" style={{
             borderLeft: isWrong ? '4px solid #ef4444' : undefined
         }}>
             <div style={{ marginBottom: '1.5rem' }}>

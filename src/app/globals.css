@@ -331,3 +331,141 @@ body {
     transform: scale(1.05);
   }
 }
+
+/* Home Page Responsive Styles */
+.home-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.home-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+.home-description {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1.25rem;
+  }
+
+  .home-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .home-title {
+    font-size: 2.25rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Question Card Responsive Styles */
+.question-card {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .question-card {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Exam List Card Responsive Styles */
+.exam-card-inner {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.exam-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .exam-card-inner {
+    padding: 1.25rem;
+  }
+
+  .exam-card-content {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .exam-card-inner {
+    padding: 1rem;
+  }
+
+  .exam-card-content {
+    gap: 0.75rem;
+  }
+
+  /* Font size adjustments for exam list items */
+  .exam-card-inner h3 {
+    font-size: 1rem !important;
+  }
+}
+
+/* Exam Detail Responsive Styles */
+.exam-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .exam-detail-container {
+    padding: 1rem;
+    padding-bottom: 80px;
+    /* Space for bottom content if needed */
+  }
+
+  .exam-detail-container.timer-active {
+    padding-top: 70px;
+    /* Space for fixed timer */
+  }
+}
