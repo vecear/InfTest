@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Microscope, BookOpen, PenTool, Database, LogIn, LogOut, User, RefreshCw, Settings } from "lucide-react";
+import { Microscope, BookOpen, PenTool, Database, LogIn, LogOut, User, RefreshCw, Settings, Shield } from "lucide-react";
 import { auth } from "@/firebase";
 import { signOut } from "firebase/auth";
 import { useAuth } from "@/context/AuthContext";
@@ -13,13 +13,15 @@ export default function Navbar() {
     const router = useRouter();
     const [isMobile, setIsMobile] = useState(false);
     const [isBottomNavVisible, setIsBottomNavVisible] = useState(true);
-    const { user } = useAuth();
+    const { user, isAdmin, loading } = useAuth();
     const [isProfileOpen, setIsProfileOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     // Detect if we are on a question detail page
     const isDetailPage = pathname.split('/').filter(Boolean).length >= 2;
 
     useEffect(() => {
+        setMounted(true);
         const checkMobile = () => setIsMobile(window.innerWidth < 768);
         checkMobile();
         window.addEventListener('resize', checkMobile);
@@ -90,13 +92,20 @@ export default function Navbar() {
                 <div id="navbar-timer-slot" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1 }}></div>
 
                 {/* User Menu */}
-                <div className="nav-user-section">
-                    {user ? (
+                <div className="nav-user-section" suppressHydrationWarning>
+                    {!mounted || loading ? (
+                        <div style={{ width: '80px' }} />
+                    ) : user ? (
                         <div className="nav-user-info">
                             <span className="nav-user-name desktop-only">
                                 {user.displayName || user.email?.split('@')[0]}
                             </span>
                             <div className="nav-user-actions" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                {isAdmin && (
+                                    <Link href="/admin" className="nav-settings-btn" title="管理後台" style={{ color: 'var(--accent-color)' }}>
+                                        <Shield size={20} />
+                                    </Link>
+                                )}
                                 <Link href="/profile" className="nav-settings-btn" title="設置">
                                     <Settings size={20} />
                                 </Link>

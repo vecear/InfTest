@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { CheckCircle2, XCircle, MessageSquare, Copy } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -180,6 +181,12 @@ export default function QuestionCard({
 
     const [isMobile, setIsMobile] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const [showImageModal, setShowImageModal] = useState(false);
+    const [imageScale, setImageScale] = useState(1);
+    const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 });
+    const [isDragging, setIsDragging] = useState(false);
+    const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+    const [lastTouchDistance, setLastTouchDistance] = useState<number | null>(null);
 
     // Check for mobile viewport
     useEffect(() => {
@@ -190,6 +197,103 @@ export default function QuestionCard({
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+    // Reset image state when modal closes
+    useEffect(() => {
+        if (!showImageModal) {
+            setImageScale(1);
+            setImagePosition({ x: 0, y: 0 });
+        }
+    }, [showImageModal]);
+
+    // Calculate and set initial scale when modal image loads
+    const handleModalImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+        const img = e.currentTarget;
+        const { naturalWidth, naturalHeight } = img;
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+
+        // Calculate scale to FILL the viewport (cover behavior)
+        // Use Math.max so image covers entire viewport
+        const scaleX = viewportWidth / naturalWidth;
+        const scaleY = viewportHeight / naturalHeight;
+        const fillScale = Math.max(scaleX, scaleY);
+
+        setImageScale(fillScale);
+    };
+
+    // Handle wheel zoom
+    const handleWheel = (e: React.WheelEvent) => {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? -0.1 : 0.1;
+        setImageScale(prev => Math.min(Math.max(0.5, prev + delta), 5));
+    };
+
+    // Handle touch zoom (pinch)
+    const getTouchDistance = (touches: React.TouchList) => {
+        if (touches.length < 2) return null;
+        const dx = touches[0].clientX - touches[1].clientX;
+        const dy = touches[0].clientY - touches[1].clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+    };
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        if (e.touches.length === 2) {
+            setLastTouchDistance(getTouchDistance(e.touches));
+        } else if (e.touches.length === 1) {
+            setIsDragging(true);
+            setDragStart({ x: e.touches[0].clientX - imagePosition.x, y: e.touches[0].clientY - imagePosition.y });
+        }
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        if (e.touches.length === 2) {
+            const distance = getTouchDistance(e.touches);
+            if (distance && lastTouchDistance) {
+                const delta = (distance - lastTouchDistance) * 0.01;
+                setImageScale(prev => Math.min(Math.max(0.5, prev + delta), 5));
+                setLastTouchDistance(distance);
+            }
+        } else if (e.touches.length === 1 && isDragging && imageScale > 1) {
+            setImagePosition({
+                x: e.touches[0].clientX - dragStart.x,
+                y: e.touches[0].clientY - dragStart.y
+            });
+        }
+    };
+
+    const handleTouchEnd = () => {
+        setLastTouchDistance(null);
+        setIsDragging(false);
+    };
+
+    // Handle mouse drag
+    const handleMouseDown = (e: React.MouseEvent) => {
+        if (imageScale > 1) {
+            setIsDragging(true);
+            setDragStart({ x: e.clientX - imagePosition.x, y: e.clientY - imagePosition.y });
+        }
+    };
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (isDragging && imageScale > 1) {
+            setImagePosition({
+                x: e.clientX - dragStart.x,
+                y: e.clientY - dragStart.y
+            });
+        }
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
+    const handleModalClose = (e: React.MouseEvent) => {
+        // Only close if clicking on backdrop, not on image
+        if (e.target === e.currentTarget) {
+            setShowImageModal(false);
+        }
+    };
+
     return (
         <div className="premium-card question-card" style={{
             borderLeft: isWrong ? '4px solid #ef4444' : undefined
@@ -198,68 +302,44 @@ export default function QuestionCard({
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 600, lineHeight: 1.6 }}>{question.content}</h3>
 
                 {question.imageUrl && (
-                    <div style={{ position: 'relative', marginTop: '1rem' }}>
-                        <div
+                    <div style={{ marginTop: '1rem' }}>
+                        <img
+                            src={question.imageUrl}
+                            alt="Question"
+                            onClick={() => setShowImageModal(true)}
+                            style={{
+                                maxWidth: '100%',
+                                borderRadius: '0.75rem',
+                                cursor: 'pointer',
+                                transition: 'opacity 0.2s ease'
+                            }}
+                        />
+                        <button
                             onClick={handleImageClick}
                             style={{
+                                marginTop: '0.5rem',
+                                padding: '0.4rem 0.75rem',
+                                background: copySuccess ? '#10b981' : '#f1f5f9',
+                                color: copySuccess ? 'white' : '#64748b',
+                                border: 'none',
+                                borderRadius: '0.375rem',
+                                fontSize: '0.8rem',
                                 cursor: 'pointer',
-                                position: 'relative'
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.35rem',
+                                transition: 'all 0.2s ease'
                             }}
                         >
-                            <img
-                                src={question.imageUrl}
-                                alt="Question"
-                                style={{
-                                    maxWidth: '100%',
-                                    borderRadius: '0.75rem',
-                                    transition: 'opacity 0.2s ease'
-                                }}
-                            />
-                            <div style={{
-                                position: 'absolute',
-                                bottom: '0.5rem',
-                                right: '0.5rem',
-                                background: 'rgba(0, 0, 0, 0.6)',
-                                color: 'white',
-                                padding: '0.25rem 0.5rem',
-                                borderRadius: '0.5rem',
-                                fontSize: '0.75rem',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.25rem'
-                            }}>
-                                <Copy size={14} />
-                                點擊複製圖片
-                            </div>
-                        </div>
-
-                        {/* Copy success toast */}
-                        {copySuccess && (
-                            <div style={{
-                                position: 'absolute',
-                                top: '0.5rem',
-                                right: '0.5rem',
-                                background: '#10b981',
-                                color: 'white',
-                                padding: '0.5rem 1rem',
-                                borderRadius: '0.5rem',
-                                fontSize: '0.875rem',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.5rem',
-                                animation: 'fadeIn 0.3s ease',
-                                zIndex: 10
-                            }}>
-                                <Copy size={14} />
-                                圖片已複製
-                            </div>
-                        )}
+                            <Copy size={14} />
+                            {copySuccess ? '已複製' : '複製圖片'}
+                        </button>
                     </div>
                 )}
             </div>
 
             {question.type === "CHOICE" ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '0.5rem' }}>
                     {question.options.map((option) => {
                         const isOptionSelected = selectedOption === option.id;
                         const isOptionCorrect = question.correctAnswer === option.text;
@@ -269,15 +349,15 @@ export default function QuestionCard({
 
                         if (shouldShowAnswer) {
                             if (isOptionCorrect) {
-                                bgColor = 'rgba(16, 185, 129, 0.1)';
+                                bgColor = 'rgba(16, 185, 129, 0.15)';
                                 borderColor = '#10b981';
                             } else if (isOptionSelected && !isCorrect) {
-                                bgColor = 'rgba(239, 68, 68, 0.1)';
+                                bgColor = 'rgba(239, 68, 68, 0.15)';
                                 borderColor = '#ef4444';
                             }
                         } else if (isOptionSelected) {
                             borderColor = 'var(--accent-color)';
-                            bgColor = 'rgba(59, 130, 246, 0.05)';
+                            bgColor = 'rgba(59, 130, 246, 0.1)';
                         }
 
                         return (
@@ -286,23 +366,26 @@ export default function QuestionCard({
                                 disabled={shouldShowAnswer}
                                 onClick={() => handleSelectOption(option.id)}
                                 style={{
-                                    textAlign: 'left',
-                                    padding: '1rem 1.25rem',
-                                    borderRadius: '0.75rem',
+                                    textAlign: 'center',
+                                    padding: '0.75rem 1.5rem',
+                                    borderRadius: '0.5rem',
                                     border: `2px solid ${borderColor}`,
                                     background: bgColor,
                                     cursor: shouldShowAnswer ? 'default' : 'pointer',
                                     transition: 'all 0.2s ease',
                                     display: 'flex',
                                     alignItems: 'center',
-                                    justifyContent: 'space-between',
+                                    justifyContent: 'center',
+                                    gap: '0.35rem',
                                     fontSize: '1rem',
-                                    color: 'var(--text-main)'
+                                    fontWeight: 600,
+                                    color: 'var(--text-main)',
+                                    minWidth: '50px'
                                 }}
                             >
                                 <span>{option.text}</span>
-                                {shouldShowAnswer && isOptionCorrect && <CheckCircle2 size={20} color="#10b981" />}
-                                {shouldShowAnswer && isOptionSelected && !isCorrect && <XCircle size={20} color="#ef4444" />}
+                                {shouldShowAnswer && isOptionCorrect && <CheckCircle2 size={16} color="#10b981" />}
+                                {shouldShowAnswer && isOptionSelected && !isCorrect && <XCircle size={16} color="#ef4444" />}
                             </button>
                         );
                     })}
@@ -490,6 +573,90 @@ export default function QuestionCard({
                 <div style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid var(--glass-border)' }}>
                     <CommentSection questionId={question.id} />
                 </div>
+            )}
+
+            {/* Image Modal - rendered via Portal to escape parent constraints */}
+            {showImageModal && question.imageUrl && typeof document !== 'undefined' && createPortal(
+                <div
+                    onClick={handleModalClose}
+                    onWheel={handleWheel}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onMouseLeave={handleMouseUp}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        width: '100vw',
+                        height: '100vh',
+                        background: 'rgba(0, 0, 0, 0.95)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 99999,
+                        cursor: imageScale > 1 ? (isDragging ? 'grabbing' : 'grab') : 'zoom-out',
+                        overflow: 'hidden',
+                        touchAction: 'none'
+                    }}
+                >
+                    <img
+                        src={question.imageUrl}
+                        alt="Question"
+                        onLoad={handleModalImageLoad}
+                        onMouseDown={handleMouseDown}
+                        draggable={false}
+                        style={{
+                            maxWidth: 'none',
+                            maxHeight: 'none',
+                            transform: `scale(${imageScale}) translate(${imagePosition.x / imageScale}px, ${imagePosition.y / imageScale}px)`,
+                            transformOrigin: 'center center',
+                            transition: isDragging ? 'none' : 'transform 0.1s ease-out',
+                            cursor: isDragging ? 'grabbing' : 'grab',
+                            userSelect: 'none'
+                        }}
+                    />
+                    {/* Close button */}
+                    <button
+                        onClick={() => setShowImageModal(false)}
+                        style={{
+                            position: 'absolute',
+                            top: '1rem',
+                            right: '1rem',
+                            background: 'rgba(255, 255, 255, 0.2)',
+                            border: 'none',
+                            borderRadius: '50%',
+                            width: '40px',
+                            height: '40px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer',
+                            color: 'white',
+                            fontSize: '1.5rem',
+                            fontWeight: 300
+                        }}
+                    >
+                        &times;
+                    </button>
+                    {/* Zoom indicator */}
+                    <div style={{
+                        position: 'absolute',
+                        bottom: '1rem',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        background: 'rgba(0, 0, 0, 0.6)',
+                        color: 'white',
+                        padding: '0.5rem 1rem',
+                        borderRadius: '0.5rem',
+                        fontSize: '0.85rem'
+                    }}>
+                        {Math.round(imageScale * 100)}%
+                    </div>
+                </div>,
+                document.body
             )}
         </div>
     );

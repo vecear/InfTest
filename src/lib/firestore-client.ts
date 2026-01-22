@@ -1,4 +1,4 @@
-import { db, auth } from "@/firebase";
+import { db } from "@/firebase";
 import {
     collection,
     doc,
@@ -68,6 +68,7 @@ export interface UserProfile {
     displayName: string;
     email: string;
     photoURL?: string;
+    role?: 'admin' | 'user';
     updatedAt: string | Timestamp;
 }
 
@@ -218,4 +219,72 @@ export async function getUserProfile(uid: string): Promise<UserProfile | null> {
             ? data.updatedAt.toDate().toISOString()
             : data.updatedAt
     } as UserProfile;
+}
+
+// ==================== Admin Functions ====================
+
+export async function createExam(examData: Omit<Exam, 'id' | '_count'>): Promise<string> {
+    const examsRef = collection(db, "exams");
+    const docRef = await addDoc(examsRef, {
+        ...examData,
+        createdAt: Timestamp.now(),
+        updatedAt: Timestamp.now()
+    });
+    return docRef.id;
+}
+
+export async function updateExam(id: string, data: Partial<Omit<Exam, 'id' | '_count'>>): Promise<void> {
+    const docRef = doc(db, "exams", id);
+    await updateDoc(docRef, {
+        ...data,
+        updatedAt: Timestamp.now()
+    });
+}
+
+export async function deleteExam(id: string): Promise<void> {
+    const { deleteDoc } = await import("firebase/firestore");
+
+    // First delete all questions belonging to this exam
+    const questionsRef = collection(db, "questions");
+    const q = query(questionsRef, where("examId", "==", id));
+    const snapshot = await getDocs(q);
+
+    const deletePromises = snapshot.docs.map(docSnap =>
+        deleteDoc(doc(db, "questions", docSnap.id))
+    );
+    await Promise.all(deletePromises);
+
+    // Then delete the exam
+    await deleteDoc(doc(db, "exams", id));
+}
+
+export async function createQuestion(questionData: Omit<Question, 'id'>): Promise<string> {
+    const questionsRef = collection(db, "questions");
+    const docRef = await addDoc(questionsRef, {
+        ...questionData,
+        createdAt: Timestamp.now(),
+        updatedAt: Timestamp.now()
+    });
+    return docRef.id;
+}
+
+export async function updateQuestion(id: string, data: Partial<Omit<Question, 'id'>>): Promise<void> {
+    const docRef = doc(db, "questions", id);
+    await updateDoc(docRef, {
+        ...data,
+        updatedAt: Timestamp.now()
+    });
+}
+
+export async function deleteQuestion(id: string): Promise<void> {
+    const { deleteDoc } = await import("firebase/firestore");
+    await deleteDoc(doc(db, "questions", id));
+}
+
+export async function getQuestionById(id: string): Promise<Question | null> {
+    const docRef = doc(db, "questions", id);
+    const docSnap = await getDoc(docRef);
+
+    if (!docSnap.exists()) return null;
+    return { id: docSnap.id, ...docSnap.data() } as Question;
 }
