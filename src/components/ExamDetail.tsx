@@ -3,7 +3,10 @@
 import { ArrowLeft, Clock, Play, FileCheck, BookOpen, Eye } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 import QuestionCard from "./QuestionCard";
+import { useAuth } from "@/context/AuthContext";
+import { saveUserScore } from "@/lib/firestore-client";
 
 type ExamMode = 'exam' | 'review' | 'reading' | null;
 
@@ -27,6 +30,7 @@ interface Question {
 interface Exam {
     id: string;
     title: string;
+    category: string;
     questions: Question[];
 }
 
@@ -92,10 +96,31 @@ export default function ExamDetail({ exam, backPath }: ExamDetailProps) {
     };
 
     // Submit exam
-    const handleSubmit = useCallback(() => {
+    const { user } = useAuth();
+
+    const handleSubmit = useCallback(async () => {
         setExamSubmitted(true);
         scrollToTop();
-    }, [scrollToTop]);
+
+        // Save score if user is logged in and it's exam/review mode
+        if (user && (selectedMode === 'exam' || selectedMode === 'review')) {
+            try {
+                const correctCount = Object.values(answers).filter(a => a.isCorrect).length;
+                await saveUserScore({
+                    userId: user.uid,
+                    examId: exam.id,
+                    examTitle: exam.title,
+                    category: exam.category,
+                    correctCount: correctCount,
+                    totalQuestions: exam.questions.length,
+                    score: Math.round((correctCount / exam.questions.length) * 100)
+                });
+                console.log("Score saved successfully");
+            } catch (error) {
+                console.error("Error saving score:", error);
+            }
+        }
+    }, [scrollToTop, user, selectedMode, answers, exam]);
 
     // Timer effect for exam mode
     useEffect(() => {
@@ -327,13 +352,36 @@ export default function ExamDetail({ exam, backPath }: ExamDetailProps) {
                 </div>
             )}
 
-            <div style={{ maxWidth: '800px', margin: '0 auto', padding: (mounted && isMobile) ? '1rem' : '2rem' }}>
+            <div className="exam-detail-container">
                 <div ref={headerRef} style={{ marginBottom: '2.5rem' }}>
                     <Link href={backPath} className="back-link">
                         <ArrowLeft size={16} /> 返回列表
                     </Link>
                     <div className="exam-header">
                         <h1 className="exam-title">{exam.title}</h1>
+
+                        {/* Timer Portal - Renders in Navbar */}
+                        {selectedMode === 'exam' && examStarted && !examSubmitted && mounted && document.getElementById('navbar-timer-slot') && createPortal(
+                            <div style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                padding: '0.25rem 0.75rem',
+                                background: timeRemaining < 300 ? 'rgba(239, 68, 68, 0.1)' : 'rgba(15, 23, 42, 0.05)',
+                                borderRadius: '2rem',
+                                border: `1px solid ${timeRemaining < 300 ? '#ef4444' : 'var(--glass-border)'}`,
+                                color: timeRemaining < 300 ? '#ef4444' : 'var(--text-main)',
+                                fontWeight: 700,
+                                fontSize: '1rem',
+                                transition: 'all 0.3s ease'
+                            }}>
+                                <Clock size={16} />
+                                <span style={{ fontFamily: 'monospace', fontSize: '1.1rem' }}>
+                                    {formatTime(timeRemaining)}
+                                </span>
+                            </div>,
+                            document.getElementById('navbar-timer-slot')!
+                        )}
                     </div>
                     <p className="exam-count">
                         共 {exam.questions.length} 題
@@ -517,49 +565,6 @@ export default function ExamDetail({ exam, backPath }: ExamDetailProps) {
                         </div>
                     )}
 
-                    {/* Timer Display (for exam mode) */}
-                    {selectedMode === 'exam' && examStarted && !examSubmitted && (
-                        <div style={isMobile ? {
-                            // Mobile: Overlay on top of Navbar
-                            position: 'fixed',
-                            top: 0,
-                            left: 0,
-                            width: '100%',
-                            height: '50px', // Match navbar height (0.75rem padding * 2 + 24px icon + border ~= 49-50px)
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            background: 'rgba(255, 255, 255, 0.95)',
-                            backdropFilter: 'blur(10px)',
-                            borderBottom: '1px solid var(--glass-border)',
-                            zIndex: 1200, // Higher than Navbar (1000) and everything else
-                            color: timeRemaining < 300 ? '#ef4444' : 'var(--primary-color)',
-                            fontWeight: 700,
-                            fontSize: '1.25rem',
-                            gap: '0.5rem',
-                            boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
-                            animation: 'slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1)'
-                        } : {
-                            // Desktop: Integrated into Navbar
-                            position: 'fixed',
-                            top: 0,
-                            right: 0,
-                            padding: '0 2rem',
-                            height: '58px', // Match approximate Navbar height
-                            background: 'transparent',
-                            color: timeRemaining < 300 ? '#ef4444' : 'var(--text-main)',
-                            fontWeight: 600,
-                            fontSize: '1.1rem',
-                            zIndex: 1100, // Top of Navbar
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.5rem',
-                            pointerEvents: 'none' // Let clicks pass through if needed (though it's on the side)
-                        }}>
-                            <Clock size={isMobile ? 22 : 18} />
-                            {formatTime(timeRemaining)}
-                        </div>
-                    )}
                 </div>
 
                 {/* Questions (only show after exam starts) */}
@@ -628,7 +633,7 @@ export default function ExamDetail({ exam, backPath }: ExamDetailProps) {
                         )}
                     </div>
                 )}
-            </div>
+            </div >
         </>
     );
 }

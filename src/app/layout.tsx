@@ -17,11 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-TW">
+    <html lang="zh-TW" suppressHydrationWarning>
       <body className={outfit.className} suppressHydrationWarning>
         <AuthProvider>
           <Navbar />
-          <main style={{ paddingTop: '5rem', paddingBottom: '2rem' }}>
+          <main className="main-content" suppressHydrationWarning>
             {children}
           </main>
         </AuthProvider>

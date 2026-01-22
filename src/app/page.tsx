@@ -1,7 +1,16 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { BookOpen, PenTool, Database, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const categories = [
     {
       title: "歷屆筆試",
@@ -29,65 +38,66 @@ export default function Home() {
     },
   ];
 
+  if (!isMounted) {
+    return (
+      <div className="home-container" suppressHydrationWarning>
+        <header className="home-header">
+          <h1 className="home-title">感染科互動測驗網</h1>
+        </header>
+        <div className="home-grid" />
+      </div>
+    );
+  }
+
   return (
-    <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '2rem' }}>
-      <header style={{ textAlign: 'center', marginBottom: '4rem' }}>
-        <h1 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1rem', color: 'var(--primary-color)' }}>
+    <div className="home-container" suppressHydrationWarning>
+      <header className="home-header">
+        <h1 className="home-title">
           感染科互動測驗網
         </h1>
-        <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto' }}>
+        <p className="home-description">
           提升專業知識，挑戰歷屆考題。即時答題回饋與專業社群討論，幫助您更有效率地學習。
         </p>
       </header>
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        gap: '2rem'
-      }}>
+      <div className="home-grid">
         {categories.map((cat) => (
-          <div key={cat.title} className="premium-card" style={{
-            padding: '2.5rem',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1.5rem',
-            opacity: cat.active ? 1 : 0.7,
-          }}>
-            <div style={{
-              width: '4rem',
-              height: '4rem',
-              borderRadius: '1rem',
-              background: `${cat.color}15`,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-              <cat.icon size={32} color={cat.color} />
-            </div>
+          <div key={cat.title}>
+            {cat.active ? (
+              <Link href={cat.href} className="premium-card cat-card" style={{ opacity: cat.active ? 1 : 0.7 }}>
+                <div className="cat-card-icon-wrapper" style={{ background: `${cat.color}15` }}>
+                  <cat.icon size={32} color={cat.color} />
+                </div>
 
-            <div>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>{cat.title}</h2>
-              <p style={{ color: 'var(--text-muted)', lineHeight: 1.6 }}>{cat.description}</p>
-            </div>
+                <div>
+                  <h2 className="cat-card-title">{cat.title}</h2>
+                  <p className="cat-card-description">{cat.description}</p>
+                </div>
 
-            <div style={{ marginTop: 'auto' }}>
-              {cat.active ? (
-                <Link href={cat.href} style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
-                  color: cat.color,
-                  fontWeight: 600,
-                  textDecoration: 'none'
-                }}>
-                  立即開始 <ChevronRight size={18} />
-                </Link>
-              ) : (
-                <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem', fontWeight: 500 }}>
-                  敬請期待
-                </span>
-              )}
-            </div>
+                <div style={{ marginTop: 'auto' }}>
+                  <div className="cat-card-link-text" style={{ color: cat.color }}>
+                    立即開始 <ChevronRight size={18} />
+                  </div>
+                </div>
+              </Link>
+            ) : (
+              <div className="premium-card cat-card" style={{ opacity: 0.7 }}>
+                <div className="cat-card-icon-wrapper" style={{ background: `${cat.color}15` }}>
+                  <cat.icon size={32} color={cat.color} />
+                </div>
+
+                <div>
+                  <h2 className="cat-card-title">{cat.title}</h2>
+                  <p className="cat-card-description">{cat.description}</p>
+                </div>
+
+                <div style={{ marginTop: 'auto' }}>
+                  <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem', fontWeight: 500 }}>
+                    敬請期待
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Microscope, BookOpen, PenTool, Database, LogIn, LogOut, User } from "lucide-react";
+import { Microscope, BookOpen, PenTool, Database, LogIn, LogOut, User, RefreshCw, Settings, Shield } from "lucide-react";
 import { auth } from "@/firebase";
 import { signOut } from "firebase/auth";
 import { useAuth } from "@/context/AuthContext";
@@ -13,13 +13,15 @@ export default function Navbar() {
     const router = useRouter();
     const [isMobile, setIsMobile] = useState(false);
     const [isBottomNavVisible, setIsBottomNavVisible] = useState(true);
-    const { user } = useAuth();
+    const { user, isAdmin, loading } = useAuth();
     const [isProfileOpen, setIsProfileOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     // Detect if we are on a question detail page
     const isDetailPage = pathname.split('/').filter(Boolean).length >= 2;
 
     useEffect(() => {
+        setMounted(true);
         const checkMobile = () => setIsMobile(window.innerWidth < 768);
         checkMobile();
         window.addEventListener('resize', checkMobile);
@@ -58,61 +60,18 @@ export default function Navbar() {
     return (
         <>
             {/* Top Navbar */}
-            <nav style={{
-                position: 'fixed',
-                top: 0,
-                width: '100%',
-                zIndex: 1000,
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                borderBottom: '1px solid var(--glass-border)',
-                padding: '0.75rem 2rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: isMobile ? 'space-between' : 'flex-start', // Adjusted for mobile to have space-between
-                gap: isMobile ? '0' : '3rem',
-                boxSizing: 'border-box'
-            }} className="navbar-top">
-                {/* Logo Area - Centered on Mobile using spacer trick if needed, or just left/center */}
-                {/* To center logo on mobile with an item on the right, we need a 3-column grid or flex tweaks. */}
-                {/* Simpler: Logo in center, User icon on right absolute? */}
+            <nav className="navbar-top">
+                {/* Logo & Refresh (Common) */}
+                <div className="nav-logo-section">
+                    <Microscope size={24} color="var(--accent-color)" />
+                    <span className="nav-brand-text">InfTest</span>
+                    <button onClick={() => window.location.reload()} className="refresh-button">
+                        <RefreshCw size={18} />
+                    </button>
+                </div>
 
-                {isMobile ? (
-                    <>
-                        <div style={{ width: '24px' }} /> {/* Spacer left */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <Microscope size={24} color="var(--accent-color)" />
-                            <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--primary-color)' }}>
-                                InfTest
-                            </span>
-                        </div>
-                        {/* Mobile User Icon */}
-                        <div style={{ width: '24px', display: 'flex', justifyContent: 'flex-end' }}>
-                            {user ? (
-                                <button onClick={() => handleLogout()} style={{ background: 'none', border: 'none', padding: 0 }}>
-                                    {user.photoURL ? (
-                                        <img src={user.photoURL} alt="User" style={{ width: 24, height: 24, borderRadius: '50%' }} />
-                                    ) : (
-                                        <LogOut size={20} color="var(--text-muted)" />
-                                    )}
-                                </button>
-                            ) : (
-                                <Link href="/login">
-                                    <LogIn size={20} color="var(--accent-color)" />
-                                </Link>
-                            )}
-                        </div>
-                    </>
-                ) : (
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                        <Microscope size={28} color="var(--accent-color)" />
-                        <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--primary-color)' }}>
-                            InfTest
-                        </span>
-                    </div>
-                )}
-
-                <div style={{ display: 'flex', gap: '1rem', flex: 1 }} className="desktop-only">
+                {/* Desktop Links */}
+                <div className="nav-links-desktop desktop-only">
                     {links.map((link) => {
                         const Icon = link.icon;
                         const isActive = pathname === link.href;
@@ -122,122 +81,90 @@ export default function Navbar() {
                                 href={link.href}
                                 className={`nav-link ${isActive ? 'active' : ''}`}
                             >
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                                    <Icon size={18} />
-                                    <span>{link.label}</span>
-                                </div>
+                                <Icon size={18} />
+                                <span>{link.label}</span>
                             </Link>
                         );
                     })}
                 </div>
 
-                {/* Desktop User Menu (Right side) */}
-                {!isMobile && (
-                    <div className="desktop-only" style={{ marginLeft: 'auto' }}>
-                        {user ? (
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                                    {user.displayName || user.email}
-                                </span>
-                                <button
-                                    onClick={handleLogout}
-                                    style={{
-                                        padding: '0.5rem 1rem',
-                                        borderRadius: '0.5rem',
-                                        border: '1px solid var(--glass-border)',
-                                        background: 'rgba(255,255,255,0.5)',
-                                        cursor: 'pointer',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '0.5rem',
-                                        fontSize: '0.9rem',
-                                        color: 'var(--text-main)'
-                                    }}
-                                >
-                                    <LogOut size={16} />
-                                    登出
-                                </button>
+                {/* Timer Portal Slot */}
+                <div id="navbar-timer-slot" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1 }}></div>
+
+                {/* User Menu */}
+                <div className="nav-user-section" suppressHydrationWarning>
+                    {!mounted || loading ? (
+                        <div style={{ width: '80px' }} />
+                    ) : user ? (
+                        <div className="nav-user-info">
+                            <span className="nav-user-name desktop-only">
+                                {user.displayName || user.email?.split('@')[0]}
+                            </span>
+                            <div className="nav-user-actions" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                {isAdmin && (
+                                    <Link href="/admin" className="nav-settings-btn" title="管理後台" style={{ color: 'var(--accent-color)' }}>
+                                        <Shield size={20} />
+                                    </Link>
+                                )}
+                                <Link href="/profile" className="nav-settings-btn" title="設置">
+                                    <Settings size={20} />
+                                </Link>
+                                {user.photoURL && (
+                                    <Link href="/profile">
+                                        <img src={user.photoURL} alt="User" className="user-avatar" />
+                                    </Link>
+                                )}
                             </div>
-                        ) : (
-                            <Link
-                                href="/login"
-                                style={{
-                                    padding: '0.5rem 1.25rem',
-                                    borderRadius: '0.5rem',
-                                    background: 'var(--accent-color)',
-                                    color: 'white',
-                                    textDecoration: 'none',
-                                    fontWeight: 600,
-                                    fontSize: '0.9rem',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '0.5rem'
-                                }}
-                            >
-                                <LogIn size={16} />
-                                登入
-                            </Link>
-                        )}
-                    </div>
-                )}
+                        </div>
+                    ) : (
+                        <Link href="/login" className="nav-login-btn">
+                            <LogIn size={20} />
+                            <span>登入</span>
+                        </Link>
+                    )}
+                </div>
             </nav>
 
             {/* Bottom Nav for Mobile */}
-            {isMobile && (
-                <>
-                    {/* Toggle Button for detail mode */}
-                    {isDetailPage && (
-                        <button
-                            onClick={() => setIsBottomNavVisible(!isBottomNavVisible)}
-                            style={{
-                                position: 'fixed',
-                                bottom: isBottomNavVisible ? '80px' : '20px',
-                                right: '20px',
-                                width: '44px',
-                                height: '44px',
-                                borderRadius: '50%',
-                                background: 'var(--accent-color)',
-                                color: 'white',
-                                border: 'none',
-                                boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)',
-                                zIndex: 1001,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                transform: isBottomNavVisible ? 'rotate(180deg)' : 'rotate(0deg)'
-                            }}
+            <div className={`bottom-nav mobile-only`} style={{
+                transform: (isDetailPage && !isBottomNavVisible) ? 'translateY(100%)' : 'translateY(0)',
+                opacity: (isDetailPage && !isBottomNavVisible) ? 0 : 1,
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                pointerEvents: (isDetailPage && !isBottomNavVisible) ? 'none' : 'auto'
+            }}>
+                {links.map((link) => {
+                    const Icon = link.icon;
+                    const isActive = pathname === link.href;
+                    return (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className={`bottom-nav-item ${isActive ? 'active' : ''}`}
+                            onClick={() => isDetailPage && setIsBottomNavVisible(false)}
                         >
-                            <div style={{ transition: 'transform 0.3s ease', transform: isBottomNavVisible ? 'rotate(180deg)' : 'rotate(0deg)' }}>
-                                <Microscope size={20} />
-                            </div>
-                        </button>
-                    )}
+                            <Icon size={22} className="bottom-nav-icon" />
+                            <span>{link.label}</span>
+                        </Link>
+                    );
+                })}
+            </div>
 
-                    <div className="bottom-nav" style={{
-                        transform: (isDetailPage && !isBottomNavVisible) ? 'translateY(100%)' : 'translateY(0)',
-                        opacity: (isDetailPage && !isBottomNavVisible) ? 0 : 1,
-                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                        pointerEvents: (isDetailPage && !isBottomNavVisible) ? 'none' : 'auto'
-                    }}>
-                        {links.map((link) => {
-                            const Icon = link.icon;
-                            const isActive = pathname === link.href;
-                            return (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    className={`bottom-nav-item ${isActive ? 'active' : ''}`}
-                                    onClick={() => isDetailPage && setIsBottomNavVisible(false)}
-                                >
-                                    <Icon size={22} className="bottom-nav-icon" />
-                                    <span>{link.label}</span>
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </>
-            )}
+            {/* Toggle Button for detail mode on mobile */}
+            <div className="mobile-only">
+                {isDetailPage && (
+                    <button
+                        onClick={() => setIsBottomNavVisible(!isBottomNavVisible)}
+                        className="mobile-fab"
+                        style={{
+                            bottom: isBottomNavVisible ? '80px' : '20px'
+                        }}
+                    >
+                        <div style={{ transition: 'transform 0.3s ease', transform: isBottomNavVisible ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+                            <Microscope size={20} />
+                        </div>
+                    </button>
+                )}
+            </div>
         </>
     );
 }

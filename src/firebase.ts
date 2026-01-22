@@ -1,8 +1,7 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
-// TODO: Replace with your actual Firebase project configuration
-// You can copy this from the Firebase Console -> Project Settings
 const firebaseConfig = {
     apiKey: "AIzaSyCtU9TdJVeCOVS0zlFtVL4QWUKS_n4jeVk",
     authDomain: "inftest-c77b1.firebaseapp.com",
@@ -14,5 +13,15 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase (SSR safe)
+// Initialize Firebase (SSR safe)
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 export const auth = getAuth(app);
+
+// Use initializeFirestore to allow settings like long polling
+import { initializeFirestore } from "firebase/firestore";
+export const db = initializeFirestore(app, {
+    experimentalForceLongPolling: true, // Fix for some networks blocking WebSockets
+    ignoreUndefinedProperties: true,
+});
+
+console.log("Firebase initialized manually with Long Polling.");

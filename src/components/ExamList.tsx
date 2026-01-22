@@ -38,38 +38,35 @@ export default function ExamList({ exams, title, description, iconColor, categor
                 {exams.map((exam) => (
                     <Link
                         key={exam.id}
-                        href={`${categoryPath}/${exam.id}`}
+                        href={`${categoryPath}?id=${exam.id}`}
                         style={{ textDecoration: 'none', color: 'inherit' }}
                     >
-                        <div className="premium-card" style={{
-                            padding: '1.5rem 2rem',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between'
-                        }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                                <div
-                                    className="exam-card-year"
-                                    style={{
-                                        color: iconColor,
-                                        background: `${iconColor}08`
-                                    } as React.CSSProperties}
-                                >
-                                    {exam.year}
-                                </div>
-                                <div>
-                                    <h3 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.25rem' }}>
-                                        {exam.title}
-                                    </h3>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
-                                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                                            <Calendar size={14} /> {exam.year} 年度
-                                        </span>
-                                        <span>共 {exam._count?.questions ?? 0} 題</span>
+                        <div className="premium-card">
+                            <div className="exam-card-inner">
+                                <div className="exam-card-content">
+                                    <div
+                                        className="exam-card-year"
+                                        style={{
+                                            color: iconColor,
+                                            background: `${iconColor}08`
+                                        } as React.CSSProperties}
+                                    >
+                                        {exam.year}
+                                    </div>
+                                    <div>
+                                        <h3 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.25rem' }}>
+                                            {exam.title}
+                                        </h3>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
+                                            <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                                                <Calendar size={14} /> {exam.year} 年度
+                                            </span>
+                                            <span>共 {exam._count?.questions ?? 0} 題</span>
+                                        </div>
                                     </div>
                                 </div>
+                                <ArrowRight size={20} color="var(--text-muted)" />
                             </div>
-                            <ArrowRight size={20} color="var(--text-muted)" />
                         </div>
                     </Link>
                 ))}
