@@ -19,6 +19,7 @@ import {
     PenTool,
     Database,
     Shield,
+    Upload,
     AlertCircle
 } from "lucide-react";
 
@@ -44,8 +45,10 @@ export default function AdminPage() {
     const [creating, setCreating] = useState(false);
     const [deleting, setDeleting] = useState<string | null>(null);
     const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         if (!authLoading) {
             if (!user) {
                 router.push("/login");
@@ -116,9 +119,11 @@ export default function AdminPage() {
         }
     };
 
+    if (!isMounted) return null;
+
     if (authLoading || loading) {
         return (
-            <div className="profile-container loading-wrapper">
+            <div className="profile-container loading-wrapper" suppressHydrationWarning>
                 <div style={{ textAlign: 'center' }}>
                     <div className="spinner" />
                     <p style={{ color: 'var(--text-muted)' }}>載入中...</p>
@@ -159,24 +164,45 @@ export default function AdminPage() {
                         <Shield size={28} color="var(--accent-color)" />
                         <h1 style={{ margin: 0, fontSize: '1.5rem' }}>管理後台</h1>
                     </div>
-                    <button
-                        onClick={() => setShowNewExamModal(true)}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.5rem',
-                            padding: '0.75rem 1.25rem',
-                            background: 'var(--accent-color)',
-                            color: 'white',
-                            border: 'none',
-                            borderRadius: '0.5rem',
-                            cursor: 'pointer',
-                            fontWeight: 600,
-                            fontSize: '0.9rem'
-                        }}
-                    >
-                        <Plus size={18} /> 新增試卷
-                    </button>
+                    <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                        <Link
+                            href="/admin/import"
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                padding: '0.75rem 1.25rem',
+                                background: '#f0fdf4',
+                                color: '#16a34a',
+                                border: '2px solid #16a34a',
+                                borderRadius: '0.5rem',
+                                cursor: 'pointer',
+                                fontWeight: 600,
+                                fontSize: '0.9rem',
+                                textDecoration: 'none'
+                            }}
+                        >
+                            <Upload size={18} /> 批量匯入
+                        </Link>
+                        <button
+                            onClick={() => setShowNewExamModal(true)}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                padding: '0.75rem 1.25rem',
+                                background: 'var(--accent-color)',
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '0.5rem',
+                                cursor: 'pointer',
+                                fontWeight: 600,
+                                fontSize: '0.9rem'
+                            }}
+                        >
+                            <Plus size={18} /> 新增試卷
+                        </button>
+                    </div>
                 </div>
             </div>
 

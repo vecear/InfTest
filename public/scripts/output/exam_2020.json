@@ -1,0 +1,3307 @@
+{
+  "title": "2020年感染症專科醫師甄審筆試",
+  "year": 2020,
+  "category": "WRITTEN",
+  "questions": [
+    {
+      "order": 0,
+      "content": "第 1 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q001.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q001.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 1,
+      "content": "第 2 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q002.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q002.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 2,
+      "content": "第 3 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q003.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q003.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 3,
+      "content": "第 4 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q004.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q004.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 4,
+      "content": "第 5 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q005.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q005.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 5,
+      "content": "第 6 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q006.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q006.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 6,
+      "content": "第 7 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q007.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q007.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 7,
+      "content": "第 8 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q008.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q008.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 8,
+      "content": "第 9 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q009.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q009.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 9,
+      "content": "第 10 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q010.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q010.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 10,
+      "content": "第 11 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q011.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q011.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 11,
+      "content": "第 12 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q012.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q012.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 12,
+      "content": "第 13 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q013.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q013.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 13,
+      "content": "第 14 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q014.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q014.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 14,
+      "content": "第 15 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q015.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q015.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 15,
+      "content": "第 16 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q016.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q016.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 16,
+      "content": "第 17 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q017.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q017.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 17,
+      "content": "第 18 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q018.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q018.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 18,
+      "content": "第 19 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q019.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q019.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 19,
+      "content": "第 20 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q020.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q020.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 20,
+      "content": "第 21 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q021.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q021.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 21,
+      "content": "第 22 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q022.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q022.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 22,
+      "content": "第 23 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q023.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q023.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 23,
+      "content": "第 24 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q024.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q024.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 24,
+      "content": "第 25 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q025.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q025.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 25,
+      "content": "第 26 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q026.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q026.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 26,
+      "content": "第 27 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q027.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q027.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 27,
+      "content": "第 28 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q028.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q028.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 28,
+      "content": "第 29 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q029.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q029.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 29,
+      "content": "第 30 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q030.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q030.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 30,
+      "content": "第 31 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q031.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q031.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 31,
+      "content": "第 32 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q032.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q032.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 32,
+      "content": "第 33 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q033.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q033.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 33,
+      "content": "第 34 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q034.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q034.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 34,
+      "content": "第 35 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q035.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q035.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 35,
+      "content": "第 36 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q036.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q036.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 36,
+      "content": "第 37 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q037.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q037.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 37,
+      "content": "第 38 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q038.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q038.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 38,
+      "content": "第 39 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q039.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q039.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 39,
+      "content": "第 40 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q040.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q040.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 40,
+      "content": "第 41 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q041.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q041.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 41,
+      "content": "第 42 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q042.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q042.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 42,
+      "content": "第 43 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q043.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q043.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 43,
+      "content": "第 44 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q044.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q044.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 44,
+      "content": "第 45 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q045.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q045.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 45,
+      "content": "第 46 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q046.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q046.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 46,
+      "content": "第 47 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q047.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q047.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 47,
+      "content": "第 48 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q048.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q048.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 48,
+      "content": "第 49 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q049.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q049.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 49,
+      "content": "第 50 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q050.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q050.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 50,
+      "content": "第 51 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q051.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q051.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 51,
+      "content": "第 52 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q052.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q052.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 52,
+      "content": "第 53 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q053.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q053.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 53,
+      "content": "第 54 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q054.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q054.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 54,
+      "content": "第 55 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q055.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q055.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 55,
+      "content": "第 56 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q056.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q056.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 56,
+      "content": "第 57 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q057.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q057.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 57,
+      "content": "第 58 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q058.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q058.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 58,
+      "content": "第 59 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q059.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q059.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 59,
+      "content": "第 60 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q060.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q060.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 60,
+      "content": "第 61 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q061.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q061.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 61,
+      "content": "第 62 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q062.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q062.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 62,
+      "content": "第 63 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q063.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q063.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 63,
+      "content": "第 64 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q064.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q064.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 64,
+      "content": "第 65 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q065.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q065.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 65,
+      "content": "第 66 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q066.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q066.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 66,
+      "content": "第 67 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q067.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q067.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 67,
+      "content": "第 68 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q068.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q068.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 68,
+      "content": "第 69 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q069.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q069.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 69,
+      "content": "第 70 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q070.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q070.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 70,
+      "content": "第 71 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q071.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q071.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 71,
+      "content": "第 72 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q072.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q072.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 72,
+      "content": "第 73 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q073.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q073.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 73,
+      "content": "第 74 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q074.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q074.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 74,
+      "content": "第 75 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q075.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q075.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 75,
+      "content": "第 76 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q076.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q076.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 76,
+      "content": "第 77 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q077.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q077.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 77,
+      "content": "第 78 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q078.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q078.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 78,
+      "content": "第 79 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q079.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q079.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 79,
+      "content": "第 80 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q080.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q080.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 80,
+      "content": "第 81 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q081.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q081.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 81,
+      "content": "第 82 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q082.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q082.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 82,
+      "content": "第 83 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q083.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q083.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 83,
+      "content": "第 84 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q084.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q084.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 84,
+      "content": "第 85 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q085.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q085.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 85,
+      "content": "第 86 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q086.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q086.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 86,
+      "content": "第 87 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q087.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q087.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 87,
+      "content": "第 88 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q088.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q088.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 88,
+      "content": "第 89 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q089.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q089.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 89,
+      "content": "第 90 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q090.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q090.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 90,
+      "content": "第 91 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q091.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q091.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 91,
+      "content": "第 92 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q092.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q092.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 92,
+      "content": "第 93 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q093.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q093.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 93,
+      "content": "第 94 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q094.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q094.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 94,
+      "content": "第 95 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q095.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q095.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 95,
+      "content": "第 96 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q096.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q096.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 96,
+      "content": "第 97 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q097.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q097.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 97,
+      "content": "第 98 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q098.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q098.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 98,
+      "content": "第 99 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q099.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q099.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 99,
+      "content": "第 100 題",
+      "type": "CHOICE",
+      "imageUrl": "/images/exams/2020/questions/q100.jpg",
+      "imageUrls": [
+        "/images/exams/2020/questions/q100.jpg"
+      ],
+      "options": [
+        {
+          "text": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    }
+  ]
+}

@@ -1,0 +1,3057 @@
+{
+  "title": "2023年感染症專科醫師甄審筆試",
+  "year": 2023,
+  "category": "WRITTEN",
+  "questions": [
+    {
+      "order": 0,
+      "content": "以下針對M痘(Mpox)的敘述，何者敘述最不正確? B",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "2022年全球爆發的M痘疫情，主要以性行為方式傳播，多發生於男同性戀者(men who had sex with men)。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "引起目前全球疫情主要流行株為clade-2，clade-2 較過去流行之 clade-1 病毒更容易傳播且嚴重度高。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "症狀與天花相似，但病情較輕微，包括發燒、畏寒/寒顫、出汗、頭痛、肌肉痛、淋巴腺腫大、疲倦等，症狀持續2-4週，大多數個案可於幾週內康復。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "兒童及免疫功能低下者尤其容易重症，併發症包括繼發性細菌感染、肺炎、敗血症等。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "口服抗病毒藥物 tecovirimat作用機制為干擾病毒表面蛋白質(VP37)，目前疾病管制署僅建議嚴重病患或免疫低下者使用。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 1,
+      "content": "下面有關細菌性腦膜炎的描述，何者為非?D",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "典型症狀為發燒、頭痛、頸部僵硬、畏光等",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "死亡率約為15%-25%",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "初生兒(一個月)常見之致病原為 Streptococcus agalactiae、E.coli、Listeria",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "在台灣 meningococcal meningitis 首選治療藥物為 penicillin",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "醫療人員接觸 meningococcal meningitis 患者而未有適當防護時，需於24小時內使用抗生素預防(如 ciprofloxacin)",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "B",
+      "answerExplanation": "C: Outcome – In the contemporary era, the mortality of neonatal bacterial meningitis is approximately 10 percent. (uptodate)\nMortality inbacterial meningitis varies by pathogen and country. For example, mortality rates in adults ranged from 6% in Germany to 54%inMalawi \n(Hasbun R. Progress and Challenges in Bacterial Meningitis: A Review. JAMA. 2022;328(21):2147–2154. doi:10.1001/jama.2022.20521)死亡率的差異很大，我覺得這個選項沒有正確答案。\nD E: 當臨床診斷疑似流行性腦脊髓膜炎，即需儘早給予合適抗生素治療。經驗性治療包括靜脈注射第3代頭孢子素如ceftriaxone，並應根據敏感性測試結果調整用藥。(CDC網頁) 熱病寫Penicilling G為Alternative的選擇\n一般而言，Rifampin、Ciprofloxacin、Ceftriaxone及Azithromycin對消除腦膜炎雙球菌於鼻咽帶菌之效果達90~95%，為執行預防性投藥之建議用藥。目前公費儲備預防性用藥以Azithromycin為儲備選擇。一般而言，Rifampin、Ciprofloxacin、Ceftriaxone及Azithromycin對消除腦膜炎雙球菌於鼻咽帶菌之效果達90~95%，為執行預防性投藥之建議用藥。(CDC流行性腦脊髓膜炎傳染病防治工作手冊)"
+    },
+    {
+      "order": 2,
+      "content": "下面有關麻疹(Measles)的描述，何者為非?D",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "人類為麻疹病毒唯一之宿主及傳染窩。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "空氣、飛沫傳播或是直接與病人的鼻腔或咽喉分泌物接觸皆可造成感染。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "典型前驅症狀為發高燒、鼻炎、結膜炎和咳嗽。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "在發燒3-4天後口腔臼齒內頰黏膜出現柯氏斑點(Koplik spots)及斑丘疹，此時會開始退燒。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "約5-10%之患者會併發症，包括中耳炎、肺炎與腦炎。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "D",
+      "answerExplanation": "前驅症狀：發高燒、鼻炎、結膜炎、咳嗽和在發燒3-4天後口腔下臼齒對面內頰側黏膜上出現柯氏斑點（Koplik spots）。\n紅疹：前驅症狀3-4天柯氏斑點出現後，會繼續發燒，並且再過24-48小時後典型的斑丘疹出現於耳後，再擴散至整個臉面，然後慢慢向下移至軀幹第2天和四肢第3天，皮疹在3-4天的時間內會覆蓋全身，並持續4-7天；病人出疹時病情最嚴重，且發燒至最高溫(CDC網頁)\nE約5-10％之患者因細菌或病毒重覆感染而產生併發症，併發症包括中耳炎、肺炎與腦炎。(CDC網頁)"
+    },
+    {
+      "order": 3,
+      "content": "doi:10.1001/jama.2022.20521)死亡率的差異很大，我覺得這個選項沒有正確答案。\nD E: 當臨床診斷疑似流行性腦脊髓膜炎，即需儘早給予合適抗生素治療。經驗性治療包括靜脈注射第3代頭孢子素如ceftriaxone，並應根據敏感性測試結果調整用藥。(CDC網頁) 熱病寫Penicilling G為Alternative的選擇\n一般而言，Rifampin、Ciprofloxacin、Ceftriaxone及Azithromycin對消除腦膜炎雙球菌於鼻咽帶菌之效果達90~95%，為執行預防性投藥之建議用藥。目前公費儲備預防性用藥以Azithromycin為儲備選擇。一般而言，Rifampin、Ciprofloxacin、Ceftriaxone及Azithromycin對消除腦膜炎雙球菌於鼻咽帶菌之效果達90~95%，為執行預防性投藥之建議用藥。(CDC流行性腦脊髓膜炎傳染病防治工作手冊)\n\n3. 下面有關麻疹(Measles)的描述，何者為非?D",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "人類為麻疹病毒唯一之宿主及傳染窩。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "空氣、飛沫傳播或是直接與病人的鼻腔或咽喉分泌物接觸皆可造成感染。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "典型前驅症狀為發高燒、鼻炎、結膜炎和咳嗽。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "在發燒3-4天後口腔臼齒內頰黏膜出現柯氏斑點(Koplik spots)及斑丘疹，此時會開始退燒。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "約5-10%之患者會併發症，包括中耳炎、肺炎與腦炎。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "D",
+      "answerExplanation": "前驅症狀：發高燒、鼻炎、結膜炎、咳嗽和在發燒3-4天後口腔下臼齒對面內頰側黏膜上出現柯氏斑點（Koplik spots）。\n紅疹：前驅症狀3-4天柯氏斑點出現後，會繼續發燒，並且再過24-48小時後典型的斑丘疹出現於耳後，再擴散至整個臉面，然後慢慢向下移至軀幹第2天和四肢第3天，皮疹在3-4天的時間內會覆蓋全身，並持續4-7天；病人出疹時病情最嚴重，且發燒至最高溫(CDC網頁)\nE約5-10％之患者因細菌或病毒重覆感染而產生併發症，併發症包括中耳炎、肺炎與腦炎。(CDC網頁)"
+    },
+    {
+      "order": 4,
+      "content": "下列有關新興感染致病原 Candida auris 之感染管制何者為非？E",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "C. auris 大多對fluconazole有抗藥性，三分之一的菌株亦對voriconazole及amphotericin B的感受性低(最低抑菌濃度≧2mg/L)。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "傳統的黴菌鑑定難以檢測此菌，需以robosmal DNA序列或matrix assisted laser desorption/ionization time-of-flight mass spectrometry(MALDI-TOF)正確鑑定此菌。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C. auris感染的高危險群，包括糖尿病患、有腹部手術、使用廣效性抗細菌抗生素或有侵入性導管置放者。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "防治C. auris感染的方式包括:確實洗手、定期環境消毒與菌株偵測、安全處理汙染廢棄物與謹慎使用抗黴菌藥物。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "C. auris好發於住院數週內(10至50天左右)的病患，院內感染C. auris的菌血症的30天死亡率約為5%至10%。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 5,
+      "content": "針對淋菌(Neisseria gonorrhoeae)引起的細菌性關節炎之敘述，何者最不適當？C",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "多處移動性關節炎(migratory arthritis)是臨床表現的特點",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "補體(complement)缺乏之免疫不全病人為此菌反覆血液感染高風險族群",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "關節液及血液培養經常為陽性，培養率檢出高達80%以上",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "治療首選藥物為ceftriaxone",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "若同時合併有披衣菌(Chamydia)感染，可加上azithromycin治療",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 6,
+      "content": "一位30歲男性，因發生急性腹瀉並有血便(dysentery)2天至急診就醫，其可能致病原的組合，下列選項何者最為適當？B\n1. Staphylococcus aureus\n2. Salmonella typhi\n3. Enterotoxigenic E. coli\n4. Campylobacter jejuni\n5. Bacillus cereus",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+2+3",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "2+4",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "1+3+5",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "2+3",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1+5",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 7,
+      "content": "下列有關狂犬病毒(rabies virus)的敘述何者為非？B",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "狂犬病毒(rabies virus)是一種桿狀病毒，Lyssavirus屬。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "台灣目前無動物狂犬病病例，屬於狂犬病非疫區地區。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "暴露前預防接種需注射3劑疫苗後(分別為第0、7及21或28天各施打一劑狂犬病疫苗)才能產生足夠的保護力。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "潛伏期通常為1~3個月，依傷口嚴重程度、傷口部位神經分布、病毒量等潛伏期不同，甚至可長達一年以上。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "注射狂犬病免疫球蛋白(rabies immunoglobulin)於動物抓咬傷後的傷口，目的在直接中和傷口處的狂犬病病毒。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 8,
+      "content": "J Infect Dis. 2006;193(11):1495. \nAntimicrob Agents Chemother. 2002;46(4):1147. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRef.: IDSA Guidelines on the Treatment and Management of Patients with COVID-19. PublishedMay 30, 2025. https://www.idsociety.org/practice-guideline/covid-19-guideline-treatment-and-management/\n\n\n13.有關抗結核藥物的治療，下列何者為非？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "單獨 isoniazid 抗藥的病人，先停用 INH，改用 RMP+EMB+PZA 9 個月。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "單獨 ethambutol 抗藥，可使用 INH+RMP+PZA 2 個月，再 INH+RMP 4 個月。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "單獨 pyrazinamide 抗藥，可使用 INH+RMP 9 個月。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "Isoniazid + pyrazinamide 抗藥，可使用 RMP+EMB+SM 至少 2 個月且痰陰轉，再 RMP+EMB 繼續治療到全程滿 9 個月。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "Pyrazinamide + ethambutol 抗藥，可使用 INH+RMP 9 個月。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 9,
+      "content": "percent. (uptodate)\nMortality inbacterial meningitis varies by pathogen and country. For example, mortality rates in adults ranged from 6% in Germany to 54%inMalawi \n(Hasbun R. Progress and Challenges in Bacterial Meningitis: A Review. JAMA. 2022;328(21):2147–2154. doi:10.1001/jama.2022.20521)死亡率的差異很大，我覺得這個選項沒有正確答案。\nD E: 當臨床診斷疑似流行性腦脊髓膜炎，即需儘早給予合適抗生素治療。經驗性治療包括靜脈注射第3代頭孢子素如ceftriaxone，並應根據敏感性測試結果調整用藥。(CDC網頁) 熱病寫Penicilling G為Alternative的選擇\n一般而言，Rifampin、Ciprofloxacin、Ceftriaxone及Azithromycin對消除腦膜炎雙球菌於鼻咽帶菌之效果達90~95%，為執行預防性投藥之建議用藥。目前公費儲備預防性用藥以Azithromycin為儲備選擇。一般而言，Rifampin、Ciprofloxacin、Ceftriaxone及Azithromycin對消除腦膜炎雙球菌於鼻咽帶菌之效果達90~95%，為執行預防性投藥之建議用藥。(CDC流行性腦脊髓膜炎傳染病防治工作手冊)\n\n3. 下面有關麻疹(Measles)的描述，何者為非?D",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "人類為麻疹病毒唯一之宿主及傳染窩。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "空氣、飛沫傳播或是直接與病人的鼻腔或咽喉分泌物接觸皆可造成感染。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "典型前驅症狀為發高燒、鼻炎、結膜炎和咳嗽。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "在發燒3-4天後口腔臼齒內頰黏膜出現柯氏斑點(Koplik spots)及斑丘疹，此時會開始退燒。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "約5-10%之患者會併發症，包括中耳炎、肺炎與腦炎。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "D",
+      "answerExplanation": "前驅症狀：發高燒、鼻炎、結膜炎、咳嗽和在發燒3-4天後口腔下臼齒對面內頰側黏膜上出現柯氏斑點（Koplik spots）。\n紅疹：前驅症狀3-4天柯氏斑點出現後，會繼續發燒，並且再過24-48小時後典型的斑丘疹出現於耳後，再擴散至整個臉面，然後慢慢向下移至軀幹第2天和四肢第3天，皮疹在3-4天的時間內會覆蓋全身，並持續4-7天；病人出疹時病情最嚴重，且發燒至最高溫(CDC網頁)\nE約5-10％之患者因細菌或病毒重覆感染而產生併發症，併發症包括中耳炎、肺炎與腦炎。(CDC網頁)"
+    },
+    {
+      "order": 10,
+      "content": "doi: 10.1016/S1473-3099(23)00731-4.\n\n\n\n\n\n\n\n\n\n\nSCCmec type IVPBP2a\n\n\n\n\n\nRef.: \nLancet. 2006;367(9512):731. \nLancet. 2002;359(9320):1819. \nJ Infect Dis. 2006;193(11):1495. \nAntimicrob Agents Chemother. 2002;46(4):1147. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRef.: IDSA Guidelines on the Treatment and Management of Patients with COVID-19. PublishedMay 30, 2025. https://www.idsociety.org/practice-guideline/covid-19-guideline-treatment-and-management/",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 11,
+      "content": "下列紅疹與疾病的配對，何者錯誤",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "玫瑰疹(rose spots)－傷寒",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "掌摑病紅疹(slapped cheek rash)－德國麻疹",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "紅海中的白色小島(white islands in a sea of red)－登革熱",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "沙紙樣(sandpaper)紅疹－猩紅熱",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "出現在手掌腳掌的紅疹－梅毒",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "B",
+      "answerExplanation": "解析：\nA、C、D、E 的配對皆正確：玫瑰疹（rose spots）見於傷寒；「紅海中的白色小島」是登革熱的典型描述；沙紙樣(sandpaper)皮疹為猩紅熱；掌跖出疹常見於二期梅毒。\nB 錯誤：所謂「slapped-cheek rash（掌頰病）」，是第五病（幼兒傳染性紅斑），由Parvovirus B19 引起，不是德國麻疹（rubella）。"
+    },
+    {
+      "order": 12,
+      "content": "關於 Listeria monocytogenes 感染的敘述，何者錯誤？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "它可以在冰箱溫度下生長",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "它最常引起健康成人的胃腸炎，且多為自限性",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "其感染在孕婦中常導致胎盤感染，可能導致流產",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "可以使用 ceftriaxone 治療",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "它具有致病能力，能穿過血腦屏障導致中樞神經系統感染",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "D",
+      "answerExplanation": "解析：\n關於 Listeria monocytogenes：\nA 正確：它可以在低溫環境（例如冰箱）下生長，屬於嗜冷菌。\nB 正確：在健康成人多表現為自限性的腸胃炎。\nC 正確：孕婦感染時可經胎盤傳染給胎兒，導致流產或死胎。\nD 錯誤：治療不能使用 ceftriaxone，因為 Listeria 對第三代頭孢菌素天然抗藥；正確藥物為 ampicillin（可合併 gentamicin）。\nE 正確：具有穿越血腦屏障的能力，會引起腦膜炎、腦炎等中樞神經系統感染。"
+    },
+    {
+      "order": 13,
+      "content": "45 歲洗腎病人的左腳不小心被狗咬傷，之後血液培養呈現 Pasteurella multocida。請問關於此菌的描述何者正確？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "Pasteurella multocida 是革蘭氏陽性球菌",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "主要是引起腸胃炎",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "可以使用 macrolides 類抗生素治療",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "存在於貓狗的口腔中",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "主要是因為吸入致病菌而被感染",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "D",
+      "answerExplanation": "解析：\nA. Pasteurella multocida 是革蘭氏陽性球菌\n=> 錯。它是 革蘭氏陰性短桿菌，不是陽性球菌。\nB. 主要是引起腸胃炎\n=> 錯。它主要引起 動物咬傷後的皮膚軟組織感染、敗血症，不是腸胃炎。\nC. 可以使用 macrolides 類抗生素治療\n=> 錯。大環內酯類 (macrolides) 對 P. multocida 效果不好，不是首選。首選通常是 penicillin、amoxicillin-clavulanate、third-gen cephalosporins。\nD. 存在於貓狗的口腔中\n=> 正確。Pasteurella multocida 常見於 貓狗的口腔與上呼吸道，因此咬傷/抓傷容易傳染給人。\nE. 主要是因為吸入病菌而被感染\n=> 錯。雖然少數案例與吸入有關（例如禽畜相關），但最主要的感染途徑是動物咬傷或抓傷。"
+    },
+    {
+      "order": 14,
+      "content": "請問下列類固醇的使用，何者錯誤？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "肺炎鏈球菌 (Streptococcus pneumoniae) 引起的腦膜炎患者應在抗生素治療開始之前或同時使用類固醇。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "中樞系統結核感染，類固醇劑量建議如下，dexamethasone 0.3–0.4 mg/kg/day 2–4 週，之後每週減量 0.1 mg/kg，直到每天 0.1 mg/kg，之後再改成每天 4 mg，之後每週減量 1 mg；總共使用類固醇時間為 12 週。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "隱球菌腦膜炎，類固醇劑量建議如下，dexamethasone 0.15 mg/kg 每 6 小時一次，持續 4 天。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "新冠肺炎患者，或需要氧氣治療，可以給予 dexamethasone 6 mg 每日一次，至多使用 10 天。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "AIDS 病人，若感染肺囊蟲肺炎，且有缺氧情形（未使用氧氣時，PaO2 < 70 mmHg 或 A-a gradient ≥ 35 mmHg）時，可以在肺囊蟲肺炎治療 72 小時內，考慮加入口服類固醇 prednisolone。治療前 1–5 天：prednisolone 40 mg BID；治療 6–10 天：prednisolone 40 mg QD；治療 11–21 天：prednisolone 20 mg QD。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "詳解：\nA. 肺炎鏈球菌腦膜炎 → 在開始抗生素前或同時給予類固醇（Dexamethasone），有助於降低發炎與神經後遺症。\n=> 正確。\nB. 中樞神經系統結核感染（TB meningitis） → 建議使用 Dexamethasone 或 Prednisone，療程約 6–8 週，部分建議可長達 12 週，且要逐漸 taper。\n=> 正確。\nC. 隱球菌腦膜炎（Cryptococcal meningitis） → 常規治療是 Amphotericin B + flucytosine，不建議使用類固醇，除非有嚴重的 IRIS或是Cerebral cryptococcomas with mass effect。\nIRIS: In the setting of CNS inflammation with increased intracranial pressure and severe symptoms, glucocorticoids may be used. Glucocorticoids should be administered with concomitant antifungal therapy.\nCerebral cryptococcomas: Glucocorticoids may be administered in the setting of mass effect and surrounding edema, especially if there are neurologic deficits. If glucocorticoids are used, the doses should be tapered gradually to prevent \"a rebound\" IRIS. \nReference:\nCox GM, Perfect JR. Cryptococcus neoformans: Treatment and prevention of meningoencephalitis and disseminated infection in patients without HIV. In: Post TW, ed. UpToDate. Waltham, MA: UpToDate Inc. Updated May 5, 2025. https://www.uptodate.com\nD. COVID-19（需氧氣的患者） → Dexamethasone 6 mg/day up to 10 days，是標準療法。\n=> 正確。\nE. AIDS 患者合併 PCP（肺囊蟲肺炎），且有低氧（PaO2 < 70 或 A-a > 35） → 可加 Prednisone，劑量 prednisolone 40 mg BID（1–5 天）、40 mg QD（6–10 天）、20 mg QD（11–21 天）。\n=> 正確。"
+    },
+    {
+      "order": 15,
+      "content": "貓抓熱(cat scratch disease)造成的不明熱(fever of unknown origin)何者症狀最 少見？E",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "體重下降",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "頭痛",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "肝脾腫大",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "眼睛病變",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "肺部發炎",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ". 體重下降常出現於貓抓病造成肝臟及脾臟侵犯的病人。 \nB. 頭痛是腦膜炎的症狀。 \nC. 肝脾腫大是肝脾侵犯的典型表現。 \nD. 眼睛病變可以用 Parinaud oculoglandular syndrome, neuroretinitis, papillitis,  optic neuritis, and focal retinochoroiditis 表現。 \nE. 肺部發炎亦有病例報導，但屬罕見。 \n【參考資料】 \n• UpToDate \"Microbiology, epidemiology, clinical manifestations, and diagnosis  of cat scratch disease\""
+    },
+    {
+      "order": 16,
+      "content": "有關感染性心內膜炎(infective endocarditis, IE)的敘述何者錯誤？C A. 醫療相關的感染性心內膜炎(healthcare-associated IE)，最常見的致病菌為 Staphylococcus aureus",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ". 正確 \nB. 其實這個選項應該也有問題：術後 3 個月後算是 major criteria，術後 3 個月 內算是 minor criteria \nC. 血液培養出兩套「Microorganisms that commonly cause IE」可算是一個 major  criteria，其中包含 Staphylococcus aureus、Staphylococcus lugdunensis、 Enterococcus faecalis、all streptococcal species except for S. pneumoniae and S.  pyogenes、Granulicatella and Abiotrophia spp、Gemella spp、HACEK group \nmicroorganisms (Haemophilus spp, Aggregatibacter actinomycetemcomitans,  Cardiobacterium hominis, Eikenella corrodens, and Kingella kingae) D. 當有心臟植入物，typical pathogen 可包含 coagulase-negative staphylococci,  Corynebacterium striatum and C. jeikeium, Serratia marcescens, Pseudomonas  aeruginosa, Cutibacterium acnes, nontuberculous mycobacteria (especially M.  chimaera), and Candida spp. \nE. 【參考資料】 \n• UpToDate \"Native valve endocarditis: Epidemiology, risk factors, and  microbiology\" \n• UpToDate \"Clinical manifestations and evaluation of adults with suspected left sided native valve endocarditis\"\n• European Society of Cardiology (ESC): Guidelines for the management of  endocarditis"
+    },
+    {
+      "order": 17,
+      "content": "HIV 感染者與非 HIV 感染者出現神經梅毒(neurosyphilis)的差別敘述，何者 錯誤？B",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "感染梅毒的早期在兩者皆可出現 neurosyphilis",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "前者比較容易出現神經學症狀(neurological deficit)",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "腦脊髓液(CSF)中的白血球數兩類病患相近",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "治療的藥物及時間相同",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "後者比較容易出現後遺症",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 18,
+      "content": "47 歲陳姓男子,十天前出現上呼吸道症狀合併發燒,經快篩檢驗為 COVID-19  antigen test 陽性,診所醫師給予症狀緩解藥物,因發燒未退,本日來急診就診,病人 有明顯的呼吸窘迫,血氧只剩下 88%,胸部 X 光檢查為雙側間質性浸潤,且疑似左 下肺野實質化,因持續呼吸衰竭、使用高流量氧氣鼻導管治療,後續轉加護病房照 顧。以下敘述何者正確? \n1. 除新冠肺炎重症的考量外,仍須考慮病毒性肺炎後的續發細菌性肺炎。 \n2. 若再次檢驗下呼吸道檢體仍為 COVID-19 antigen 陽性,可考慮使用新冠肺炎 抗病毒藥物。 \n3. 病人接受支氣管鏡檢查,肺泡灌洗液 galactomannan antigen test (GM test) index 為 0.5, 根據 2020 ECMM/ISHAM consensus criteria,可診斷為 probable CAPA  (COVID-19-associated pulmonary aseprgillosis)。 \n4. 針對 proven CAPA 的治療,首選藥物為 voriconazole 或 isavuconazole。 Voriconazole 要小心藥物交互作用,並監測藥物濃度,後者則無須監測。\n5. 考量新冠肺炎重症風險因子,可幫病人檢測是否有糖尿病或 HIV 病毒感染。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+2",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "1+3+4+5",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "2+4",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1+2+4+5",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "3",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 19,
+      "content": "25 歲谷先生,愛滋匿名篩檢陽性,經轉介至感染科門診後續抽血確診 HIV 感染 合併後天免疫缺乏症候群(acquired immunodeficiency syndrome/AIDS),CD4 淋巴 球為 4cells/µl,全身檢查後發現活動性喘、低燒、腋下及頸部淋巴結腫大、手掌 腳掌 maculopapular rash、肛門異樣凸起物。下列敘述何者不適合?",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "肺部影像檢查須注意是否有雙側間質性浸潤,必要時可排電腦斷層診斷是否 合併肺囊蟲肺病(Pneumocystis jirovecii pneumonia)或巨細胞病毒肺炎(CMV  pneumonitis)。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "若胸部 X 光片正常,仍不可排除結核菌感染,因 AIDS status,影像可呈不典型表 現。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "依照目前愛滋治療的建議,early ART(antiretroviral therapy)或 same day ART 為 目前的治療方針。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "可進行淋巴結切片,因免疫低下可能發生 disseminated Mycobacterium avium  complex disease.",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "肛門異樣凸起物可能為人類乳突病毒(human papillomavirus/HPV)感染,若併發 肛門癌,最可能是 HPV6、HPV11 導致。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 20,
+      "content": "一位 67 歲男性是肝硬化患者，今日早晨參加在海灘舉行的廟會活動，過程 中右足被海邊珊瑚石割傷，一天後，右下肢腫大並且併隨出血性水疱，病人因 為意識改變及發燒，於當日晚間被送到急診，到急診時血壓 70/40mmHg，心跳 130 次/分，請問下列哪種細菌是最可能的致病菌?",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "Klebsiella pneumoniae",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "Escherichia coli",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "Vibrio vulnificus",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "Salmonella enteritidis",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "Staphylococcus aureus",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 21,
+      "content": "一位 45 歲女性,已生育兩個小孩，為了節育而裝有子宮内避孕器(Intrauterine  device)，10 年未曾更換。因為最近一個月感覺下腹不適、發燒，她到婦產科求 診；超音波檢查發現骨盆腔内 10x10cm 病灶,經手術摘除病灶後,病理組織報告 提及 Sulfur granules，微生物室通知長革蘭氏陽性桿菌。請問下列何者敘述是 正確? D",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "最有效的治療藥物是 Baktar (trimethoprim/sulfamethoxazole)頭痛 B. 它是一種真菌的菌絲(mold)",
+          "order": 0
+        },
+        {
+          "text": "C",
+          "label": "這種致病菌不會在頭部感染",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "使用 penicillin 治療 6 到 12 個月",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "最可能的致病菌是 Nocardia",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 22,
+      "content": "一位 68 歲女性，育有 3 個兒女，以前身體健康良好，最近一年多來反覆泌 尿道感染。她到診所拿抗生素治療，每次都拿 3 天治療改善後就未再求診，也 不曾做過微生物培養，或影像學檢查。今日因又有解尿疼痛、發燒，到泌尿科\n門診，做了腹部 X-ray(KUB)檢查而發現鹿角石(staghorn stone)。請問致病菌最 可能有哪一種菌? C",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "Streptococcus pyogenes",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "Klebsiella pneumonia",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "Proteus mirabilis",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "Vibrio cholerae",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "Bacillus anthracis",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 23,
+      "content": "下列與老鼠有關的感染性疾病敘述,何者有誤?",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 24,
+      "content": "次/分，請問下列哪種細菌是最可能的致病菌?",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "Klebsiella pneumoniae",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "Escherichia coli",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "Vibrio vulnificus",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "Salmonella enteritidis",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "Staphylococcus aureus",
+          "order": 4
+        },
+        {
+          "text": "A",
+          "label": "最有效的治療藥物是 Baktar (trimethoprim/sulfamethoxazole)頭痛 B. 它是一種真菌的菌絲(mold)",
+          "order": 0
+        },
+        {
+          "text": "C",
+          "label": "這種致病菌不會在頭部感染",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "使用 penicillin 治療 6 到 12 個月",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "最可能的致病菌是 Nocardia",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "D",
+      "answerExplanation": "(D)目前許多已上市 DAAs 治療 HCV 的 SVR(sustained virologic response)皆高達 九成以上，DAAs 治療 HCV 成功率在愛滋或非愛滋感染族群並無差異。 \n(A)(C)(E)正確 \n(B) HIV/HCV 合併感染者在接受 DAA 之前，應重新抽血確認是否同時合併 HBV 感染，而合併 HIV/HCV/HBV 感染的患者在開始 DAA 治療前應接受完整 且具有 HBV 療效的高效能抗愛滋病毒藥物處方，以避免 B 型肝炎病毒再活化 的情形發生。 \n【參考資料】 \n愛滋病檢驗及治療指引第六版"
+    },
+    {
+      "order": 25,
+      "content": "針對潛伏結核感染（latent tuberculosis infection, LTBI）的治療，以下哪項敘 述是正確的？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "懷孕婦女為避免孕期中服藥，LTBI 治療通常被延遲到產後才進行。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "建議優先提供每日 1 次 isoniazid （INH），300mg，共 180/270 次（6H 或 9H 處方），倘無法使用，再考慮短程治療處方。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "愛滋病毒感染者建議優先提供 3HP（INH 加 rifapentine （RPT）），3 個月 每週一次處方，與 efavirenz 600 mg QD 併用需調整劑量。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "愛滋病毒感染者，LTBI 治療 3HP 與含 dolutegravir 50 mg QD 成分合併使 用時，需調整 dolutegravir 至 100 mg QD 劑量。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "愛滋病毒感染者，LTBI 治療 1HP （INH+RPT） 每日 1 次，1 個月處方， 與抗愛滋病毒藥物治療（bictegravir, emtricitabine, tenofovir QD）併用不需調整 劑量。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "E",
+      "answerExplanation": "詳解： \n(A)過去懷孕婦女為避免孕期中服藥，LTBI 治療通常被延遲到產後才進行，但 結核病接觸者發病風險高，尤其是近期接觸到傳染性結核病病人，因此懷孕 不應該視為延遲治療的原因，對於 LTBI 檢驗陽性孕婦應儘速進行治療， \n除可保護孕婦發病外，也可以預防新生兒先天性結核病的發生，處方可選擇 4R、3HR 或 6H/9H。孕婦及哺乳婦女 LTBI 治療如使用 INH 者可同時補 充 pyridoxine(vitaminB6)。（參考：結核診治指引第七版第十章） \n(B)建議優先提供短程治療處方，倘無法使用短程處方，再考慮 6H 或 9H 處 方。（參考：結核診治指引第七版第十章） \n(C) Efavirenz (EFV)與 3HP 併用，不需調整劑量 \n(D)3HP 與 dolutegravir 50 mg QD 合併使用，增加 dolutegravir 36%的清除，導 致 dolutegravir 的 area under the curve 減少 26%，但都可以維持病人的病 毒抑制，而且耐受性良好，dolutegravir 劑量不需調整；若是合併使用 rifampin 時，才需要增加 dolutegravir 的劑量至 50 mg 每日兩次。（參考： 愛滋病檢驗及治療指引第六版第三章） \n(E) 正確，根據臺大醫院針對 48 位併用 BIC/FTC/TAF 與 1HP 的藥物濃度與 HIV 病毒控制的研究結果：rifapentine 會顯著降低 BIC 濃度，但是 1HP 治 療結束後 HIV 病毒量控制並沒有受到影響。建議使用在規則服用 ART 且 半年內病毒量<200 copies/ml 之病人，且須謹慎追蹤病毒量變化。（參考： 愛滋病檢驗及治療指引第六版第三章）"
+    },
+    {
+      "order": 26,
+      "content": "28. 下列與老鼠有關的感染性疾病敘述,何者有誤?",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "B",
+      "answerExplanation": "(B)會造成猛爆性感染的為絲狀幼蟲(filariform larvae)(如下圖)，非桿狀幼蟲 (rhabditiform larvae)。 \n(A) 正確，肝臟可能因長期慢性感染導致膽管上皮增生、纖維化、膽結石或細\n胞病變等，有很多研究顯示中華肝吸蟲感染症與膽管癌有關。WHO 下的國際 癌症研究機構 (International Agency for Research on Cancer, IARC)已將中華肝吸 蟲列為人類的第一類生物致癌物 (Group 1 Biological Carcinogen)。 \n(C) 正確，Angiostrongylus cantonensis is the most common parasitic cause of  eosinophilic meningitis. A. cantonensis larvae are neurotropic(如下圖). \n(D)正確拼音應為 Schistosoma. Acute schistosomiasis syndrome (also known as  Katayama fever) is a systemic hypersensitivity reaction to schistosome antigens and  circulating immune complexes. Acute schistosomiasis syndrome occurs 2 to 12 weeks  \nafter initial infection. Clinical manifestations include sudden onset of fever, urticaria  and angioedema, chills, myalgias, arthralgias, dry cough, diarrhea, abdominal pain,  lymphadenopathy, and headache. \n(E)正確， IARC 已將埃及血吸蟲列為人類的第一類生物致癌物。 \n【參考資料】 \n台灣 CDC 網站(中華肝吸蟲感染症)、WHO IARC Classifications、UpToDate \n30.關於 HCV-HIV co-infection 的敘述下列何者錯誤？ \nA. HIV-HCV co-infection 相較於 HCV mono-infection 感染的患者有較高機會發\n生與肝臓相關的併發症和死亡率。 \nB.在開始 DAAs (direct-acting antivirals)治療 HCV 的患者中，若有同時感染 B 型 肝炎須留意 HBV 再活化的情況。 \nC.隨著 DAAs 藥物的進展，目前已經有數種可對抗 C 型肝炎病毒全基因型的 DAAs。 \nD.雖然 DAAs 治療效果已有顯著成效，但在 HIV-HCV co-infection 的病患治療 效果還是比 HCV mono-infection 的病患差。 \nE.在選擇 DAAs 時須留意和 HIV 藥物 cART(combination antiretroviral therapy)的 藥物交互作用，其中蛋白酶抑制劑與 C 型肝炎藥物交互作用相對較多。 \n答案: (D) \n(D)目前許多已上市 DAAs 治療 HCV 的 SVR(sustained virologic response)皆高達 九成以上，DAAs 治療 HCV 成功率在愛滋或非愛滋感染族群並無差異。 \n(A)(C)(E)正確 \n(B) HIV/HCV 合併感染者在接受 DAA 之前，應重新抽血確認是否同時合併 HBV 感染，而合併 HIV/HCV/HBV 感染的患者在開始 DAA 治療前應接受完整 且具有 HBV 療效的高效能抗愛滋病毒藥物處方，以避免 B 型肝炎病毒再活化 的情形發生。 \n【參考資料】 \n愛滋病檢驗及治療指引第六版 \n31.一名 45 歲的 HIV/AIDS 男性 CD4+lymphocyte count 35 cells/uL，出現了 4 週 的腹瀉，發燒和體重減輕。以下哪項檢驗最有可能診断巨細胞病毒感染 cytomegalovirus (CMV colitis)結腸炎？ \nA. Serum CMV IgG/ IgM \nB. Serum CMV polymerase chain reaction (PCR) \nC. Colonoscopy with biopsy\nD. Stool CMV antigen \nE. Stool CMV culture \n答案: (C) \n(A)(B)(C)在 CMV 腸胃道疾病，血液 CMV PCR 有時會是陰性，因此診斷需要 依賴組織切片的培養和組織病理學，而且病兆常是局部和斑塊狀的，因此可能 需要多次切片才能確診。 \n(E)糞便培養對診斷 CMV colitis 沒有角色，因為陽性培養結果可能代表 asymptomatic viral shedding. \n*補充: Invasive CMV disease in patients with AIDS，CMV colitis 是第二常見(第一 是 CMV retinitis) \n【參考資料】 \nUpToDate \n32. 針對潛伏結核感染（latent tuberculosis infection, LTBI）的治療，以下哪項敘 述是正確的？ \nA. 懷孕婦女為避免孕期中服藥，LTBI 治療通常被延遲到產後才進行。 \nB. 建議優先提供每日 1 次 isoniazid （INH），300mg，共 180/270 次（6H 或 9H 處方），倘無法使用，再考慮短程治療處方。 \nC. 愛滋病毒感染者建議優先提供 3HP（INH 加 rifapentine （RPT）），3 個月 每週一次處方，與 efavirenz 600 mg QD 併用需調整劑量。 \nD. 愛滋病毒感染者，LTBI 治療 3HP 與含 dolutegravir 50 mg QD 成分合併使 用時，需調整 dolutegravir 至 100 mg QD 劑量。 \nE. 愛滋病毒感染者，LTBI 治療 1HP （INH+RPT） 每日 1 次，1 個月處方， 與抗愛滋病毒藥物治療（bictegravir, emtricitabine, tenofovir QD）併用不需調整 劑量。\n正確答案：E \n詳解： \n(A)過去懷孕婦女為避免孕期中服藥，LTBI 治療通常被延遲到產後才進行，但 結核病接觸者發病風險高，尤其是近期接觸到傳染性結核病病人，因此懷孕 不應該視為延遲治療的原因，對於 LTBI 檢驗陽性孕婦應儘速進行治療， \n除可保護孕婦發病外，也可以預防新生兒先天性結核病的發生，處方可選擇 4R、3HR 或 6H/9H。孕婦及哺乳婦女 LTBI 治療如使用 INH 者可同時補 充 pyridoxine(vitaminB6)。（參考：結核診治指引第七版第十章） \n(B)建議優先提供短程治療處方，倘無法使用短程處方，再考慮 6H 或 9H 處 方。（參考：結核診治指引第七版第十章） \n(C) Efavirenz (EFV)與 3HP 併用，不需調整劑量 \n(D)3HP 與 dolutegravir 50 mg QD 合併使用，增加 dolutegravir 36%的清除，導 致 dolutegravir 的 area under the curve 減少 26%，但都可以維持病人的病 毒抑制，而且耐受性良好，dolutegravir 劑量不需調整；若是合併使用 rifampin 時，才需要增加 dolutegravir 的劑量至 50 mg 每日兩次。（參考： 愛滋病檢驗及治療指引第六版第三章） \n(E) 正確，根據臺大醫院針對 48 位併用 BIC/FTC/TAF 與 1HP 的藥物濃度與 HIV 病毒控制的研究結果：rifapentine 會顯著降低 BIC 濃度，但是 1HP 治 療結束後 HIV 病毒量控制並沒有受到影響。建議使用在規則服用 ART 且 半年內病毒量<200 copies/ml 之病人，且須謹慎追蹤病毒量變化。（參考： 愛滋病檢驗及治療指引第六版第三章） \n33. 關於新一代 B-lactam-B-lactamase-inhibitor 的抗菌範圍，下列敘述何者正 確？ \nA. Ceftazidime-avibactam is active against Enterobacterales, including ESBL producing and AmpC B-lactamase-producing isolates, as well as some of the bacteria  producing class D carbapenemases, such as OXA-24, OXA-40, and OXA-48. \nB. Ceftolozane-tazobactam has documented activity against ESBL-producing E. coli  carrying CTX-M-14 and CTX-M-15, carbapenem-resistant Acinetobacter baumannii,  as well as some anaerobes.\nC. Meropenem-vaborbactam inhibits class D (OXA-48) or class B carbapenemases. \nD. Imipenem-cilastatin combined with relebactam is mainly to restore the activity  against NDM and other carbapenemase-producing Enterobacterales and Pseudomonas  aeruginosa isolates \nE. 以上選項都正確。 \n正確答案：A \n詳解： \n(A)正確 \n(B)Ceftozolane-tazobactam has documented activity against ESBL-producing  Enterobacterales, including E. coli carrying CTX-M-14 and CTX-M-15, MDR P.  aeruginosa, as well as some anaerobes \n(C) Meropenem-vaborbactam has emerged as treatment option for Enterobacterales  producing ESBL, KPC, or AmpC. Meropenem-vaborbactam does not inhibit class  D (OXA-48) or class B carbapenemases \n(D)Imipenem/cilastatin-relebactam is effective against bacteria carrying class A and  class C β-lactamases, while the activity against blaOXA-48-expressing  carbapenem-resistant Enterobacterales is limited, and no activity against MBL  (including IMP, VIM, and NDM)-producing isolates is demonstrated"
+    },
+    {
+      "order": 27,
+      "content": "下面有關屈公病的描述，何者為非？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "詳解： \n(A)正確，Chikungunya virus 為 Togaviridae 科，Alphavirus 屬，單股 RNA 病毒 (B)正確 \n(C)與登革熱不同的是，部分感染屈公病的病人會持續數週的倦怠感，有些患者 的關節會痛到無法行動，並持續數週至數月，甚至數年，而典型的登革熱不 會出現長期的關節痛。 \n(D)正確 \n(E) 正確"
+    },
+    {
+      "order": 28,
+      "content": "關於鼠疫的敘述，下列何者不正確？\n鼠疫桿菌 Yersinia pestis 為革蘭陰性桿菌，兩極濃染，呈現 safety pin 型狀的桿菌。\n可因被跳蚤叮咬或咬傷感染，也可因接觸鼠類被感染動物或人類組織液，及吸入帶有致病菌的飛沫感染。\n臨床表現可分腺鼠疫、肺鼠疫、咽喉炎及敗血症性鼠疫，其中死亡率最高的為肺鼠疫。\n鼠疫皮膚病灶為壞疽型，受感染者初因局部皮膚受傷部位臨近的淋巴腺發炎，形成劇烈腫大及疼痛。\n在台灣屬為第二類法定傳染病，應於24小時內通報。\n選項：",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+2",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "3+4",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "4+5",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1+2+4",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1+2+3+4+5",
+          "order": 4
+        },
+        {
+          "text": "A",
+          "label": "1+2+3",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "2+3+4",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "2+4+5",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1+2+3+4",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1+2+3+4+5",
+          "order": 4
+        },
+        {
+          "text": "A",
+          "label": "1+2",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "1+3",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "1+4",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "2+5",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "3+5",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 29,
+      "content": "COVID-19 對孕產婦及新生兒的影響，下列何者為是？\n孕婦感染 SARS-CoV-2 的症狀和其他患者相似。\n相較於未感染 SARS-CoV-2 之育齡婦女，感染 SARS-CoV-2 且有症狀之孕婦演變為重症之風險增加。\n孕婦感染 SARS-CoV-2 並無產生感染 SARS-CoV-2 之母嬰，感染 SARS-CoV-2 且有症狀之孕婦，早產及剖腹產風險增加，且新生兒死亡與低體重風險較高。\n母乳中未檢出病毒，產婦之咽喉拭子可由 PCR 檢出病毒，但母乳未由 PCR 檢出病毒。母乳可提供嬰兒營養、強化嬰兒抵抗力。\n為避免新生兒感染 SARS-CoV-2，建議感染 SARS-CoV-2 之產婦與新生兒隔離。\n選項：",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+2+3",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "2+3+4",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "2+4+5",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1+2+3+4",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1+2+3+4+5",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 30,
+      "content": "關於川崎症與兒童多系統炎症候群（multisystem inflammatory syndrome in children, MIS-C）的比較，下列何者正確？\n川崎症主要侵犯嬰幼兒，而 MIS-C 之病童通常年齡較大，平均年齡大約 7-10 歲。\n川崎症多侵犯冠狀動脈，因心肌受損症候群較 MIS-C 嚴重。\n川崎症與 MIS-C 均見血小板增多。\n川崎症及 MIS-C 均見胃腸道症狀。\n川崎症併發休克比例較高，稱為川崎氏症休克症候群（Kawasaki disease shock syndrome），其表現包括低血壓休克與心肌功能異常。\n選項：",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+2",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "1+3",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "1+4",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "2+5",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "3+5",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 31,
+      "content": "關於呼吸道融合病毒（RSV,\tRespiratory\tsyncytial\tvirus），以下何者為是？\t1.\t呼吸道融合病毒（Respiratory\tsyncytial\tvirus）為幼兒細支氣管炎與肺炎的重要原因，最常侵犯兩歲以下幼兒。\t2.\t台灣地區，呼吸道融合病毒流行季節傾向明顯，多集中在秋冬季。\t3.\t目前有單株抗體及疫苗可用來降低高危險幼兒罹患呼吸道融合病毒感染與住院的機率。\t4.\t之前施打過單株抗體的高風險幼兒，發生呼吸道融合病毒的穿透感染（breakthrough\tinfection）住院時，建議再追加一劑單株抗體，以避免重症發生。\t5.\t母奶含有對抗呼吸道融合病毒的免疫球蛋白與其他免疫因子，餵哺母乳可降低呼吸道融合病毒感染率與疾病嚴重度。\tA.\t1+3\tB.\t1+4\tC.\t1+5\tD.\t1+2+3+4\tE.\t1+2+3+4+5\t\t答案：C。\t根據「RSV疫苗使用建議（專業版）」（2024/3，臺灣多學會共識）：\t1.\t對：RSV\t是幼兒細支氣管炎/肺炎住院最常見原因，多在1歲內發生，幾乎所有兒童2歲前感染一次。\t2.\t錯：台灣季節性不明顯，全年均有病例；北部雙峰（約3–5月、8–10月），南部4–7月較多——不是單一「秋冬」。\t3.\t錯：目前單株抗體（palivizumab／nirsevimab）可預防高風險嬰幼兒住院；疫苗核准族群為孕婦與≥60歲長者（及≥75歲強烈建議），不是直接給嬰幼兒。\t4.\t錯：突破性感染住院時不建議補打一劑單株抗體；單株抗體是預防，非治療。\t5.\t對：母乳含\tIgA\t等免疫因子，可降低感染率與重症風險。\t超精簡記憶：\t台灣RSV：全年、北雙峰、南春夏\t預防：嬰幼兒靠單抗；疫苗給孕婦/長者\t單抗：預防，不是治療\t母乳有保護\t\t\t39.\t關於百日咳（Pertussis）描述，以下何者為是？\t1.\t百日咳致病原為百日咳桿菌。\t\n2.\t疾病過程一般分為三階段，黏膜期（catarthal\tstage）、陣發期（paroxysmal\tstage）、恢復期（convalescent\tstage）。\t3.\t若已進入陣發期（paroxysmal\tstage），即使給予正確的抗生素亦無法減輕症狀及縮短可傳染期。\t4.\t嬰兒感染常表現出\twhooping\tcough。\t5.\t實驗室數據可見到白血球上升（leukocytosis）合併中性球增多的情形。\tA.\t1+2\tB.\t1+3\tC.\t1+2+3\tD.\t1+2+3+4\tE.\t1+2+3+4+5\t\t答案：A。\t1.\t正確：病原體是\t百日咳桿菌\t(Bordetella\tpertussis)。\t2.\t正確：典型分三期：\t卡他期\tcatarrhal\tstage（類感冒症狀，最具傳染力）\t陣發期\tparoxysmal\tstage（嚴重咳嗽、咳嗽末端\twhooping\tcough，常合併嘔吐）\t恢復期\tconvalescent\tstage（症狀逐漸減輕）\t3.\t部分正確／陷阱：\t抗生素（如\tmacrolides）在\t卡他期可減輕症狀與傳染期。\t進入陣發期後，抗生素無法減輕症狀，但仍可縮短傳染期。→\t本句說「無法減輕症狀及縮短傳染期」（錯誤）。\t根據\tMandell:\tThe\tclassic\tteaching\tis\tthat\tantibiotics\timprove\tsymptoms\tand\tablate\tdisease\twhen\tgiven\tearly\tin\tthe\tcourse\tof\tthe\tdisease,\tduring\tthe\tcatarrhal\tstage,\tbut\tnot\twhen\tgiven\tin\tthe\tparoxysmal\tstage\t(\tTable\t236.1\t).\t128\tIn\tan\topen\trandomized\tstudy\tby\tBergquist\tand\tcolleagues,\t129\t17\tpatients\twith\ta\tpositive\tculture\tfor\tB.\tpertussis\twere\ttreated\twith\terythromycin\tfor\t10\tdays\tand\tcompared\twith\tan\tuntreated\tcontrol\tgroup.\tTreatment\teradicated\tthe\tbacterium\tfrom\tthe\tnasopharynx\tin\tall\tbut\t1\tpatient,\tand\tthe\ttreated\tgroup\tdeveloped\tsignificantly\tfewer\twhoops\tthan\tthe\tcontrol\tgroup.\tHowever,\talthough\tpatients\twere\tenrolled\twithin\tthe\tfirst\t14\tdays\tof\ttheir\tillness,\ta\tsignificant\tproportion\talready\tcomplained\tof\ta\twhooping\tcough\ton\ttheir\tinitial\tvisit,\tsuggesting\tthat\tantibiotics\tmay\thave\tan\teffect,\talbeit\tnot\ta\tdramatic\tone,\tin\tthe\tparoxysmal\tand\tthe\tcatarrhal\tstages\tof\tdisease.\tThe\tErythromycin\tStudy\tGroup\tfrom\tGermany\t130\thas\talso\treported\timprovement\tin\tthe\tfrequency\tand\tseverity\tof\tcoughing\tin\tpatients\tin\tthe\tearly\tparoxysmal\tstage\tof\tpertussis\twhen\ttreated\twith\terythromycin.\tHowever,\ta\tCochrane\treview\tof\t11\trandomized\tor\tquasi-randomized\tcontrolled\ttrials\tof\t\nantibiotics\tfor\ttreatment\tof\twhooping\tcough\tconcluded\tthat\talthough\tantibiotics\tare\teffective\tin\teliminating\tB.\tpertussis,\tthey\tdo\tnot\talter\tthe\tsubsequent\tclinical\tcourse\tof\tthe\tillness.\t131\t4.\t錯誤：嬰兒往往不會典型出現\twhooping\tcough，反而常表現為呼吸暫停、發紺、甚至突然死亡。典型的\twhooping\tcough\t反而見於較大兒童。\t根據\tMandell:\tPertussis\tcan\tpresent\tatypically\tin\tadults\tand\tinfants.\tInfants\tare\tless\tlikely\tto\thave\tthe\tcharacteristic\tinspiratory\twhoop\tand\ta\tsignificant\tcatarrhal\tstage\tand\tare\tmore\tlikely\tto\tpresent\twith\tgagging,\tgasping,\tcyanosis,\tor\tapnea\tand\thave\ta\tprolonged\tconvalescent\tphase.\t86\t,\t87\t,\t89\tInfants\toften\tpresent\twith\tthe\tnonspecific\tsign\tof\tpoor\tfeeding\tand\tcan\tpresent\twith\tseizures.\tIn\tadults,\tparoxysmal\tcoughing\tis\tseen\tin\tmost\tpatients,\tand\tseveral\tstudies\thave\treported\tcough\tduration\tof\tlonger\tthan\t21\tdays.\t88\tThere\tis\ta\twide\trange\tin\tthe\tpercentage\tof\tadult\tpatients\twith\tpertussis\twho\thave\twhooping\t(8%–82%)\tand\tposttussive\tvomiting\t(17%–65%;\tmean,\t50%).\tUnlike\tchildren,\tin\tadults,\tposttussive\tvomiting\tis\tstrongly\tsuggestive\tof\tpertussis.\t5.\t錯誤：典型是白血球上升合併淋巴球增多（lymphocytosis），不是中性球。\t根據\tMandell:\tUnlike\tother\tbacterial\tdiseases,\tthere\tare\tfew\tsystemic\tmanifestations\tof\tB.\tpertussis\tinfection\tbecause\tit\tdoes\tnot\tenter\tthe\tcirculation\tand\tdisseminate.\tB.\tpertussis\tis\trelatively\tsensitive\tto\tkilling\tby\tserum\tin\tvitro.\tHowever,\tin\tvivo,\teven\tserum-sensitive\tstrains\tcan\tefficiently\tinfect\tmice.\t42\t,\t43\tB.\tpertussis\thas\tmultiple\tmechanisms\tfor\tavoiding\tantibody-mediated\tcomplement\tkilling,\t44\tincluding\tthe\texpression\tof\tBrkA,\ta\tsurface-associated\tprotein\tbelonging\tto\tthe\tautotransporter\tsecretion\tsystem.\t45\tPT\tis\tthe\tprimary\tvirulence\tdeterminant\tresponsible\tfor\tthe\tsystemic\tmanifestations,\tof\twhich\tthe\tmost\tprominent\tis\tleukocytosis\twith\tlymphocytosis.\t34\t\t附上\tMandell\t整理的\tShort\tView\tSummary：\tDefinition\tl Pertussis,\tinfection\twith\tBordetella\tpertussis,\tis\tdivided\tinto\tthree\tstages:\tl Catarrhal\tstage:\trhinorrhea,\tnon-purulent\tconjunctivitis,\toccasional\tcough,\tlow-grade\tfever\tl Paroxysmal\tstage:\tparoxysms\tor\tfits\tof\tcoughing,\tinspiratory\twhoop\tl Convalescent\tstage:\tgradually\tdiminishing\tcough\tlasting\tup\tto\t8\tweeks\tl The\tclinical\tcase\tdefinition\tincludes\tcough\tfor\t14\tdays\tor\tlonger\tand\tone\tor\tmore\tof\tthe\tfollowing:\tparoxysmal\tcough,\tinspiratory\twhoop,\tor\tposttussive\tvomiting\t\tEpidemiology\t\nl With\tthe\tintroduction\tof\twhole-cell\tpertussis\tvaccine\tin\tthe\t1940s,\tpertussis\trates\tdropped\tdramatically.\tl Peaks\tof\tdisease\tcontinue\tto\toccur\tevery\t3\tto\t5\tyears.\tl Most\tcases,\thospitalizations,\tand\tdeaths\toccur\tin\tunimmunized\tinfants\tyounger\tthan\t6\tmonths.\tl Outbreaks\tin\tchildren\twith\thigh\tvaccine\trates\tmay\tbe\tpartly\tdue\tto\twaning\timmunity\tfrom\tacellular\tpertussis\tvaccine.\t\tMicrobiology\tl Bordetella\torganisms\tare\tsmall\tgram-negative\tcoccobacilli;\tgrowth\tis\tfastidious.\tl Filamentous\themagglutinin\tand\tfimbriae\tare\ttwo\tmajor\tadhesins.\tl Pertussis\ttoxin\t(PT)\thelps\torganisms\tevade\thost\tdefenses\tand\tcauses\tsystemic\tmanifestations;\tit\talso\tacts\tas\tan\tadhesin.\t\tDiagnosis\tl Diagnosis\tis\ttraditionally\tmade\tby\tmeans\tof\tculture\tfrom\tnasopharyngeal\tswabs\tor\taspirates;\tspecific\tswabs,\ttransport\tmedia,\tand\tgrowth\tmedia\tshould\tbe\tused\tto\tenhance\trecovery.\tl Newer\tpolymerase\tchain\treaction\tassays\tare\tmore\tsensitive\tfor\tdetection\tof\tB.\tpertussis\tand\tare\tthe\tprocedure\tof\tchoice.\tl Antibodies\tto\tB.\tpertussis\tPT\tcan\tbe\tused\tfor\tdiagnosis.\tl Direct\tfluorescent\tantibody\ttesting\tis\tavailable\tbut\tnot\trecommended.\t\tTherapy\tl Clarithromycin\t15\tmg/kg/day\tin\ttwo\tdivided\tdoses\t(maximum\t1\tg/day)\tfor\t7\tto\t14\tdays\tor\tazithromycin\tfor\t5\tdays\t(500\tmg\tfirst\tday,\tthen\t250\tmg\tdaily)\tcan\tbe\tused\tfor\ttreatment;\tazithromycin\t10\tmg/kg/day\tfor\t4\tdays\tis\trecommended\tfor\tinfants\tyounger\tthan\t1\tmonth.\tErythromycin\t500\tmg\tfour\ttimes\tdaily\tfor\t14\tdays\thas\ttraditionally\tbeen\tused\tfor\ttreatment\tbut\tis\tless\twell\ttolerated;\terythromycin\t40\tmg/kg/day\tin\tfour\tdivided\tdoses\tis\trecommended\tfor\tchildren\t(maximum\t2\tg/day).\tl Supportive\tcare\tis\tparamount\tin\tmanagement\tof\tpertussis,\tespecially\tin\tinfants.\t\tPrevention\tl Immunization\tis\tthe\tsingle\tmost\teffective\tmeans\tof\tpreventing\tpertussis.\t\nl The\tpertussis\timmunization\tschedule\tin\tthe\tUnited\tStates\tand\tCanada\tfor\tchildren\tand\tadolescents\tis\tas\tfollows:\tDTaP\t(diphtheria\ttoxoid,\ttetanus\ttoxoid,\tacellular\tpertussis\tvaccine,\tpediatric\tformulation)\tat\t2,\t4,\t6,\tand\t18\tmonths,\twith\tbooster\tat\t4\tto\t6\tyears;\tand\tTdap\t(tetanus\ttoxoid,\tdiphtheria\ttoxoid,\tacellular\tpertussis\tvaccine,\tadult\tformulation\t[reduced\tdoses\tof\t“d”\tand\t“ap”\tcomponents])\tfor\tpreadolescents\tand\tadolescents.\tl In\tthe\tUnited\tStates\tand\tCanada,\tit\tis\trecommended\tthat\tall\tadults\tage\t19\tyears\tand\tolder\treceive\ta\tsingle\tdose\tof\tTdap.\tThe\texception\tis\tpregnant\twomen\twho\tare\trecommended\tto\treceive\tTdap\tfor\teach\tpregnancy,\tpreferably\tin\tthe\tearly\tthird\ttrimester\talthough\tthe\tspecific\ttiming\tvaries\tsomewhat\tin\tdifferent\tcountries.\tl All\thealth\tcare\tworkers\twith\tpatient\tcontact\tshould\tbe\tgiven\ta\tsingle\tdose\tof\tTdap\tif\tthey\thave\tnot\tbeen\tvaccinated\tas\tan\tadult,\tirrespective\tof\twhen\tthey\treceived\tthe\tlast\tdose\tof\ttetanus\ttoxoid.\tl Prophylaxis\tcan\tbe\tconsidered\tfor\tclose\tcontacts\texposed\twithin\t21\tdays\tof\tonset\tof\tcough\tin\tthe\tindex\tcase.\tAdults\tand\tadolescents\tare\tgiven\terythromycin\t500\tmg\tfour\ttimes\tdaily\tfor\t7\tto\t14\tdays,\tazithromycin\t500\tmg\ton\tthe\tfirst\tday\tand\t250\tmg\tdaily\tfor\t4\tadditional\tdays,\tor\tclarithromycin\t500\tmg\ttwice\tdaily\tfor\t7\tdays.\t\t\t40.\t根據衛生福利部疾病管制署所公告的「各項預防接種間隔時間一覽表」，以下何者為是？\t1.\t活性注射型減毒疫苗與活性注射型減毒疫苗可同時接種，如不同時接種最少要間隔\t28天。\t2.\t卡介苗或口服活性減毒疫苗可與其他活性減毒注射式疫苗同時或間隔任何時間接種。\t3.\t麻疹腮腺炎德國麻疹混合疫苗（MMR）、水痘疫苗（Varicella）、活性減毒嵌合型日本腦炎疫苗（JE-CV\tLiveAtd），可同時分開不同部位接種。如未同時接種，且2劑疫苗接種間隔少於28天，則第2劑疫苗須重打，且應與前1劑（無效第2劑）接種疫苗最少間隔28天。\t4.\t接受一般肌肉注射免疫球蛋白治療或\tHBIG\t者，宜間隔11個月後再接種\tMIMR、水痘或活性減毒嵌合型日本腦炎疫苗（JE-CV\tLiveAtd）等活性減毒疫苗。\t5.\t接受\tRSV\t單株抗體\tpalivizumab\t後，則應間隔6個月以上再接種\tMMR、水痘或活性減毒嵌合型日本腦炎疫苗（JE-CV\tLiveAtd）等活性減毒疫苗。\tA.\t1+2\tB.\t1+3",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "根據「RSV疫苗使用建議（專業版）」（2024/3，臺灣多學會共識）：\t1.\t對：RSV\t是幼兒細支氣管炎/肺炎住院最常見原因，多在1歲內發生，幾乎所有兒童2歲前感染一次。\t2.\t錯：台灣季節性不明顯，全年均有病例；北部雙峰（約3–5月、8–10月），南部4–7月較多——不是單一「秋冬」。\t3.\t錯：目前單株抗體（palivizumab／nirsevimab）可預防高風險嬰幼兒住院；疫苗核准族群為孕婦與≥60歲長者（及≥75歲強烈建議），不是直接給嬰幼兒。\t4.\t錯：突破性感染住院時不建議補打一劑單株抗體；單株抗體是預防，非治療。\t5.\t對：母乳含\tIgA\t等免疫因子，可降低感染率與重症風險。\t超精簡記憶：\t台灣RSV：全年、北雙峰、南春夏\t預防：嬰幼兒靠單抗；疫苗給孕婦/長者\t單抗：預防，不是治療\t母乳有保護"
+    },
+    {
+      "order": 32,
+      "content": "關於百日咳（Pertussis）描述，以下何者為是？\t1.\t百日咳致病原為百日咳桿菌。\t\n2.\t疾病過程一般分為三階段，黏膜期（catarthal\tstage）、陣發期（paroxysmal\tstage）、恢復期（convalescent\tstage）。\t3.\t若已進入陣發期（paroxysmal\tstage），即使給予正確的抗生素亦無法減輕症狀及縮短可傳染期。\t4.\t嬰兒感染常表現出\twhooping\tcough。\t5.\t實驗室數據可見到白血球上升（leukocytosis）合併中性球增多的情形。\tA.\t1+2\tB.\t1+3\tC.\t1+2+3\tD.\t1+2+3+4\tE.\t1+2+3+4+5\t\t答案：A。\t1.\t正確：病原體是\t百日咳桿菌\t(Bordetella\tpertussis)。\t2.\t正確：典型分三期：\t卡他期\tcatarrhal\tstage（類感冒症狀，最具傳染力）\t陣發期\tparoxysmal\tstage（嚴重咳嗽、咳嗽末端\twhooping\tcough，常合併嘔吐）\t恢復期\tconvalescent\tstage（症狀逐漸減輕）\t3.\t部分正確／陷阱：\t抗生素（如\tmacrolides）在\t卡他期可減輕症狀與傳染期。\t進入陣發期後，抗生素無法減輕症狀，但仍可縮短傳染期。→\t本句說「無法減輕症狀及縮短傳染期」（錯誤）。\t根據\tMandell:\tThe\tclassic\tteaching\tis\tthat\tantibiotics\timprove\tsymptoms\tand\tablate\tdisease\twhen\tgiven\tearly\tin\tthe\tcourse\tof\tthe\tdisease,\tduring\tthe\tcatarrhal\tstage,\tbut\tnot\twhen\tgiven\tin\tthe\tparoxysmal\tstage\t(\tTable\t236.1\t).\t128\tIn\tan\topen\trandomized\tstudy\tby\tBergquist\tand\tcolleagues,\t129\t17\tpatients\twith\ta\tpositive\tculture\tfor\tB.\tpertussis\twere\ttreated\twith\terythromycin\tfor\t10\tdays\tand\tcompared\twith\tan\tuntreated\tcontrol\tgroup.\tTreatment\teradicated\tthe\tbacterium\tfrom\tthe\tnasopharynx\tin\tall\tbut\t1\tpatient,\tand\tthe\ttreated\tgroup\tdeveloped\tsignificantly\tfewer\twhoops\tthan\tthe\tcontrol\tgroup.\tHowever,\talthough\tpatients\twere\tenrolled\twithin\tthe\tfirst\t14\tdays\tof\ttheir\tillness,\ta\tsignificant\tproportion\talready\tcomplained\tof\ta\twhooping\tcough\ton\ttheir\tinitial\tvisit,\tsuggesting\tthat\tantibiotics\tmay\thave\tan\teffect,\talbeit\tnot\ta\tdramatic\tone,\tin\tthe\tparoxysmal\tand\tthe\tcatarrhal\tstages\tof\tdisease.\tThe\tErythromycin\tStudy\tGroup\tfrom\tGermany\t130\thas\talso\treported\timprovement\tin\tthe\tfrequency\tand\tseverity\tof\tcoughing\tin\tpatients\tin\tthe\tearly\tparoxysmal\tstage\tof\tpertussis\twhen\ttreated\twith\terythromycin.\tHowever,\ta\tCochrane\treview\tof\t11\trandomized\tor\tquasi-randomized\tcontrolled\ttrials\tof\t\nantibiotics\tfor\ttreatment\tof\twhooping\tcough\tconcluded\tthat\talthough\tantibiotics\tare\teffective\tin\teliminating\tB.\tpertussis,\tthey\tdo\tnot\talter\tthe\tsubsequent\tclinical\tcourse\tof\tthe\tillness.\t131\t4.\t錯誤：嬰兒往往不會典型出現\twhooping\tcough，反而常表現為呼吸暫停、發紺、甚至突然死亡。典型的\twhooping\tcough\t反而見於較大兒童。\t根據\tMandell:\tPertussis\tcan\tpresent\tatypically\tin\tadults\tand\tinfants.\tInfants\tare\tless\tlikely\tto\thave\tthe\tcharacteristic\tinspiratory\twhoop\tand\ta\tsignificant\tcatarrhal\tstage\tand\tare\tmore\tlikely\tto\tpresent\twith\tgagging,\tgasping,\tcyanosis,\tor\tapnea\tand\thave\ta\tprolonged\tconvalescent\tphase.\t86\t,\t87\t,\t89\tInfants\toften\tpresent\twith\tthe\tnonspecific\tsign\tof\tpoor\tfeeding\tand\tcan\tpresent\twith\tseizures.\tIn\tadults,\tparoxysmal\tcoughing\tis\tseen\tin\tmost\tpatients,\tand\tseveral\tstudies\thave\treported\tcough\tduration\tof\tlonger\tthan\t21\tdays.\t88\tThere\tis\ta\twide\trange\tin\tthe\tpercentage\tof\tadult\tpatients\twith\tpertussis\twho\thave\twhooping\t(8%–82%)\tand\tposttussive\tvomiting\t(17%–65%;\tmean,\t50%).\tUnlike\tchildren,\tin\tadults,\tposttussive\tvomiting\tis\tstrongly\tsuggestive\tof\tpertussis.\t5.\t錯誤：典型是白血球上升合併淋巴球增多（lymphocytosis），不是中性球。\t根據\tMandell:\tUnlike\tother\tbacterial\tdiseases,\tthere\tare\tfew\tsystemic\tmanifestations\tof\tB.\tpertussis\tinfection\tbecause\tit\tdoes\tnot\tenter\tthe\tcirculation\tand\tdisseminate.\tB.\tpertussis\tis\trelatively\tsensitive\tto\tkilling\tby\tserum\tin\tvitro.\tHowever,\tin\tvivo,\teven\tserum-sensitive\tstrains\tcan\tefficiently\tinfect\tmice.\t42\t,\t43\tB.\tpertussis\thas\tmultiple\tmechanisms\tfor\tavoiding\tantibody-mediated\tcomplement\tkilling,\t44\tincluding\tthe\texpression\tof\tBrkA,\ta\tsurface-associated\tprotein\tbelonging\tto\tthe\tautotransporter\tsecretion\tsystem.\t45\tPT\tis\tthe\tprimary\tvirulence\tdeterminant\tresponsible\tfor\tthe\tsystemic\tmanifestations,\tof\twhich\tthe\tmost\tprominent\tis\tleukocytosis\twith\tlymphocytosis.\t34\t\t附上\tMandell\t整理的\tShort\tView\tSummary：\tDefinition\tl Pertussis,\tinfection\twith\tBordetella\tpertussis,\tis\tdivided\tinto\tthree\tstages:\tl Catarrhal\tstage:\trhinorrhea,\tnon-purulent\tconjunctivitis,\toccasional\tcough,\tlow-grade\tfever\tl Paroxysmal\tstage:\tparoxysms\tor\tfits\tof\tcoughing,\tinspiratory\twhoop\tl Convalescent\tstage:\tgradually\tdiminishing\tcough\tlasting\tup\tto\t8\tweeks\tl The\tclinical\tcase\tdefinition\tincludes\tcough\tfor\t14\tdays\tor\tlonger\tand\tone\tor\tmore\tof\tthe\tfollowing:\tparoxysmal\tcough,\tinspiratory\twhoop,\tor\tposttussive\tvomiting\t\tEpidemiology\t\nl With\tthe\tintroduction\tof\twhole-cell\tpertussis\tvaccine\tin\tthe\t1940s,\tpertussis\trates\tdropped\tdramatically.\tl Peaks\tof\tdisease\tcontinue\tto\toccur\tevery\t3\tto\t5\tyears.\tl Most\tcases,\thospitalizations,\tand\tdeaths\toccur\tin\tunimmunized\tinfants\tyounger\tthan\t6\tmonths.\tl Outbreaks\tin\tchildren\twith\thigh\tvaccine\trates\tmay\tbe\tpartly\tdue\tto\twaning\timmunity\tfrom\tacellular\tpertussis\tvaccine.\t\tMicrobiology\tl Bordetella\torganisms\tare\tsmall\tgram-negative\tcoccobacilli;\tgrowth\tis\tfastidious.\tl Filamentous\themagglutinin\tand\tfimbriae\tare\ttwo\tmajor\tadhesins.\tl Pertussis\ttoxin\t(PT)\thelps\torganisms\tevade\thost\tdefenses\tand\tcauses\tsystemic\tmanifestations;\tit\talso\tacts\tas\tan\tadhesin.\t\tDiagnosis\tl Diagnosis\tis\ttraditionally\tmade\tby\tmeans\tof\tculture\tfrom\tnasopharyngeal\tswabs\tor\taspirates;\tspecific\tswabs,\ttransport\tmedia,\tand\tgrowth\tmedia\tshould\tbe\tused\tto\tenhance\trecovery.\tl Newer\tpolymerase\tchain\treaction\tassays\tare\tmore\tsensitive\tfor\tdetection\tof\tB.\tpertussis\tand\tare\tthe\tprocedure\tof\tchoice.\tl Antibodies\tto\tB.\tpertussis\tPT\tcan\tbe\tused\tfor\tdiagnosis.\tl Direct\tfluorescent\tantibody\ttesting\tis\tavailable\tbut\tnot\trecommended.\t\tTherapy\tl Clarithromycin\t15\tmg/kg/day\tin\ttwo\tdivided\tdoses\t(maximum\t1\tg/day)\tfor\t7\tto\t14\tdays\tor\tazithromycin\tfor\t5\tdays\t(500\tmg\tfirst\tday,\tthen\t250\tmg\tdaily)\tcan\tbe\tused\tfor\ttreatment;\tazithromycin\t10\tmg/kg/day\tfor\t4\tdays\tis\trecommended\tfor\tinfants\tyounger\tthan\t1\tmonth.\tErythromycin\t500\tmg\tfour\ttimes\tdaily\tfor\t14\tdays\thas\ttraditionally\tbeen\tused\tfor\ttreatment\tbut\tis\tless\twell\ttolerated;\terythromycin\t40\tmg/kg/day\tin\tfour\tdivided\tdoses\tis\trecommended\tfor\tchildren\t(maximum\t2\tg/day).\tl Supportive\tcare\tis\tparamount\tin\tmanagement\tof\tpertussis,\tespecially\tin\tinfants.\t\tPrevention\tl Immunization\tis\tthe\tsingle\tmost\teffective\tmeans\tof\tpreventing\tpertussis.\t\nl The\tpertussis\timmunization\tschedule\tin\tthe\tUnited\tStates\tand\tCanada\tfor\tchildren\tand\tadolescents\tis\tas\tfollows:\tDTaP\t(diphtheria\ttoxoid,\ttetanus\ttoxoid,\tacellular\tpertussis\tvaccine,\tpediatric\tformulation)\tat\t2,\t4,\t6,\tand\t18\tmonths,\twith\tbooster\tat\t4\tto\t6\tyears;\tand\tTdap\t(tetanus\ttoxoid,\tdiphtheria\ttoxoid,\tacellular\tpertussis\tvaccine,\tadult\tformulation\t[reduced\tdoses\tof\t“d”\tand\t“ap”\tcomponents])\tfor\tpreadolescents\tand\tadolescents.\tl In\tthe\tUnited\tStates\tand\tCanada,\tit\tis\trecommended\tthat\tall\tadults\tage\t19\tyears\tand\tolder\treceive\ta\tsingle\tdose\tof\tTdap.\tThe\texception\tis\tpregnant\twomen\twho\tare\trecommended\tto\treceive\tTdap\tfor\teach\tpregnancy,\tpreferably\tin\tthe\tearly\tthird\ttrimester\talthough\tthe\tspecific\ttiming\tvaries\tsomewhat\tin\tdifferent\tcountries.\tl All\thealth\tcare\tworkers\twith\tpatient\tcontact\tshould\tbe\tgiven\ta\tsingle\tdose\tof\tTdap\tif\tthey\thave\tnot\tbeen\tvaccinated\tas\tan\tadult,\tirrespective\tof\twhen\tthey\treceived\tthe\tlast\tdose\tof\ttetanus\ttoxoid.\tl Prophylaxis\tcan\tbe\tconsidered\tfor\tclose\tcontacts\texposed\twithin\t21\tdays\tof\tonset\tof\tcough\tin\tthe\tindex\tcase.\tAdults\tand\tadolescents\tare\tgiven\terythromycin\t500\tmg\tfour\ttimes\tdaily\tfor\t7\tto\t14\tdays,\tazithromycin\t500\tmg\ton\tthe\tfirst\tday\tand\t250\tmg\tdaily\tfor\t4\tadditional\tdays,\tor\tclarithromycin\t500\tmg\ttwice\tdaily\tfor\t7\tdays.\t\t\t40.\t根據衛生福利部疾病管制署所公告的「各項預防接種間隔時間一覽表」，以下何者為是？\t1.\t活性注射型減毒疫苗與活性注射型減毒疫苗可同時接種，如不同時接種最少要間隔\t28天。\t2.\t卡介苗或口服活性減毒疫苗可與其他活性減毒注射式疫苗同時或間隔任何時間接種。\t3.\t麻疹腮腺炎德國麻疹混合疫苗（MMR）、水痘疫苗（Varicella）、活性減毒嵌合型日本腦炎疫苗（JE-CV\tLiveAtd），可同時分開不同部位接種。如未同時接種，且2劑疫苗接種間隔少於28天，則第2劑疫苗須重打，且應與前1劑（無效第2劑）接種疫苗最少間隔28天。\t4.\t接受一般肌肉注射免疫球蛋白治療或\tHBIG\t者，宜間隔11個月後再接種\tMIMR、水痘或活性減毒嵌合型日本腦炎疫苗（JE-CV\tLiveAtd）等活性減毒疫苗。\t5.\t接受\tRSV\t單株抗體\tpalivizumab\t後，則應間隔6個月以上再接種\tMMR、水痘或活性減毒嵌合型日本腦炎疫苗（JE-CV\tLiveAtd）等活性減毒疫苗。\tA.\t1+2\tB.\t1+3",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": "1.\t正確：病原體是\t百日咳桿菌\t(Bordetella\tpertussis)。\t2.\t正確：典型分三期：\t卡他期\tcatarrhal\tstage（類感冒症狀，最具傳染力）\t陣發期\tparoxysmal\tstage（嚴重咳嗽、咳嗽末端\twhooping\tcough，常合併嘔吐）\t恢復期\tconvalescent\tstage（症狀逐漸減輕）\t3.\t部分正確／陷阱：\t抗生素（如\tmacrolides）在\t卡他期可減輕症狀與傳染期。\t進入陣發期後，抗生素無法減輕症狀，但仍可縮短傳染期。→\t本句說「無法減輕症狀及縮短傳染期」（錯誤）。\t根據\tMandell:\tThe\tclassic\tteaching\tis\tthat\tantibiotics\timprove\tsymptoms\tand\tablate\tdisease\twhen\tgiven\tearly\tin\tthe\tcourse\tof\tthe\tdisease,\tduring\tthe\tcatarrhal\tstage,\tbut\tnot\twhen\tgiven\tin\tthe\tparoxysmal\tstage\t(\tTable\t236.1\t).\t128\tIn\tan\topen\trandomized\tstudy\tby\tBergquist\tand\tcolleagues,\t129\t17\tpatients\twith\ta\tpositive\tculture\tfor\tB.\tpertussis\twere\ttreated\twith\terythromycin\tfor\t10\tdays\tand\tcompared\twith\tan\tuntreated\tcontrol\tgroup.\tTreatment\teradicated\tthe\tbacterium\tfrom\tthe\tnasopharynx\tin\tall\tbut\t1\tpatient,\tand\tthe\ttreated\tgroup\tdeveloped\tsignificantly\tfewer\twhoops\tthan\tthe\tcontrol\tgroup.\tHowever,\talthough\tpatients\twere\tenrolled\twithin\tthe\tfirst\t14\tdays\tof\ttheir\tillness,\ta\tsignificant\tproportion\talready\tcomplained\tof\ta\twhooping\tcough\ton\ttheir\tinitial\tvisit,\tsuggesting\tthat\tantibiotics\tmay\thave\tan\teffect,\talbeit\tnot\ta\tdramatic\tone,\tin\tthe\tparoxysmal\tand\tthe\tcatarrhal\tstages\tof\tdisease.\tThe\tErythromycin\tStudy\tGroup\tfrom\tGermany\t130\thas\talso\treported\timprovement\tin\tthe\tfrequency\tand\tseverity\tof\tcoughing\tin\tpatients\tin\tthe\tearly\tparoxysmal\tstage\tof\tpertussis\twhen\ttreated\twith\terythromycin.\tHowever,\ta\tCochrane\treview\tof\t11\trandomized\tor\tquasi-randomized\tcontrolled\ttrials\tof\t\nantibiotics\tfor\ttreatment\tof\twhooping\tcough\tconcluded\tthat\talthough\tantibiotics\tare\teffective\tin\teliminating\tB.\tpertussis,\tthey\tdo\tnot\talter\tthe\tsubsequent\tclinical\tcourse\tof\tthe\tillness.\t131\t4.\t錯誤：嬰兒往往不會典型出現\twhooping\tcough，反而常表現為呼吸暫停、發紺、甚至突然死亡。典型的\twhooping\tcough\t反而見於較大兒童。\t根據\tMandell:\tPertussis\tcan\tpresent\tatypically\tin\tadults\tand\tinfants.\tInfants\tare\tless\tlikely\tto\thave\tthe\tcharacteristic\tinspiratory\twhoop\tand\ta\tsignificant\tcatarrhal\tstage\tand\tare\tmore\tlikely\tto\tpresent\twith\tgagging,\tgasping,\tcyanosis,\tor\tapnea\tand\thave\ta\tprolonged\tconvalescent\tphase.\t86\t,\t87\t,\t89\tInfants\toften\tpresent\twith\tthe\tnonspecific\tsign\tof\tpoor\tfeeding\tand\tcan\tpresent\twith\tseizures.\tIn\tadults,\tparoxysmal\tcoughing\tis\tseen\tin\tmost\tpatients,\tand\tseveral\tstudies\thave\treported\tcough\tduration\tof\tlonger\tthan\t21\tdays.\t88\tThere\tis\ta\twide\trange\tin\tthe\tpercentage\tof\tadult\tpatients\twith\tpertussis\twho\thave\twhooping\t(8%–82%)\tand\tposttussive\tvomiting\t(17%–65%;\tmean,\t50%).\tUnlike\tchildren,\tin\tadults,\tposttussive\tvomiting\tis\tstrongly\tsuggestive\tof\tpertussis.\t5.\t錯誤：典型是白血球上升合併淋巴球增多（lymphocytosis），不是中性球。\t根據\tMandell:\tUnlike\tother\tbacterial\tdiseases,\tthere\tare\tfew\tsystemic\tmanifestations\tof\tB.\tpertussis\tinfection\tbecause\tit\tdoes\tnot\tenter\tthe\tcirculation\tand\tdisseminate.\tB.\tpertussis\tis\trelatively\tsensitive\tto\tkilling\tby\tserum\tin\tvitro.\tHowever,\tin\tvivo,\teven\tserum-sensitive\tstrains\tcan\tefficiently\tinfect\tmice.\t42\t,\t43\tB.\tpertussis\thas\tmultiple\tmechanisms\tfor\tavoiding\tantibody-mediated\tcomplement\tkilling,\t44\tincluding\tthe\texpression\tof\tBrkA,\ta\tsurface-associated\tprotein\tbelonging\tto\tthe\tautotransporter\tsecretion\tsystem.\t45\tPT\tis\tthe\tprimary\tvirulence\tdeterminant\tresponsible\tfor\tthe\tsystemic\tmanifestations,\tof\twhich\tthe\tmost\tprominent\tis\tleukocytosis\twith\tlymphocytosis.\t34\t\t附上\tMandell\t整理的\tShort\tView\tSummary：\tDefinition\tl Pertussis,\tinfection\twith\tBordetella\tpertussis,\tis\tdivided\tinto\tthree\tstages:\tl Catarrhal\tstage:\trhinorrhea,\tnon-purulent\tconjunctivitis,\toccasional\tcough,\tlow-grade\tfever\tl Paroxysmal\tstage:\tparoxysms\tor\tfits\tof\tcoughing,\tinspiratory\twhoop\tl Convalescent\tstage:\tgradually\tdiminishing\tcough\tlasting\tup\tto\t8\tweeks\tl The\tclinical\tcase\tdefinition\tincludes\tcough\tfor\t14\tdays\tor\tlonger\tand\tone\tor\tmore\tof\tthe\tfollowing:\tparoxysmal\tcough,\tinspiratory\twhoop,\tor\tposttussive\tvomiting\t\tEpidemiology\t\nl With\tthe\tintroduction\tof\twhole-cell\tpertussis\tvaccine\tin\tthe\t1940s,\tpertussis\trates\tdropped\tdramatically.\tl Peaks\tof\tdisease\tcontinue\tto\toccur\tevery\t3\tto\t5\tyears.\tl Most\tcases,\thospitalizations,\tand\tdeaths\toccur\tin\tunimmunized\tinfants\tyounger\tthan\t6\tmonths.\tl Outbreaks\tin\tchildren\twith\thigh\tvaccine\trates\tmay\tbe\tpartly\tdue\tto\twaning\timmunity\tfrom\tacellular\tpertussis\tvaccine.\t\tMicrobiology\tl Bordetella\torganisms\tare\tsmall\tgram-negative\tcoccobacilli;\tgrowth\tis\tfastidious.\tl Filamentous\themagglutinin\tand\tfimbriae\tare\ttwo\tmajor\tadhesins.\tl Pertussis\ttoxin\t(PT)\thelps\torganisms\tevade\thost\tdefenses\tand\tcauses\tsystemic\tmanifestations;\tit\talso\tacts\tas\tan\tadhesin.\t\tDiagnosis\tl Diagnosis\tis\ttraditionally\tmade\tby\tmeans\tof\tculture\tfrom\tnasopharyngeal\tswabs\tor\taspirates;\tspecific\tswabs,\ttransport\tmedia,\tand\tgrowth\tmedia\tshould\tbe\tused\tto\tenhance\trecovery.\tl Newer\tpolymerase\tchain\treaction\tassays\tare\tmore\tsensitive\tfor\tdetection\tof\tB.\tpertussis\tand\tare\tthe\tprocedure\tof\tchoice.\tl Antibodies\tto\tB.\tpertussis\tPT\tcan\tbe\tused\tfor\tdiagnosis.\tl Direct\tfluorescent\tantibody\ttesting\tis\tavailable\tbut\tnot\trecommended.\t\tTherapy\tl Clarithromycin\t15\tmg/kg/day\tin\ttwo\tdivided\tdoses\t(maximum\t1\tg/day)\tfor\t7\tto\t14\tdays\tor\tazithromycin\tfor\t5\tdays\t(500\tmg\tfirst\tday,\tthen\t250\tmg\tdaily)\tcan\tbe\tused\tfor\ttreatment;\tazithromycin\t10\tmg/kg/day\tfor\t4\tdays\tis\trecommended\tfor\tinfants\tyounger\tthan\t1\tmonth.\tErythromycin\t500\tmg\tfour\ttimes\tdaily\tfor\t14\tdays\thas\ttraditionally\tbeen\tused\tfor\ttreatment\tbut\tis\tless\twell\ttolerated;\terythromycin\t40\tmg/kg/day\tin\tfour\tdivided\tdoses\tis\trecommended\tfor\tchildren\t(maximum\t2\tg/day).\tl Supportive\tcare\tis\tparamount\tin\tmanagement\tof\tpertussis,\tespecially\tin\tinfants.\t\tPrevention\tl Immunization\tis\tthe\tsingle\tmost\teffective\tmeans\tof\tpreventing\tpertussis.\t\nl The\tpertussis\timmunization\tschedule\tin\tthe\tUnited\tStates\tand\tCanada\tfor\tchildren\tand\tadolescents\tis\tas\tfollows:\tDTaP\t(diphtheria\ttoxoid,\ttetanus\ttoxoid,\tacellular\tpertussis\tvaccine,\tpediatric\tformulation)\tat\t2,\t4,\t6,\tand\t18\tmonths,\twith\tbooster\tat\t4\tto\t6\tyears;\tand\tTdap\t(tetanus\ttoxoid,\tdiphtheria\ttoxoid,\tacellular\tpertussis\tvaccine,\tadult\tformulation\t[reduced\tdoses\tof\t“d”\tand\t“ap”\tcomponents])\tfor\tpreadolescents\tand\tadolescents.\tl In\tthe\tUnited\tStates\tand\tCanada,\tit\tis\trecommended\tthat\tall\tadults\tage\t19\tyears\tand\tolder\treceive\ta\tsingle\tdose\tof\tTdap.\tThe\texception\tis\tpregnant\twomen\twho\tare\trecommended\tto\treceive\tTdap\tfor\teach\tpregnancy,\tpreferably\tin\tthe\tearly\tthird\ttrimester\talthough\tthe\tspecific\ttiming\tvaries\tsomewhat\tin\tdifferent\tcountries.\tl All\thealth\tcare\tworkers\twith\tpatient\tcontact\tshould\tbe\tgiven\ta\tsingle\tdose\tof\tTdap\tif\tthey\thave\tnot\tbeen\tvaccinated\tas\tan\tadult,\tirrespective\tof\twhen\tthey\treceived\tthe\tlast\tdose\tof\ttetanus\ttoxoid.\tl Prophylaxis\tcan\tbe\tconsidered\tfor\tclose\tcontacts\texposed\twithin\t21\tdays\tof\tonset\tof\tcough\tin\tthe\tindex\tcase.\tAdults\tand\tadolescents\tare\tgiven\terythromycin\t500\tmg\tfour\ttimes\tdaily\tfor\t7\tto\t14\tdays,\tazithromycin\t500\tmg\ton\tthe\tfirst\tday\tand\t250\tmg\tdaily\tfor\t4\tadditional\tdays,\tor\tclarithromycin\t500\tmg\ttwice\tdaily\tfor\t7\tdays."
+    },
+    {
+      "order": 33,
+      "content": "根據衛生福利部疾病管制署所公告的「各項預防接種間隔時間一覽表」，以下何者為是？\t1.\t活性注射型減毒疫苗與活性注射型減毒疫苗可同時接種，如不同時接種最少要間隔\t28天。\t2.\t卡介苗或口服活性減毒疫苗可與其他活性減毒注射式疫苗同時或間隔任何時間接種。\t3.\t麻疹腮腺炎德國麻疹混合疫苗（MMR）、水痘疫苗（Varicella）、活性減毒嵌合型日本腦炎疫苗（JE-CV\tLiveAtd），可同時分開不同部位接種。如未同時接種，且2劑疫苗接種間隔少於28天，則第2劑疫苗須重打，且應與前1劑（無效第2劑）接種疫苗最少間隔28天。\t4.\t接受一般肌肉注射免疫球蛋白治療或\tHBIG\t者，宜間隔11個月後再接種\tMIMR、水痘或活性減毒嵌合型日本腦炎疫苗（JE-CV\tLiveAtd）等活性減毒疫苗。\t5.\t接受\tRSV\t單株抗體\tpalivizumab\t後，則應間隔6個月以上再接種\tMMR、水痘或活性減毒嵌合型日本腦炎疫苗（JE-CV\tLiveAtd）等活性減毒疫苗。\tA.\t1+2\tB.\t1+3",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "1.\t對。活性減毒注射型疫苗（如\tMMR、水痘、黃熱病）可以同時接種；若非同時，需間隔\t≥28天。\t2.\t對。卡介苗（BCG）或口服活性減毒疫苗（如小兒麻痺疫苗\tOPV、輪狀病毒疫苗\tRota）可與其他活性注射型減毒疫苗「同時或任意時間」接種，不受\t28\t天限制。\t3.\t對。MMR、Varicella、JE-CV（活性減毒嵌合型日腦疫苗）可同時於不同部位接種；若非同時且間隔\t<28天，則後打那劑無效，必須重打，且要與前一次至少再間隔\t28天。\t4.\t錯。一般免疫球蛋白（IVIG,\tHBIG\t等）會干擾活性減毒疫苗效益，但不同製劑有不同間隔：\t一般\tIVIG：3–11\t個月（依劑量而異）\tHBIG：通常間隔\t3\t個月\t→\t題目一律寫「11\t個月」不正確。\t5.\t錯。RSV\t單株抗體（palivizumab）不是免疫球蛋白製劑，不會干擾活性減毒疫苗，因此不需延後接種。\t根據CDC各項預防接種間隔時間一覽表：\t◆\t不活化疫苗與其他不活化疫苗可同時（分開不同部\t位接種）或間隔任何時間接種\t◆\t接受一般肌肉注射免疫球蛋白治療或HBIG\t者，宜間隔3個月後再接種\tMMR、水痘或\tJE\t等活性減毒疫苗。麻疹個案接觸者，如施打預防性肌肉注射免疫球蛋白，則應間隔\t6\t個月以上再接種MMR、水痘或\tJE\t等活性減毒疫苗(palivizumab\t無須間隔)。\t◆\t輸過血或接受靜脈注射血液製品者，宜間隔\t6\t個月後再接種\tMMR、水痘或\tJE疫苗（Washed\tRBCs\t無須間隔）。\t◆\t曾靜脈注射高劑量（≧1g/kg）免疫球蛋白治療時，宜間隔\t11\t個月後再接受MMR、水痘或\tJE\t疫苗。\t◆\t霍亂疫苗與黃熱病疫苗應間隔3週以上。\t\n\t來源：https://www.cdc.gov.tw/File/Get/7HXDNKcsK13duJoakNWkLQ"
+    },
+    {
+      "order": 34,
+      "content": "下列有關肺炎黴漿菌(Mycoplasma\tpneimoniae)感染的敘述何者錯誤？\tA.\t目前發現最小且可自行複製的病原體，且沒有細胞壁，許多常見的抗生素對他無效。\tB.\t孩童常見的呼吸道表現為哮吼、鼻竇炎、氣管炎、及肺炎\tC.\t肺外症狀有腦炎、溶血性貧血、腎功能異常及皮膚疾病(史蒂芬強生症候群、多形性紅斑、毒性表皮溶解症)等嚴重肺外並發症\tD.\t首選藥物為macrolides,\t二線替代藥物為fluoroquinolones或tetracyclines類抗生素\tE.\t懷疑黴漿菌合併腦炎等嚴重疾病時，首選用藥為fluoroquinolones\t\t解:\t(B)\t(B)\t孩童常見的表現為發燒、咳嗽及肺炎。雖然偶爾會造成上呼吸道感染，但造成的哮吼的狀況十分罕見(大部分croup的原因是parainfluenza)。\t(D)\t根據CDC的說法，首選藥物為macrolides,\t替代藥物為為fluoroquinolones或tetracyclines，雖然macrolides的抗藥性在上升。\t(E)\t以下出自Mandell,\t“Fluoroquinolones\tare\tbactericidal,\twhich\tcould\tbe\thelpful\tin\ttreating\tpatients\twith\tan\timpaired\timmune\tsystem\tor\tsystemic\tinfection\toutside\tthe\trespiratory\ttract.”\t\t42.\t有關登革熱(Dengue\tfever)的敘述，下列何者正確？\t1.\t屬黃病毒科\t(Flaviviridae)黃病毒屬(Flavivirus)中的登革熱病毒亞屬，分別為I、II、III、IV四種血清型別\t2.\t台灣的病媒蚊主要為三斑家蚊(Culex\ttritaniorhychus)\t及白線斑蚊(Aedes\talbopictus)\t\n\n3.\t兒童和成人比較，兒童比較容易出現嘔吐、腹痛、皮疹及咳嗽等，成人則是頭痛、肌肉痛等不適\t4.\t母親在產前三周診斷登革熱仍有機會藉由垂直傳染傳染給胎兒、被傳染的新生兒可能會有發燒、發紺、皮膚大理石斑、肝腫大(hepatomegaly)及血小板低下等症狀\t5.\t罹患登革出血熱的孩童和成人比較，孩童容易有出血表現和多重起器官失能，而成人比較容易有血漿滲漏及休克的現象\tA.\t1+2+3\tB.\t1+3+4\tC.\t1+3+4+5\tD.\t1+3\tE.\t1+2+3+4+5\t\t解:\t(B)\t(1) 正確\t(2) 埃及斑紋(Aedes\taegypti)及白線斑蚊\t(3) (5)兒童和成人比較，兒童比較容易有皮疹、搔癢、低血壓、休克及血漿滲漏(rash,\tpruritus,\thypotension,\tand\thigher\trates\tof\tplasma\tleakage\tand\tshock)，且腸胃道成狀比較明顯；成人比較容易有疼痛的症狀、頭暈、寒顫、腸胃道出血(pain\tsymptoms,\theadache,\tretro-orbital\tpain,\tmyalgia,\tarthralgia,\tback\tpain)及器官的影響(organ\tinvolvement,\ti.e.\tabnormal\tLFTs)\t(4) 登革熱可以藉由垂直傳染，通常是藉由三個途徑，當病毒血症的時候經胎盤傳染、胎盤脫離時的血液交換、或是生產時的血體液暴露(transplacental\tpassage\tduring\tmaternal\tviremia,\tmicro-transfusion\tas\tthe\tplacenta\tdetaches,\tand\texposure\tto\tmaternal\tblood\tor\tsecretions\tduring\tdelivery),\t機會約1.6-22%。新生兒有可能產生發燒、血小板低下、petechiae、粘膜出血、肝腫大、腹水、肋膜積液、及低血壓\tFrom\topen\tevidence\t\t43.\t1歲4個月健康男童，疫苗都有按時施打，因為近兩週走路姿勢怪怪且右膝腫脹帶到急診，媽媽否認發燒、外傷史、身體檢查右膝關節頭痛感也不明顯，做超音波發現膿瘍且引流初步細菌培養陰性，acid-fast\tstain陽性，MRI發現右膝骨髓侵犯，請問下列敘述何者錯誤？\tA.\t病人初步診斷為tuberculous\tosteomyelitis\tB.\t有可能和卡介苗相關，可送衛生福利部核可之實驗室進行卡介苗鑒定\tC.\t卡介苗選用牛結核分枝桿菌(Mycobacterium\tbovis)製成的活性疫苗\tD.\tMycobacterium\tbovis對rifampin具有抗藥性且多為multidrug-resistant\tstrain\tE.\t骨頭的X光片會有典型的變下如骨頭的腐蝕性病變，沒有新骨形成，骨頭周邊紡錘形冷膿瘍(cold\tabscess)\t\t解:\t(Ｄ)\t\nBCG\tosteomyelitis大都發生在2歲以下的幼童，打完BCG疫苗13-16個月後。與MTB造成的osteomyelitis相比，CRP,\tESR常常是正常或是高一點點。M.\tbovis對PZA具有抗藥性。CDC有公布BCG檢驗方式，以陽性培養菌株優先，送疾管署檢驗及疫苗研製中心分枝桿菌實驗室進行鑑定。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "B",
+      "answerExplanation": "(B)\t孩童常見的表現為發燒、咳嗽及肺炎。雖然偶爾會造成上呼吸道感染，但造成的哮吼的狀況十分罕見(大部分croup的原因是parainfluenza)。\t(D)\t根據CDC的說法，首選藥物為macrolides,\t替代藥物為為fluoroquinolones或tetracyclines，雖然macrolides的抗藥性在上升。\t(E)\t以下出自Mandell,\t“Fluoroquinolones\tare\tbactericidal,\twhich\tcould\tbe\thelpful\tin\ttreating\tpatients\twith\tan\timpaired\timmune\tsystem\tor\tsystemic\tinfection\toutside\tthe\trespiratory\ttract.”"
+    },
+    {
+      "order": 35,
+      "content": "有關登革熱(Dengue\tfever)的敘述，下列何者正確？\t1.\t屬黃病毒科\t(Flaviviridae)黃病毒屬(Flavivirus)中的登革熱病毒亞屬，分別為I、II、III、IV四種血清型別\t2.\t台灣的病媒蚊主要為三斑家蚊(Culex\ttritaniorhychus)\t及白線斑蚊(Aedes\talbopictus)\t\n\n3.\t兒童和成人比較，兒童比較容易出現嘔吐、腹痛、皮疹及咳嗽等，成人則是頭痛、肌肉痛等不適\t4.\t母親在產前三周診斷登革熱仍有機會藉由垂直傳染傳染給胎兒、被傳染的新生兒可能會有發燒、發紺、皮膚大理石斑、肝腫大(hepatomegaly)及血小板低下等症狀\t5.\t罹患登革出血熱的孩童和成人比較，孩童容易有出血表現和多重起器官失能，而成人比較容易有血漿滲漏及休克的現象\tA.\t1+2+3\tB.\t1+3+4\tC.\t1+3+4+5\tD.\t1+3\tE.\t1+2+3+4+5\t\t解:\t(B)\t(1) 正確\t(2) 埃及斑紋(Aedes\taegypti)及白線斑蚊\t(3) (5)兒童和成人比較，兒童比較容易有皮疹、搔癢、低血壓、休克及血漿滲漏(rash,\tpruritus,\thypotension,\tand\thigher\trates\tof\tplasma\tleakage\tand\tshock)，且腸胃道成狀比較明顯；成人比較容易有疼痛的症狀、頭暈、寒顫、腸胃道出血(pain\tsymptoms,\theadache,\tretro-orbital\tpain,\tmyalgia,\tarthralgia,\tback\tpain)及器官的影響(organ\tinvolvement,\ti.e.\tabnormal\tLFTs)\t(4) 登革熱可以藉由垂直傳染，通常是藉由三個途徑，當病毒血症的時候經胎盤傳染、胎盤脫離時的血液交換、或是生產時的血體液暴露(transplacental\tpassage\tduring\tmaternal\tviremia,\tmicro-transfusion\tas\tthe\tplacenta\tdetaches,\tand\texposure\tto\tmaternal\tblood\tor\tsecretions\tduring\tdelivery),\t機會約1.6-22%。新生兒有可能產生發燒、血小板低下、petechiae、粘膜出血、肝腫大、腹水、肋膜積液、及低血壓\tFrom\topen\tevidence\t\t43.\t1歲4個月健康男童，疫苗都有按時施打，因為近兩週走路姿勢怪怪且右膝腫脹帶到急診，媽媽否認發燒、外傷史、身體檢查右膝關節頭痛感也不明顯，做超音波發現膿瘍且引流初步細菌培養陰性，acid-fast\tstain陽性，MRI發現右膝骨髓侵犯，請問下列敘述何者錯誤？\tA.\t病人初步診斷為tuberculous\tosteomyelitis\tB.\t有可能和卡介苗相關，可送衛生福利部核可之實驗室進行卡介苗鑒定\tC.\t卡介苗選用牛結核分枝桿菌(Mycobacterium\tbovis)製成的活性疫苗\tD.\tMycobacterium\tbovis對rifampin具有抗藥性且多為multidrug-resistant\tstrain\tE.\t骨頭的X光片會有典型的變下如骨頭的腐蝕性病變，沒有新骨形成，骨頭周邊紡錘形冷膿瘍(cold\tabscess)\t\t解:\t(Ｄ)\t\nBCG\tosteomyelitis大都發生在2歲以下的幼童，打完BCG疫苗13-16個月後。與MTB造成的osteomyelitis相比，CRP,\tESR常常是正常或是高一點點。M.\tbovis對PZA具有抗藥性。CDC有公布BCG檢驗方式，以陽性培養菌株優先，送疾管署檢驗及疫苗研製中心分枝桿菌實驗室進行鑑定。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "B",
+      "answerExplanation": "(1) 正確\t(2) 埃及斑紋(Aedes\taegypti)及白線斑蚊\t(3) (5)兒童和成人比較，兒童比較容易有皮疹、搔癢、低血壓、休克及血漿滲漏(rash,\tpruritus,\thypotension,\tand\thigher\trates\tof\tplasma\tleakage\tand\tshock)，且腸胃道成狀比較明顯；成人比較容易有疼痛的症狀、頭暈、寒顫、腸胃道出血(pain\tsymptoms,\theadache,\tretro-orbital\tpain,\tmyalgia,\tarthralgia,\tback\tpain)及器官的影響(organ\tinvolvement,\ti.e.\tabnormal\tLFTs)\t(4) 登革熱可以藉由垂直傳染，通常是藉由三個途徑，當病毒血症的時候經胎盤傳染、胎盤脫離時的血液交換、或是生產時的血體液暴露(transplacental\tpassage\tduring\tmaternal\tviremia,\tmicro-transfusion\tas\tthe\tplacenta\tdetaches,\tand\texposure\tto\tmaternal\tblood\tor\tsecretions\tduring\tdelivery),\t機會約1.6-22%。新生兒有可能產生發燒、血小板低下、petechiae、粘膜出血、肝腫大、腹水、肋膜積液、及低血壓\tFrom\topen\tevidence"
+    },
+    {
+      "order": 36,
+      "content": "1歲4個月健康男童，疫苗都有按時施打，因為近兩週走路姿勢怪怪且右膝腫脹帶到急診，媽媽否認發燒、外傷史、身體檢查右膝關節頭痛感也不明顯，做超音波發現膿瘍且引流初步細菌培養陰性，acid-fast\tstain陽性，MRI發現右膝骨髓侵犯，請問下列敘述何者錯誤？\tA.\t病人初步診斷為tuberculous\tosteomyelitis\tB.\t有可能和卡介苗相關，可送衛生福利部核可之實驗室進行卡介苗鑒定\tC.\t卡介苗選用牛結核分枝桿菌(Mycobacterium\tbovis)製成的活性疫苗\tD.\tMycobacterium\tbovis對rifampin具有抗藥性且多為multidrug-resistant\tstrain\tE.\t骨頭的X光片會有典型的變下如骨頭的腐蝕性病變，沒有新骨形成，骨頭周邊紡錘形冷膿瘍(cold\tabscess)\t\t解:\t(Ｄ)\t\nBCG\tosteomyelitis大都發生在2歲以下的幼童，打完BCG疫苗13-16個月後。與MTB造成的osteomyelitis相比，CRP,\tESR常常是正常或是高一點點。M.\tbovis對PZA具有抗藥性。CDC有公布BCG檢驗方式，以陽性培養菌株優先，送疾管署檢驗及疫苗研製中心分枝桿菌實驗室進行鑑定。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 37,
+      "content": "(B)\n \n \n依\n據\n題\n幹\n敘\n述\n，\n應\n為\n腺\n病\n毒\n(Adenovirus)\n感\n染\n \n \n(A)\n  \n \n腺\n病\n毒\n是\n雙\n股\nDNA\n無\n套\n膜\n，\n \n>60\n \nserotypes\n \ndivided\n \ninto\n \nseven\n \nsubgroups\n \nor\n \nspecies\n \n(A\n \nthrough\n \nG)\n \n \n \n(B)\n \n腸\n套\n疊\n跟\nspecies\n \nC\n \n(1,2,5,6)\n有\n關\n \nLin,\n \nL.-H.;\n \nHuang,",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": ""
+    },
+    {
+      "order": 38,
+      "content": "(B)\n \n \n(1)\n \nV\n \n2024\n年\n第\n39\n週\n(2024/09/22\n \n-\n \n2024/09/28)\n \n腸\n病\n毒\n疫\n情\n週\n報\n \n第\n37\n週\n社\n區\n合\n約\n實\n驗\n室\n腸\n病\n毒\n陽\n性\n率\n為\n32.6%\n，\n腸\n病\n毒\n陽\n性\n檢\n體\n分\n別\n為\n克\n沙\n奇\n \nA16\n型\n4\n件\n，\n克\n沙\n奇\nA5\n型、\n克\n沙\n奇\nA6\n型、\n克\n沙\n奇\nA10\n型\n及\nNPEV\n各\n2\n件\n，\n克\n沙\n奇\nA2\n型\n及\n伊\n科\n病\n毒\n11\n型\n各\n1\n件\n \n腸\n病\n毒\n \nD68\n \n型\n個\n案\n：\n新\n增\n2\n例\n輕\n症\n病\n例\n，\n今\n年\n累\n計\n23\n例\n，\n均\n輕\n症\n \n \n(2)\n \nX\n \n新\n生\n兒\n感\n染\n腸\n病\n毒\n的\n症\n狀\n大\n多\n與\n嬰\n幼\n兒\n的\n表\n現\n不\n同\n，\n最\n常\n見\n的\n症\n狀\n包\n括\n發\n燒、\n食\n慾\n不\n佳、\n活\n動\n力\n下\n降、\n躁\n動\n不\n安、\n皮\n膚\n出\n現\n紅\n疹、\n腹\n瀉\n或\n嘔\n吐\n等\n，\n病\n況\n進\n展\n嚴\n重\n時\n可\n引\n發\n心\n肌\n炎、\n肝\n炎、\n腦\n炎、\n新\n生\n兒\n敗\n血\n症。\n主\n要\n由\nB\n型\n克\n沙\n奇\n病\n毒\n或\n伊\n科\n病\n毒\n引\n起。\n \n \n(3)\n \nV\n \n\n人\n類\n是\n腸\n病\n毒\n唯\n一\n的\n傳\n染\n來\n源\n，\n主\n要\n經\n由\n腸\n胃\n道\n（糞\n-\n口、\n水\n或\n食\n物\n污\n染）\n或\n呼\n吸\n道\n（飛\n沫、\n咳\n嗽\n或\n打\n噴\n嚏）\n傳\n染\n，\n亦\n可\n經\n由\n接\n觸\n病\n人\n皮\n膚\n水\n泡\n的\n液\n體\n而\n受\n到\n感\n染\n，\n此\n外\n，\n新\n生\n兒\n則\n可\n能\n透\n過\n胎\n盤、\n孕\n婦\n分\n娩\n過\n程\n或\n產\n後\n人\n際\n接\n觸\n等\n途\n徑\n感\n染\n腸\n病\n毒。\n在\n發\n病\n前\n數\n天\n，\n喉\n嚨\n部\n位\n與\n糞\n便\n就\n可\n發\n現\n病\n毒\n，\n此\n時\n即\n有\n傳\n染\n力\n，\n通\n常\n以\n發\n病\n後\n一\n週\n內\n傳\n染\n力\n最\n強\n；\n而\n患\n者\n可\n持\n續\n經\n由\n腸\n道\n釋\n出\n病\n毒\n，\n時\n間\n長\n達\n8\n到\n12\n週\n之\n久。\n \n \n(4)\n \nV\n \n腸\n病\n毒\n可\n以\n引\n發\n多\n種\n疾\n病\n，\n其\n中\n很\n多\n是\n沒\n有\n症\n狀\n的\n感\n染\n，\n或\n只\n出\n現\n類\n似\n一\n般\n感\n冒\n的\n輕\n微\n症\n狀。\n常\n引\n起\n手\n足\n口\n病\n（\nhand-foot-mouth\n \ndisease\n）\n及\n疱\n疹\n性\n咽\n峽\n炎\n（\nherpangina\n）\n，\n有\n些\n時\n候\n則\n會\n引\n起\n一\n些\n較\n特\n殊\n的\n臨\n床\n表\n現\n，\n包\n括\n無\n菌\n性\n腦\n膜\n炎、\n病\n毒\n性\n腦\n炎、\n心\n肌\n炎、\n肢\n體\n麻\n痺\n症\n候\n群、\n急\n性\n出\n血\n性\n結\n膜\n炎\n（\nacute\n \nhemorrhagic\n \nconjunctivitis\n）\n，\n或\n因\n感\n染\n腸\n病\n毒\nD68\n型\n而\n引\n起\n嚴\n重\n呼\n吸\n道\n症\n狀、\n腦\n炎\n或\n急\n性\n無\n力\n脊\n髓\n炎\n等。\n \n \n(5)\n \nX\n \n在\n所\n有\n腸\n病\n毒\n中\n，\n除\n了\n小\n兒\n麻\n痺\n病\n毒\n之\n外\n，\n以\n腸\n病\n毒\nA71\n型\n(Enterovirus\n \ntype\n \nA71)\n最\n容\n易\n引\n起\n神\n經\n系\n統\n的\n併\n發\n症\n，\n但\n是\n嚴\n重\n程\n度\n各\n有\n不\n同\n，\n有\n的\n只\n出\n現\n腦\n膜\n炎、\n輕\n微\n腦\n炎、\n肢\n體\n麻\n痺\n等\n非\n致\n命\n性\n的\n併\n發\n症\n，\n有\n的\n則\n會\n造\n成\n死\n亡\n病\n例。\n一\n般\n而\n言\n，\n感\n染\n某\n一\n型\n腸\n病\n毒\n之\n後\n，\n對\n該\n種\n特\n定\n病\n毒\n之\n免\n疫\n力\n至\n少\n可\n持\n續\n數\n十\n年\n之\n久\n，\n但\n接\n觸\n過\n未\n曾\n感\n染\n過\n的\n病\n毒\n型\n別\n，\n仍\n有\n可\n能\n感\n染\n發\n病。\n \n目\n前\n國\n內\n核\n准\n上\n市\n的\n腸\n病\n毒\nA71\n型\n疫\n苗\n廠\n牌\n有\n兩\n種\n，\n皆\n屬\n全\n病\n毒\n型\n不\n活\n化\n疫\n苗\n，\n適\n用\n滿\n2\n個\n月\n至\n未\n滿\n6\n歲\n幼\n兒\n。\n \n血\n清\n抗\n體\n的\n體\n外\n試\n驗\n中\n，\n兩\n種\n廠\n牌\n對\n於\n腸\n病\n毒\nA71\n型\n的\nB5\n及\nC4\n基\n因\n亞\n型\n具\n有\n交\n叉\n保\n護\n力\n，\n但\n對\n於\n其\n他\n腸\n病\n毒\n型\n別\n，\n如\n克\n沙\n奇\nA16\n型、\n腸\n病\n毒\nD68\n型\n等\n，\n目\n前\n未\n有\n證\n據\n顯\n示\n具\n有\n交\n叉\n保\n護\n效\n力。\n \n接\n種\n禁\n忌\n只\n有\n對\n疫\n苗\n過\n敏\n者\n，\n感\n染\n過\n腸\n病\n毒\n並\n不\n在\n條\n件\n中\n \n \n補\n充\n \n2025\n年\n第\n38\n週\n(2025/09/14\n \n-\n \n2025/09/20)\n \n腸\n病\n毒\n疫\n情\n週\n報\n \n第\n36\n週\n社\n區\n合\n約\n實\n驗\n室\n腸\n病\n毒\n檢\n出\n率\n10.8%\n，\n腸\n病\n毒\n陽\n性\n檢\n體\n分\n別\n為\n克\n沙\n奇\n \nA16\n型\n20\n件\n，\n克\n沙\n奇\nA2\n型\n及\n克\n沙\n奇\nA6\n型\n各\n6\n件\n，\n伊\n科\n病\n毒\n11\n型\n3\n件、\n克\n沙\n奇\nA5\n型\n2\n件\n，\n克\n沙\n奇\nA4\n型、\n克\n沙\n奇\nB5\n型\n及\n伊\n科\n病\n毒\n9\n型\n各\n1\n件。\n今\n年\n累\n計\n16\n例\n腸\n病\n毒\n感\n染\n併\n發\n重\n症\n病\n例\n，\n為\n近\n6\n年\n同\n期\n最\n高\n，\n其\n中\n新\n生\n兒\n重\n症\n病\n例\n累\n計\n \n13\n \n例\n，\n均\n感\n染\n伊\n科\n病\n毒\n \n11\n \n型。\n \n \nRef:\n \nCDC",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 39,
+      "content": "(C)\n \nCongenital\n \nCMV\n \ninfection\n \n(cCMV)\n \n-CMV\n \nis\n \nthe\n \nmost\n \ncommon\n \ninfectious\n \ncause\n \nof\n \nbirth\n \ndefects\n \nin\n \nthe\n \nUnited\n \nStates.\n \n-Most\n \nbabies\n \nwith\n \ncongenital\n \nCMV\n \nnever\n \nshow\n \nsigns\n \nor\n \nhave\n \nhealth\n \nproblems,\n \nbut\n \nsome\n \ndo\n \nat\n \nbirth\n \nor\n \ndevelop\n \nthem\n \nlater.\n \n-About\n \n1\n \nin\n \n200\n \nbabies\n \nis\n \nborn\n \nwith\n \ncongenital\n \nCMV .\n \n \n-About\n \n1\n \nin\n \n5\n \nbabies\n \nwith\n \ncongenital\n \nCMV\n \nwill\n \nhave\n \nbirth\n \ndefects\n \nor\n \nlong-term\n \nhealth\n \nproblems,\n \nlike\n \nhearing\n \nloss.\n \n \n(A)\n \nApproximately\n \n10\n \npercent\n \nof\n \nneonates\n \nwith\n \ncCMV\n \nhave\n \nsigns\n \nof\n \nsymptomatic\n \ninfection\n \nat\n \nbirth.\n \n \n(B)\n \n(C)\n \n(E)\n \nSensorineural\n \nhearing\n \nloss\n \nis\n \na\n \ncommon\n \nsequela\n \nof\n \ncCMV\n \nand\n \nis\n \ndetected\n \nin\n \none-third\n \nto\n \none-half\n \nof\n \ninfants\n \nwith\n \nsymptomatic\n \ndisease.\n \nThe\n \nhearing\n \nloss\n \n\nassociated\n \nwith\n \nsymptomatic\n \ncCMV\n \nmay\n \nbe\n \ndetectable\n \nat\n \nbirth,\n \nbut,\n \nin\n \n18\n \nto\n \n30\n \npercent\n \nof\n \ncases,\n \nit\n \nhas\n \ndelayed\n \nonset.\n \nIn\n \na\n \nsystematic\n \nreview ,\n \nhearing\n \nloss\n \nwas\n \nbilateral\n \nin\n \n71\n \npercent\n \nof\n \nchildren\n \nwith\n \nsymptomatic\n \ncCMV\n \n(compared\n \nwith\n \n43\n \npercent\n \nof\n \nchildren\n \nwith\n \nasymptomatic\n \ncCMV).\n \nThe\n \nhearing\n \nloss\n \nassociated\n \nwith\n \nsymptomatic\n \ncCMV\n \nis\n \noften\n \nprogressive\n \n(18\n \nto\n \n63\n \npercent\n \nof\n \ncases)\n \nand\n \neventually\n \nbecomes\n \nsevere\n \nto\n \nprofound\n \nin\n \nthe\n \naffected\n \near(s)\n \nof\n \n78\n \npercent\n \nof\n \naffected\n \nchildren.\n \n \n(D)\n \n \n○\n口\n水\n跟\n尿\n相\n比\n，\n比\n較\n建\n議\n用\n尿\n，\n因\n為\n口\n水\n較\n容\n易\n因\nsample\n \nerror\n造\n成\n偽\n陰\n性\n(\n例\n如\n檢\n體\n量\n不\n夠\n)\n，\n少\n機\n率\n也\n會\n因\n為\n留\n在\n嘴\n巴\n裡\n的\n母\n奶\n而\n偽\n陽\n性\n \n○\n血\n(\n漿\n)\nPCR\n沒\n有\n很\n推\n薦\n，\n因\n為\n不\n一\n定\n會\n有\nviremia\n而\n偽\n陰\n性\n，\n但\n如\n果\n有\n驗\n到\n就\n是\n陽\n性\n \n\n○\n不\n建\n議\n用\nIgG/IgM\n來\n診\n斷\n，\n因\n為\nIgM\n易\n偽\n陰\n性\n，\nIgG\n陽\n性\n有\n可\n能\n是\n媽\n媽\n傳\n來\n的\n \n○Prenatal\n時\n期\n也\n可\n用\n羊\n水\nPCR\n診\n斷\n \n○\n超\n過\n三\n周\n後\n驗\n到\n的\n，\n有\n可\n能\n是\n先\n天\n或\n是\n後\n天\n的\n感\n染\n \n \n目\n前\n台\n灣\n沒\n有\n相\n關\n指\n引\n，\n國\n際\n上\n對\n於\n篩\n檢\n方\n法\n(\n血\n?\n尿\n?\n口\n水\n?)\n及\noptimal\n \nfollow-up\n \nand\n \nmanagement\n \nof\n \nnewborns\n \nwith\n \npositive\n \nscreening\n \nresults\n仍\n未\n有\n共\n識\n，\n但\n有\n些\n人\n的\n症\n狀\n較\n晚\n才\n會\n出\n現\n，\n可\n能\n還\n是\n需\n要\n定\n期\n追\n蹤\n \nRef:\n \nCDC,\n \nuptodate\n \n \n答\n案\n:\nD\n \n(\n應\n先\nPCV\n再\nPPV)\n \n \nA:\n對。\n如\n圖\n \n(2024\n \nID\n \nforum\n \n林\n怡\n汎\n醫\n師\nppt)\n \nB:\n \n \n19\n \n歲\n(\n含\n)\n以\n上\n至\n64\n歲\n高\n危\n險\n群\n，\n接\n種\n過\n \n1\n \n劑\n \nPCV13/15\n者\n，\n間\n隔\n至\n少\n \n8\n \n週\n再\n接\n種\n \n1\n \n劑\n \nPPV23\n。\n \n\n65\n \n歲\n(\n含\n)\n以\n上\n長\n者\n，\n曾\n接\n種\nPCV13/15\n者\n，\n間\n隔\n至\n少\n1\n年\n \n(\n若\n65\n歲\n前\n接\n種\n且\n為\n高\n風\n險\n對\n象、\n機\n構\n住\n民、\n洗\n腎\n患\n者\n，\n間\n隔\n至\n少\n \n8\n \n週\n)\n，\n公\n費\n提\n供\n1\n劑\n \nPPV23\n。\n \n*\n高\n風\n險\n對\n象\n定\n義\n:\n \n \na.\n \n脾\n臟\n功\n能\n缺\n損\n或\n脾\n臟\n切\n除\n \nb.\n \n先\n天\n或\n後\n天\n免\n疫\n功\n能\n不\n全\n \nc.\n \n人\n工\n耳\n植\n入\n者\n \nd.\n \n腦\n脊\n髓\n液\n滲\n漏\n \ne.\n \n1\n年\n內\n接\n受\n免\n疫\n抑\n制\n劑\n或\n放\n射\n治\n療\n的\n惡\n性\n腫\n瘤\n及\n器\n官\n移\n植\n者\n \n(\n成\n人\n預\n防\n接\n種\n建\n議\n時\n程\n表\n \n114/4\n \n版\n)\n \n \nC:\n \n對。\n參\n考\nUS\n \nCDC\n \npneumococcus\n \n疫\n苗\n時\n程\n表。\n \n(https://www .cdc.gov/pneumococcal/downloads/V accine-T iming-Adults-JobAid.pdf)\n \nE:\n \n對。\n參\n考\nTaiwan\n \nCDC“\n我\n國\n現\n行\n兒\n童\n預\n防\n接\n種\n時\n程\n”\n \n \n\n \n \n答\n案\n:\nE\n \n(\n應\n為\nM2\n \nprotein)\n \n \nACD:\n \nQ.\n \nFang\n \net\n \nal.\n \nBiosafety\n \nand\n \nHealth\n \n2\n \n(2020)\n \n64–70\n \n \nBD:\n \n參\n考\nIDST\n流\n感\n藥\n物\n共\n識\n \n \n \n \n \n \n \n \n \n\n \n\n \n答\n案\n:\nD\n \n(\n不\n適\n症\n狀\n改\n善\n即\n可\n接\n種。\n要\n等\n12\n週\n的\n是\nCOVID-19)\n \n \nA:\n \n去\n年\n對。\n114\n年\n已\n改\n成\n三\n價\n，\n因\n自\n2020/3\n起\nWHO\n未\n監\n測\n到\n有\n自\n然\n發\n生\n的\nB/Yamagata\n株。\n \n \n(Reference:\n \n疾\n管\n署\n114\n年\n度\n流\n感\n疫\n苗\n接\n種\n計\n畫\n)\n \nB:\n \n對。\n6\n個\n月\n以\n下\n嬰\n兒\n接\n種\n流\n感\n疫\n苗\n，\n不\n會\n有\n持\n續\n性\n抗\n體\n反\n應\n，\n所\n以\n不\n建\n議\n接\n種。\n8\n歲\n(\n含\n)\n以\n下\n兒\n童\n初\n次\n流\n感\n疫\n苗\n應\n接\n種\n2\n劑\n，\n間\n隔\n至\n少\n4\n週\n。\n而\n9\n歲\n(\n含\n)\n以\n上\n初\n次\n接\n種\n只\n需\n要\n一\n劑。\n(ref:\n我\n國\n現\n行\n兒\n童\n預\n防\n接\n種\n時\n程\n)\n \n \nC:\n對。\n如\n圖。\n \n \n \n \n \n \n \n\nE:\n \n參\n考\n \nFLUCEL VAX\n \n仿\n單\n \n(https://www .tty.com.tw/rwd1 181/store/F3/Flucelvax_v3.pdf)\n \n \n \n \n \n \n \n50.\n \n有\n關\n流\n行\n性\n腦\n膜\n炎\n的\n描\n述\n何\n者\n錯\n誤\n?\n  \nAns:\n \nC\n \n1.\n \n腦\n膜\n炎\n雙\n球\n菌\n可\n以\n造\n成\n嚴\n重\n的\n敗\n血\n症\n或\n腦\n膜\n炎。\n \n2.\n \n急\n性\n腦\n膜\n炎\n雙\n球\n菌\n可\n能\n造\n成\nDIC\n合\n併\n周\n邊\n不\n對\n稱\n的\n壞\n死\n與\npurpura\n \nfulminans\n的\n表\n現\n;\n \n皮\n膚\n病\n灶\n是\n血\n管\n炎\n的\n表\n現\n，\n並\n無\n細\n菌\n直\n接\n侵\n犯\n之\n證\n據。\n \n3.\n \n慢\n性\n腦\n膜\n炎\n雙\n球\n菌\n菌\n血\n症\n可\n能\n有\n反\n覆\n發\n燒、\n關\n節\n痛、\n皮\n疹\n的\n表\n現\n，\n皮\n疹\n的\n位\n置\n多\n集\n中\n在\n軀\n幹\n位\n置。\n \n4.\n \n目\n前\n已\n有\npolysaccharide\n \nconjugate\n疫\n苗\n用\n於\n預\n防\n血\n清\n型\nA,\n \nB,\n \nC,\n \nY\n與\nW-135\n感\n染。\n \n5.\n \n治\n療\n首\n選\n為\npenicillin\n \nor\n \nampicillin\n。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+2+3+4+5",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "1+2+3+5",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "2+3+4",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1+5",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1+4+5",
+          "order": 4
+        },
+        {
+          "text": "A",
+          "label": "會",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "所",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "約",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "新",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "應",
+          "order": 4
+        },
+        {
+          "text": "A",
+          "label": "1+4",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "2+3+4",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "3+5",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1+3+4",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "2+4+5",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 40,
+      "content": "小\n時\n內\n會\n測\n得\n到\nviral\n \nload\n，\n在\n2\n週\n大\n的\n時\n候\n>90%\n \nHIV\n感\n染\n的\n新\n生\n兒\n會\n測\n得\n到\nviral\n \nload\n。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "D",
+          "label": "新",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "應",
+          "order": 4
+        },
+        {
+          "text": "A",
+          "label": "1+4",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "2+3+4",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "3+5",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1+3+4",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "2+4+5",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": ""
+    },
+    {
+      "order": 41,
+      "content": "有\n關\n流\n行\n性\n腦\n膜\n炎\n的\n描\n述\n何\n者\n錯\n誤\n?\n  \nAns:\n \nC\n \n1.\n \n腦\n膜\n炎\n雙\n球\n菌\n可\n以\n造\n成\n嚴\n重\n的\n敗\n血\n症\n或\n腦\n膜\n炎。\n \n2.\n \n急\n性\n腦\n膜\n炎\n雙\n球\n菌\n可\n能\n造\n成\nDIC\n合\n併\n周\n邊\n不\n對\n稱\n的\n壞\n死\n與\npurpura\n \nfulminans\n的\n表\n現\n;\n \n皮\n膚\n病\n灶\n是\n血\n管\n炎\n的\n表\n現\n，\n並\n無\n細\n菌\n直\n接\n侵\n犯\n之\n證\n據。\n \n3.\n \n慢\n性\n腦\n膜\n炎\n雙\n球\n菌\n菌\n血\n症\n可\n能\n有\n反\n覆\n發\n燒、\n關\n節\n痛、\n皮\n疹\n的\n表\n現\n，\n皮\n疹\n的\n位\n置\n多\n集\n中\n在\n軀\n幹\n位\n置。\n \n4.\n \n目\n前\n已\n有\npolysaccharide\n \nconjugate\n疫\n苗\n用\n於\n預\n防\n血\n清\n型\nA,\n \nB,\n \nC,\n \nY\n與\nW-135\n感\n染。\n \n5.\n \n治\n療\n首\n選\n為\npenicillin\n \nor\n \nampicillin\n。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+2+3+4+5",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "1+2+3+5",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "2+3+4",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1+5",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1+4+5",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 42,
+      "content": "有\n關\n新\n生\n兒\nHIV\n之\n垂\n直\n感\n染\n，\n下\n列\n何\n者\n為\n非\n?\n  \nAns:\n \nE",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "會",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "所",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "約",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "新",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "應",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 43,
+      "content": "有\n關\n水\n痘\n疫\n苗、\nlive\n \nzoster\n \nvaccine(Zostavax)\n \nand\n \nrecombinant\n \nzoster\n \nvaccine(Shingrix)\n，\n下\n列\n何\n者\n為\n非\n?\n \n \nAns:\n \nE\n \n1.\n \n出\n生\n滿\n12\n個\n月\n接\n種\n第\n1\n劑\n公\n費\n水\n痘\n疫\n苗\n，\n可\n於\n滿\n4\n道\n6\n個\n月\n自\n費\n接\n種\n第\n2\n劑。\n13\n歲\n(\n含\n)\n以\n上\n未\n曾\n接\n種\n疫\n苗\n且\n未\n得\n過\n水\n痘\n者\n，\n應\n接\n種\n兩\n劑\n，\n兩\n劑\n間\n隔\n四\n至\n八\n週。\n \n2.\n \nZostavax\n含\n水\n痘\n疫\n苗\n病\n毒\n株\n，\n病\n毒\n含\n量\n是\n水\n痘\n疫\n苗\n的\n7\n倍。\n \n3.\n \nShingrix\n是\n重\n組\n蛋\n白\n疫\n苗\n，\n含\nASO1B\n佐\n劑\n(MPLA+QS-21\n \nin\n \nliposome)\n，\n保\n護\n力\n超\n過\n八\n成。\n \n4.\n \n在\n免\n疫\n不\n全\n者\n，\n建\n議\n施\n打\nZostavax\n。\n \n5.\n \n接\n種\n前\n24\n小\n時\n內\n曾\n接\n受\n特\n定\n抗\n病\n毒\n藥\n物\n者\n(\n如\n:\n \nacyclovir\n、\nfamiciclovir\n或\nvalacyclovir)\n，\n於\n接\n種\n後\n可\n繼\n續\n服\n用\n這\n些\n藥\n物。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+4",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "2+3+4",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "3+5",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1+3+4",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "2+4+5",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 44,
+      "content": "有關 Campylobacter infection，下列何者為非？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "在先進國家，Campylobacter infection 最常見在幼兒時期與年輕的成人 (15–44 歲)。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "Campylobacter 造成急性腸炎，平均潛伏期 3 天。三分之一的病人可能先有發燒、頭痛、頭暈與肌肉痠痛；1–3 天後出現絞痛合併水瀉，較少見有黏液血絲便。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "感染後可能出現 erythema nodosum 的皮膚病灶。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "培養 Campylobacter 需使用特殊培養基，例如 CAMPY-agar，生長環境 5–10% oxygen、1–10% carbon dioxide、with some hydrogen，C. jejuni 在 37°C 生長最好。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "使用抗生素治療建議用在有血便、高燒、病情嚴重與免疫抑制或有 underlying diseases 的兒童，首選藥物為 azithromycin。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "D",
+      "answerExplanation": "正確\nMandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases, Tenth Edition, Chapter 221 p. 2641：\nBased on current estimates, there are probably more than 2 million Campylobacter infections annually in the United States, although there is great geographic variability in incidence rates, even within the United States. Population-based studies show peak incidence in children younger than 1 year and in people 15 to 29 years old.\n正確\nUptodate - Campylobacter jejuni infection：\nIncubation period — The typical incubation period is three days (range one to seven days)\nA prodromal period occurs in about one-third of cases; manifestations include high fever accompanied by rigors, generalized aches, dizziness, and delirium. It may last for one day (rarely two or three days) prior to onset of gastrointestinal symptoms.\nSigns and symptoms of intestinal infection include abrupt onset of abdominal pain, cramping, diarrhea, and fever. In about 15 percent of patients, bloody stools are observed on the second or third day of diarrhea.\n正確，過去有多篇文獻報導：\nCampylobacter enteritis and erythema nodosum. Lancet. 1982;1(8286):1409.\nCampylobacter colitis associated with erythema nodosum. BMJ. 1982;285(6346):937.\n錯誤\nUptodate - Campylobacter jejuni infection & Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases, Tenth Edition, Chapter 221 p. 2639：\nIdeally, culture is performed using selective media, such as CAMPY-agar and incubation in a gas mixture of 5 to 10 percent oxygen, 1 to 10 percent carbon dioxide, ideally some hydrogen and are thus considered microaerophilic. All campylobacters grow at 37°C; however, C. jejuni grows best at 42°C. Because C. jejuni is the most common enteric pathogen of humans, many laboratories have used incubation at 42°C for optimal isolation.\n正確\nUptodate - Campylobacter jejuni infection：\nWe suggest antibiotic therapy for patients with severe disease or at risk for severe disease. Patients with severe disease include those with bloody stools, high fever, extraintestinal infection, worsening or relapsing symptoms, or symptoms lasting longer than one week. Patients at risk for severe disease include those who are pregnant, immunocompromised, or ≥70 years of age. For patients with Campylobacter infection who warrant treatment, we suggest azithromycin."
+    },
+    {
+      "order": 45,
+      "content": "有關人類乳突病毒 (human papillomavirus, HPV) 描述，下列何者為非？\n人類乳突病毒感染造成生殖道疣，其中 90% 是由 types 6 和 11 造成。\n子宮頸癌約 70% 由高危險型 Types 16 和 18 造成；另外 types 31, 33, 45, 52, 和 58 也是高危險型，造成約 20% 的子宮頸癌。\n將近 90% 男性的肛門癌由 type 52 和 58 造成，所以建議男性也應施打人類乳突病毒疫苗。\n人類乳突病毒疫苗 Gardasil-9 含九個型別，分別是 6, 11, 16, 18, 31, 33, 45, 52, 和 58，而人類乳突病毒疫苗 Gardasil 可預防四種型別的人類乳突病毒感染 (6, 11, 16, 和 18)。\n若在 9 到 14 歲之間施打，須施打三劑；若在 15 歲之後施打只須施打兩劑。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+3+5",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "2+4",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "2+3+4",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "3+4",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "3+5",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "E",
+      "answerExplanation": "Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases, Tenth Edition, Chapter 143 p. 1916：\nHPV types 1, 2, and 4 are the most common types found in cutaneous warts.\nHPV types 6 and 11 account for most genital warts.\nHPV types 16 and 18 cause the great majority of cancers of the anogenital tract and oropharynx and are defined as high-risk oncogenic."
+    },
+    {
+      "order": 46,
+      "content": "有關 Pharyngoconjunctival fever 的描述，以下何者不正確？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "臨床特徵包括高燒、咽喉炎、非膿性結膜炎、耳前與頸部淋巴腺炎等",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "最常見的病原是 adenoviruses，偶爾 enteroviruses 感染也會有類似的表現",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "標準的治療是 penicillin 使用 7 天，因為常常會合併 group A Streptococcus 感染",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "傳染力強，有時會透過未過濾當消毒的游泳池爆發流行",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "腺病毒引起的 pharyngoconjunctival fever 有時可併發肺炎，特別是在年幼的兒童或免疫系統較弱的患者中",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases, Tenth Edition, Chapter 142 p. 1910-1911：\nPharyngoconjunctival fever is a common syndrome consisting of benign follicular conjunctivitis, fever, pharyngitis, and cervical adenitis, commonly caused by adenovirus types 3 and 7. It is a common sporadic illness in children and has also been associated with outbreaks in children’s summer camps, swimming pools, and lakes. \nSeveral adenovirus types, including 1 to 5, 7, 14, and 21, can cause pneumonia in children and may occasionally result in sequelae such as bronchiectasis. Certain\nsubgroup B adenoviruses (3, 7, 14, and 21) have been associated with severe and complicated pneumonias, particularly in infants. Adenoviruses have also been identified as the cause of community-acquired pneumonia (CAP) in children, with up to 15% of children younger than 5 years with CAP requiring hospitalization."
+    },
+    {
+      "order": 47,
+      "content": "有一3個月大嬰兒因發燒、活動力下降、與抽筋等症狀前來就醫。抽血發現白血球上升、CRP上升，腦脊髓液檢查發現白血球增加(pleocytosis) ，且90%是segmented neutrophils，另於Gram stain發現有Gram(+) coccus。以下敘述何者為真？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "最可能是Haemophilus influenzae或Streptococcus pneumoniae腦膜炎",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "起始經驗性用藥使用Vancomycin加Ceftriaxone是合理的，但知道是Gram(+)以後，就可以把ceftriaxone停掉",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "若培養確認是Streptococcus pneumoniae，應注意Penicillin MIC。若Penicillin MIC為0.12μg/mL，則可以繼續使用penicillin治療",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "類固醇在兒童Streptococcus pneumoniae腦膜炎的角色仍不明確",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "接種卡介苗是預防肺炎鏈球菌感染最有效的方法",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "D",
+      "answerExplanation": "詳解：\n題幹敘述提及Gram stain發現有Gram(+) coccus，而Haemophilus influenzae是Gram(-) bacillus，故本選項錯誤\n知道是Gram(+)以後，就可以把ceftriaxone停掉這句話是錯誤的。\n2016 ESCMID guideline: diagnosis and treatment of acute bacterial meningitis. http://dx.doi.org/10.1016/j.cmi.2016.01.007\n各年齡層細菌性腦膜炎經驗性抗生素選擇，依各地區Streptococcus pneumoniae對penicillin抗藥狀況提供選擇建議\n  \n針對特定細菌腦膜炎的抗生素治療"
+    },
+    {
+      "order": 48,
+      "content": "當新生兒或早產兒COVID-19確診需要非侵襲性呼吸治療時，哪一種方法通常較為優先考慮，因為他能提供較為穩定的PEEP？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "High flow nasal cannula oxygen(HFNC)",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "Continuous positive airway pressure(CPAP)",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "Non-rebreathing mask(NRM, 高流速氧氣設備)",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "Bi-level positive airway pressure(BIPAP)",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "甦醒球擠壓換氣(Ambu bagging)",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "B",
+      "answerExplanation": "詳解：\n新生兒或早產兒最常使用的非侵襲性呼吸器為HFNC/CPAP。\n臺灣兒科醫學會、臺灣新生兒科醫學會、臺灣兒童感染症醫學會共識發表。對於確診/懷疑COVID-19母親之新生兒的照護注意事項第一版。\n鼻式持續性氣道正壓/非侵襲性正壓換氣（NCPAP/NIPPV）：依呼吸治療常規流程處置，建議使用拋棄護措施時，以置放氣管內管連接呼吸器照護，也是合理可接受的選擇。式管路，並於管路吐氣端加裝過濾器，照護時醫護人員要穿著完整裝備（包含N95、護目鏡），並維持室內換氣良好、鼻管適當密合、環境適當消毒。若裝備不足或無法信賴防\n避免使用加濕加熱高流量氧氣鼻管（Heated humidified high flow nasal cannula, HHHFNC）。"
+    },
+    {
+      "order": 49,
+      "content": "有關Haemophilus influenzae的敘述，以下何者正確？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "在有效的Hib接合型疫苗問世以前，non typeable Haemophilus influenzae是兒童嚴重Haemophilus influenzae感染的主要型別",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "侵襲性Haemophilus influenzae感染，主要發生在5-15歲的兒童與青少年",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "大部分ampicillin-resistant Haemophilus influenzae是經由分泌β-lactamase產生抗藥性。但是近年有 β-lactamase-negative ampicillin-resistant Haemophilus influenzae，其機轉是透過penicillin binding protein的突變",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "近年的研究發現dexamethasone並不能減少Haemophilus influenzae meningitis造成的聽力異常",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "Haemophilus influenzae的治療，首選用藥是macrolide類抗生素",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "詳解：\nHaemophilus influenzae type b為Hib疫苗問世之前兒童嚴重Haemophilus influenzae感染的主要型別\nMandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases, ninth Edition, Chapter 225 p. 2744：\nBefore the widespread use of conjugate vaccines, type b strains colonized the nasopharynx of children at a rate of 2% to 4%. The rate of nasopharyngeal colonization by type b strains has decreased substantially with the use of conjugate vaccines to prevent invasive infections caused by H. influenzae type b.\n台灣侵襲性Haemophilus influenzae感染主要發生在5歲以下孩童\nCDC 侵襲性b型嗜血桿菌感染症防治工作手冊_1070911.pdf\n侵襲性B型嗜血桿菌感染症屬於第三類法定傳染病，應於一周內通報。\n由Hib引起之侵襲性疾病好發於3個月至3歲之嬰幼兒，很少發生於5歲以上的兒童，超過一半以上的病例為1歲以下的嬰兒，而引起急性會厭炎的好發年齡在2～4歲小孩。\n正確\nMandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases, ninth Edition, Chapter 225 p. 2748：\nOverall, approximately 30% of nontypeable strains produce β-lactamase. Mutations in the fts1 gene, which codes for penicillin-binding protein 3, is a more recently recognized mechanism of resistance in H. influenzae and H. haemolyticus isolates. This mechanism is common in Japan and increasing in prevalence in Europe. Although it is still uncommon in the United States, careful vigilance will be important.\n教科書結論使用dexamethasone治療Haemophilus influezae type b meningitis可以減少聽力損失\nMandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases, ninth Edition, Chapter 87 p. 1207：\nOne meta-analysis of these clinical studies confirmed the benefit of adjunctive dexamethasone (0.15 mg/kg every 6 hours for 2–4 days) for H. influenzae type b meningitis and, if begun with or before parenteral antimicrobial therapy, suggests benefit for pneumococcal meningitis in childhood. Evidence of clinical benefit was strongest for improved hearing outcomes.\nNelson Textbook of Pediatrics, 21 edition, chapter 621, corticosteroid part:\nIn a Cochrane review of using steroids in meningitis treatment, steroids reduced hearing loss in children with meningitis due to H. influenzae type b but not due to other pathogens.\nMacrolide並非首選，台灣兒童感染症醫學會兒童社區肺炎處置建議將其列為alternative treatment。"
+    },
+    {
+      "order": 50,
+      "content": "以下有關  norovirus 的敘述，何者不正確？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "Norovirus 在冬天比較常見， 嬰幼兒、老人及免疫力低下者容易出現較嚴重的症狀",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "Norovirus 感染的潛伏期通常是  12–48 小時",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "Norovirus 和 sapovirus 同屬 caliciviruses ，都會引起急性腸胃炎",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "照顧過 norovirus 感染的病童，應以酒精為基礎的乾洗手液洗手，可以避免交叉感染",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "在嬰兒例行使用  rotavirus 疫苗的國家  (如美國)，norovirus 是兒童急性腸胃炎最常見的致病因",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 51,
+      "content": "有關兒童中耳炎，以下敘述何者正確？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "6 個月以下的嬰兒最容易發生中耳炎，主要因為這個年齡段的耳咽管較粗且水平，使得細菌和病毒",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "游泳或泡 澡是引發中耳炎的主要原因，因為外來的水可導致細菌或病毒進入中耳引發炎症",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "兒童中耳炎常見的致病菌包括金黃色葡萄球菌與肺炎鏈球菌，這兩者是一般兒童急性中耳炎的主",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "2 歲以下兒童的中耳炎，可以考慮不使用抗生素，很高比例感染會自行緩解",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "對於反覆發作的中耳炎患童，尤其是影響聽力的情況下，應考慮耳膜切開術並置入通氣管",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 52,
+      "content": "有關 Respiratory syncytial virus (RSV) 的敘述，何者正確？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "根據病毒表面  G protein 的序列與抗原性，可以分成  A、B 兩種 subgroups",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "屬 RNA 病毒，其基因組為  8 段 (segments)",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "反覆感染並不罕見，主要是因為病毒抗原異質性  (antigenic variation) 大",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "在溫帶地區，流行期集中在冬天；在熱帶地區則夏天最常見",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "吸入類固醇可以有效治療嬰兒  acute bronchiolitis 的主要藥物",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 53,
+      "content": "關於EV-D68與其他腸病毒在臨床表現上的差異，下列何者正確？B",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "EV-D68主要引起手足口病、疱疹性咽峽炎等症狀",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "EV-D68通常引起發燒、流鼻水、咳嗽等上呼吸道感染症狀",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "其他腸病毒主要引起發燒、流鼻水、咳嗽、肌肉無力，嚴重時可能導致癱瘓",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "EV-D68不會導致死亡",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "其他腸病毒通常引起腸胃道症狀",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 54,
+      "content": "腸病毒感染時，請問下列哪些狀況建議使用免疫球蛋白？D\n1. 手足口病或疱疹性咽峽炎(herpangina)合併脫水可使用\n2. 手足口病或疱疹性咽峽炎(herpangina)合併肌躍型抽搐合併無發燒時心搏過速(如心跳每分鐘超過140-150)下可使用\n3. 病毒培養或PCR等確認是腸病毒71型可使用\n4. 手足口病或疱疹性咽峽炎合併腦炎可使用\n5. 新生兒敗血症候群可使用",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1、2、4、5",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "2、3、5",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "3、4、5",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "2、4、5",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1、2、4",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 55,
+      "content": "請問下列那些病原”無法”被酒精性乾洗手消毒？D\n1. 諾羅病毒\n2. 流感病毒\n3. 冠狀病毒\n4. 腺病毒\n5. 輪狀病毒",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1、3、4、5",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "3、4",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "3",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1、4、5",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1、3、4",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 56,
+      "content": "有關呼吸融合病毒單株抗體(Palivizumab)可用於預防嬰兒感染，下列何種狀況建議使用且台灣健保可給付？\n1. 早產兒出生時妊娠週數未滿33週\n2. 腦性麻痺嬰兒\n3. 早產兒出生時妊娠週數≤35週且合併有慢性肺疾病\n4. 所有先天性心臟病嬰兒\n5. 一歲以下患有血液動力學上顯著異常之先天性心臟病童",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1、2、3、4",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "1、3、5",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "1、2、3、5",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "1、2、3",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1、2、3、4、5",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "B",
+      "answerExplanation": "參考Palivizumab 健保給付規定\n1.出生時，懷孕週數未滿33週之早產兒，最多施打六劑。懷孕週數滿33 週但未滿36週之早產兒，最多施打 三劑。(106/4/1、111/2/1、111/4/1、 114/6/1) \n2.併有慢性肺疾病(Chronic Lung Disease；CLD)之早產兒(35週以 下)(111/2/1)。 \n3.1歲以下患有血液動力學上顯著異常 之先天性心臟病童。需符合以下條 件(111/2/1)： \n(1)納入條件：符合下列條件之一 Ⅰ.非發紺性先天性心臟病合併心臟衰 竭：符合下列三項中至少兩項：(1) 生長遲滯，體重小於第三百分位； (2)有明顯心臟擴大現象；(3)需兩種 以上抗心臟衰竭藥物控制症狀。 Ⅱ.發紺性先天性心臟病：完全矯正手 術（含心導管或是外科手術矯正） 前或是矯正手術後仍有發紺或是心臟衰竭症狀者。\n(2)排除條件： Ⅰ.非嚴重性先天性心臟病：不需藥物控 制心臟衰竭，如心房中隔缺損，單 純動脈瓣膜輕微狹窄等。 Ⅱ.嚴重性先天性心臟病，但經心導管 或外科手術治療，目前僅殘存輕微 血行動力學異常，且無發紺症狀。\n題目符合健保使用的標準為(1)(3)(5)\n(2)錯, 腦麻不在給付標準內\n(4)不是所有的先天性心臟病都適用（請看上述針對先天性心臟病的排除條件）"
+    },
+    {
+      "order": 57,
+      "content": "下列何種疫苗不適合施打於1歲6個月小孩？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "水痘疫苗",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "日本腦炎疫苗",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "13價肺炎鏈球菌接合疫苗(Prevenar 13)",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "MMR(麻疹、腮腺炎、德國麻疹疫苗)",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "23價肺炎鏈球菌多醣體疫苗(PPV23)",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "E",
+      "answerExplanation": "MMR(麻疹、腮腺炎、德國麻疹疫苗)\n日本腦炎疫苗：第一劑一歲三個月時施打, 第二劑隔一年後施打\n13價肺炎鏈球菌接合疫苗(Prevenar 13)：現行國內採2+1的施打方式, 分別在2個月, 4個月大時施打, 第三劑(booster)則是在一歲到一歲三個月之間施打"
+    },
+    {
+      "order": 58,
+      "content": "兒童中耳炎的最常見致病菌之中，哪一種製造生物膜(biofilm)能力最強而與中耳積水、復發性中耳炎的相關性最高？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "Staphylococcus aureus",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "Streptococcus pneumoniae",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "Haemophilus influenzae",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "Mycoplasma pneumoniae",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "Moraxella catarrhalis",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "先記小兒中耳炎最常見的致病菌包括 Streptococcus pneumoniae, Haemophilus influenzae, 以及 Moraxella catarrhalis\n在Mandell ch225中有這樣一段\nH. influenzae in the form of biofilms is present in the middle ear in animal models and in the middle ears of children with otitis media. A biofilm is a community of bacteria encased in a matrix and attached to a surface. Bacteria in biofilms are more resistant to host clearance mechanisms and more resistant to antibiotics compared with planktonic bacteria. Nontypeable H. influenzae biofilms are associated with recurrent and chronic otitis media."
+    },
+    {
+      "order": 59,
+      "content": "關於早產兒的預防接種，下列敘述何者不正確？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 60,
+      "content": "根據CLSI，下列對最小抑菌濃度測定時的注意事項何者正確？\n1.測定daptomycin最小抑菌濃度時，應調整Cation-Adjusted Mueller-Hinton Broth中的鈣離子度至50ug/mL\n2.測定cefiderocal最小抑菌濃度時，應使用螯合劑去除Cation-Adjusted Mueller-Hinton\nBroth中的鐵離子\n3.測定polymyxin E最小抑菌濃度時，建議使用broth dilution法測定\n4.測定fosfomycin最小抑菌濃度時，建議使用broth dilution法測定",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+2+3。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "2+4。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "1+3 °",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "4 °",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1+2+3+4 °",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": "詳解：\n測定daptomycin MIC時，需使用cation-adjusted Mueller-Hinton broth (CAMHB) with Ca²⁺ adjusted to 50 mg/L (50 µg/mL)。\n因cefiderocal為鐵載體抗生素，測定MIC時需使用iron-depleted CAMHB (ID-CAMHB)，也就是要先用螯合劑去除鐵離子，再重新調整至低鐵濃度。\n測定colistin/polymyxin僅建議broth microdilution (BMD)，其他方法（E-test、disk diffusion）不可靠\n測定fosfomycin MIC建議使用agar dilution method（且需補充glucose-6-phosphate, G6P）。Broth dilution結果不穩定。\nRef：\nCLSI. Performance Standards for Antimicrobial Susceptibility Testing (M100, 34th ed., 2024)\nHackel MA, et al. Multicenter Evaluation of Disk Diffusion and Broth Microdilution Methods for Testing Susceptibility of Enterobacterales to Cefiderocol. J Clin Microbiol. 2019;57(9):e01801-18."
+    },
+    {
+      "order": 61,
+      "content": "下列對於carbapenems 的描述何者正確？\n1.Ambler class B B-lactamases能水解carbapenem\n2.Ambler class C B-lactamases尤其是Klebsiella pneumoniae-type carbapenemases (KPCs)能水解carbapenem\n3.在綠膿桿菌中，因抗藥性機轉的關係，imipenem呈現抗藥時，meropenem不一定呈現抗藥性\n4.在Enterococcus faecalis中，imipenem具感受性時，meropenem也會具感受性",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1 +2+3 °",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "2+4°",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "1+3 °",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "4 °",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "1+2+3+4 °",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "詳解：\nClass B為Metallo-β-lactamases（MBLs，例如NDM, VIM, IMP），能有效水解carbapenem。\nKPC（Klebsiella pneumoniae carbapenemase）其實是Ambler class A β-lactamase，不是class C。\n在Pseudomonas aeruginosa，因為不同的外膜蛋白（例如OprD缺失主要影響imipenem），可能出現imipenem resistant但meropenem susceptible的情況。\nEnterococcus faecalis對imipenem可能有活性（需ampicillin有效），但對 meropenem則仍然不可靠。\nRef：\nLivermore DM. Multiple mechanisms of antimicrobial resistance in Pseudomonas aeruginosa: our worst nightmare? Clin Infect Dis. 2002;34(5):634–640.\nMurray BE. The life and times of the Enterococcus. Clin Microbiol Rev. 1990;3(1):46–65.\nCLSI M100 (34th ed., 2024)"
+    },
+    {
+      "order": 62,
+      "content": "有關潛伏結核感染（LTBI）診斷與治療，下列何者錯誤？ D",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "IGRA (interferon-gamma releasing assay) 較不易受卡介苗接種或非結核分枝桿菌所帶來的偽陽性影響，缺點是價格昂貴。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "台灣目前政策未滿2 歲者以結核菌素皮膚測驗(TST)方式檢驗。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "所有結核病接觸者治療之前皆須接受胸部X光檢查。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "孕婦也需要即時接受治療，處方只能使用9個月的INH(9H)，避免影響胎兒。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "孕婦以及未滿 2 歲兒童不適合速克伏(3HP)治療。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 63,
+      "content": "有關於細菌和適合操作該細菌的實驗室生物安全等級（Biosafety level, BSL）之配對，下列何者最不適當？D",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "nonpathogenic Escherichia coli / BSL-I",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "Staphylococcus aureus / BSL-II",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "Burkholderia pseudomallei / BSL-III",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "Mycobacterium tuberculosis / BSL-IV",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "Streptococcus pneumoniae / BSL-II",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 64,
+      "content": "根據 2023 年 ISCVID-modified Duke criteria 在 infective endocarditis 中，microbiologic major criteria 的描述，何者正確？A",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "Typical pathogen 只要兩套或更多（2 or more）分開抽取的血液培養長菌，即可符合一個 major criteria，無須再強調間隔多久時間。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "Enterococcus faecalis 不算是 typical pathogen",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "使用 PCR 或是其他核酸增幅技術（NAAT）自血液中偵測到任何病原菌，可符合一個 major criteria",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "在病患有 intracardiac prosthesis 的情況下，血液培養長出 Serratia marcescens 也仍需三套血液培養陽性才能符合一個 major criteria",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "Bartonella henselae 的血清學檢查，並不在此次更新的 major criteria 裡面",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": "正確。(B)算。(C)只能是Coxiella burnetii, Bartonella spp., Tropheryma whipplei。(D)兩套即可。(E)血清學檢查的部分有Coxiella burnetii的phase 1 IgG>1:800，Bartonella henselae, Bartonella quintana的IgG>1:800。這部分附上參考文獻 (doi: 10.1093/cid/ciad271.) paper裡面的表格很重要，建議讀熟 !!!!!"
+    },
+    {
+      "order": 65,
+      "content": "根據 IDSA Guidelines，有一癌症病人如果發生 Clostridioides difficile 感染的 secondrecurrence，下列治療何者不被建議？\nVancomycin extended regimens\nFidaxomicin extended regimen\nTeicoplanin PO 10-14 *\nFecal microbiota transplantation\nBezlotoxumab\n\n正確答案:E\n\n治療策略解析\nVancomycin 延長（taper & pulse）療程\nIDSA 建議對首次復發可使用標準劑量 vancomycin（125 mg 每日 4 次、10–14 天），或改用 taper/pulse；對多次復發則建議 vancomycin taper/pulse、vancomycin 接 rifaximin 或 FMTidsociety.org。表中提供的 taper/pulse 範例為：\n125 mg QID × 10–14 天 ➔ BID × 7 天 ➔ QD × 7 天 ➔ 隔 2–3 天服一次，維持 2–8 週idsociety.org。\n癌症患者適用性：\n指南未特別限制癌症或免疫抑制患者；Vancomycin 屬非系統性吸收，對血液抑制風險低，因此常被用於免疫抑制者。治療延長可增加腸內藥物濃度並支持菌相恢復。\n目前缺乏特定於癌症患者的研究，但在臨床實務中常作為多次復發的基礎療程，故在第二次復發的癌症病人仍是推薦方案。\n**推薦等級與證據：**根據 IDSA，taper/pulse regimen 屬 條件性建議，證據品質低idsociety.org。證據主要來自少數非隨機研究；然而其簡易和安全性使其廣泛採用。\nFidaxomicin 延長療程\nFidaxomicin 對 CDI 具有窄譜活性且對微生物群的影響較小。IDSA 建議在首發及再發 episodes 以 標準療程（200 mg 每日兩次 10 天）或延長/脈衝療程替代 vancomycinidsociety.org。延長療程（EXTEND trial）為：\n200 mg BID × 5 天，之後每隔一天服用 200 mg，總療程 20 天。\n癌症患者適用性：\nFidaxomicin 幾乎不吸收，副作用少，適用於免疫抑制者。研究顯示延長療程可降低复發，EXTEND trial 的延伸分析中，脈衝療程的再發率 2％，顯著低於 vancomycin 的 17％idsociety.org。\nIDSA 指出在多次復發時可選擇 fidaxomicin 延長療程；未禁用於癌症患者，但費用高可能限制可及性。\n**推薦等級與證據：**指南對復發 CDI 選擇 fidaxomicin 而非標準 vancomycin 做 條件性建議，證據品質低idsociety.org。延長療程的證據多來自 EXTEND trial 和少數研究，需更多數據確認。\nTeicoplanin 口服 10–14 天\nTeicoplanin 為另一種糖肽抗生素，與 vancomycin 作用類似。IDSA/SHEA 2021 指南並未將其納入治療選項；主要原因為 美國未供應該藥。約翰霍普金斯 ABX guide 提到，teicoplanin 具有對革蘭氏陽性菌（包括 C. difficile）的活性，但 “Not available in the U.S.”hopkinsguides.com。早期 1990 年代的研究比較 teicoplanin 與 vancomycin，但樣本小且缺乏長期成效證據，故未進入 IDSA 指南。\n癌症患者適用性：\n由於美國無法取得且缺乏標準化經驗，不建議在癌症患者中使用。\n若地區性指南（如部分亞洲或歐洲）能取得 teicoplanin，可作為 vancomycin 的替代選項，但須注意缺乏關於免疫抑制患者的證據。\n**推薦等級與證據：**IDSA 未提出建議；目前僅有限的觀察研究及陳年 RCT，證據品質極低，不足以支持在第二次復發的常規使用。\nFecal Microbiota Transplantation (FMT)\nIDSA/SHEA 指南建議在 經過至少兩次復發且標準抗菌治療失敗時考慮 FMTidsociety.org。此程序將健康供者糞便導入患者腸道，以恢復菌相。\n癌症患者適用性與證據：\n由於免疫抑制者易受機會感染，早期隨機試驗排除此群體。近年一項前瞻性隊列研究評估 10 名正在接受化療的癌症患者接受 FMT。研究指出 FMT 後 80% 在初次治療後治癒，平均 32.5 天即可恢復化療；無嚴重感染或死亡事件pmc.ncbi.nlm.nih.gov。作者指出，癌症患者因廣譜抗生素使用與腸道菌相破壞而易復發 CDIpmc.ncbi.nlm.nih.gov。\n然而 FMT 仍有安全疑慮。2019 年 FDA 發出警示，兩例糞菌移植導致攜帶 ESBL 大腸桿菌感染（一例死亡），呼籲加強供者篩查pmc.ncbi.nlm.nih.gov。因此對於重度免疫抑制或活動性癌症患者，需慎選 donor 並告知風險。\n**推薦等級與證據：**IDSA 對 FMT 為 條件性建議，證據品質低，僅在多次復發且標準療法失敗時使用idsociety.org。對癌症或免疫抑制者，指南建議個案評估並配合 FDA 警示；現有證據主要來自小型隊列，未有大型 RCT 支持。\nBezlotoxumab\nBezlotoxumab 是一種單株抗體，可中和 C. difficile 毒素 B。IDSA 指南建議將其作為標準抗菌療法的輔助（包括復發性 CDI），特別是具有高復發風險者，例如年齡 ≥65 歲、免疫抑制或嚴重 CDIidsociety.org。不過需注意以下重點：\n使用建議與證據：\nMODIFY I/II 試驗表明，與安慰劑相比，bezlotoxumab 可減少 CDI 再發 (RR 0.62)，並降低因 CDI 住院，但對死亡率無顯著影響idsociety.org。指南因此對其進行 條件性建議，證據品質極低idsociety.org。\n指南指出，當標準療法為 fidaxomicin 時，參與 MODIFY I/II 試驗的患者不到 5%，因此 結合 fidaxomicin 與 bezlotoxumab 的證據有限idsociety.org。\n癌症或免疫抑制患者的考量：\n在 MODIFY I/II 的事後分析中，382 名癌症患者的初始臨床治癒率低於非癌症患者 (71.9% vs 83.1%)，但再發率相似pmc.ncbi.nlm.nih.gov。Bezlotoxumab 在癌症患者中 降低再發率 (17.8% vs 30.4%)，但未提高初始治癒率pmc.ncbi.nlm.nih.gov；作者認為需更多研究以確認療效並評估長期結果pmc.ncbi.nlm.nih.gov。\nIDSA 亦提及，有 CHF 病史者使用 bezlotoxumab 出現更多嚴重不良事件與死亡，FDA 因此警示應在獲益大於風險時使用idsociety.org；FDA 2016 年的審查報告亦指出 CHF 患者接受 bezlotoxumab 的嚴重不良事件和死亡數字高於安慰劑fda.gov。\n為何不建議在活動性惡性腫瘤患者常規使用？\n雖然一些付款政策將活性惡性腫瘤視為高復發風險而批准用藥，但 IDSA 指南與 MODIFY I/II 事後分析指出 癌症患者的初始治癒率較低且證據有限pmc.ncbi.nlm.nih.gov，pmc.ncbi.nlm.nih.gov。這代表 Bezlotoxumab 在癌症患者中的益處主要是降低再發，而非提高治癒率，其臨床價值仍需進一步驗證。\n由於參與試驗的癌症患者數量有限且併用 fidaxomicin 的資料稀少，指南建議僅在評估風險與成本後使用，並未將其列為常規治療。基於免疫抑制者可能更易感染，且 FDA 警示 CHF 患者存在安全風險，醫師通常會在活動性惡性腫瘤中採取保守策略。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "E",
+      "answerExplanation": "治療策略解析\nVancomycin 延長（taper & pulse）療程\nIDSA 建議對首次復發可使用標準劑量 vancomycin（125 mg 每日 4 次、10–14 天），或改用 taper/pulse；對多次復發則建議 vancomycin taper/pulse、vancomycin 接 rifaximin 或 FMTidsociety.org。表中提供的 taper/pulse 範例為：\n125 mg QID × 10–14 天 ➔ BID × 7 天 ➔ QD × 7 天 ➔ 隔 2–3 天服一次，維持 2–8 週idsociety.org。\n癌症患者適用性：\n指南未特別限制癌症或免疫抑制患者；Vancomycin 屬非系統性吸收，對血液抑制風險低，因此常被用於免疫抑制者。治療延長可增加腸內藥物濃度並支持菌相恢復。\n目前缺乏特定於癌症患者的研究，但在臨床實務中常作為多次復發的基礎療程，故在第二次復發的癌症病人仍是推薦方案。\n**推薦等級與證據：**根據 IDSA，taper/pulse regimen 屬 條件性建議，證據品質低idsociety.org。證據主要來自少數非隨機研究；然而其簡易和安全性使其廣泛採用。\nFidaxomicin 延長療程\nFidaxomicin 對 CDI 具有窄譜活性且對微生物群的影響較小。IDSA 建議在首發及再發 episodes 以 標準療程（200 mg 每日兩次 10 天）或延長/脈衝療程替代 vancomycinidsociety.org。延長療程（EXTEND trial）為：\n200 mg BID × 5 天，之後每隔一天服用 200 mg，總療程 20 天。\n癌症患者適用性：\nFidaxomicin 幾乎不吸收，副作用少，適用於免疫抑制者。研究顯示延長療程可降低复發，EXTEND trial 的延伸分析中，脈衝療程的再發率 2％，顯著低於 vancomycin 的 17％idsociety.org。\nIDSA 指出在多次復發時可選擇 fidaxomicin 延長療程；未禁用於癌症患者，但費用高可能限制可及性。\n**推薦等級與證據：**指南對復發 CDI 選擇 fidaxomicin 而非標準 vancomycin 做 條件性建議，證據品質低idsociety.org。延長療程的證據多來自 EXTEND trial 和少數研究，需更多數據確認。\nTeicoplanin 口服 10–14 天\nTeicoplanin 為另一種糖肽抗生素，與 vancomycin 作用類似。IDSA/SHEA 2021 指南並未將其納入治療選項；主要原因為 美國未供應該藥。約翰霍普金斯 ABX guide 提到，teicoplanin 具有對革蘭氏陽性菌（包括 C. difficile）的活性，但 “Not available in the U.S.”hopkinsguides.com。早期 1990 年代的研究比較 teicoplanin 與 vancomycin，但樣本小且缺乏長期成效證據，故未進入 IDSA 指南。\n癌症患者適用性：\n由於美國無法取得且缺乏標準化經驗，不建議在癌症患者中使用。\n若地區性指南（如部分亞洲或歐洲）能取得 teicoplanin，可作為 vancomycin 的替代選項，但須注意缺乏關於免疫抑制患者的證據。\n**推薦等級與證據：**IDSA 未提出建議；目前僅有限的觀察研究及陳年 RCT，證據品質極低，不足以支持在第二次復發的常規使用。\nFecal Microbiota Transplantation (FMT)\nIDSA/SHEA 指南建議在 經過至少兩次復發且標準抗菌治療失敗時考慮 FMTidsociety.org。此程序將健康供者糞便導入患者腸道，以恢復菌相。\n癌症患者適用性與證據：\n由於免疫抑制者易受機會感染，早期隨機試驗排除此群體。近年一項前瞻性隊列研究評估 10 名正在接受化療的癌症患者接受 FMT。研究指出 FMT 後 80% 在初次治療後治癒，平均 32.5 天即可恢復化療；無嚴重感染或死亡事件pmc.ncbi.nlm.nih.gov。作者指出，癌症患者因廣譜抗生素使用與腸道菌相破壞而易復發 CDIpmc.ncbi.nlm.nih.gov。\n然而 FMT 仍有安全疑慮。2019 年 FDA 發出警示，兩例糞菌移植導致攜帶 ESBL 大腸桿菌感染（一例死亡），呼籲加強供者篩查pmc.ncbi.nlm.nih.gov。因此對於重度免疫抑制或活動性癌症患者，需慎選 donor 並告知風險。\n**推薦等級與證據：**IDSA 對 FMT 為 條件性建議，證據品質低，僅在多次復發且標準療法失敗時使用idsociety.org。對癌症或免疫抑制者，指南建議個案評估並配合 FDA 警示；現有證據主要來自小型隊列，未有大型 RCT 支持。\nBezlotoxumab\nBezlotoxumab 是一種單株抗體，可中和 C. difficile 毒素 B。IDSA 指南建議將其作為標準抗菌療法的輔助（包括復發性 CDI），特別是具有高復發風險者，例如年齡 ≥65 歲、免疫抑制或嚴重 CDIidsociety.org。不過需注意以下重點：\n使用建議與證據：\nMODIFY I/II 試驗表明，與安慰劑相比，bezlotoxumab 可減少 CDI 再發 (RR 0.62)，並降低因 CDI 住院，但對死亡率無顯著影響idsociety.org。指南因此對其進行 條件性建議，證據品質極低idsociety.org。\n指南指出，當標準療法為 fidaxomicin 時，參與 MODIFY I/II 試驗的患者不到 5%，因此 結合 fidaxomicin 與 bezlotoxumab 的證據有限idsociety.org。\n癌症或免疫抑制患者的考量：\n在 MODIFY I/II 的事後分析中，382 名癌症患者的初始臨床治癒率低於非癌症患者 (71.9% vs 83.1%)，但再發率相似pmc.ncbi.nlm.nih.gov。Bezlotoxumab 在癌症患者中 降低再發率 (17.8% vs 30.4%)，但未提高初始治癒率pmc.ncbi.nlm.nih.gov；作者認為需更多研究以確認療效並評估長期結果pmc.ncbi.nlm.nih.gov。\nIDSA 亦提及，有 CHF 病史者使用 bezlotoxumab 出現更多嚴重不良事件與死亡，FDA 因此警示應在獲益大於風險時使用idsociety.org；FDA 2016 年的審查報告亦指出 CHF 患者接受 bezlotoxumab 的嚴重不良事件和死亡數字高於安慰劑fda.gov。\n為何不建議在活動性惡性腫瘤患者常規使用？\n雖然一些付款政策將活性惡性腫瘤視為高復發風險而批准用藥，但 IDSA 指南與 MODIFY I/II 事後分析指出 癌症患者的初始治癒率較低且證據有限pmc.ncbi.nlm.nih.gov，pmc.ncbi.nlm.nih.gov。這代表 Bezlotoxumab 在癌症患者中的益處主要是降低再發，而非提高治癒率，其臨床價值仍需進一步驗證。\n由於參與試驗的癌症患者數量有限且併用 fidaxomicin 的資料稀少，指南建議僅在評估風險與成本後使用，並未將其列為常規治療。基於免疫抑制者可能更易感染，且 FDA 警示 CHF 患者存在安全風險，醫師通常會在活動性惡性腫瘤中採取保守策略。"
+    },
+    {
+      "order": 66,
+      "content": "有關目本腦炎病毒，何者敘述錯誤？\n屬 RNA病毒，跟登革熱病毒及西尼羅河病毒均屬黃病毒（Flaviviridae）\n人類感染後有人傳人之可能性，故應在病毒血症期間掛蚊帳\n豬隻感染不會發病，屬增幅宿主（amplifier host）\n在台灣主要以三斑家蚊（Culex triaeniorhynchus）為傳播媒介，喜愛夜間活動，對人的吸血行為以晚上九點為高峰\n台灣近年來，確定病例數每年約介於20-30例之間\n\n正確答案:B  \n\n日本腦炎病毒(Japanese Encephalitis virus, JEV)錯誤敘述判斷與說明\n日本腦炎是由日本腦炎病毒（JEV）所致的嚴重腦炎。為了驗證選項 A–E 的正確性，本報告查閱了 WHO、台灣疾管署 (Taiwan CDC)、ECDC、權威教科書及最新研究。每項敘述的正確與否如下表與詳細說明。\n表：各選項的判斷與依據\n選項 B 錯誤之處詳述\n選項 B 的敘述錯誤在於 日本腦炎病毒沒有經由人與人之間直接傳播的機制。權威資料的關鍵訊息如下：\n病毒循環宿主：WHO 指出，JEV 透過感染的蚊子叮咬豬隻或水鳥後在自然界中傳播；人類感染後血中病毒濃度不足以使蚊子再感染，因此人體是「終端宿主」who.int。\n沒有人傳人風險：美國 CDC 強調 JEV 不會透過接觸、咳嗽或打噴嚏傳播，僅非常罕見的輸血可傳染cdc.gov。Johns Hopkins 指南則指出 JEV 主要經由 Culex 蚊子叮咬傳播，人體在自然感染後不會傳給他人hopkinsguides.com。\n掛蚊帳目的：台灣 CDC 建議民眾應在蚊子活躍的黃昏與黎明使用長袖衣物、蚊香和蚊帳，目的是防止蚊子叮咬，避免受感染或讓帶毒蚊子叮咬後再去叮咬豬隻等動物而造成病毒擴散cdc.gov.tw。因此掛蚊帳是個人防護措施，不是因為存在人傳人風險。\n綜合以上，JEV 主要在蚊子與動物宿主之間循環，人體感染後不會將病毒傳給他人；掛蚊帳的目的是防止蚊子叮咬。選項 B 將「防蚊」解釋為「防止人傳人」屬不正確。對日本腦炎的防治應著重於疫苗接種、避免蚊子叮咬，以及減少豬舍、稻田等蚊媒孳生環境。\n小結\n本研究透過最新的國內外資料驗證各敘述，發現選項 B 涵義不符現有科學證據；其他敘述基本正確或在表述上需修正。日本腦炎病毒為黃病毒科的 RNA 病毒，主要透過 Culex 蚊子傳播，豬隻及水鳥為重要增幅宿主。人類為死端宿主，無人傳人風險，防治應注重疫苗接種及防蚊措施。在台灣，由於疫苗施打普及，病例數維持在約 20–30 例/年，但仍須在每年 5–10 月疫情季做好防蚊及疫苗接種，以減少感染風險。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "B",
+      "answerExplanation": "日本腦炎病毒(Japanese Encephalitis virus, JEV)錯誤敘述判斷與說明\n日本腦炎是由日本腦炎病毒（JEV）所致的嚴重腦炎。為了驗證選項 A–E 的正確性，本報告查閱了 WHO、台灣疾管署 (Taiwan CDC)、ECDC、權威教科書及最新研究。每項敘述的正確與否如下表與詳細說明。\n表：各選項的判斷與依據\n選項 B 錯誤之處詳述\n選項 B 的敘述錯誤在於 日本腦炎病毒沒有經由人與人之間直接傳播的機制。權威資料的關鍵訊息如下：\n病毒循環宿主：WHO 指出，JEV 透過感染的蚊子叮咬豬隻或水鳥後在自然界中傳播；人類感染後血中病毒濃度不足以使蚊子再感染，因此人體是「終端宿主」who.int。\n沒有人傳人風險：美國 CDC 強調 JEV 不會透過接觸、咳嗽或打噴嚏傳播，僅非常罕見的輸血可傳染cdc.gov。Johns Hopkins 指南則指出 JEV 主要經由 Culex 蚊子叮咬傳播，人體在自然感染後不會傳給他人hopkinsguides.com。\n掛蚊帳目的：台灣 CDC 建議民眾應在蚊子活躍的黃昏與黎明使用長袖衣物、蚊香和蚊帳，目的是防止蚊子叮咬，避免受感染或讓帶毒蚊子叮咬後再去叮咬豬隻等動物而造成病毒擴散cdc.gov.tw。因此掛蚊帳是個人防護措施，不是因為存在人傳人風險。\n綜合以上，JEV 主要在蚊子與動物宿主之間循環，人體感染後不會將病毒傳給他人；掛蚊帳的目的是防止蚊子叮咬。選項 B 將「防蚊」解釋為「防止人傳人」屬不正確。對日本腦炎的防治應著重於疫苗接種、避免蚊子叮咬，以及減少豬舍、稻田等蚊媒孳生環境。\n小結\n本研究透過最新的國內外資料驗證各敘述，發現選項 B 涵義不符現有科學證據；其他敘述基本正確或在表述上需修正。日本腦炎病毒為黃病毒科的 RNA 病毒，主要透過 Culex 蚊子傳播，豬隻及水鳥為重要增幅宿主。人類為死端宿主，無人傳人風險，防治應注重疫苗接種及防蚊措施。在台灣，由於疫苗施打普及，病例數維持在約 20–30 例/年，但仍須在每年 5–10 月疫情季做好防蚊及疫苗接種，以減少感染風險。"
+    },
+    {
+      "order": 67,
+      "content": "2003年 SARS疫情爆發後，因為是新興傳染病，當時的感染症教科書並未記載何種防護措施能有效保護醫護人員。以下敘述何者正確？\n是否會感染SARS，由遺傳因素決定。各人命運早已註定。\n此時應進行臨床試驗，隨機分派一組醫護人員給予我們要研究的防護措施，另一組則不給，然後看兩組死亡率是否有差異。\n應進行前瞻性世代追蹤研究，不必加強感染管制措施，故意放任醫護人員個別自行去決定防護措施，再觀察不同防護措施下，感染SARS機率是否有差異\n人命關天，此時應先努力建立 SARS 動物模式，以實驗用白老鼠測試防護措施的效果。\n此時應進行病例對照研究，比較感染 SARS的醫護人員（病例組）與未感染 SARS醫護人員（對照組）防護措施的差異，作為建立防治指引的基礎。\n\n正確答案:E   \n\n選項 A：以遺傳決定論解釋感染差異\n科學合理性有限：\n一些後續研究假設某些基因型可能影響對 SARS‑CoV 的易感性，但研究者指出，感染易感性只是經由數學模型與少量病例推測，相關基因多態性與臨床感染之間關係尚未完全闡明pmc.ncbi.nlm.nih.gov。因此在疫情初期，將高感染率歸因於遺傳差異缺乏直接證據。\n醫護人員感染主要由接觸患者、暴露時間及防護措施不足決定。將風險歸咎於遺傳可能忽視改善環境和防護裝備的重要性。\n可行性與倫理性：\n需要大量患者的基因資料，且在緊急疫情下蒐集血液樣本不易。基因研究亦無法及時指出具體的防護措施，因此不符合「快速提供實證」的目標。\n若以遺傳特徵為基準安排工作或防護等級，涉及歧視和隱私問題，違反醫療倫理。\n選項 B：隨機分派防護措施的臨床試驗\n可行性與科學考量：\n隨機控制試驗在評估藥物或治療時有高證據力，但在 SARS 爆發初期，最主要的疑問是「基本防護裝備是否有效」，而人體實驗要求先有充分的安全證據。Emerging Infectious Diseases 發表的評論指出，在疾病爆發時，試驗的介入必須有合理的機制與事前的實驗或動物研究支持，若能以體外或動物研究回答問題，應避免臨床試驗wwwnc.cdc.gov。\n因為 SARS 的傳播方式初期未明，難以確定試驗所需樣本量；且隨著政策推動，所有醫護人員很快統一使用 N95、護目鏡等裝備，使得對照組不可能存在pmc.ncbi.nlm.nih.gov。\n倫理性問題：\n將醫護人員隨機分派到使用或不使用（或使用較低等級）口罩、護目鏡等防護裝備，意即刻意增加一群人的暴露風險。學者警告，在未知病原的情況下，不應提高臨床人員的暴露程度；地方倫理審查機構須確保保護措施符合醫護人員與公眾的安全wwwnc.cdc.gov。因此隨機不給予有效防護裝備違反不傷害原則。\n臨床試驗還需考慮醫師與受試者的利益，若有強烈推定某項防護措施有效，則沒有道德基礎將其隨機剝奪。\n選項 C：前瞻性世代追蹤研究且不干預防護\n設計和可行性：\n世代研究追蹤一群醫護人員在長時間內暴露與感染情況，若無防護介入，可觀察哪些人感染。但 SARS 爆發短暫而具有高致病性，且政府很快要求醫護人員全部佩戴 N95 口罩、護目鏡、手套和穿防護衣archive.cdc.gov；因此沒有長時間的「自然實驗」窗口來觀察不同防護水平的效果。\n正如 Toronto 的醫護人員病例對照研究所指出，在初期爆發後所有醫護都採用一致的裝備，因此若以前瞻性設計在後期追蹤，就無法比較不同防護措施的效果pmc.ncbi.nlm.nih.gov。\n倫理性問題：\n不干預防護意味著觀察某些醫護人員在缺乏保護的條件下工作，這與衛生機構提供充分保護的義務相衝突。\n研究者面臨難以平衡知情同意與立即處置要求的道德衝突；基於保護醫護人員安全和公共健康，無法僅為研究目的而讓部分人缺乏防護。\n選項 D：建立動物模式\n科學貢獻與限制：\n動物實驗對於瞭解病毒致病機制與疫苗研發非常重要。例如在 SARS-CoV 爆發後建立了小鼠模型，不同品系的 mice 可重現肺炎或體重減輕等表現，但出現嚴重疾病的多為高齡小鼠且品系間差異大pmc.ncbi.nlm.nih.gov。\n研究指出，取得大量年齡超過 12 個月的高齡小鼠不易pmc.ncbi.nlm.nih.gov；且動物感染表現與人類不同，無法直接推論醫護人員感染和防護的成效。\n速度與實用性：\n建立、繁殖並驗證動物模式需數月時間，無法快速回應人類緊急疫情。對於急於了解哪些防護措施有效的醫療前線，動物模式較適合後續機制研究，而非制定即時感染控制策略。\n選項 E：病例對照研究\n設計與效率：\n病例對照研究從出現的 SARS 患者（病例）與無感染但暴露於類似環境的醫護人員（對照）中，回顧性比較他們使用何種防護措施、從事哪些醫療活動。這種方法可在短時間內利用已有病例收集資料，且適合研究罕見事件或突發疫情。\n在香港的病例對照研究中，研究者訪問 72 名感染醫護與 144 名對照，結果顯示在照顧 SARS 患者時，不一致使用護目鏡、手術帽或隔離衣的醫護人員感染風險較高；若同時有三項以上防護措施未持續使用，感染風險更大（一般患者接觸時勝算比 10.83）pmc.ncbi.nlm.nih.gov。病例更常反映個人防護裝備供應不足，感覺 PPE 不夠的人感染風險也較高pmc.ncbi.nlm.nih.gov。\nSeto 等人在香港另一所醫院的研究分析 69 名未感染者與多名病例，發現同時使用口罩、手套、隔離衣及勤洗手者皆未感染，而所有感染的職員至少漏用其中一項；其中口罩的保護效果最顯著（勝算比約 13）pmc.ncbi.nlm.nih.gov。\n北京的研究則顯示，穿戴 12 層或 16 層棉質口罩、佩戴眼鏡或護目鏡、進行鼻腔清洗、使用多層防護衣、接受感染控制訓練及服用預防性藥物皆與感染風險顯著下降相關；未戴 16 層口罩的勝算比達 6.04pmc.ncbi.nlm.nih.gov。\nToronto 的調查發現，在進行插管、吸痰和調整氧氣面罩等操作時感染風險顯著增加，但持續佩戴口罩（包括 N95 或外科口罩）可降低感染；始終佩戴口罩的護理人員感染率為 13%，未持續佩戴者為 56%，相對風險為 0.23pmc.ncbi.nlm.nih.gov。\n倫理性與實用性：\n病例對照研究不需蓄意曝露或剝奪保護，只是回顧已發生的事件，因此不會增加參與者的風險。研究者可在疫情被控制前快速收集資料並分析風險因素，結果可立即用於改進防護措施。\n此類研究符合公共衛生應急研究的原則：利用觀察性資料以支持實證，而不危害受眾wwwnc.cdc.gov。在 SARS 疫情期間，病例對照研究迅速指出口罩、護目鏡、手套、隔離衣和適當的訓練是保護醫護人員的關鍵措施，為制定感染控制指引提供實證基礎。\n總結\nSARS 疫情爆發時，醫護人員面臨高風險但缺乏明確的防護指引。比較各種研究設計後可以發現：基因決定論在當時缺乏實證，無法提供實際建議；隨機分派防護裝備的試驗或不干預的世代研究會刻意讓部分醫護暴露於危險環境，違反倫理且不可行；動物模式雖有助於病理學與疫苗研發，但難以快速解答臨床防護問題。相對而言，病例對照研究利用現有病例與對照回顧性分析，使研究者在不增加風險的情況下快速識別防護措施的有效性。香港、北京和加拿大的多項病例對照研究一致發現口罩、護目鏡、隔離衣、手套、鼻腔清洗和適當培訓等可顯著降低醫護人員感染 SARS 的風險pmc.ncbi.nlm.nih.govpmc.ncbi.nlm.nih.govpmc.ncbi.nlm.nih.gov。因此，在感染防護措施尚未建立的情況下，病例對照研究是最有效率、具倫理性又能快速提供實證的方法。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "E",
+      "answerExplanation": "選項 A：以遺傳決定論解釋感染差異\n科學合理性有限：\n一些後續研究假設某些基因型可能影響對 SARS‑CoV 的易感性，但研究者指出，感染易感性只是經由數學模型與少量病例推測，相關基因多態性與臨床感染之間關係尚未完全闡明pmc.ncbi.nlm.nih.gov。因此在疫情初期，將高感染率歸因於遺傳差異缺乏直接證據。\n醫護人員感染主要由接觸患者、暴露時間及防護措施不足決定。將風險歸咎於遺傳可能忽視改善環境和防護裝備的重要性。\n可行性與倫理性：\n需要大量患者的基因資料，且在緊急疫情下蒐集血液樣本不易。基因研究亦無法及時指出具體的防護措施，因此不符合「快速提供實證」的目標。\n若以遺傳特徵為基準安排工作或防護等級，涉及歧視和隱私問題，違反醫療倫理。\n選項 B：隨機分派防護措施的臨床試驗\n可行性與科學考量：\n隨機控制試驗在評估藥物或治療時有高證據力，但在 SARS 爆發初期，最主要的疑問是「基本防護裝備是否有效」，而人體實驗要求先有充分的安全證據。Emerging Infectious Diseases 發表的評論指出，在疾病爆發時，試驗的介入必須有合理的機制與事前的實驗或動物研究支持，若能以體外或動物研究回答問題，應避免臨床試驗wwwnc.cdc.gov。\n因為 SARS 的傳播方式初期未明，難以確定試驗所需樣本量；且隨著政策推動，所有醫護人員很快統一使用 N95、護目鏡等裝備，使得對照組不可能存在pmc.ncbi.nlm.nih.gov。\n倫理性問題：\n將醫護人員隨機分派到使用或不使用（或使用較低等級）口罩、護目鏡等防護裝備，意即刻意增加一群人的暴露風險。學者警告，在未知病原的情況下，不應提高臨床人員的暴露程度；地方倫理審查機構須確保保護措施符合醫護人員與公眾的安全wwwnc.cdc.gov。因此隨機不給予有效防護裝備違反不傷害原則。\n臨床試驗還需考慮醫師與受試者的利益，若有強烈推定某項防護措施有效，則沒有道德基礎將其隨機剝奪。\n選項 C：前瞻性世代追蹤研究且不干預防護\n設計和可行性：\n世代研究追蹤一群醫護人員在長時間內暴露與感染情況，若無防護介入，可觀察哪些人感染。但 SARS 爆發短暫而具有高致病性，且政府很快要求醫護人員全部佩戴 N95 口罩、護目鏡、手套和穿防護衣archive.cdc.gov；因此沒有長時間的「自然實驗」窗口來觀察不同防護水平的效果。\n正如 Toronto 的醫護人員病例對照研究所指出，在初期爆發後所有醫護都採用一致的裝備，因此若以前瞻性設計在後期追蹤，就無法比較不同防護措施的效果pmc.ncbi.nlm.nih.gov。\n倫理性問題：\n不干預防護意味著觀察某些醫護人員在缺乏保護的條件下工作，這與衛生機構提供充分保護的義務相衝突。\n研究者面臨難以平衡知情同意與立即處置要求的道德衝突；基於保護醫護人員安全和公共健康，無法僅為研究目的而讓部分人缺乏防護。\n選項 D：建立動物模式\n科學貢獻與限制：\n動物實驗對於瞭解病毒致病機制與疫苗研發非常重要。例如在 SARS-CoV 爆發後建立了小鼠模型，不同品系的 mice 可重現肺炎或體重減輕等表現，但出現嚴重疾病的多為高齡小鼠且品系間差異大pmc.ncbi.nlm.nih.gov。\n研究指出，取得大量年齡超過 12 個月的高齡小鼠不易pmc.ncbi.nlm.nih.gov；且動物感染表現與人類不同，無法直接推論醫護人員感染和防護的成效。\n速度與實用性：\n建立、繁殖並驗證動物模式需數月時間，無法快速回應人類緊急疫情。對於急於了解哪些防護措施有效的醫療前線，動物模式較適合後續機制研究，而非制定即時感染控制策略。\n選項 E：病例對照研究\n設計與效率：\n病例對照研究從出現的 SARS 患者（病例）與無感染但暴露於類似環境的醫護人員（對照）中，回顧性比較他們使用何種防護措施、從事哪些醫療活動。這種方法可在短時間內利用已有病例收集資料，且適合研究罕見事件或突發疫情。\n在香港的病例對照研究中，研究者訪問 72 名感染醫護與 144 名對照，結果顯示在照顧 SARS 患者時，不一致使用護目鏡、手術帽或隔離衣的醫護人員感染風險較高；若同時有三項以上防護措施未持續使用，感染風險更大（一般患者接觸時勝算比 10.83）pmc.ncbi.nlm.nih.gov。病例更常反映個人防護裝備供應不足，感覺 PPE 不夠的人感染風險也較高pmc.ncbi.nlm.nih.gov。\nSeto 等人在香港另一所醫院的研究分析 69 名未感染者與多名病例，發現同時使用口罩、手套、隔離衣及勤洗手者皆未感染，而所有感染的職員至少漏用其中一項；其中口罩的保護效果最顯著（勝算比約 13）pmc.ncbi.nlm.nih.gov。\n北京的研究則顯示，穿戴 12 層或 16 層棉質口罩、佩戴眼鏡或護目鏡、進行鼻腔清洗、使用多層防護衣、接受感染控制訓練及服用預防性藥物皆與感染風險顯著下降相關；未戴 16 層口罩的勝算比達 6.04pmc.ncbi.nlm.nih.gov。\nToronto 的調查發現，在進行插管、吸痰和調整氧氣面罩等操作時感染風險顯著增加，但持續佩戴口罩（包括 N95 或外科口罩）可降低感染；始終佩戴口罩的護理人員感染率為 13%，未持續佩戴者為 56%，相對風險為 0.23pmc.ncbi.nlm.nih.gov。\n倫理性與實用性：\n病例對照研究不需蓄意曝露或剝奪保護，只是回顧已發生的事件，因此不會增加參與者的風險。研究者可在疫情被控制前快速收集資料並分析風險因素，結果可立即用於改進防護措施。\n此類研究符合公共衛生應急研究的原則：利用觀察性資料以支持實證，而不危害受眾wwwnc.cdc.gov。在 SARS 疫情期間，病例對照研究迅速指出口罩、護目鏡、手套、隔離衣和適當的訓練是保護醫護人員的關鍵措施，為制定感染控制指引提供實證基礎。\n總結\nSARS 疫情爆發時，醫護人員面臨高風險但缺乏明確的防護指引。比較各種研究設計後可以發現：基因決定論在當時缺乏實證，無法提供實際建議；隨機分派防護裝備的試驗或不干預的世代研究會刻意讓部分醫護暴露於危險環境，違反倫理且不可行；動物模式雖有助於病理學與疫苗研發，但難以快速解答臨床防護問題。相對而言，病例對照研究利用現有病例與對照回顧性分析，使研究者在不增加風險的情況下快速識別防護措施的有效性。香港、北京和加拿大的多項病例對照研究一致發現口罩、護目鏡、隔離衣、手套、鼻腔清洗和適當培訓等可顯著降低醫護人員感染 SARS 的風險pmc.ncbi.nlm.nih.govpmc.ncbi.nlm.nih.govpmc.ncbi.nlm.nih.gov。因此，在感染防護措施尚未建立的情況下，病例對照研究是最有效率、具倫理性又能快速提供實證的方法。"
+    },
+    {
+      "order": 68,
+      "content": "正\n確\n答\n案\n:\n \nB\n \n \nA:\n正\n確\n，\n肺\n炎\n鏈\n球\n菌\n是\n一\n種\n柳\n葉\n刀\n狀\n（\nlancet-shaped\n）\n革\n蘭\n氏\n陽\n性\n雙\n球\n菌\n，\n兼\n性\n厭\n氧\n \nB:\n錯\n誤\n，\n呈\nα\n溶\n血\n性\n，\n若\n再\n繼\n續\n培\n養\n，\n菌\n體\n會\n自\n行\n溶\n解\n，\n使\n菌\n落\n由\n中\n央\n凹\n陷\n而\n呈\n火\n山\n口\n狀\n \nC:\n正\n確\n，\n有\n些\n肺\n炎\n鏈\n球\n菌\n具\n有\n莢\n膜\n，\n此\n為\n具\n有\n致\n病\n性\n的\n菌\n種\n，\n毒\n性\n來\n自\n於\n莢\n膜\n上\n的\n多\n醣\n體\n，\n目\n前\n以\n莢\n膜\n多\n醣\n類\n抗\n體\n之\n莢\n膜\n腫\n脹\n試\n驗\n（\nQuellung\n \nreaction\n）\n，\n可\n將\n其\n區\n分\n為\n92\n種\n以\n上\n血\n清\n型\n \nD:\n正\n確\n，\n為\n第\n四\n類\n法\n定\n傳\n染\n病\n，\n一\n周\n內\n通\n報。\n通\n報\n定\n義\n：\n由\n肺\n炎\n鏈\n球\n菌\n（\nStreptococcus\n \npneumoniae\n）\n引\n起\n之\n侵\n襲\n性\n疾\n病\n，\n如\n：\n敗\n血\n症、\n肺\n炎、\n腦\n膜\n炎、\n關\n節\n炎、\n骨\n髓\n炎、\n心\n包\n膜\n炎、\n溶\n血\n性\n尿\n毒\n症、\n腹\n膜\n炎\n...\n等\n，\n且\n經\n由\n正\n常\n狀\n況\n下\n之\n無\n菌\n部\n位\n檢\n體\n如\n：\n血\n液、\n腦\n脊\n髓\n液\n...\n等\n體\n液\n分\n離\n並\n鑑\n定\n出\n該\n菌\n \nE:\n正\n確。\n目\n前\n國\n內\n核\n准\n上\n市\n之\n肺\n炎\n鏈\n球\n菌\n疫\n苗\n有\n二\n大\n類\n，\n分\n別\n為\n結\n合\n型\n疫\n苗\n（\nPneumococcal\n \nconjugate\n \nvaccine,\n \nPCV\n）\n及\n多\n醣\n體\n疫\n苗\n（\nPneumococcal\n \npolysaccharide\n \nvaccine,\n \nPPV\n）\n，\n皆\n屬\n不\n活\n化\n疫\n苗\n，\n可\n與\n其\n他\n疫\n苗\n分\n開\n不\n同\n部\n位\n同\n時\n接\n種\n，\n另\nPCV13\n與\nPPV23\n之\n適\n應\n症\n分\n述\n如\n下。\n \n１、\n13\n價\n結\n合\n型\n疫\n苗\n（\nPneumococcal\n \nconjugate\n \nvaccine,\n \nPCV13\n）\n：\n含\n有\n13\n種\n肺\n炎\n鏈\n球\n菌\n血\n清\n型\n（\n1,\n \n3,\n \n4,\n \n5,\n \n6A,\n \n6B,\n \n7F,\n \n9V,\n \n14,\n \n18C,\n \n19A,\n \n19F,\n \n23F\n）\n之\n莢\n膜\n抗\n原\n，\n我\n國\n嬰\n幼\n兒\n常\n規\n接\n種\n疫\n苗\n，\n採\n2+1\n之\n3\n劑\n接\n種\n時\n程\n，\n於\n出\n生\n滿\n2\n個\n月、\n4\n個\n月\n分\n別\n接\n種\n第\n1\n劑、\n第\n2\n劑\n（兩\n劑\n間\n隔\n至\n少\n8\n週）\n，\n年\n滿\n12-15\n個\n月\n接\n種\n第\n3\n劑。\n \n2\n、\n23\n價\n多\n醣\n體\n疫\n苗\n（\nPneumococcal\n \npolysaccharide\n \nvaccine,\n \nPPV23\n）\n：\n含\n有\n23\n種\n肺\n炎\n鏈\n球\n菌\n血\n清\n型\n（\n1\n、\n2\n、\n3\n、\n4\n、\n5\n、\n6B\n、\n7F\n、\n8\n、\n9N\n、\n9B\n、\n10A\n、\n11A\n、\n12F\n、\n14\n、\n15B\n、\n17F\n、\n18C\n、\n19F\n、\n19A\n、\n20\n、\n22F\n、\n23F\n、\n33F\n）\n之\n莢\n膜\n抗\n原\n，\n2\n歲\n以\n下\n嬰\n幼\n兒\n因\n對\n多\n醣\n體\n抗\n原\n的\n免\n疫\n反\n應\n不\n佳\n，\n故\n不\n建\n議\n使\n用。\n我\n國\n核\n准\n接\n種\n年\n齡\n為\n2\n～\n49\n歲\n高\n危\n險\n群\n者\n及\n50\n歲\n以\n上\n成\n人。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 69,
+      "content": "正\n確\n答\n案\n:\n \nC\n \n \nA:\n \n錯\n誤。\nIsoniazid\n會\n肝\n炎\n \n\n●\n \n肝\n炎\n：\n約\n \n10-20%\n的\n病\n人\n血\n中\n轉\n胺\n酶\n(transaminase)\n值\n會\n暫\n時\n輕\n微\n升\n高\n，\n多\n發\n生\n於\n用\n藥\n後\n十\n週\n內\n，\n但\n也\n可\n能\n在\n治\n療\n中\n任\n何\n期\n間\n出\n現\n，\n通\n常\n不\n需\n停\n藥\n即\n會\n恢\n復\n \n正\n常。\n嚴\n重\n肝\n炎\n(\n定\n義\n請\n參\n閱\n \n1-1)\n發\n生\n率\n約\n \n0.1-0.15%\n，\n多\n出\n現\n在\n投\n藥\n後\n三\n個\n月\n內\n，\n發\n生\n率\n和\n年\n齡\n有\n關\n：\n35\n \n歲\n以\n下\n約\n為\n \n0.3%\n、\n35-49\n \n歲\n \n1.2%\n、\n50-64\n \n歲\n \n2.3%\n，\n通\n常\n停\n藥\n後\n即\n可\n恢\n復\n正\n常。\n \n \n●\n \n周\n邊\n神\n經\n炎\n：\n最\n常\n見\n的\n症\n狀\n為\n對\n稱\n性\n肢\n端\n麻\n木\n或\n刺\n痛\n感\n，\n發\n生\n率\n與\n劑\n量\n有\n關\n，\n \n在\n每\n日\n \n5\n \nmg/kg\n \n的\n劑\n量\n時\n並\n不\n常\n見。\n因\n \nINH\n \n會\n與\n \npyridoxal\n \nphosphate\n \n競\n爭\n \napotryptophanase\n，\n高\n劑\n量\n使\n用\n可\n能\n引\n起\n \npyridoxine\n \n缺\n乏\n，\n故\n孕\n婦\n或\n合\n併\n糖\n \n尿\n病、\n尿\n毒\n症、\n癲\n癇\n，\n酗\n酒\n或\n營\n養\n不\n良\n之\n病\n人\n最\n好\n同\n時\n投\n予\n \npyridoxine(vitamin\n \nB6)\n，\n一\n般\n不\n建\n議\n常\n規\n使\n用\n \npyridoxine\n。\n \n●\n \n神\n經\n毒\n性\n包\n括\n痙\n攣、\n毒\n性\n腦\n病\n變、\n視\n神\n經\n炎\n及\n萎\n縮、\n記\n憶\n障\n礙\n與\n毒\n性\n精\n神\n病\n症。\n \n \n●\n \n類\n狼\n瘡\n症\n候\n群\n \n(Lupus-like\n \nsyndrome)\n；\n發\n生\n率\n小\n於\n \n1%\n \n●\n \n過\n敏\n性\n反\n應\n如\n發\n熱、\n皮\n疹、\nStevens-Johnson\n \nsyndrome\n、\n溶\n血\n性\n貧\n血、\n血\n管\n炎、\n白\n血\n球\n偏\n低\n，\n及\n消\n化\n道\n反\n應\n等。\n \nB:\n \n錯\n誤。\nEthambutol\n會\n視\n神\n經\n炎\n \n●\n \n視\n神\n經\n病\n變\n \n(Optic\n \nneuropathy)\n：\nEMB\n \n最\n常\n見\n的\n副\n作\n用\n，\n腎\n衰\n竭\n的\n病\n人\n較\n易\n發\n生\n，\n與\n劑\n量\n有\n關。\n症\n狀\n包\n括\n視\n力\n模\n糊、\n視\n野\n缺\n損\n及\n色\n彩\n辨\n識\n異\n常\n，\n可\n能\n先\n發\n生\n於\n一\n側\n，\n但\n大\n多\n發\n生\n於\n雙\n側。\n一\n旦\n發\n現\n視\n力\n減\n退\n，\n若\n立\n即\n停\n藥\n，\n有\n機\n會\n恢\n復\n視\n力\n，\n但\n若\n未\n及\n時\n停\n藥\n，\n則\n可\n能\n發\n生\n不\n可\n逆\n損\n傷\n，\n甚\n至\n繼\n續\n發\n生\n視\n神\n經\n萎\n縮\n或\n導\n致\n障\n礙。\n值\n得\n注\n意\n的\n是\n，\n在\n臺\n灣\n每\n萬\n人\n中\n約\n有\n一\n人\n，\n天\n生\n帶\n著\n \nLHON\n（\nLeber\n \nhereditary\n \noptic\n \nneuropathy)\n或\n \nDOA\n \n(Dominant\n \noptic\n \natrophy)\n \n的\n罕\n見\n基\n因\n遺\n傳\n，\n \n這\n類\n病\n人\n會\n因\n為\n使\n用\n \nEMB\n，\n誘\n發\n視\n力\n缺\n損\n的\n時\n間\n特\n別\n快\n速\n \n(\n可\n能\n在\n2\n個\n月\n內\n發\n \n生\n)\n。\n \n●\n \n過\n敏\n性\n反\n應、\n皮\n膚\n炎、\n皮\n膚\n搔\n癢、\n關\n節\n痛、\n食\n慾\n不\n振、\n噁\n心、\n嘔\n吐、\n胃\n腸\n不\n適、\n \n腹\n痛、\n發\n熱、\n全\n身\n倦\n怠、\n頭\n痛、\n頭\n暈\n，\n精\n神\n混\n亂\n定\n向\n力\n障\n礙\n及\n可\n能\n有\n幻\n覺。\n \n●\n \n罕\n見\n不\n良\n反\n應\n：\n高\n尿\n酸\n血\n症\n偶\n亦\n發\n生。\n \n●\n \n不\n單\n單\n僅\n有\n \nEMB\n \n會\n造\n成\n視\n神\n經\n炎\n，\n其\n他\n抗\n結\n核\n藥\n物\n包\n括\n \nINH\n、\n \nrifabutin\n、\nethionamide\n、\n以\n及\n \nclofazimine\n、\nlinezolid\n \n等\n等\n，\n也\n都\n被\n報\n告\n有\n視\n力\n傷\n害\n的\n可\n能\n \nC:\n正\n確。\nRifampicin\n \n●\n \nRMP\n \n及\n其\n代\n謝\n產\n物\n呈\n橘\n紅\n色\n，\n服\n用\n \nRMP\n \n時\n排\n尿、\n眼\n淚、\n咳\n痰\n均\n會\n變\n成\n橘\n紅\n色\n，\n \n需\n先\n告\n知\n病\n人。\n \n●\n \n食\n慾\n不\n振、\n噁\n心、\n嘔\n吐、\n胃\n痛、\n下\n痢、\n皮\n疹、\n肝\n炎。\n \n \n●\n \nRMP\n和\nINH\n合\n併\n使\n用\n時\n，\n較\n單\n獨\n使\n用\n時\n更\n易\n造\n成\n病\n人\n血\n中\n轉\n胺\n酶\n(transaminase)\n \n值\n會\n暫\n時\n輕\n微\n升\n高\n \n●\n \n間\n歇\n治\n療\n及\n曾\n服\n用\n過\n \nRMP\n \n的\n病\n人\n，\n若\n劑\n量\n大\n於\n \n10\n \nmg/kg\n，\n偶\n有\n血\n小\n板\n減\n少\n \n●\n \n類\n似\n感\n冒\n的\n症\n狀\n \n●\n \n溶\n血\n性\n貧\n血\n \n●\n \n急\n性\n腎\n衰\n竭。\n \nD:\n \n錯\n誤。\n尿\n酸\n小\n於\n \n13\n \nmg/dL\n \n時\n，\n無\n症\n狀\n時\n通\n常\n不\n需\n要\n藥\n物\n治\n療\n，\n也\n不\n需\n停\n止\n \nPZA\n \n使\n用\n \nPyrazinamide\n \n●\n \n肝\n毒\n性\n：\n發\n生\n率\n約\n為\n \n2-20%\n，\n在\n高\n劑\n量\n(3\n \ngm/day)\n較\n常\n發\n生\n，\n使\n用\n劑\n量\n小\n於\n \n25\n \nmg/kg\n，\n發\n生\n率\n低\n於\n \n5%\n，\n與\n \nINH\n \n及\n \nRMP\n \n同\n時\n使\n用\n會\n增\n加\n肝\n毒\n性\n的\n機\n會。\n \n●\n \n高\n尿\n酸\n血\n症\n：\nPZA\n \n會\n干\n擾\n尿\n酸\n代\n謝\n而\n導\n致\n高\n尿\n酸\n血\n症\n，\n一\n般\n人\n血\n清\n尿\n酸\n濃\n度\n小\n \n於\n \n13\n \nmg/dL\n \n時\n，\n無\n症\n狀\n時\n通\n常\n不\n需\n要\n藥\n物\n治\n療\n，\n也\n不\n需\n停\n止\n \nPZA\n \n使\n用。\n痛\n風\n病\n人\n需\n注\n意\n痛\n風\n發\n作\n情\n形\n，\n或\n暫\n時\n停\n用\n \nPZA\n。\n與\n \nAllopurinol\n \n併\n用\n會\n增\n加\n血\n \n中\n \npyrazinoic\n \nacid\n \n濃\n度\n，\n故\n \nPZA\n \n造\n成\n尿\n酸\n增\n加\n不\n可\n使\n用\n \nAllopurinol\n \n來\n治\n療。\n \n若\n需\n長\n期\n使\n用\n \nPZA\n，\n可\n考\n慮\n採\n用\n降\n尿\n酸\n藥\n \nBenzbromarone\n \n類\n藥\n物\n（如\n \nUrinorm\n）\n治\n療\n高\n尿\n酸\n血\n症。\n \n●\n \n多\n關\n節\n痛\n：\n偶\n而\n發\n生\n，\n以\n水\n楊\n酸\n劑\n(salicylates)\n或\n \nNSAIDs\n \n即\n可\n緩\n解。\n \n●\n \n血\n糖\n升\n高\n：\n糖\n尿\n病\n人\n須\n監\n測\n血\n糖\n值。\n \n●\n \n皮\n疹\n及\n胃\n腸\n不\n適\n亦\n曾\n發\n生。\n \nE:\n \n錯\n誤\n，\n第\n二\n線\n藥\n物。",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 70,
+      "content": "正\n確\n答\n案\n:\n \nB\n \n\n這\n一\n題\n出\n的\n不\n好\n，\n因\n為\n厭\n氧\n菌\n的\n翻\n譯\n和\n分\n類\n有\n很\n多\n種\n版\n本\n(\n流\n派\n?)\n。\n在\n一\n般\n厭\n氧\n性\n細\n菌\n的\n分\n類\n依\n其\n對\n氧\n的\n耐\n受\n程\n度\n可\n分\n成\n三\n種\n，\n分\n別\n為\n專\n性\n厭\n氧\n菌、\n微\n需\n氧\n厭\n氧\n菌\n及\n兼\n性\n厭\n氧\n菌。\n而\n專\n性\n厭\n氧\n菌\n又\n可\n分\n成\n三\n類\n：\n對\n氧\n極\n端\n敏\n感\n的\n厭\n氧\n菌、\n中\n度\n厭\n氧\n菌\n及\n耐\n氧\n厭\n氧\n菌\n(\n感\n控\n雜\n誌\n \n2013:23:68-75\n \n謝\n珊\n珊\n，\n楊\n雅\n頌\n，\n程\n雲\n詳\n，\n孫\n俊\n仁\n \n)\n，\n該\n篇\n文\n獻\n並\n未\n定\n義\n各\n分\n類\n厭\n氧\n程\n度。\nOligate\n \nanaerobes\n可\n以\n翻\n譯\n為\n專\n性\n厭\n氧\n菌\n(\n相\n對\n於\naerotolerant\n \nanaerobes\n、\nFacultative\n \nanaerobes)\n或\n是\n絕\n對\n厭\n氧\n菌\n(\n相\n對\n於\n兼\n性\n厭\n氧\n菌\n)\n，\n但\n依\n據\n文\n意\n定\n義\n會\n不\n一\n樣。\n多\n數\n文\n獻\n中\n，\n依\n據\n氧\n氣\n耐\n受\n度\n分\n為\n對\n氧\n氣\n極\n端\n感\n(strict,\n \n<\n \n0.5%\n \noxygen\n，\n絕\n對\n厭\n氧\n程\n度\n),\n \n中\n度\n厭\n氧\n菌\n(Moderate\n，\n2-8%\n \noxygen)\n。\n而\n在\n專\n性\n厭\n氧\n菌\n之\n外\n，\n又\n有\n好\n氧\n厭\n氧\n菌\n（\naerotolerant\n \nanaerobe)\n、\n兼\n性\n厭\n氧\n菌\n(Facultative\n \nanaerobes)\n。\n故\n選\n項\n1\n潛\n在\n是\n有\n爭\n議\n的。\n不\n過\n，\n依\n據\n考\n試\n用\n書\nMandell\n中\n，\n簡\n單\n粗\n暴\n的\n將\n厭\n氧\n菌\n分\n為\n兩\n種\nStrict\n \nanaerobic\n \nconditions(<\n \n0.5%\n \noxygen)\n以\n及\naerotolerant(tolerate\n \n2%-8%\n \noxygen)\n，\n並\n舉\n例\nBacteriodes\n \nfragilis,\n \nPrevoyella\n \nmelaninogenica,\n \nFusobacterium\n \nnucleatum\n等\n常\n見\n感\n染\n菌\n為\naerotolerant\n \nanaerobes\n的\n例\n子。\n課\n文\n中\n，\n並\n沒\n有\nOligate\n \nanaerobes\n這\n個\n詞\n彙。\n \n \n課\n本\n原\n文\n如\n下\n:\n \nAs\n \nopposed\n \nto\n \nseveral\n \nanaerobic\n \nspecies\n \ninhabiting\n \nhuman\n \nbodily\n \nsurfaces,\n \nwhich\n \ncan\n \nsurvive\n \nonly\n \nunder\n \nstrict\n \nanaerobic\n \nconditions\n \n(<0.5%\n \noxygen),\n \nanaerobes\n \nthat\n \ncommonly\n \ncause\n \nhuman\n \ninfections\n \n(Bacteroides\n \nfragilis,\n \nPrevotella\n \nmelaninogenica,\n \nand\n \nFusobacterium\n \nnucleatum)\n \nare\n \ngenerally\n \naerotolerant\n \n(i.e.,\n \nthey\n \ntolerate\n \n2%–8%\n \noxygen)\n \nand\n \ncan\n \nsurvive\n \nfor\n \nsustained\n \nperiods,\n \nbut\n \ncannot\n \nreplicate,\n \nin\n \nan\n \noxygenated\n \natmosphere.\n \n \n1.\n有\n爭\n義\n，\n如\n果\n不\n看\n英\n文\n的\n話\n可\n以\n算\n對\n \n2.\n依\n據\nMandell\n課\n文\n敘\n述\n，\nAnaerobes\n \nthat\n \ncommonly\n \ncause\n \nhuman\n \ninfections\n \n(Bacteroides,\n \nPrevotella,\n \nand\n \nFusobacterium\n \nspp.)\n \nare\n \ngenerally\n \naerotolerant\n \n3.\n \nInfections\n \ninvolving\n \nanaerobes\n \nare\n \noften\n \npolymicrobial\n \nand\n \nusually\n \nresult\n \nfrom\n \nthe\n \ndisruption\n \nof\n \nmucosal\n \nsurfaces\n \nby\n \nsurgery,\n \ntrauma,\n \ntumors,\n \nor\n \nischemia\n \nand\n \nthe\n \nsubsequent\n \ninfiltration\n \nof\n \nresident\n \nmicrobiota.\n \n4.\n \n附\n上\nMandell\n表\n格\n左\n佐\n證",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "",
+      "answerExplanation": ""
+    },
+    {
+      "order": 71,
+      "content": "內視鏡高程度消毒目前最常用的方法為何？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "氧化乙烯 (EO)",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "Glutaraldehyde (Cidex) or Ortho-phthalaldehyde (OPA)",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "酚類 (Lysol)",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "氯化物類 (Chlorophors)",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "Hexachlorophene (Phisohex)",
+          "order": 4
+        },
+        {
+          "text": "A",
+          "label": "氧化乙烯 (EO)",
+          "order": 0
+        },
+        {
+          "text": "C",
+          "label": "酚類 (Lysol)",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "氯化物類 (Chlorophors)",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "Hexachlorophene (Phisohex)",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 72,
+      "content": "針對 Creutzfeldt-Jakob disease (庫賈氏症) 器材滅菌 (sterilization) 下列何種方式較為安全？\n高壓鍋 (autoclaving sterilizer)，134°C，18 分鐘\n高壓鍋 (autoclaving sterilizer)，121°C，60 分鐘\n浸泡 1M NaOH 60 分鐘；清洗後置放在壓力鍋 (autoclaving sterilizer) 134°C，18 分鐘",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "1+2+3",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "1+2",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "1+3",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "2+3",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "3",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 73,
+      "content": "下列關於中央供應室之設置何者為非？",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "採品區為單向管理",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "物品運送方向 (物流方向) 為單行道",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "氣流方向需與物流方向相同",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "建議室內溫度範圍 18–22 度",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "濕度應控制在 35–70%",
+          "order": 4
+        },
+        {
+          "text": "A",
+          "label": "採品區為單向管理",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "物品運送方向 (物流方向) 為單行道",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "氣流方向需與物流方向相同 ❌",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "建議室內溫度範圍 18–22°C",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "濕度應控制在 35–70%",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 74,
+      "content": "答案：(C)\n(C) 住院最重要的感染管制是避免病人被蚊蟲叮咬以阻斷人→蚊→人的院內傳播，因此確保病人在蚊帳／紗窗完備的房間最關鍵",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "(C) 住院最重要的感染管制是避免病人被蚊蟲叮咬以阻斷人→蚊→人的院內傳播，因此確保病人在蚊帳／紗窗完備的房間最關鍵"
+    },
+    {
+      "order": 75,
+      "content": "答案：(D)\n(D) 錯誤，Mpox的潛伏期通常為6-13天，最長可達21天，根據台灣疾管署指引，對於暴露者的健康監測期間是最後暴露日後的21天",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "(C) 住院最重要的感染管制是避免病人被蚊蟲叮咬以阻斷人→蚊→人的院內傳播，因此確保病人在蚊帳／紗窗完備的房間最關鍵\n93\n答案：(D)\n(D) 錯誤，Mpox的潛伏期通常為6-13天，最長可達21天，根據台灣疾管署指引，對於暴露者的健康監測期間是最後暴露日後的21天"
+    },
+    {
+      "order": 76,
+      "content": "答案：(A)\n不合適，依據目前推行的手術部位感染組合式照護，病患於手術當天及術後48小時內，血糖濃度應控制在180mg/dl以下",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "A",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "B",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "C",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "D",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "E",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "C",
+      "answerExplanation": "(C) 住院最重要的感染管制是避免病人被蚊蟲叮咬以阻斷人→蚊→人的院內傳播，因此確保病人在蚊帳／紗窗完備的房間最關鍵\n93\n答案：(D)\n(D) 錯誤，Mpox的潛伏期通常為6-13天，最長可達21天，根據台灣疾管署指引，對於暴露者的健康監測期間是最後暴露日後的21天\n94\n答案：(A)\n不合適，依據目前推行的手術部位感染組合式照護，病患於手術當天及術後48小時內，血糖濃度應控制在180mg/dl以下"
+    },
+    {
+      "order": 77,
+      "content": "CA-UTI (catheter-associated urinary tract infection)組合式照護(bundle care) ，導尿管每日照護措施不包括哪一項? E",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "檢視導尿管的必要性",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "照護前後皆應清潔雙手",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "適當固定導尿管，尿袋低於膀胱",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "維持密閉、無菌且暢通的引流系統，集尿袋不可超過八分滿",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "使用75%酒精，進行尿道口清潔及清除導尿管積聚的分泌物",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 78,
+      "content": "下列哪一部門不是感染管制委員會必要的代表? E",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "內、外科",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "急診部門",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "行政部門",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "職安部門",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "骨科、精神科",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "A",
+      "answerExplanation": ""
+    },
+    {
+      "order": 79,
+      "content": "關於 Legionnaires’ desease和 Legionella spp. bacteria敘述何者錯誤? E",
+      "type": "CHOICE",
+      "imageUrl": "",
+      "imageUrls": [],
+      "options": [
+        {
+          "text": "A",
+          "label": "退伍軍人菌為革蘭氏染色陰性桿菌，培養時需要半胱胺酸 (cysteine) 。",
+          "order": 0
+        },
+        {
+          "text": "B",
+          "label": "主要可能存在水溶液中。熱水供應系統、空調之冷卻水塔、蒸氣凝結設備均曾發現此菌。可於自來水或蒸餾水中存活數月之久。",
+          "order": 1
+        },
+        {
+          "text": "C",
+          "label": "退伍軍人菌並不會人傳人。主要是經由吸入或嗆入含有退伍軍人菌的氣霧或水滴而致病。",
+          "order": 2
+        },
+        {
+          "text": "D",
+          "label": "治療選擇包含macrolides, tetracycline, 和quinolone。",
+          "order": 3
+        },
+        {
+          "text": "E",
+          "label": "依照台灣CDC”醫院退伍軍人菌環境檢測作業及相關因應措施指引”建議高風險區域在同一供水系統中培養出>100cfu/L的陽性樣本數應該<30%。",
+          "order": 4
+        }
+      ],
+      "correctAnswer": "E",
+      "answerExplanation": "選項: \n根據醫院退伍軍人菌環境檢測作業及相關因應措施指引:\n高風險區域(如骨髓移植病房、器官移植病房、加護病房及新生兒照護單位等)，供水系統出水口應不得檢出有退伍軍人菌；若採樣檢體測得有退伍軍人菌陽性(>100cfu/L)，則應： (1)加強臨床肺炎感染個案之監測，針對所有醫療照護相關肺炎感染病人常規執行實驗室診斷。 (2)採取下列措施直到該區域內供水系統不再檢出退伍軍人菌：如限制嚴重免疫功能不全的病人使用病室內的蓮蓬頭沖澡；使用未受退伍軍人菌污染的水替造血幹細胞移植病人進行擦澡；提供無菌水給造血幹細胞移植病人飲用、刷牙或用於鼻胃管沖洗；不得使用病室內水龍頭取用受退伍軍人菌污染的水避免產生具感染性的飛沫微粒。"
+    }
+  ]
+}

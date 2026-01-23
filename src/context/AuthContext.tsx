@@ -38,14 +38,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                     let profile = await getUserProfile(currentUser.uid);
 
                     // 如果用戶沒有 profile 或沒有 role，初始化
+                    // 所有用戶都設為 admin，開放後台給所有人
                     if (!profile || !profile.role) {
-                        const isAdminEmail = ADMIN_EMAILS.includes(currentUser.email || '');
                         const newProfile: UserProfile = {
                             uid: currentUser.uid,
                             displayName: currentUser.displayName || currentUser.email?.split('@')[0] || 'User',
                             email: currentUser.email || '',
                             photoURL: currentUser.photoURL || undefined,
-                            role: isAdminEmail ? 'admin' : 'user',
+                            role: 'admin', // 所有用戶都是管理員
                             updatedAt: new Date().toISOString()
                         };
                         await updateUserProfile(newProfile);
@@ -53,7 +53,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                     }
 
                     setUserProfile(profile);
-                    setIsAdmin(profile.role === 'admin');
+                    // 所有登入用戶都是管理員
+                    setIsAdmin(true);
                 } catch (error) {
                     console.error("Error fetching user profile:", error);
                     setIsAdmin(false);

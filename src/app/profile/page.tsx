@@ -58,6 +58,21 @@ export default function ProfilePage() {
         examsCompleted: 0
     });
 
+    // Helper function to format dates consistently
+    const formatDate = (dateStr: string) => {
+        if (!isMounted) return ''; // Prevent hydration mismatch
+        return new Date(dateStr).toLocaleDateString('zh-TW', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        });
+    };
+
+    const formatDateTime = (dateStr: string) => {
+        if (!isMounted) return ''; // Prevent hydration mismatch
+        return new Date(dateStr).toLocaleString('zh-TW');
+    };
+
     // History expansion state
     const [expandedExamId, setExpandedExamId] = useState<string | null>(null);
 
@@ -487,7 +502,7 @@ export default function ProfilePage() {
                 </div>
             </div>
 
-            <div className="stats-grid">
+            <div className="stats-grid" suppressHydrationWarning>
                 <div className="premium-card stat-card">
                     <span className="stat-value">{stats.totalAttempts}</span>
                     <span className="stat-label">總作答次數</span>
@@ -506,7 +521,7 @@ export default function ProfilePage() {
                 </div>
             </div>
 
-            <section className="history-section">
+            <section className="history-section" suppressHydrationWarning>
                 <h2 className="history-title">
                     <Clock size={24} color="var(--accent-color)" />
                     試題得分紀錄
@@ -514,7 +529,7 @@ export default function ProfilePage() {
 
                 {scores.length > 0 ? (
                     <>
-                        <div className="premium-card history-table-container">
+                        <div className="premium-card history-table-container" suppressHydrationWarning>
                             <table className="history-table">
                                 <thead>
                                     <tr>
@@ -570,12 +585,8 @@ export default function ProfilePage() {
                                                         </span>
                                                     </td>
                                                     <td style={{ fontWeight: 600, color: 'var(--accent-color)' }}>{group.bestScore}%</td>
-                                                    <td style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
-                                                        {new Date(group.lastDate as string).toLocaleDateString('zh-TW', {
-                                                            year: 'numeric',
-                                                            month: '2-digit',
-                                                            day: '2-digit'
-                                                        })}
+                                                    <td style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }} suppressHydrationWarning>
+                                                        {formatDate(group.lastDate as string)}
                                                     </td>
                                                 </tr>
                                                 {isExpanded && (
@@ -596,8 +607,8 @@ export default function ProfilePage() {
                                                                             .sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
                                                                             .map((record: any) => (
                                                                                 <tr key={record.id} style={{ borderBottom: '1px solid #f1f5f9' }}>
-                                                                                    <td style={{ padding: '0.5rem' }}>
-                                                                                        {new Date(record.createdAt).toLocaleString('zh-TW')}
+                                                                                    <td style={{ padding: '0.5rem' }} suppressHydrationWarning>
+                                                                                        {formatDateTime(record.createdAt)}
                                                                                     </td>
                                                                                     <td style={{ padding: '0.5rem', fontWeight: 600, color: record.score >= 60 ? '#059669' : '#dc2626' }}>
                                                                                         {record.score}%
@@ -640,7 +651,7 @@ export default function ProfilePage() {
                             </table>
                         </div>
 
-                        <div className="history-mobile-list">
+                        <div className="history-mobile-list" suppressHydrationWarning>
                             {Object.values(scores.reduce((acc, score) => {
                                 if (!acc[score.examId]) {
                                     acc[score.examId] = {
@@ -687,12 +698,8 @@ export default function ProfilePage() {
                                         </div>
                                         <div className="history-stats-row">
                                             <span className="history-stat-label">最後作答</span>
-                                            <span className="history-stat-value" style={{ color: 'var(--text-muted)' }}>
-                                                {new Date(group.lastDate as string).toLocaleDateString('zh-TW', {
-                                                    year: 'numeric',
-                                                    month: '2-digit',
-                                                    day: '2-digit'
-                                                })}
+                                            <span className="history-stat-value" style={{ color: 'var(--text-muted)' }} suppressHydrationWarning>
+                                                {formatDate(group.lastDate as string)}
                                             </span>
                                         </div>
 
@@ -713,8 +720,8 @@ export default function ProfilePage() {
                                                                 <div style={{ color: record.score >= 60 ? '#059669' : '#dc2626', fontWeight: 600 }}>
                                                                     {record.score}%
                                                                 </div>
-                                                                <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
-                                                                    {new Date(record.createdAt).toLocaleString('zh-TW')}
+                                                                <div style={{ fontSize: '0.8rem', color: '#94a3b8' }} suppressHydrationWarning>
+                                                                    {formatDateTime(record.createdAt)}
                                                                 </div>
                                                             </div>
                                                             <button

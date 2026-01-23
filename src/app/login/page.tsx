@@ -1,13 +1,16 @@
 "use client";
 
 import { useState } from 'react';
-import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from '@/firebase';
 import { useRouter } from 'next/navigation';
 import { Microscope, Mail } from 'lucide-react';
 import Link from 'next/link';
+import { updateUserProfile, UserProfile } from '@/lib/firestore-client';
 
 export default function LoginPage() {
+    const [isRegisterMode, setIsRegisterMode] = useState(false);
+    const [displayName, setDisplayName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -39,6 +42,57 @@ export default function LoginPage() {
         } catch (err: any) {
             console.error(err);
             setError('登入失敗：' + (err.message || '請檢查帳號密碼'));
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleRegister = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setError('');
+
+        if (!displayName.trim()) {
+            setError('請輸入帳號名稱');
+            setIsLoading(false);
+            return;
+        }
+
+        try {
+            // Create user with email and password
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+
+            // Update display name in Firebase Auth
+            await updateProfile(user, {
+                displayName: displayName.trim()
+            });
+
+            // Create user profile in Firestore
+            const newProfile: UserProfile = {
+                uid: user.uid,
+                displayName: displayName.trim(),
+                email: user.email || '',
+                photoURL: undefined,
+                role: 'admin', // All users are admins
+                updatedAt: new Date().toISOString()
+            };
+            await updateUserProfile(newProfile);
+
+            router.push('/');
+        } catch (err: any) {
+            console.error(err);
+            let errorMessage = '註冊失敗：';
+            if (err.code === 'auth/email-already-in-use') {
+                errorMessage += 'Email 已被使用';
+            } else if (err.code === 'auth/weak-password') {
+                errorMessage += '密碼強度不足（至少6個字元）';
+            } else if (err.code === 'auth/invalid-email') {
+                errorMessage += 'Email 格式不正確';
+            } else {
+                errorMessage += err.message || '未知錯誤';
+            }
+            setError(errorMessage);
         } finally {
             setIsLoading(false);
         }
@@ -78,10 +132,10 @@ export default function LoginPage() {
                         <Microscope size={32} color="white" />
                     </div>
                     <h1 style={{ fontSize: '1.75rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.5rem' }}>
-                        歡迎回來
+                        {isRegisterMode ? '建立帳號' : '歡迎回來'}
                     </h1>
                     <p style={{ color: 'var(--text-muted)' }}>
-                        登入以追蹤您的學習進度
+                        {isRegisterMode ? '註冊以開始您的學習之旅' : '登入以追蹤您的學習進度'}
                     </p>
                 </div>
 
@@ -151,7 +205,26 @@ export default function LoginPage() {
                     <div style={{ flex: 1, height: '1px', background: '#e5e7eb' }} />
                 </div>
 
-                <form onSubmit={handleEmailLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <form onSubmit={isRegisterMode ? handleRegister : handleEmailLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                    {isRegisterMode && (
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="帳號名稱"
+                                value={displayName}
+                                onChange={(e) => setDisplayName(e.target.value)}
+                                style={{
+                                    width: '100%',
+                                    padding: '0.875rem',
+                                    borderRadius: '0.75rem',
+                                    border: '1px solid #e5e7eb',
+                                    background: '#f9fafb',
+                                    outline: 'none'
+                                }}
+                                required
+                            />
+                        </div>
+                    )}
                     <div>
                         <input
                             type="email"
@@ -204,10 +277,33 @@ export default function LoginPage() {
                             marginTop: '0.5rem'
                         }}
                     >
-                        {isLoading ? '登入中...' : '登入'}
+                        {isLoading ? (isRegisterMode ? '註冊中...' : '登入中...') : (isRegisterMode ? '註冊' : '登入')}
                     </button>
 
-                    <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+                    <div style={{ textAlign: 'center', marginTop: '0.5rem' }}>
+                        <button
+                            type="button"
+                            onClick={() => {
+                                setIsRegisterMode(!isRegisterMode);
+                                setError('');
+                                setDisplayName('');
+                                setEmail('');
+                                setPassword('');
+                            }}
+                            style={{
+                                background: 'none',
+                                border: 'none',
+                                color: 'var(--accent-color)',
+                                fontSize: '0.9rem',
+                                cursor: 'pointer',
+                                textDecoration: 'underline'
+                            }}
+                        >
+                            {isRegisterMode ? '已有帳號？登入' : '還沒有帳號？註冊'}
+                        </button>
+                    </div>
+
+                    <div style={{ textAlign: 'center', marginTop: '0.5rem' }}>
                         <Link href="/" style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textDecoration: 'none' }}>
                             暫時略過，回首頁
                         </Link>

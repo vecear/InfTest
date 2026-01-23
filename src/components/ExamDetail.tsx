@@ -136,6 +136,7 @@ export default function ExamDetail({ exam, backPath }: ExamDetailProps) {
         }
     }, [scrollToTop, user, selectedMode, answers, exam]);
 
+
     // Timer effect for exam mode
     useEffect(() => {
         if (selectedMode !== 'exam' || !examStarted || examSubmitted) return;
@@ -213,9 +214,8 @@ export default function ExamDetail({ exam, backPath }: ExamDetailProps) {
             {/* Floating Navigation */}
             {examStarted && (
                 <div
-                    onMouseEnter={() => !isMobile && setIsNavHovered(true)}
-                    onMouseLeave={() => !isMobile && setIsNavHovered(false)}
-                    onClick={() => isMobile && setIsNavHovered(!isNavHovered)}
+                    data-nav-panel
+                    onClick={() => setIsNavHovered(!isNavHovered)}
                     style={{
                         position: 'fixed',
                         left: 0,
@@ -338,8 +338,8 @@ export default function ExamDetail({ exam, backPath }: ExamDetailProps) {
             {/* Collapsed indicator when not hovered */}
             {examStarted && (
                 <div
-                    onMouseEnter={() => !isMobile && setIsNavHovered(true)}
-                    onClick={() => isMobile && setIsNavHovered(true)}
+                    data-nav-panel
+                    onClick={() => setIsNavHovered(true)}
                     style={{
                         position: 'fixed',
                         left: 0,
