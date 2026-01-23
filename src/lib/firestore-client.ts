@@ -35,6 +35,7 @@ export interface Question {
     answerExplanation: string | null;
     order: number;
     options: QuestionOption[];
+    hideOptions?: boolean;
 }
 
 export interface QuestionOption {
@@ -42,6 +43,7 @@ export interface QuestionOption {
     questionId?: string;
     text: string;
     order: number;
+    hidden?: boolean;
 }
 
 export interface Comment {
@@ -206,6 +208,12 @@ export async function getUserScoreHistory(userId: string): Promise<UserScore[]> 
         const dateB = typeof b.createdAt === 'string' ? new Date(b.createdAt).getTime() : 0;
         return dateB - dateA;
     });
+}
+
+export async function deleteUserScore(id: string): Promise<void> {
+    const { deleteDoc } = await import("firebase/firestore");
+    const docRef = doc(db, "userScores", id);
+    await deleteDoc(docRef);
 }
 
 export async function getUserProfile(uid: string): Promise<UserProfile | null> {

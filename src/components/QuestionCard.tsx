@@ -12,6 +12,7 @@ interface Option {
     id: string;
     text: string;
     order: number;
+    hidden?: boolean;
 }
 
 type ExamMode = 'exam' | 'review' | 'reading' | null;
@@ -26,6 +27,7 @@ interface QuestionProps {
         correctAnswer: string | null;
         answerExplanation: string | null;
         options: Option[];
+        hideOptions?: boolean;
     };
     mode?: ExamMode;
     examSubmitted?: boolean;
@@ -209,8 +211,14 @@ export default function QuestionCard({
 
     // Calculate and set initial scale when modal image loads
     const handleModalImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
-        // Set a fixed 1.2x zoom on modal open
-        setImageScale(1.2);
+        const img = e.currentTarget;
+        if (window.innerWidth < 768) {
+            // Mobile: adapt to screen width
+            setImageScale(window.innerWidth / img.naturalWidth);
+        } else {
+            // Desktop: 100% scale
+            setImageScale(1);
+        }
     };
 
     // Handle wheel zoom
@@ -312,23 +320,30 @@ export default function QuestionCard({
 
             {question.type === "CHOICE" ? (
                 <div>
-                    {/* Options Text Display */}
-                    <div style={{ marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                        {question.options.sort((a, b) => a.order - b.order).map((option, index) => {
-                            const label = String.fromCharCode(65 + index); // A, B, C...
-                            return (
-                                <div key={`text-${index}`} style={{ display: 'flex', gap: '0.5rem', fontSize: '1rem', lineHeight: '1.5', color: 'var(--text-main)' }}>
-                                    <span style={{ fontWeight: 600, minWidth: '24px' }}>({label})</span>
-                                    <span>{option.text}</span>
-                                </div>
-                            );
-                        })}
-                    </div>
+                    {/* Options Text Display - hidden when hideOptions is true */}
+                    {!question.hideOptions && (
+                        <div style={{ marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                            {question.options.sort((a, b) => a.order - b.order).map((option, index) => {
+                                const label = String.fromCharCode(65 + index); // A, B, C...
+                                // Skip hidden options
+                                if (option.hidden) return null;
+                                return (
+                                    <div key={`text-${index}`} style={{ display: 'flex', gap: '0.5rem', fontSize: '1rem', lineHeight: '1.5', color: 'var(--text-main)' }}>
+                                        <span style={{ fontWeight: 600, minWidth: '24px' }}>({label})</span>
+                                        <span>{option.text}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
 
                     {/* Answer Buttons (Answer Sheet Style) */}
                     <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '0.8rem' }}>
                         {question.options.sort((a, b) => a.order - b.order).map((option, index) => {
                             const label = String.fromCharCode(65 + index); // A, B, C...
+                            // Skip buttons for individually hidden options
+                            if (option.hidden) return null;
+
                             const isOptionSelected = selectedLabel === label;
 
                             // Check correctness using Label or Text

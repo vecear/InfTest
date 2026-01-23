@@ -210,7 +210,7 @@ export default function AdminPage() {
                                             <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontWeight: 600, color: 'var(--text-muted)', fontSize: '0.85rem' }}>試卷名稱</th>
                                             <th style={{ padding: '0.75rem 1rem', textAlign: 'center', fontWeight: 600, color: 'var(--text-muted)', fontSize: '0.85rem', width: '80px' }}>年份</th>
                                             <th style={{ padding: '0.75rem 1rem', textAlign: 'center', fontWeight: 600, color: 'var(--text-muted)', fontSize: '0.85rem', width: '80px' }}>題數</th>
-                                            <th style={{ padding: '0.75rem 1rem', textAlign: 'center', fontWeight: 600, color: 'var(--text-muted)', fontSize: '0.85rem', width: '120px' }}>操作</th>
+                                            <th style={{ padding: '0.75rem 1rem', textAlign: 'center', fontWeight: 600, color: 'var(--text-muted)', fontSize: '0.85rem', width: '160px' }}>操作</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -232,7 +232,8 @@ export default function AdminPage() {
                                                                 color: '#0284c7',
                                                                 borderRadius: '0.375rem',
                                                                 fontSize: '0.8rem',
-                                                                textDecoration: 'none'
+                                                                textDecoration: 'none',
+                                                                whiteSpace: 'nowrap'
                                                             }}
                                                         >
                                                             <Edit size={14} /> 編輯
@@ -251,7 +252,8 @@ export default function AdminPage() {
                                                                 borderRadius: '0.375rem',
                                                                 fontSize: '0.8rem',
                                                                 cursor: deleting === exam.id ? 'not-allowed' : 'pointer',
-                                                                opacity: deleting === exam.id ? 0.6 : 1
+                                                                opacity: deleting === exam.id ? 0.6 : 1,
+                                                                whiteSpace: 'nowrap'
                                                             }}
                                                         >
                                                             <Trash2 size={14} /> {deleting === exam.id ? '刪除中...' : '刪除'}

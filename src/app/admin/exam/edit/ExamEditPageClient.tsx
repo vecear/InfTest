@@ -25,7 +25,9 @@ import {
     ChevronDown,
     AlertCircle,
     Check,
-    Play
+    Play,
+    Eye,
+    EyeOff
 } from "lucide-react";
 
 const CATEGORIES = [
@@ -42,24 +44,26 @@ const QUESTION_TYPES = [
 interface QuestionFormData {
     content: string;
     type: string;
-    options: { text: string; order: number }[];
+    options: { text: string; order: number; hidden?: boolean }[];
     correctAnswer: string;
     answerExplanation: string;
     imageUrl: string;
+    hideOptions?: boolean;
 }
 
 const emptyQuestion: QuestionFormData = {
     content: "",
     type: "CHOICE",
     options: [
-        { text: "", order: 0 },
-        { text: "", order: 1 },
-        { text: "", order: 2 },
-        { text: "", order: 3 },
+        { text: "", order: 0, hidden: false },
+        { text: "", order: 1, hidden: false },
+        { text: "", order: 2, hidden: false },
+        { text: "", order: 3, hidden: false },
     ],
     correctAnswer: "",
     answerExplanation: "",
     imageUrl: "",
+    hideOptions: false,
 };
 
 export default function ExamEditPageClient({ id }: { id: string }) {
@@ -161,7 +165,8 @@ export default function ExamEditPageClient({ id }: { id: string }) {
                 correctAnswer: questionForm.correctAnswer,
                 answerExplanation: questionForm.answerExplanation,
                 imageUrl: questionForm.imageUrl || null,
-                order: isNew ? questions.length : (questions.find(q => q.id === editingQuestionId)?.order || 0)
+                order: isNew ? questions.length : (questions.find(q => q.id === editingQuestionId)?.order || 0),
+                hideOptions: questionForm.hideOptions || false
             };
 
             if (isNew) {
@@ -213,10 +218,15 @@ export default function ExamEditPageClient({ id }: { id: string }) {
         setQuestionForm({
             content: question.content,
             type: question.type,
-            options: question.options.length > 0 ? question.options : emptyQuestion.options,
+            options: question.options.length > 0 ? question.options.map(opt => ({
+                text: opt.text,
+                order: opt.order,
+                hidden: opt.hidden || false
+            })) : emptyQuestion.options,
             correctAnswer: question.correctAnswer || "",
             answerExplanation: question.answerExplanation || "",
             imageUrl: question.imageUrl || "",
+            hideOptions: question.hideOptions || false,
         });
     };
 
@@ -245,6 +255,24 @@ export default function ExamEditPageClient({ id }: { id: string }) {
         } catch (error) {
             console.error("Error reordering:", error);
             fetchData(); // Reload on error
+        }
+    };
+
+    const handleToggleAllHideOptions = async (hideAll: boolean) => {
+        try {
+            setSaving(true);
+            // Update all questions in parallel
+            await Promise.all(
+                questions.map(q => updateQuestion(q.id, { hideOptions: hideAll }))
+            );
+            // Update local state
+            setQuestions(questions.map(q => ({ ...q, hideOptions: hideAll })));
+            setMessage({ type: 'success', text: hideAll ? '已隱藏所有題目選項' : '已顯示所有題目選項' });
+        } catch (error) {
+            console.error("Error toggling hideOptions:", error);
+            setMessage({ type: 'error', text: '操作失敗' });
+        } finally {
+            setSaving(false);
         }
     };
 
@@ -446,30 +474,91 @@ export default function ExamEditPageClient({ id }: { id: string }) {
             </div>
 
             {/* Questions Section */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem', flexWrap: 'wrap', gap: '0.75rem' }}>
                 <h2 style={{ margin: 0, fontSize: '1.1rem' }}>題目列表</h2>
-                <button
-                    onClick={() => {
-                        setShowNewQuestion(true);
-                        setEditingQuestionId(null);
-                        setQuestionForm(emptyQuestion);
-                    }}
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        padding: '0.5rem 1rem',
-                        background: 'var(--accent-color)',
-                        color: 'white',
-                        border: 'none',
-                        borderRadius: '0.5rem',
-                        cursor: 'pointer',
-                        fontWeight: 500,
-                        fontSize: '0.9rem'
-                    }}
-                >
-                    <Plus size={16} /> 新增題目
-                </button>
+                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                    {(() => {
+                        const allHidden = questions.length > 0 && questions.every(q => q.hideOptions);
+                        // Determine if all are shown (none are hidden)
+                        const allShown = questions.length > 0 && questions.every(q => !q.hideOptions);
+
+                        return (
+                            <div style={{
+                                display: 'flex',
+                                background: '#f1f5f9',
+                                padding: '0.25rem',
+                                borderRadius: '0.5rem',
+                                border: '1px solid #e2e8f0'
+                            }}>
+                                <button
+                                    onClick={() => handleToggleAllHideOptions(false)}
+                                    disabled={saving || questions.length === 0}
+                                    style={{
+                                        padding: '0.4rem 0.8rem',
+                                        borderRadius: '0.375rem',
+                                        border: 'none',
+                                        background: allShown ? 'white' : 'transparent',
+                                        color: allShown ? '#0284c7' : '#64748b',
+                                        boxShadow: allShown ? '0 1px 2px rgba(0,0,0,0.1)' : 'none',
+                                        fontWeight: 500,
+                                        fontSize: '0.85rem',
+                                        cursor: saving || questions.length === 0 ? 'default' : 'pointer',
+                                        transition: 'all 0.2s',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '0.25rem'
+                                    }}
+                                >
+                                    <Eye size={14} /> 顯示
+                                </button>
+                                <button
+                                    onClick={() => handleToggleAllHideOptions(true)}
+                                    disabled={saving || questions.length === 0}
+                                    style={{
+                                        padding: '0.4rem 0.8rem',
+                                        borderRadius: '0.375rem',
+                                        border: 'none',
+                                        background: allHidden ? 'white' : 'transparent',
+                                        color: allHidden ? '#dc2626' : '#64748b',
+                                        boxShadow: allHidden ? '0 1px 2px rgba(0,0,0,0.1)' : 'none',
+                                        fontWeight: 500,
+                                        fontSize: '0.85rem',
+                                        cursor: saving || questions.length === 0 ? 'default' : 'pointer',
+                                        transition: 'all 0.2s',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '0.25rem'
+                                    }}
+                                >
+                                    <EyeOff size={14} /> 隱藏
+                                </button>
+                            </div>
+                        );
+                    })()}
+                    <button
+                        onClick={() => {
+                            setShowNewQuestion(true);
+                            setEditingQuestionId(null);
+                            setQuestionForm(emptyQuestion);
+                        }}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.5rem',
+                            padding: '0.5rem 1rem',
+                            background: 'var(--accent-color)',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '0.5rem',
+                            cursor: 'pointer',
+                            fontWeight: 500,
+                            fontSize: '0.9rem',
+                            whiteSpace: 'nowrap'
+                        }}
+                    >
+                        <Plus size={16} /> 新增題目
+                    </button>
+                </div>
             </div>
 
             {/* New Question Form */}
@@ -661,7 +750,7 @@ function QuestionForm({
         if (form.options.length >= 5) return;
         setForm({
             ...form,
-            options: [...form.options, { text: "", order: form.options.length }]
+            options: [...form.options, { text: "", order: form.options.length, hidden: false }]
         });
     };
 
@@ -669,6 +758,16 @@ function QuestionForm({
         if (form.options.length <= 2) return;
         const newOptions = form.options.filter((_, i) => i !== index).map((opt, i) => ({ ...opt, order: i }));
         setForm({ ...form, options: newOptions });
+    };
+
+    const toggleOptionHidden = (index: number) => {
+        const newOptions = [...form.options];
+        newOptions[index] = { ...newOptions[index], hidden: !newOptions[index].hidden };
+        setForm({ ...form, options: newOptions });
+    };
+
+    const toggleHideAllOptions = () => {
+        setForm({ ...form, hideOptions: !form.hideOptions });
     };
 
     return (
@@ -751,17 +850,17 @@ function QuestionForm({
                             選項
                         </label>
                         {form.options.map((option, index) => (
-                            <div key={index} style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                            <div key={index} style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem', opacity: option.hidden ? 0.5 : 1 }}>
                                 <span style={{
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     width: '28px',
                                     height: '38px',
-                                    background: '#f1f5f9',
+                                    background: option.hidden ? '#fee2e2' : '#f1f5f9',
                                     borderRadius: '0.375rem',
                                     fontWeight: 600,
-                                    color: 'var(--text-muted)'
+                                    color: option.hidden ? '#dc2626' : 'var(--text-muted)'
                                 }}>
                                     {String.fromCharCode(65 + index)}
                                 </span>
@@ -775,9 +874,24 @@ function QuestionForm({
                                         padding: '0.5rem 0.75rem',
                                         borderRadius: '0.375rem',
                                         border: '1px solid #e2e8f0',
-                                        fontSize: '0.9rem'
+                                        fontSize: '0.9rem',
+                                        textDecoration: option.hidden ? 'line-through' : 'none'
                                     }}
                                 />
+                                <button
+                                    onClick={() => toggleOptionHidden(index)}
+                                    title={option.hidden ? '顯示選項' : '隱藏選項'}
+                                    style={{
+                                        padding: '0.5rem',
+                                        background: option.hidden ? '#fef3c7' : '#f0f9ff',
+                                        color: option.hidden ? '#d97706' : '#0284c7',
+                                        border: 'none',
+                                        borderRadius: '0.375rem',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    {option.hidden ? <EyeOff size={16} /> : <Eye size={16} />}
+                                </button>
                                 {form.options.length > 2 && (
                                     <button
                                         onClick={() => removeOption(index)}
@@ -795,24 +909,56 @@ function QuestionForm({
                                 )}
                             </div>
                         ))}
-                        {form.options.length < 5 && (
+                        <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem' }}>
+                            {form.options.length < 5 && (
+                                <button
+                                    onClick={addOption}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '0.25rem',
+                                        padding: '0.4rem 0.75rem',
+                                        background: '#f0fdf4',
+                                        color: '#16a34a',
+                                        border: 'none',
+                                        borderRadius: '0.375rem',
+                                        fontSize: '0.85rem',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    <Plus size={14} /> 新增選項
+                                </button>
+                            )}
                             <button
-                                onClick={addOption}
+                                onClick={toggleHideAllOptions}
                                 style={{
                                     display: 'flex',
                                     alignItems: 'center',
                                     gap: '0.25rem',
                                     padding: '0.4rem 0.75rem',
-                                    background: '#f0fdf4',
-                                    color: '#16a34a',
+                                    background: form.hideOptions ? '#fef3c7' : '#f1f5f9',
+                                    color: form.hideOptions ? '#d97706' : '#64748b',
                                     border: 'none',
                                     borderRadius: '0.375rem',
                                     fontSize: '0.85rem',
                                     cursor: 'pointer'
                                 }}
                             >
-                                <Plus size={14} /> 新增選項
+                                {form.hideOptions ? <EyeOff size={14} /> : <Eye size={14} />}
+                                {form.hideOptions ? '顯示選項' : '不顯示選項'}
                             </button>
+                        </div>
+                        {form.hideOptions && (
+                            <div style={{
+                                marginTop: '0.5rem',
+                                padding: '0.5rem 0.75rem',
+                                background: '#fef3c7',
+                                borderRadius: '0.375rem',
+                                fontSize: '0.8rem',
+                                color: '#92400e'
+                            }}>
+                                此題目的選項將在作答時被隱藏
+                            </div>
                         )}
                     </div>
                 )}

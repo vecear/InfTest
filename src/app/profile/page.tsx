@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
 import {
     getUserScoreHistory,
     updateUserProfile,
     getUserProfile,
+    deleteUserScore,
     UserScore,
 } from "@/lib/firestore-client";
 import {
@@ -21,7 +22,10 @@ import {
     Check,
     AlertCircle,
     Globe,
-    LogOut
+    LogOut,
+    ChevronDown,
+    ChevronUp,
+    Trash2
 } from "lucide-react";
 import Link from "next/link";
 import {
@@ -53,6 +57,9 @@ export default function ProfilePage() {
         bestScore: 0,
         examsCompleted: 0
     });
+
+    // History expansion state
+    const [expandedExamId, setExpandedExamId] = useState<string | null>(null);
 
     // Account Settings State
     const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
@@ -106,7 +113,15 @@ export default function ProfilePage() {
     };
 
     const calculateStats = (history: UserScore[]) => {
-        if (history.length === 0) return;
+        if (history.length === 0) {
+            setStats({
+                totalAttempts: 0,
+                averageScore: 0,
+                bestScore: 0,
+                examsCompleted: 0
+            });
+            return;
+        }
 
         const total = history.length;
         const sum = history.reduce((acc, curr) => acc + curr.score, 0);
@@ -200,10 +215,6 @@ export default function ProfilePage() {
         setIsLinking(true);
         try {
             if (authProviders.includes('password')) {
-                // Change existing password
-                // For changing password, re-auth might be needed if session is old,
-                // but updatePassword usually works if decent login.
-                // Best practice: Ask for current password to re-auth first.
                 if (!currentPassword) {
                     setMessage({ type: 'error', text: "請輸入目前密碼以驗證身分" });
                     setIsLinking(false);
@@ -214,14 +225,6 @@ export default function ProfilePage() {
                 await updatePassword(user, newPassword);
                 setMessage({ type: 'success', text: "密碼已變更" });
             } else {
-                // Set password (for Google users)
-                // Need to link with Email/Password credential
-                // Note: user.email must rely on the google email for this linking usually
-                // Or we treat it as adding a password to the existing provider-less base?
-                // Actually, updatePassword works if the user is authenticated, effectively 'adding' password provider behavior often,
-                // BUT formally syncing 'password' provider usually requires 'linkWithCredential' if we want to add the provider explicitly.
-                // However, updatePassword on a Google-only user often throws if not set up.
-                // Correct path: linkWithCredential with EmailAuthProvider.
                 const credential = EmailAuthProvider.credential(user.email!, newPassword);
                 await linkWithCredential(user, credential);
                 setMessage({ type: 'success', text: "密碼已設定，現在可以使用 Email登入" });
@@ -240,6 +243,23 @@ export default function ProfilePage() {
             }
         } finally {
             setIsLinking(false);
+            setTimeout(() => setMessage(null), 3000);
+        }
+    };
+
+    const handleDeleteScore = async (scoreId: string) => {
+        if (!window.confirm("確定要刪除這筆作答紀錄嗎？此動作無法復原。")) return;
+
+        try {
+            await deleteUserScore(scoreId);
+            const newScores = scores.filter(s => s.id !== scoreId);
+            setScores(newScores);
+            calculateStats(newScores);
+            setMessage({ type: 'success', text: "紀錄已刪除" });
+        } catch (error: any) {
+            console.error("Delete score error:", error);
+            setMessage({ type: 'error', text: "刪除失敗" });
+        } finally {
             setTimeout(() => setMessage(null), 3000);
         }
     };
@@ -498,6 +518,7 @@ export default function ProfilePage() {
                             <table className="history-table">
                                 <thead>
                                     <tr>
+                                        <th style={{ width: '40px' }}></th>
                                         <th>試卷名稱</th>
                                         <th>作答次數</th>
                                         <th>平均正確率</th>
@@ -514,36 +535,105 @@ export default function ProfilePage() {
                                                 count: 0,
                                                 totalScore: 0,
                                                 bestScore: 0,
-                                                lastDate: score.createdAt
+                                                lastDate: score.createdAt,
+                                                records: []
                                             };
                                         }
                                         acc[score.examId].count += 1;
                                         acc[score.examId].totalScore += score.score;
                                         acc[score.examId].bestScore = Math.max(acc[score.examId].bestScore, score.score);
+                                        // Store individual scores
+                                        acc[score.examId].records.push(score);
+
                                         if (new Date(score.createdAt as string) > new Date(acc[score.examId].lastDate as string)) {
                                             acc[score.examId].lastDate = score.createdAt;
                                         }
                                         return acc;
                                     }, {} as any)).map((group: any) => {
                                         const avgScore = Math.round(group.totalScore / group.count);
+                                        const isExpanded = expandedExamId === group.id;
+
                                         return (
-                                            <tr key={group.id}>
-                                                <td style={{ fontWeight: 600 }}>{group.title}</td>
-                                                <td style={{ textAlign: 'center' }}>{group.count} 次</td>
-                                                <td>
-                                                    <span className={`score-badge ${avgScore >= 80 ? 'score-high' : avgScore >= 60 ? 'score-medium' : 'score-low'}`}>
-                                                        {avgScore}%
-                                                    </span>
-                                                </td>
-                                                <td style={{ fontWeight: 600, color: 'var(--accent-color)' }}>{group.bestScore}%</td>
-                                                <td style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
-                                                    {new Date(group.lastDate as string).toLocaleDateString('zh-TW', {
-                                                        year: 'numeric',
-                                                        month: '2-digit',
-                                                        day: '2-digit'
-                                                    })}
-                                                </td>
-                                            </tr>
+                                            <React.Fragment key={group.id}>
+                                                <tr
+                                                    onClick={() => setExpandedExamId(isExpanded ? null : group.id)}
+                                                    style={{ cursor: 'pointer', background: isExpanded ? '#f8fafc' : undefined }}
+                                                >
+                                                    <td style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
+                                                        {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                                                    </td>
+                                                    <td style={{ fontWeight: 600 }}>{group.title}</td>
+                                                    <td style={{ textAlign: 'center' }}>{group.count} 次</td>
+                                                    <td>
+                                                        <span className={`score-badge ${avgScore >= 80 ? 'score-high' : avgScore >= 60 ? 'score-medium' : 'score-low'}`}>
+                                                            {avgScore}%
+                                                        </span>
+                                                    </td>
+                                                    <td style={{ fontWeight: 600, color: 'var(--accent-color)' }}>{group.bestScore}%</td>
+                                                    <td style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+                                                        {new Date(group.lastDate as string).toLocaleDateString('zh-TW', {
+                                                            year: 'numeric',
+                                                            month: '2-digit',
+                                                            day: '2-digit'
+                                                        })}
+                                                    </td>
+                                                </tr>
+                                                {isExpanded && (
+                                                    <tr>
+                                                        <td colSpan={6} style={{ padding: 0 }}>
+                                                            <div style={{ background: '#f8fafc', padding: '1rem' }}>
+                                                                <table style={{ width: '100%', fontSize: '0.9rem' }}>
+                                                                    <thead>
+                                                                        <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                                                                            <th style={{ padding: '0.5rem', textAlign: 'left', color: 'var(--text-muted)' }}>作答時間</th>
+                                                                            <th style={{ padding: '0.5rem', textAlign: 'left', color: 'var(--text-muted)' }}>得分</th>
+                                                                            <th style={{ padding: '0.5rem', textAlign: 'left', color: 'var(--text-muted)' }}>正確題數</th>
+                                                                            <th style={{ padding: '0.5rem', textAlign: 'right' }}>操作</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        {group.records
+                                                                            .sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+                                                                            .map((record: any) => (
+                                                                                <tr key={record.id} style={{ borderBottom: '1px solid #f1f5f9' }}>
+                                                                                    <td style={{ padding: '0.5rem' }}>
+                                                                                        {new Date(record.createdAt).toLocaleString('zh-TW')}
+                                                                                    </td>
+                                                                                    <td style={{ padding: '0.5rem', fontWeight: 600, color: record.score >= 60 ? '#059669' : '#dc2626' }}>
+                                                                                        {record.score}%
+                                                                                    </td>
+                                                                                    <td style={{ padding: '0.5rem', color: '#64748b' }}>
+                                                                                        {record.correctCount} / {record.totalQuestions}
+                                                                                    </td>
+                                                                                    <td style={{ padding: '0.5rem', textAlign: 'right' }}>
+                                                                                        <button
+                                                                                            onClick={(e) => {
+                                                                                                e.stopPropagation();
+                                                                                                handleDeleteScore(record.id);
+                                                                                            }}
+                                                                                            style={{
+                                                                                                background: 'none',
+                                                                                                border: 'none',
+                                                                                                padding: '0.25rem',
+                                                                                                cursor: 'pointer',
+                                                                                                color: '#dc2626',
+                                                                                                opacity: 0.7,
+                                                                                                transition: 'opacity 0.2s'
+                                                                                            }}
+                                                                                            title="刪除紀錄"
+                                                                                        >
+                                                                                            <Trash2 size={16} />
+                                                                                        </button>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            ))}
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                )}
+                                            </React.Fragment>
                                         );
                                     })}
                                 </tbody>
@@ -559,22 +649,30 @@ export default function ProfilePage() {
                                         count: 0,
                                         totalScore: 0,
                                         bestScore: 0,
-                                        lastDate: score.createdAt
+                                        lastDate: score.createdAt,
+                                        records: []
                                     };
                                 }
                                 acc[score.examId].count += 1;
                                 acc[score.examId].totalScore += score.score;
                                 acc[score.examId].bestScore = Math.max(acc[score.examId].bestScore, score.score);
+                                acc[score.examId].records.push(score);
+
                                 if (new Date(score.createdAt as string) > new Date(acc[score.examId].lastDate as string)) {
                                     acc[score.examId].lastDate = score.createdAt;
                                 }
                                 return acc;
                             }, {} as any)).map((group: any) => {
                                 const avgScore = Math.round(group.totalScore / group.count);
+                                const isExpanded = expandedExamId === group.id;
+
                                 return (
-                                    <div key={group.id} className="history-card-mobile">
+                                    <div key={group.id} className="history-card-mobile" onClick={() => setExpandedExamId(isExpanded ? null : group.id)}>
                                         <div className="history-card-header">
-                                            <div className="history-card-title">{group.title}</div>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                                {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                                                <div className="history-card-title">{group.title}</div>
+                                            </div>
                                             <span className={`score-badge ${avgScore >= 80 ? 'score-high' : avgScore >= 60 ? 'score-medium' : 'score-low'}`}>
                                                 {avgScore}%
                                             </span>
@@ -597,6 +695,48 @@ export default function ProfilePage() {
                                                 })}
                                             </span>
                                         </div>
+
+                                        {isExpanded && (
+                                            <div style={{ marginTop: '1rem', borderTop: '1px solid #e2e8f0', paddingTop: '0.5rem' }}>
+                                                {group.records
+                                                    .sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+                                                    .map((record: any) => (
+                                                        <div key={record.id} style={{
+                                                            display: 'flex',
+                                                            justifyContent: 'space-between',
+                                                            alignItems: 'center',
+                                                            padding: '0.75rem 0',
+                                                            borderBottom: '1px solid #f1f5f9',
+                                                            fontSize: '0.9rem'
+                                                        }}>
+                                                            <div>
+                                                                <div style={{ color: record.score >= 60 ? '#059669' : '#dc2626', fontWeight: 600 }}>
+                                                                    {record.score}%
+                                                                </div>
+                                                                <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
+                                                                    {new Date(record.createdAt).toLocaleString('zh-TW')}
+                                                                </div>
+                                                            </div>
+                                                            <button
+                                                                onClick={(e) => {
+                                                                    e.stopPropagation();
+                                                                    handleDeleteScore(record.id);
+                                                                }}
+                                                                style={{
+                                                                    background: '#fef2f2',
+                                                                    border: 'none',
+                                                                    padding: '0.4rem',
+                                                                    borderRadius: '0.375rem',
+                                                                    color: '#dc2626',
+                                                                    cursor: 'pointer'
+                                                                }}
+                                                            >
+                                                                <Trash2 size={16} />
+                                                            </button>
+                                                        </div>
+                                                    ))}
+                                            </div>
+                                        )}
                                     </div>
                                 );
                             })}
@@ -608,7 +748,6 @@ export default function ProfilePage() {
                         <p>尚無作答記錄，快去挑戰吧！</p>
                     </div>
                 )}
-
             </section >
         </div >
     );
