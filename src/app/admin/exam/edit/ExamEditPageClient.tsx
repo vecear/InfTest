@@ -47,7 +47,8 @@ interface QuestionFormData {
     options: { text: string; order: number; hidden?: boolean }[];
     correctAnswer: string;
     answerExplanation: string;
-    imageUrl: string;
+    imageUrl: string; // Keeps compatibility
+    imageUrls: string[]; // New: list of images
     hideOptions?: boolean;
 }
 
@@ -63,6 +64,7 @@ const emptyQuestion: QuestionFormData = {
     correctAnswer: "",
     answerExplanation: "",
     imageUrl: "",
+    imageUrls: [],
     hideOptions: false,
 };
 
@@ -164,7 +166,8 @@ export default function ExamEditPageClient({ id }: { id: string }) {
                 options: questionForm.type === "CHOICE" ? questionForm.options : [],
                 correctAnswer: questionForm.correctAnswer,
                 answerExplanation: questionForm.answerExplanation,
-                imageUrl: questionForm.imageUrl || null,
+                imageUrl: questionForm.imageUrls[0] || null, // Primary image for backward compatibility
+                imageUrls: questionForm.imageUrls.filter(url => url.trim() !== ""),
                 order: isNew ? questions.length : (questions.find(q => q.id === editingQuestionId)?.order || 0),
                 hideOptions: questionForm.hideOptions || false
             };
@@ -226,6 +229,9 @@ export default function ExamEditPageClient({ id }: { id: string }) {
             correctAnswer: question.correctAnswer || "",
             answerExplanation: question.answerExplanation || "",
             imageUrl: question.imageUrl || "",
+            imageUrls: (question.imageUrls && question.imageUrls.length > 0)
+                ? question.imageUrls
+                : (question.imageUrl ? [question.imageUrl] : []),
             hideOptions: question.hideOptions || false,
         });
     };
@@ -822,25 +828,70 @@ function QuestionForm({
                     />
                 </div>
 
-                {/* Image URL */}
+                {/* Image URLs */}
                 <div>
                     <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
                         圖片網址 (選填)
                     </label>
-                    <input
-                        type="text"
-                        value={form.imageUrl}
-                        onChange={(e) => setForm({ ...form, imageUrl: e.target.value })}
-                        placeholder="https://..."
-                        style={{
-                            width: '100%',
-                            padding: '0.75rem',
-                            borderRadius: '0.5rem',
-                            border: '1px solid #e2e8f0',
-                            fontSize: '0.95rem',
-                            boxSizing: 'border-box'
-                        }}
-                    />
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                        {form.imageUrls.map((url, index) => (
+                            <div key={index} style={{ display: 'flex', gap: '0.5rem' }}>
+                                <input
+                                    type="text"
+                                    value={url}
+                                    onChange={(e) => {
+                                        const newUrls = [...form.imageUrls];
+                                        newUrls[index] = e.target.value;
+                                        setForm({ ...form, imageUrls: newUrls });
+                                    }}
+                                    placeholder="https://..."
+                                    style={{
+                                        flex: 1,
+                                        padding: '0.75rem',
+                                        borderRadius: '0.5rem',
+                                        border: '1px solid #e2e8f0',
+                                        fontSize: '0.95rem',
+                                        boxSizing: 'border-box'
+                                    }}
+                                />
+                                <button
+                                    onClick={() => {
+                                        const newUrls = form.imageUrls.filter((_, i) => i !== index);
+                                        setForm({ ...form, imageUrls: newUrls });
+                                    }}
+                                    title="移除圖片"
+                                    style={{
+                                        padding: '0.5rem',
+                                        background: '#fef2f2',
+                                        color: '#dc2626',
+                                        border: 'none',
+                                        borderRadius: '0.375rem',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    <Trash2 size={16} />
+                                </button>
+                            </div>
+                        ))}
+                        <button
+                            onClick={() => setForm({ ...form, imageUrls: [...form.imageUrls, ""] })}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.25rem',
+                                padding: '0.4rem 0.75rem',
+                                background: '#f0fdf4',
+                                color: '#16a34a',
+                                border: 'none',
+                                borderRadius: '0.375rem',
+                                fontSize: '0.85rem',
+                                cursor: 'pointer',
+                                alignSelf: 'flex-start'
+                            }}
+                        >
+                            <Plus size={14} /> 新增圖片網址
+                        </button>
+                    </div>
                 </div>
 
                 {/* Options (for CHOICE type) */}

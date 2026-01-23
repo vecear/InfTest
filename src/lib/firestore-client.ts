@@ -29,6 +29,7 @@ export interface Question {
     examId: string;
     content: string;
     imageUrl?: string | null;
+    imageUrls?: string[];
     ocrText?: string | null;
     type: string;
     correctAnswer: string | null;

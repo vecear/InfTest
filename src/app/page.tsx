@@ -42,7 +42,7 @@ export default function Home() {
     return (
       <div className="home-container" suppressHydrationWarning>
         <header className="home-header">
-          <h1 className="home-title">感染科互動測驗網</h1>
+          <h1 className="home-title">歷屆感專題庫</h1>
         </header>
         <div className="home-grid" />
       </div>
@@ -53,10 +53,10 @@ export default function Home() {
     <div className="home-container" suppressHydrationWarning>
       <header className="home-header">
         <h1 className="home-title">
-          感染科互動測驗網
+          歷屆感專題庫
         </h1>
         <p className="home-description">
-          提升專業知識，挑戰歷屆考題。即時答題回饋與專業社群討論，幫助您更有效率地學習。
+          考題練習，團結就是力量!
         </p>
       </header>
 

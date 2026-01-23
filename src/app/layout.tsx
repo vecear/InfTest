@@ -7,7 +7,7 @@ import { AuthProvider } from "@/context/AuthContext";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "InfTest - 感染科互動測驗網",
+  title: "InfTest - 歷屆感專題庫",
   description: "歷屆感染科專科醫師考題互動測驗",
 };
 

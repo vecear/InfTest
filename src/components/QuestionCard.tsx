@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import CommentSection from "@/components/CommentSection";
 import { updateQuestionExplanation } from "@/lib/firestore-client";
+import TiptapEditor from "@/components/TiptapEditor";
 
 interface Option {
     id: string;
@@ -22,6 +23,7 @@ interface QuestionProps {
         id: string;
         content: string;
         imageUrl?: string | null;
+        imageUrls?: string[];
         ocrText?: string | null;
         type: string;
         correctAnswer: string | null;
@@ -128,13 +130,14 @@ export default function QuestionCard({
         }
     };
 
-    const handleImageClick = async () => {
-        if (!question.imageUrl) return;
+    const handleImageClick = async (url?: string) => {
+        const targetUrl = url || question.imageUrl;
+        if (!targetUrl) return;
 
         // Check if clipboard API is available (requires HTTPS or localhost)
         if (!navigator.clipboard?.write) {
             // Fallback: open image in new tab
-            window.open(question.imageUrl, '_blank');
+            if (targetUrl) window.open(targetUrl, '_blank');
             return;
         }
 
@@ -147,7 +150,7 @@ export default function QuestionCard({
             await new Promise((resolve, reject) => {
                 img.onload = resolve;
                 img.onerror = reject;
-                img.src = question.imageUrl!;
+                img.src = targetUrl!;
             });
 
             // Create canvas and draw image
@@ -179,13 +182,14 @@ export default function QuestionCard({
         } catch (err) {
             console.error('Failed to copy image:', err);
             // Fallback: open image in new tab
-            window.open(question.imageUrl, '_blank');
+            if (question.imageUrl) window.open(question.imageUrl, '_blank');
         }
     };
 
     const [isMobile, setIsMobile] = useState(false);
     const [mounted, setMounted] = useState(false);
     const [showImageModal, setShowImageModal] = useState(false);
+    const [activeImage, setActiveImage] = useState<string | null>(null);
     const [imageScale, setImageScale] = useState(1);
     const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 });
     const [isDragging, setIsDragging] = useState(false);
@@ -301,21 +305,66 @@ export default function QuestionCard({
             <div style={{ marginBottom: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 600, lineHeight: 1.6 }}>{question.content}</h3>
 
-                {question.imageUrl && (
-                    <div style={{ marginTop: '1rem' }}>
-                        <img
-                            src={question.imageUrl}
-                            alt="Question"
-                            onClick={() => setShowImageModal(true)}
-                            style={{
-                                maxWidth: '100%',
-                                borderRadius: '0.75rem',
-                                cursor: 'pointer',
-                                transition: 'opacity 0.2s ease'
-                            }}
-                        />
-                    </div>
-                )}
+                {(() => {
+                    const images = (question.imageUrls && question.imageUrls.length > 0)
+                        ? question.imageUrls
+                        : (question.imageUrl ? [question.imageUrl] : []);
+
+                    if (images.length === 0) return null;
+
+                    return (
+                        <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            {images.map((url, index) => (
+                                <div key={index} style={{ position: 'relative' }}>
+                                    <img
+                                        src={url}
+                                        alt={`Question Image ${index + 1}`}
+                                        onClick={() => {
+                                            setActiveImage(url);
+                                            setShowImageModal(true);
+                                        }}
+                                        style={{
+                                            maxWidth: '100%',
+                                            borderRadius: '0.75rem',
+                                            cursor: 'pointer',
+                                            transition: 'opacity 0.2s ease'
+                                        }}
+                                    />
+                                    <div style={{
+                                        position: 'absolute',
+                                        bottom: '10px',
+                                        right: '10px',
+                                        display: 'flex',
+                                        gap: '0.5rem'
+                                    }}>
+                                        <button
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleImageClick(url);
+                                            }}
+                                            style={{
+                                                padding: '0.4rem 0.75rem',
+                                                background: 'rgba(255, 255, 255, 0.9)',
+                                                color: '#64748b',
+                                                border: 'none',
+                                                borderRadius: '0.375rem',
+                                                fontSize: '0.8rem',
+                                                cursor: 'pointer',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '0.35rem',
+                                                boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                                            }}
+                                        >
+                                            <Copy size={14} />
+                                            複製
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    );
+                })()}
             </div>
 
             {question.type === "CHOICE" ? (
@@ -453,32 +502,7 @@ export default function QuestionCard({
                             </div>
                         )}
 
-                        {question.imageUrl && (
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                                <button
-                                    onClick={handleImageClick}
-                                    style={{
-                                        padding: '0.4rem 0.75rem',
-                                        background: copySuccess ? '#10b981' : '#f1f5f9',
-                                        color: copySuccess ? 'white' : '#64748b',
-                                        border: 'none',
-                                        borderRadius: '0.375rem',
-                                        fontSize: '0.8rem',
-                                        cursor: 'pointer',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '0.35rem',
-                                        transition: 'all 0.2s ease'
-                                    }}
-                                >
-                                    <Copy size={14} />
-                                    {copySuccess ? '已複製' : '複製圖片'}
-                                </button>
-                                <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
-                                    點擊圖片可放大
-                                </span>
-                            </div>
-                        )}
+                        {/* Removed legacy copy button from here as it's now overlay on image */}
                     </div>
 
                     {canShowComments ? (
@@ -541,42 +565,12 @@ export default function QuestionCard({
                     </div>
 
                     {isEditingExplanation ? (
-                        <div>
-                            <textarea
-                                value={editedExplanation}
-                                onChange={(e) => setEditedExplanation(e.target.value)}
-                                style={{
-                                    width: '100%',
-                                    minHeight: '300px',
-                                    padding: '1rem',
-                                    borderRadius: '0.75rem',
-                                    border: '2px solid var(--glass-border)',
-                                    background: 'rgba(255, 255, 255, 0.5)',
-                                    fontSize: '0.95rem',
-                                    lineHeight: 1.6,
-                                    fontFamily: 'inherit',
-                                    resize: 'vertical',
-                                    outline: 'none'
-                                }}
-                                placeholder="輸入詳解（支援 Markdown 格式）..."
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            <TiptapEditor
+                                content={editedExplanation}
+                                onChange={setEditedExplanation}
                             />
-                            <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem' }}>
-                                <button
-                                    onClick={handleSaveExplanation}
-                                    disabled={isSaving}
-                                    style={{
-                                        padding: '0.5rem 1.25rem',
-                                        borderRadius: '0.5rem',
-                                        background: isSaving ? '#94a3b8' : '#10b981',
-                                        color: 'white',
-                                        border: 'none',
-                                        fontSize: '0.875rem',
-                                        cursor: isSaving ? 'default' : 'pointer',
-                                        fontWeight: 600
-                                    }}
-                                >
-                                    {isSaving ? '儲存中...' : '儲存'}
-                                </button>
+                            <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem', justifyContent: 'flex-end' }}>
                                 <button
                                     onClick={handleCancelEdit}
                                     disabled={isSaving}
@@ -593,13 +587,34 @@ export default function QuestionCard({
                                 >
                                     取消
                                 </button>
+                                <button
+                                    onClick={handleSaveExplanation}
+                                    disabled={isSaving}
+                                    style={{
+                                        padding: '0.5rem 1.25rem',
+                                        borderRadius: '0.5rem',
+                                        background: isSaving ? '#94a3b8' : '#10b981',
+                                        color: 'white',
+                                        border: 'none',
+                                        fontSize: '0.875rem',
+                                        cursor: isSaving ? 'default' : 'pointer',
+                                        fontWeight: 600
+                                    }}
+                                >
+                                    {isSaving ? '儲存中...' : '儲存'}
+                                </button>
                             </div>
                         </div>
                     ) : (
                         <article style={{ color: 'var(--text-muted)', lineHeight: 1.6, fontSize: '0.95rem' }} className="markdown-content">
-                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                {question.answerExplanation || "目前尚無詳細解析。"}
-                            </ReactMarkdown>
+                            {/* Check if content is HTML (from Tiptap) or Markdown (legacy) */}
+                            {(question.answerExplanation && /<\/?[a-z][\s\S]*>/i.test(question.answerExplanation)) ? (
+                                <div dangerouslySetInnerHTML={{ __html: question.answerExplanation }} />
+                            ) : (
+                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                    {question.answerExplanation || "目前尚無詳細解析。"}
+                                </ReactMarkdown>
+                            )}
                         </article>
                     )}
                 </div>
@@ -612,7 +627,7 @@ export default function QuestionCard({
             )}
 
             {/* Image Modal - rendered via Portal to escape parent constraints */}
-            {showImageModal && question.imageUrl && typeof document !== 'undefined' && createPortal(
+            {showImageModal && activeImage && typeof document !== 'undefined' && createPortal(
                 <div
                     onClick={handleModalClose}
                     onWheel={handleWheel}
@@ -639,7 +654,7 @@ export default function QuestionCard({
                     }}
                 >
                     <img
-                        src={question.imageUrl}
+                        src={activeImage}
                         alt="Question"
                         onLoad={handleModalImageLoad}
                         onMouseDown={handleMouseDown}

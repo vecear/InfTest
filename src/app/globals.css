@@ -91,7 +91,7 @@ body {
 
 /* ExamList specific classes */
 .exam-list-container {
-  max-width: 800px;
+  max-width: 85%;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -335,10 +335,12 @@ body {
 
 /* Home Page Responsive Styles */
 .home-container {
-  max-width: 1000px;
+  max-width: 85%;
   margin: 0 auto;
   padding: 2rem;
 }
+
+
 
 .home-header {
   text-align: center;
@@ -363,7 +365,7 @@ body {
 
 .home-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
 }
 
@@ -453,7 +455,7 @@ body {
 
 /* Exam Detail Responsive Styles */
 .exam-detail-container {
-  max-width: 800px;
+  max-width: 85%;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -711,7 +713,7 @@ body {
 
 /* Profile Page Styles */
 .profile-container {
-  max-width: 900px;
+  max-width: 85%;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -771,15 +773,17 @@ body {
 }
 
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 .stat-card {
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   text-align: center;
+  flex: 0 0 auto;
+  min-width: 120px;
 }
 
 .stat-value {
@@ -979,6 +983,13 @@ body {
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid #f1f5f9;
+}
+
+mark {
+  background-color: #fef08a;
+  /* Default yellow */
+  padding: 0 2px;
+  border-radius: 2px;
 }
 
 .history-card-title {
